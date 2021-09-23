@@ -1,0 +1,13 @@
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\bin\Debug\Battleships.exe.config
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\bin\Debug\Battleships.exe
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\bin\Debug\Battleships.pdb
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\obj\Debug\Battleships.csproj.AssemblyReference.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\obj\Debug\Battleships.Game.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\obj\Debug\Battleships.Login.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\obj\Debug\Battleships.Main.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\obj\Debug\Battleships.Properties.Resources.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\obj\Debug\Battleships.Register.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\obj\Debug\Battleships.csproj.GenerateResource.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\obj\Debug\Battleships.exe
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\obj\Debug\Battleships.pdb
