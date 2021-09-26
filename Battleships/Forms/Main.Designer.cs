@@ -30,30 +30,43 @@ namespace Battleships.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.search_game_btn = new System.Windows.Forms.Button();
+            this.create_room_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
+            this.join_room_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // search_game_btn
+            // create_room_btn
             // 
-            this.search_game_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.search_game_btn.Location = new System.Drawing.Point(437, 231);
-            this.search_game_btn.Name = "search_game_btn";
-            this.search_game_btn.Size = new System.Drawing.Size(463, 82);
-            this.search_game_btn.TabIndex = 1;
-            this.search_game_btn.Text = "Ieškoti žaidimo";
-            this.search_game_btn.UseVisualStyleBackColor = true;
+            this.create_room_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.create_room_btn.Location = new System.Drawing.Point(437, 231);
+            this.create_room_btn.Name = "create_room_btn";
+            this.create_room_btn.Size = new System.Drawing.Size(463, 82);
+            this.create_room_btn.TabIndex = 1;
+            this.create_room_btn.Text = "Sukurti Kambarį";
+            this.create_room_btn.UseVisualStyleBackColor = true;
+            this.create_room_btn.Click += new System.EventHandler(this.create_room_btn_Click);
             // 
             // exit_btn
             // 
             this.exit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.exit_btn.Location = new System.Drawing.Point(437, 335);
+            this.exit_btn.Location = new System.Drawing.Point(437, 422);
             this.exit_btn.Name = "exit_btn";
             this.exit_btn.Size = new System.Drawing.Size(463, 82);
             this.exit_btn.TabIndex = 3;
             this.exit_btn.Text = "Exit";
             this.exit_btn.UseVisualStyleBackColor = true;
-            this.exit_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
+            // 
+            // join_room_btn
+            // 
+            this.join_room_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.join_room_btn.Location = new System.Drawing.Point(437, 319);
+            this.join_room_btn.Name = "join_room_btn";
+            this.join_room_btn.Size = new System.Drawing.Size(463, 82);
+            this.join_room_btn.TabIndex = 4;
+            this.join_room_btn.Text = "Prisijungti prie Kambario";
+            this.join_room_btn.UseVisualStyleBackColor = true;
+            this.join_room_btn.Click += new System.EventHandler(this.join_room_btn_Click);
             // 
             // Main
             // 
@@ -61,8 +74,9 @@ namespace Battleships.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.join_room_btn);
             this.Controls.Add(this.exit_btn);
-            this.Controls.Add(this.search_game_btn);
+            this.Controls.Add(this.create_room_btn);
             this.Name = "Main";
             this.Text = "Main";
             this.ResumeLayout(false);
@@ -71,7 +85,8 @@ namespace Battleships.Forms
 
         #endregion
 
-        private System.Windows.Forms.Button search_game_btn;
+        private System.Windows.Forms.Button create_room_btn;
         private System.Windows.Forms.Button exit_btn;
+        private System.Windows.Forms.Button join_room_btn;
     }
 }
