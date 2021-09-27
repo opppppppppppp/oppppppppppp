@@ -29,7 +29,6 @@ namespace Battleships.Forms
         {
             this.Hide();
             var room = new Room();
-            room.Closed += (s, args) => this.Close();
             room.Show();
         }
 
@@ -41,9 +40,8 @@ namespace Battleships.Forms
         private void join_room_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var room = new JoinRoom();
-            room.Closed += (s, args) => this.Close();
-            room.Show();
+            var joinroom = new JoinRoom();
+            joinroom.Show();
         }
     }
 }

@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,19 +17,26 @@ namespace Battleships.Forms
 {
     class Server
     {
+        public static int connectedUsers = 0;
+
+        static WebSocketServer wssv = new WebSocketServer();
         public class Connection : WebSocketBehavior
         {
+            
             protected override void OnMessage(MessageEventArgs e)
             {
-                MessageBox.Show(e.Data);
-                Send(e.Data);
+                connectedUsers++;
+                Sessions.Broadcast(JsonConvert.SerializeObject(connectedUsers));
+                Debug.WriteLine(connectedUsers);
             }
         }
         public static void InitializeServer(string ip_address)
         {
+            connectedUsers = 0;
             try
             {
-                WebSocketServer wssv = new WebSocketServer("ws://" + ip_address);
+                wssv = new WebSocketServer($"ws://{ip_address}");
+                
                 wssv.Start();
                 wssv.AddWebSocketService<Connection>("/Connection");
             }

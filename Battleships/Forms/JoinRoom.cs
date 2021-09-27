@@ -17,18 +17,20 @@ namespace Battleships.Forms
             InitializeComponent();
         }
 
+        private void login_server_btn_Click(object sender, EventArgs e)
+        {
+            Room room = new Room();
+            Server.InitializeServer(ip_address_textbox.Text);
+            this.Hide();
+            var waitroom = new WaitRoom(ip_address_textbox.Text);
+            waitroom.Show();
+        }
+
         private void go_back_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var main = new Main();
-            main.Closed += (s, args) => this.Close();
+            Main main = new Main();
             main.Show();
-
-        }
-
-        private void join_server_btn_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Client\Client.cs" />
     <Compile Include="Forms\Game.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,12 +83,6 @@
     <Compile Include="Forms\Room.Designer.cs">
       <DependentUpon>Room.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Search.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Search.Designer.cs">
-      <DependentUpon>Search.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\WaitRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,9 +106,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Room.resx">
       <DependentUpon>Room.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Search.resx">
-      <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\WaitRoom.resx">
       <DependentUpon>WaitRoom.cs</DependentUpon>

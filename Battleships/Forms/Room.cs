@@ -23,24 +23,15 @@ namespace Battleships.Forms
         private void create_server_btn_Click(object sender, EventArgs e)
         {
             Room room = new Room();
-            Server.InitializeServer(room.ip_address_textbox.Text);
+            Server.InitializeServer(ip_address_textbox.Text);
             this.Hide();
-            var waitroom = new WaitRoom();
-            waitroom.Closed += (s, args) => this.Hide();
+            var waitroom = new WaitRoom(ip_address_textbox.Text);
             waitroom.Show();
         }
 
         private void go_back_btn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var main = new Main();
-            main.Closed += (s, args) => this.Close();
-            main.Show();
         }
 
-        private void ip_address_textbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

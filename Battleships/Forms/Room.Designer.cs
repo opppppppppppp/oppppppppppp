@@ -43,8 +43,6 @@ namespace Battleships.Forms
             this.ip_address_textbox.Name = "ip_address_textbox";
             this.ip_address_textbox.Size = new System.Drawing.Size(317, 32);
             this.ip_address_textbox.TabIndex = 0;
-            this.ip_address_textbox.Text = "127.0.0.1:7890";
-            this.ip_address_textbox.TextChanged += new System.EventHandler(this.ip_address_textbox_TextChanged);
             // 
             // ip_address_label
             // 
