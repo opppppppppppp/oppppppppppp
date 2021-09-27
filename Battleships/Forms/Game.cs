@@ -18,33 +18,49 @@ namespace Battleships
     public partial class Game : Form
     {
         List<Button> playerPos;
+        List<Button> playerPosOriginal;
         List<Button> enemyPos;
         List<Button> attackPos;
         List<int> selectedPlayerPos;
         List<int> selectedEnemyPos;
 
         WebSocket game;
+        WebSocket response;
         int totalShips = 4;
         int playerScore = 0;
         int enemyScore = 0;
+        static string user_id;
         private string ip_address;
         public Game(string ip_address)
         {
+           
             this.ip_address = ip_address;
             InitializeComponent();
             selectedPlayerPos = generateRandomPos(playerPos);
             selectedEnemyPos = generateRandomPos(enemyPos);
             playerScore = 0;
             enemyScore = 0;
-            game = new WebSocket($"ws://{ip_address}/Positions");
-            game.Connect();
+            game = Client.Positions(ip_address);
+            response = Client.Response(ip_address);
             RestartGame();
+        }
+        public void setUserId(string user_i)
+        {
+            user_id = user_i;
+        }
+
+        public void setPlayerPositionAsEnemy()
+        {
+            playerPosOriginal = playerPos;
+            playerPos = enemyPos;
+            selectedPlayerPos = selectedEnemyPos;
         }
 
         private void user_b_Click(object sender, EventArgs e)
         {
 
         }
+
 
         private List<int> generateRandomPos(List<Button> pos)
         {
@@ -93,19 +109,21 @@ namespace Battleships
             options.Remove(option);
         }
 
-        private void AttackShip(Button attackShip)
+        private void AttackShip(Button attackShip, bool hitMe)
         {
             //Button result = enemyPos.Find(x => x.Text == attackShip.Text);
-            if(attackShip.Tag == "Ship")
-            {
+           
                 attackShip.BackColor = Color.Red;
+            if (!hitMe)
+            {
                 attackShip.Text = "X";
                 playerScore++;
                 MessageBox.Show("You have hit enemy Ship!");
                 UpdateScore();
                 ScoreChecker();
             }
-            else { attackShip.BackColor = Color.Red; }
+            
+            
             RemoveAttackOption(attackPos, attackShip);
         }
 
@@ -113,6 +131,8 @@ namespace Battleships
         {
             return enemyPos[index];
         }
+
+        
 
         private void UpdateScore()
         {
@@ -168,10 +188,40 @@ namespace Battleships
             //Button selected_value = attack_options.SelectedItem;
             int index = attack_options.SelectedIndex;
             Button attackOption = FindShipByIndex(enemyPos, index);
-            AttackShip(attackOption);
+            AttackShip(attackOption, false);
             AddAttackOptions(enemyPos);
-            game.Send(attackOption.Name);
+            game.Send(attackOption.Name+":"+ user_id);
         }
+
+
+
+
+        public bool checkPlayerPosition(string pos)
+        {
+
+            for(int i = 0; i < playerPos.Count; i++)
+            {
+                if (playerPos[i].Name == pos)
+                    if (playerPos[i].Tag == "Ship")
+                    {
+                        AttackShip(playerPosOriginal[i], true);
+                        response.Send(true+":"+i);
+                        return true;
+                    }
+
+            }
+            response.Send(false + ":" + pos);
+            return false;
+
+
+        }
+
+
+        public void markHitField(string index)
+        {
+            AttackShip(playerPos[Convert.ToInt32(index)], false);
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {

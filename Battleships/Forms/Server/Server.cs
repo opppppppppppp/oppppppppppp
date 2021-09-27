@@ -18,7 +18,7 @@ namespace Battleships.Forms
     class Server
     {
         public static int connectedUsers = 0;
-        //public static int point = 0;
+        public static int user_id = 0;
         static WebSocketServer wssv = new WebSocketServer();
         public class Connection : WebSocketBehavior
         {         
@@ -36,9 +36,16 @@ namespace Battleships.Forms
         {
             protected override void OnMessage(MessageEventArgs e)
             {
-                connectedUsers++;
-                Sessions.Broadcast(JsonConvert.SerializeObject(e.Data));
-                Debug.WriteLine("Position hiited: " + e.Data);
+                string[] data = e.Data.Split(':');
+                Sessions.Broadcast(JsonConvert.SerializeObject(data));
+                Debug.WriteLine("Position hiited: " + data[0] +" --- "+ data[1]);
+            }
+        }  
+        public class Response : WebSocketBehavior
+        {
+            protected override void OnMessage(MessageEventArgs e)
+            {
+                Debug.WriteLine("Response: " + e.Data);
             }
         }
 
@@ -53,6 +60,7 @@ namespace Battleships.Forms
                 wssv.Start();
                 wssv.AddWebSocketService<Connection>("/Connection");
                 wssv.AddWebSocketService<Positions>("/Positions");
+                wssv.AddWebSocketService<Response>("/Response");
             }
             catch (Exception exception)
             {
