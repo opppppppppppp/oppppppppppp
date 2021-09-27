@@ -22,18 +22,22 @@ namespace Battleships
         List<Button> attackPos;
         List<int> selectedPlayerPos;
         List<int> selectedEnemyPos;
-        WebSocket client;
+
+        WebSocket game;
         int totalShips = 4;
         int playerScore = 0;
         int enemyScore = 0;
-        public Game(WebSocket ws)
+        private string ip_address;
+        public Game(string ip_address)
         {
+            this.ip_address = ip_address;
             InitializeComponent();
             selectedPlayerPos = generateRandomPos(playerPos);
             selectedEnemyPos = generateRandomPos(enemyPos);
             playerScore = 0;
             enemyScore = 0;
-            client = ws;
+            game = new WebSocket($"ws://{ip_address}/Positions");
+            game.Connect();
             RestartGame();
         }
 
@@ -164,9 +168,9 @@ namespace Battleships
             //Button selected_value = attack_options.SelectedItem;
             int index = attack_options.SelectedIndex;
             Button attackOption = FindShipByIndex(enemyPos, index);
-
             AttackShip(attackOption);
             AddAttackOptions(enemyPos);
+            game.Send(attackOption.Name);
         }
 
         private void label1_Click(object sender, EventArgs e)

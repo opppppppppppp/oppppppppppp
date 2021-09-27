@@ -19,11 +19,11 @@ namespace Battleships.Forms
 
         private void login_server_btn_Click(object sender, EventArgs e)
         {
-            Room room = new Room();
-            Server.InitializeServer(ip_address_textbox.Text);
             this.Hide();
-            var waitroom = new WaitRoom(ip_address_textbox.Text);
-            waitroom.Show();
+            Client.Connect(ip_address_textbox.Text);
+            Game game = new Game(ip_address_textbox.Text);
+            game.ShowDialog();
+
         }
 
         private void go_back_btn_Click(object sender, EventArgs e)

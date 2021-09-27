@@ -16,3 +16,21 @@ C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battle
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\Battleships\obj\Debug\Battleships.Forms.JoinRoom.resources
+E:\Work stuff\oppppppppppp\Battleships\bin\Debug\Battleships.exe.config
+E:\Work stuff\oppppppppppp\Battleships\bin\Debug\Battleships.exe
+E:\Work stuff\oppppppppppp\Battleships\bin\Debug\Battleships.pdb
+E:\Work stuff\oppppppppppp\Battleships\bin\Debug\Newtonsoft.Json.dll
+E:\Work stuff\oppppppppppp\Battleships\bin\Debug\websocket-sharp.dll
+E:\Work stuff\oppppppppppp\Battleships\bin\Debug\Newtonsoft.Json.xml
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.csprojAssemblyReference.cache
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.Game.resources
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.JoinRoom.resources
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Main.resources
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Room.resources
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.WaitRoom.resources
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.Properties.Resources.resources
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.GenerateResource.cache
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CopyComplete
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.exe
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.pdb

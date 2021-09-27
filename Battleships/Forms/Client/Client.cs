@@ -17,20 +17,21 @@ namespace Battleships.Forms
     {
         public static Game game;
         public static WebSocket ws;
+        static  string ip_addr;
         public static void Connect(string ip_address)
         {
-
+            ip_addr = ip_address;
             ws = new WebSocket($"ws://{ip_address}/Connection");
             ws.OnMessage += OnMessage;
             ws.Connect();
             ws.Send("Connected");
-            game = new Game(ws);
         }
 
         private static void OnMessage(object sender, MessageEventArgs e)
         {
             if(Convert.ToInt32(e.Data) == 2)
             {
+                game = new Game(ip_addr);
                 game.ShowDialog();
             }   
         }

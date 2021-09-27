@@ -18,7 +18,7 @@ namespace Battleships.Forms
     class Server
     {
         public static int connectedUsers = 0;
-
+        //public static int point = 0;
         static WebSocketServer wssv = new WebSocketServer();
         public class Connection : WebSocketBehavior
         {         
@@ -28,17 +28,21 @@ namespace Battleships.Forms
                 Sessions.Broadcast(JsonConvert.SerializeObject(connectedUsers));
                 Debug.WriteLine("Users Connected: " + connectedUsers);
             }
-        }
+
+        }  
+    
 
         public class Positions : WebSocketBehavior
         {
             protected override void OnMessage(MessageEventArgs e)
             {
-
-                Sessions.Broadcast(e.Data);
-                
+                connectedUsers++;
+                Sessions.Broadcast(JsonConvert.SerializeObject(e.Data));
+                Debug.WriteLine("Position hiited: " + e.Data);
             }
         }
+
+
         public static void InitializeServer(string ip_address)
         {
             connectedUsers = 0;
@@ -48,12 +52,15 @@ namespace Battleships.Forms
                 
                 wssv.Start();
                 wssv.AddWebSocketService<Connection>("/Connection");
+                wssv.AddWebSocketService<Positions>("/Positions");
             }
             catch (Exception exception)
             {
                 ShowExceptionDetails(exception);
             }
         }
+
+        
 
         private static void ShowExceptionDetails(Exception exception)
         {
