@@ -49,7 +49,7 @@ namespace Battleships
             this.user_a = new System.Windows.Forms.Label();
             this.user_b = new System.Windows.Forms.Label();
             this.Attack = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.attack_options = new System.Windows.Forms.ComboBox();
             this.attack_btn = new System.Windows.Forms.Button();
             this.surrender_btn = new System.Windows.Forms.Label();
             this.z5 = new System.Windows.Forms.Button();
@@ -91,6 +91,9 @@ namespace Battleships
             this.turn_right = new System.Windows.Forms.Label();
             this.level_label = new System.Windows.Forms.Label();
             this.level_value = new System.Windows.Forms.Label();
+            this.score_label = new System.Windows.Forms.Label();
+            this.score_value = new System.Windows.Forms.Label();
+            this.score_val = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // w1
@@ -277,13 +280,13 @@ namespace Battleships
             this.Attack.TabIndex = 37;
             this.Attack.Text = "Choose Ship:";
             // 
-            // comboBox1
+            // attack_options
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(23, 175);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 33);
-            this.comboBox1.TabIndex = 38;
+            this.attack_options.FormattingEnabled = true;
+            this.attack_options.Location = new System.Drawing.Point(23, 175);
+            this.attack_options.Name = "attack_options";
+            this.attack_options.Size = new System.Drawing.Size(121, 33);
+            this.attack_options.TabIndex = 38;
             // 
             // attack_btn
             // 
@@ -295,6 +298,7 @@ namespace Battleships
             this.attack_btn.TabIndex = 39;
             this.attack_btn.Text = "Attack";
             this.attack_btn.UseVisualStyleBackColor = false;
+            this.attack_btn.Click += new System.EventHandler(this.attack_btn_Click);
             // 
             // surrender_btn
             // 
@@ -563,7 +567,7 @@ namespace Battleships
             this.b3.Name = "b3";
             this.b3.Size = new System.Drawing.Size(84, 73);
             this.b3.TabIndex = 56;
-            this.b3.Text = "X";
+            this.b3.Text = "B3";
             this.b3.UseVisualStyleBackColor = false;
             // 
             // b2
@@ -679,12 +683,50 @@ namespace Battleships
             this.level_value.TabIndex = 81;
             this.level_value.Text = "3";
             // 
+            // score_label
+            // 
+            this.score_label.AutoSize = true;
+            this.score_label.BackColor = System.Drawing.Color.Transparent;
+            this.score_label.ForeColor = System.Drawing.Color.White;
+            this.score_label.Location = new System.Drawing.Point(592, 285);
+            this.score_label.Name = "score_label";
+            this.score_label.Size = new System.Drawing.Size(69, 26);
+            this.score_label.TabIndex = 82;
+            this.score_label.Text = "Score";
+            this.score_label.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // score_value
+            // 
+            this.score_value.AutoSize = true;
+            this.score_value.BackColor = System.Drawing.Color.Transparent;
+            this.score_value.ForeColor = System.Drawing.Color.White;
+            this.score_value.Location = new System.Drawing.Point(1340, 635);
+            this.score_value.Name = "score_value";
+            this.score_value.Size = new System.Drawing.Size(36, 26);
+            this.score_value.TabIndex = 83;
+            this.score_value.Text = "20";
+            // 
+            // score_val
+            // 
+            this.score_val.AutoSize = true;
+            this.score_val.BackColor = System.Drawing.Color.Transparent;
+            this.score_val.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.score_val.ForeColor = System.Drawing.Color.Lime;
+            this.score_val.Location = new System.Drawing.Point(664, 275);
+            this.score_val.Name = "score_val";
+            this.score_val.Size = new System.Drawing.Size(49, 36);
+            this.score_val.TabIndex = 84;
+            this.score_val.Text = "20";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.score_val);
+            this.Controls.Add(this.score_value);
+            this.Controls.Add(this.score_label);
             this.Controls.Add(this.level_value);
             this.Controls.Add(this.level_label);
             this.Controls.Add(this.turn_right);
@@ -726,7 +768,7 @@ namespace Battleships
             this.Controls.Add(this.w5);
             this.Controls.Add(this.surrender_btn);
             this.Controls.Add(this.attack_btn);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.attack_options);
             this.Controls.Add(this.Attack);
             this.Controls.Add(this.user_b);
             this.Controls.Add(this.user_a);
@@ -776,7 +818,7 @@ namespace Battleships
         private System.Windows.Forms.Label user_a;
         private System.Windows.Forms.Label user_b;
         private System.Windows.Forms.Label Attack;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox attack_options;
         private System.Windows.Forms.Button attack_btn;
         private System.Windows.Forms.Label surrender_btn;
         private System.Windows.Forms.Button z5;
@@ -818,5 +860,8 @@ namespace Battleships
         private System.Windows.Forms.Label turn_right;
         private System.Windows.Forms.Label level_label;
         private System.Windows.Forms.Label level_value;
+        private System.Windows.Forms.Label score_label;
+        private System.Windows.Forms.Label score_value;
+        private System.Windows.Forms.Label score_val;
     }
 }

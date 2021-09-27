@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -18,33 +19,20 @@ namespace Battleships.Forms
         public static WebSocket ws;
         public static void Connect(string ip_address)
         {
-            try
-            {
-                ws = new WebSocket($"ws://{ip_address}/Connection");
-                game = new Game(ws);
-                ws.OnMessage += JoinRoom;
-                ws.Connect();
-                ws.Send("Connected");
-            }
-            catch (Exception exception)
-            {
-                ShowExceptionDetails(exception);
-            }
+
+            ws = new WebSocket($"ws://{ip_address}/Connection");
+            ws.OnMessage += OnMessage;
+            ws.Connect();
+            ws.Send("Connected");
+            game = new Game(ws);
         }
 
-        private static void JoinRoom(object sender, MessageEventArgs e)
+        private static void OnMessage(object sender, MessageEventArgs e)
         {
             if(Convert.ToInt32(e.Data) == 2)
             {
-                try
-                {
-                    game.ShowDialog();
-                }catch(Exception exception)
-                {
-                    Debug.WriteLine(exception.Message);
-                }
-
-            }
+                game.ShowDialog();
+            }   
         }
 
         private static void ShowExceptionDetails(Exception exception)

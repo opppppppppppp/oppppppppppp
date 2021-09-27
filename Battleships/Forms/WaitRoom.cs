@@ -19,7 +19,6 @@ namespace Battleships.Forms
             InitializeComponent();
             server_ip_address.Text = ip_address;
             Client.Connect(ip_address);
-
         }
 
 

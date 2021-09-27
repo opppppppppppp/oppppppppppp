@@ -21,13 +21,22 @@ namespace Battleships.Forms
 
         static WebSocketServer wssv = new WebSocketServer();
         public class Connection : WebSocketBehavior
-        {
-            
+        {         
             protected override void OnMessage(MessageEventArgs e)
             {
                 connectedUsers++;
                 Sessions.Broadcast(JsonConvert.SerializeObject(connectedUsers));
-                Debug.WriteLine(connectedUsers);
+                Debug.WriteLine("Users Connected: " + connectedUsers);
+            }
+        }
+
+        public class Positions : WebSocketBehavior
+        {
+            protected override void OnMessage(MessageEventArgs e)
+            {
+
+                Sessions.Broadcast(e.Data);
+                
             }
         }
         public static void InitializeServer(string ip_address)

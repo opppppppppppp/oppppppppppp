@@ -71,12 +71,6 @@
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Popup\Popup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Popup\Popup.Designer.cs">
-      <DependentUpon>Popup.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Room.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +83,8 @@
     <Compile Include="Forms\WaitRoom.Designer.cs">
       <DependentUpon>WaitRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Ship.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\Server\Server.cs" />
@@ -100,9 +96,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Popup\Popup.resx">
-      <DependentUpon>Popup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Room.resx">
       <DependentUpon>Room.cs</DependentUpon>
