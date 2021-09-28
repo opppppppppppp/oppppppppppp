@@ -35,7 +35,7 @@ namespace Battleships
             InitializeComponent();
             position_socket = Client.Positions(ip_address);
             response_socket = Client.Response(ip_address);
-            complete_socket = Client.Response(ip_address);
+            complete_socket = Client.Complete(ip_address);
             RestartGame();
         }
         public void setUID(string user_i)
@@ -82,11 +82,13 @@ namespace Battleships
             {
                 attack_options.Items.Add(options[i].Text);
             }
+
         }
 
-        private void RemoveAttackOption(List<Button> options, Button option)
+        private void RemoveAttackOption(string option)
         {
-            options.Remove(option);
+            attack_options.Items.Remove(option);
+            //options.Remove(option);
         }
 
         private void MarkShip(Button Ship, bool hit_status)
@@ -155,25 +157,30 @@ namespace Battleships
         private void attack_btn_Click(object sender, EventArgs e)
         {
             int index = attack_options.SelectedIndex;
+            //RemoveAttackOption(FindShipByIndex(enemyPos, index).Text);
             position_socket.Send($"{index}:{user_id}");
         }
         public void ShipHitCheck(int ship_index, string uid)
         {
             Button attackOption = FindShipByIndex(playerPos, ship_index);
             if (attackOption.Tag == "Ship")
+            {
+                MarkShip(attackOption, false);
                 response_socket.Send($"{uid}:{ship_index}:{true}");
+            }
             else
                 response_socket.Send($"{uid}:{ship_index}:{false}");
         }
 
         public void UpdateHitShips(int ship_index, string uid, bool hit_status)
         {
-            if (user_id != uid)
-            {
-                Button attackedShip = FindShipByIndex(playerPos, ship_index);
-                MarkShip(attackedShip, hit_status);
-            }
-            else if (user_id == uid)
+            //if (user_id != uid)
+            //{
+            //    Button attackedShip = FindShipByIndex(playerPos, ship_index);
+            //    MarkShip(attackedShip, hit_status);
+            //}
+            //else 
+            if (user_id == uid)
             {
                 Button attackedShip = FindShipByIndex(enemyPos, ship_index);
                 MarkShip(attackedShip, hit_status);
