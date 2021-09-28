@@ -91,15 +91,23 @@ namespace Battleships
 
         private void MarkShip(Button Ship, bool hit_status)
         {
-            if (hit_status)
+            Ship.Invoke((MethodInvoker)(() =>
             {
-                Ship.BackColor = Color.Red;
-                Ship.Text = "X";
-            }
-            else
-            {
-                Ship.BackColor = Color.Red;
-            }
+                if (hit_status)
+                {
+                    Ship.BackColor = Color.Red;
+                    Ship.Text = "X";
+                    MessageBox.Show("You've hit enemy ship!");
+                    playerScore++;
+                    UpdateScore();
+                    ScoreChecker();
+
+                }
+                else
+                {
+                    Ship.BackColor = Color.Red;
+                }
+            }));
         }
 
         private Button FindShipByIndex(List<Button> positions, int index)
@@ -169,13 +177,6 @@ namespace Battleships
             {
                 Button attackedShip = FindShipByIndex(enemyPos, ship_index);
                 MarkShip(attackedShip, hit_status);
-                if (hit_status)
-                {
-                    MessageBox.Show("You've hit enemy ship!");
-                    playerScore++;
-                    UpdateScore();
-                    ScoreChecker();
-                }
             }
         }
 
