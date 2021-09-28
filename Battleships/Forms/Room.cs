@@ -22,7 +22,6 @@ namespace Battleships.Forms
 
         private void create_server_btn_Click(object sender, EventArgs e)
         {
-            Room room = new Room();
             Server.InitializeServer(ip_address_textbox.Text);
             this.Hide();
             var waitroom = new WaitRoom(ip_address_textbox.Text);

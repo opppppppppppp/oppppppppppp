@@ -20,10 +20,7 @@ namespace Battleships.Forms
         private void login_server_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-          Client.Connect(ip_address_textbox.Text);
-            
-            //Game game = new Game(ip_address_textbox.Text);
-            //game.ShowDialog();
+            Client.Connect(ip_address_textbox.Text);
 
         }
 

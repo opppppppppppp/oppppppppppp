@@ -267,7 +267,6 @@ namespace Battleships
             this.user_b.Size = new System.Drawing.Size(107, 36);
             this.user_b.TabIndex = 34;
             this.user_b.Text = "Pirates";
-            this.user_b.Click += new System.EventHandler(this.user_b_Click);
             // 
             // Attack
             // 
@@ -693,7 +692,6 @@ namespace Battleships
             this.score_label.Size = new System.Drawing.Size(69, 26);
             this.score_label.TabIndex = 82;
             this.score_label.Text = "Score";
-            this.score_label.Click += new System.EventHandler(this.label1_Click);
             // 
             // score_value
             // 
