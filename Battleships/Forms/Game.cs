@@ -34,15 +34,13 @@ namespace Battleships
         int playerScore = 0;
         int currentLevel = 2;
         static string user_id;
-        private string ip_address;
         Sailor sailor;
-        public Game(string ip_addr)
+        public Game()
         {
-            this.ip_address = ip_addr;
             InitializeComponent();
-            position_socket = Client.Positions(ip_address);
-            response_socket = Client.Response(ip_address);
-            complete_socket = Client.Complete(ip_address);
+            position_socket = Client.Positions(Constants.ip_address);
+            response_socket = Client.Response(Constants.ip_address);
+            complete_socket = Client.Complete(Constants.ip_address);
             RestartGame();
         }
         public void setUID(string uid)
@@ -119,7 +117,6 @@ namespace Battleships
                 }
             }));
         }
-
         private void LevelChecker()
         {
             switch(currentLevel)
@@ -135,7 +132,6 @@ namespace Battleships
                     break;
             }
         }
-
         private Button FindShipByIndex(List<Button> positions, int index)
         {
             return positions[index];
@@ -150,7 +146,6 @@ namespace Battleships
         {
             if (playerScore >= totalShips)
                 complete_socket.Send(user_id);
-
         }
 
         public void RestartGame()
