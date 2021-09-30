@@ -1,5 +1,4 @@
-﻿using Battleships.Forms.Server;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,7 +82,7 @@ namespace Battleships.Forms
             connectedUsers = 0;
             try
             {
-                wssv = ServerInstance.GetInstance(ip_address);
+                wssv = new WebSocketServer($"ws://{ip_address}");
 
                 wssv.Start();
                 wssv.AddWebSocketService<Connection>("/Connection");

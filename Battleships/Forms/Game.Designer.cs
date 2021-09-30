@@ -680,7 +680,7 @@ namespace Battleships
             this.level_value.Name = "level_value";
             this.level_value.Size = new System.Drawing.Size(32, 36);
             this.level_value.TabIndex = 81;
-            this.level_value.Text = "3";
+            this.level_value.Text = "1";
             // 
             // score_label
             // 

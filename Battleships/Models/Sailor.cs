@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models
 {
-    class Player
+    public class Sailor
     {
-        public string Name { get; set; }
-        public int ID { get; set; }
+        public string UID { get; set; }
 
-        public Player(string name, int id)
+        public Sailor(string uid)
         {
-            Name = name;
-            ID = id;
+            UID = uid;
         }
     }
 }

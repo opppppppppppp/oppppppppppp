@@ -34,3 +34,21 @@ E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CoreCompileI
 E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CopyComplete
 E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.exe
 E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.pdb
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\obj\Debug\Battleships.csproj.AssemblyReference.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\obj\Debug\Battleships.Game.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\obj\Debug\Battleships.Forms.JoinRoom.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\obj\Debug\Battleships.Forms.Main.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\obj\Debug\Battleships.Forms.Room.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\obj\Debug\Battleships.Forms.WaitRoom.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\obj\Debug\Battleships.Properties.Resources.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\obj\Debug\Battleships.csproj.GenerateResource.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\obj\Debug\Battleships.exe
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\obj\Debug\Battleships.pdb
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\bin\Debug\Battleships.exe.config
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\bin\Debug\Battleships.exe
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\bin\Debug\Battleships.pdb
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\bin\Debug\websocket-sharp.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\Battleships\Battleships\obj\Debug\Battleships.csproj.CopyComplete

@@ -12,6 +12,8 @@ using Newtonsoft;
 using Newtonsoft.Json;
 using Battleships.Forms;
 using System.Diagnostics;
+using Battleships.Models;
+using Battleships.Models.ConcreteCreator;
 
 namespace Battleships
 {
@@ -22,31 +24,37 @@ namespace Battleships
         List<Button> attackPos;
         List<int> selectedPlayerPos;
 
+        ShipFactory ships;
+
         WebSocket position_socket;
         WebSocket response_socket;
         WebSocket complete_socket;
+
         int totalShips = 4;
         int playerScore = 0;
+        int currentLevel = 2;
         static string user_id;
         private string ip_address;
-        public Game(string ip_address)
+        Sailor sailor;
+        public Game(string ip_addr)
         {
-            this.ip_address = ip_address;
+            this.ip_address = ip_addr;
             InitializeComponent();
             position_socket = Client.Positions(ip_address);
             response_socket = Client.Response(ip_address);
             complete_socket = Client.Complete(ip_address);
             RestartGame();
         }
-        public void setUID(string user_i)
+        public void setUID(string uid)
         {
-            user_id = user_i;
+            user_id = uid;
+            sailor = new Sailor(uid);
         }
         private List<int> generateRandomPos()
         {
             Random rnd = new Random();
             List<int> positions = new List<int>();
-            while (positions.Count != 4)
+            while (positions.Count != ships.GetShip().ShipSize)
             {
                 int number = rnd.Next(1, 24);
                 if (!positions.Contains(number))
@@ -112,6 +120,22 @@ namespace Battleships
             }));
         }
 
+        private void LevelChecker()
+        {
+            switch(currentLevel)
+            {
+                case 1:
+                    ships = new ShipSmallFactory(4);
+                    break;
+                case 2:
+                    ships = new ShipMediumFactory(5);
+                    break;
+                case 3:
+                    ships = new ShipBigFactory(6);
+                    break;
+            }
+        }
+
         private Button FindShipByIndex(List<Button> positions, int index)
         {
             return positions[index];
@@ -131,6 +155,7 @@ namespace Battleships
 
         public void RestartGame()
         {
+            LevelChecker();
             playerPos = new List<Button> { w1, w2, w3, w4, w5, x1, x2, x3, x4, x5, y1, y2, y3, y4, y5, z1, z2, z3, z4, z5, f1, f2, f3, f4, f5 };
             enemyPos = new List<Button> { a1, a2, a3, a4, a5, b1, b2, b3, b4, b5, c1, c2, c3, c4, c5, d1, d2, d3, d4, d5, e1, e2, e3, e4, e5 };
             attackPos = enemyPos;
@@ -144,6 +169,7 @@ namespace Battleships
                 enemyPos[i].Tag = null;
             }
             playerScore = 0;
+            level_value.Text = currentLevel.ToString();
 
             selectedPlayerPos = generateRandomPos();
 
@@ -157,7 +183,7 @@ namespace Battleships
         private void attack_btn_Click(object sender, EventArgs e)
         {
             int index = attack_options.SelectedIndex;
-            //RemoveAttackOption(FindShipByIndex(enemyPos, index).Text);
+            //RemoveAttackOption(FindShipByIndex(enemyPos, index).Text);//*Cia*
             position_socket.Send($"{index}:{user_id}");
         }
         public void ShipHitCheck(int ship_index, string uid)
@@ -174,13 +200,13 @@ namespace Battleships
 
         public void UpdateHitShips(int ship_index, string uid, bool hit_status)
         {
-            //if (user_id != uid)
-            //{
-            //    Button attackedShip = FindShipByIndex(playerPos, ship_index);
-            //    MarkShip(attackedShip, hit_status);
-            //}
-            //else 
-            if (user_id == uid)
+            if (sailor.UID != uid)//Nuo cia*
+            {
+                Button attackedShip = FindShipByIndex(playerPos, ship_index);
+                MarkShip(attackedShip, hit_status);
+            }
+            else //Iki cia*
+            if (sailor.UID == uid)
             {
                 Button attackedShip = FindShipByIndex(enemyPos, ship_index);
                 MarkShip(attackedShip, hit_status);
@@ -189,7 +215,7 @@ namespace Battleships
 
         public void Completed(string uid)
         {
-            if (user_id == uid)
+            if (sailor.UID == uid)
             {
                 position_socket.Close();
                 response_socket.Close();
