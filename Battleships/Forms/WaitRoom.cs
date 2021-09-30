@@ -14,11 +14,11 @@ namespace Battleships.Forms
 {
     public partial class WaitRoom : Form
     {
-        public WaitRoom(string ip_address)
+        public WaitRoom()
         {
             InitializeComponent();
-            server_ip_address.Text = ip_address;
-            Client.Connect(ip_address);
+            server_ip_address.Text = Constants.ip_address;
+            Client.Connect(Constants.ip_address);
         }
 
 

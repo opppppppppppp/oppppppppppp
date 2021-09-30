@@ -82,7 +82,7 @@ namespace Battleships.Forms
             connectedUsers = 0;
             try
             {
-                wssv = new WebSocketServer($"ws://{ip_address}");
+                wssv = ServerInstance.GetInstance();
 
                 wssv.Start();
                 wssv.AddWebSocketService<Connection>("/Connection");

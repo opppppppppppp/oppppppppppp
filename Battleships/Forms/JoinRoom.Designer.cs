@@ -69,6 +69,7 @@ namespace Battleships.Forms
             this.ip_address_label.Size = new System.Drawing.Size(102, 26);
             this.ip_address_label.TabIndex = 9;
             this.ip_address_label.Text = "Įvesti IP :";
+            this.ip_address_label.Visible = false;
             // 
             // ip_address_textbox
             // 
@@ -77,6 +78,7 @@ namespace Battleships.Forms
             this.ip_address_textbox.Name = "ip_address_textbox";
             this.ip_address_textbox.Size = new System.Drawing.Size(317, 32);
             this.ip_address_textbox.TabIndex = 8;
+            this.ip_address_textbox.Visible = false;
             // 
             // JoinRoom
             // 

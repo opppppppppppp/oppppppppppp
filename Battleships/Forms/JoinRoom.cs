@@ -15,13 +15,13 @@ namespace Battleships.Forms
         public JoinRoom()
         {
             InitializeComponent();
+            ip_address_textbox.Text = Constants.ip_address;
         }
 
         private void login_server_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Client.Connect(ip_address_textbox.Text);
-
+            Client.Connect(Constants.ip_address);
         }
 
         private void go_back_btn_Click(object sender, EventArgs e)

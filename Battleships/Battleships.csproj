@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="Forms\Client\Client.cs" />
     <Compile Include="Forms\Game.cs">
       <SubType>Form</SubType>
@@ -77,6 +78,7 @@
     <Compile Include="Forms\Room.Designer.cs">
       <DependentUpon>Room.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Server\ServerInstance.cs" />
     <Compile Include="Forms\WaitRoom.cs">
       <SubType>Form</SubType>
     </Compile>

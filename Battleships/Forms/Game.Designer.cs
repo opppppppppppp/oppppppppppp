@@ -252,9 +252,9 @@ namespace Battleships
             this.user_a.ForeColor = System.Drawing.Color.GreenYellow;
             this.user_a.Location = new System.Drawing.Point(383, 170);
             this.user_a.Name = "user_a";
-            this.user_a.Size = new System.Drawing.Size(97, 36);
+            this.user_a.Size = new System.Drawing.Size(163, 36);
             this.user_a.TabIndex = 33;
-            this.user_a.Text = "Police";
+            this.user_a.Text = "Your Ships";
             // 
             // user_b
             // 
@@ -264,9 +264,9 @@ namespace Battleships
             this.user_b.ForeColor = System.Drawing.Color.White;
             this.user_b.Location = new System.Drawing.Point(956, 170);
             this.user_b.Name = "user_b";
-            this.user_b.Size = new System.Drawing.Size(107, 36);
+            this.user_b.Size = new System.Drawing.Size(190, 36);
             this.user_b.TabIndex = 34;
-            this.user_b.Text = "Pirates";
+            this.user_b.Text = "Enemy Ships";
             // 
             // Attack
             // 

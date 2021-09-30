@@ -18,13 +18,15 @@ namespace Battleships.Forms
         public Room()
         {
             InitializeComponent();
+            ip_address_textbox.Text = Constants.ip_address;
+            ip_address_textbox.ReadOnly = true;
         }
 
         private void create_server_btn_Click(object sender, EventArgs e)
         {
-            Server.InitializeServer(ip_address_textbox.Text);
+            Server.InitializeServer(Constants.ip_address);
             this.Hide();
-            var waitroom = new WaitRoom(ip_address_textbox.Text);
+            var waitroom = new WaitRoom();
             waitroom.Show();
         }
 

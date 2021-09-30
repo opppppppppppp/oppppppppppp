@@ -12,16 +12,13 @@ namespace Battleships.Forms
 
         private static WebSocketServer wsServer;
 
-        public static WebSocketServer GetInstance(string ip_address)
+        public static WebSocketServer GetInstance()
         {
             if (wsServer == null)
             {
-                    wsServer = new WebSocketServer($"ws://{ip_address}");
+                    wsServer = new WebSocketServer($"ws://{Constants.ip_address}");
             }
             return wsServer;
         }
-
-
-
     }
 }

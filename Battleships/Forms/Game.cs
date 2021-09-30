@@ -205,7 +205,7 @@ namespace Battleships
                 Button attackedShip = FindShipByIndex(playerPos, ship_index);
                 MarkShip(attackedShip, hit_status);
             }
-            else //Iki cia*
+            else //Iki cia
             if (sailor.UID == uid)
             {
                 Button attackedShip = FindShipByIndex(enemyPos, ship_index);
