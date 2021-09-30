@@ -4,21 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebSocketSharp.Server;
+using System.Diagnostics;
 
 namespace Battleships.Forms
 {
     class ServerInstance
     {
+        private static ServerInstance serverInstance = null;
 
-        private static WebSocketServer wsServer;
+        private WebSocketServer webSocketServer = null;
 
-        public static WebSocketServer GetInstance()
+        private ServerInstance()
         {
-            if (wsServer == null)
+            webSocketServer = new WebSocketServer($"ws://{Constants.ip_address}");
+            Debug.WriteLine("Singleton initialized");
+        }
+
+        public static ServerInstance Instance
+        {
+            get
             {
-                    wsServer = new WebSocketServer($"ws://{Constants.ip_address}");
+                if(serverInstance == null)
+                {
+                    serverInstance = new ServerInstance();
+                }
+                return serverInstance;
             }
-            return wsServer;
+        }
+
+        public WebSocketServer GetWebSocketServer()
+        {
+            return webSocketServer;
         }
     }
 }

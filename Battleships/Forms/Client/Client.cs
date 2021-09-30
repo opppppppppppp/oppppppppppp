@@ -85,7 +85,8 @@ namespace Battleships.Forms
         {
             if (Convert.ToInt32(e.Data) == 2)
             {
-                game = new Game(ip_addr);
+                // game = new Game(ip_addr);
+                game = new Game();
                 game.setUID(user_id);
                 //game.setPlayerPositionAsEnemy();
                 game.ShowDialog();

@@ -18,7 +18,10 @@ namespace Battleships.Forms
     class Server
     {
         public static int connectedUsers = 0;
-        static WebSocketServer wssv = new WebSocketServer();
+
+        private static ServerInstance serverInstance = ServerInstance.Instance;
+        static WebSocketServer webSocketServer = serverInstance.GetWebSocketServer();
+        // = new WebSocketServer();
 
         /// <summary>
         /// Connection Klasė, paveldinti WebSocketBehavior
@@ -82,13 +85,13 @@ namespace Battleships.Forms
             connectedUsers = 0;
             try
             {
-                wssv = ServerInstance.GetInstance();
+                //webSocketServer = ServerInstance.GetInstance();
 
-                wssv.Start();
-                wssv.AddWebSocketService<Connection>("/Connection");
-                wssv.AddWebSocketService<Positions>("/Positions");
-                wssv.AddWebSocketService<Response>("/Response");
-                wssv.AddWebSocketService<Complete>("/Complete");
+                webSocketServer.Start();
+                webSocketServer.AddWebSocketService<Connection>("/Connection");
+                webSocketServer.AddWebSocketService<Positions>("/Positions");
+                webSocketServer.AddWebSocketService<Response>("/Response");
+                webSocketServer.AddWebSocketService<Complete>("/Complete");
             }
             catch (Exception exception)
             {
