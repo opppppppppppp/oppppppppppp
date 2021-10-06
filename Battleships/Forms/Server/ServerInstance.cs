@@ -13,7 +13,6 @@ namespace Battleships.Forms
         private static ServerInstance serverInstance = null;
 
         private WebSocketServer webSocketServer = null;
-
         private ServerInstance()
         {
             webSocketServer = new WebSocketServer($"ws://{Constants.ip_address}");

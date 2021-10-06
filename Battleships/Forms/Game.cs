@@ -14,6 +14,7 @@ using Battleships.Forms;
 using System.Diagnostics;
 using Battleships.Models;
 using Battleships.Models.ConcreteCreator;
+using Battleships.Models.Strategy;
 
 namespace Battleships
 {
@@ -25,6 +26,7 @@ namespace Battleships
         List<int> selectedPlayerPos;
 
         ShipFactory ships;
+        IAttackStrategy attackstrategy;
 
         WebSocket position_socket;
         WebSocket response_socket;
@@ -50,7 +52,7 @@ namespace Battleships
         }
         private List<int> generateRandomPos()
         {
-            Random rnd = new Random();
+            Random rnd = new Random(Guid.NewGuid().GetHashCode());
             List<int> positions = new List<int>();
             while (positions.Count != ships.GetShip().ShipSize)
             {
@@ -61,6 +63,11 @@ namespace Battleships
                 }
             }
             return positions;
+        }
+
+        private int getEnemyShipIndex(Button ship)
+        {
+            return enemyPos.IndexOf(ship);
         }
 
         private void markShipColor(List<Button> Pos, List<int> selectedPos)
@@ -91,6 +98,10 @@ namespace Battleships
 
         }
 
+        private void RemoveShipFromAttackTable(Button Ship)
+        {
+            attackPos.Remove(Ship);
+        }
         private void RemoveAttackOption(string option)
         {
             attack_options.Items.Remove(option);
@@ -123,12 +134,18 @@ namespace Battleships
             {
                 case 1:
                     ships = new ShipSmallFactory(4);
+                    attackstrategy = new BombAttackStrategy();
+                    special_ability_label.Text = attackstrategy.Name;
                     break;
                 case 2:
                     ships = new ShipMediumFactory(5);
+                    attackstrategy = new DynamiteAttackStrategy();
+                    special_ability_label.Text = attackstrategy.Name;
                     break;
                 case 3:
                     ships = new ShipBigFactory(6);
+                    attackstrategy = new MissileAttackStrategy();
+                    special_ability_label.Text = attackstrategy.Name;
                     break;
             }
         }
@@ -198,13 +215,24 @@ namespace Battleships
             if (sailor.UID != uid)//Nuo cia*
             {
                 Button attackedShip = FindShipByIndex(playerPos, ship_index);
-                MarkShip(attackedShip, hit_status);
+                MarkShip(attackedShip, hit_status);           
             }
             else //Iki cia
             if (sailor.UID == uid)
             {
                 Button attackedShip = FindShipByIndex(enemyPos, ship_index);
                 MarkShip(attackedShip, hit_status);
+                RemoveShipFromAttackTable(attackedShip);
+            }
+        }
+
+        public void SpecialAttack()
+        {
+            List<Button> attackships = attackstrategy.GetAttackingShips(attackPos);
+            for(int i = 0;i<attackships.Count;i++)
+            {
+                int index = enemyPos.IndexOf(attackships[i]);
+                position_socket.Send($"{index}:{user_id}");
             }
         }
 
@@ -227,6 +255,19 @@ namespace Battleships
                 Application.Exit();
             }
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void special_ability_btn_Click(object sender, EventArgs e)
+        {
+            SpecialAttack();
+            special_ability_btn.Hide();
+            special_ability_label.Hide();
+           
         }
     }
 }

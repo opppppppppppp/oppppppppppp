@@ -94,6 +94,8 @@ namespace Battleships
             this.score_label = new System.Windows.Forms.Label();
             this.score_value = new System.Windows.Forms.Label();
             this.score_val = new System.Windows.Forms.Label();
+            this.special_ability_label = new System.Windows.Forms.Label();
+            this.special_ability_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // w1
@@ -716,12 +718,38 @@ namespace Battleships
             this.score_val.TabIndex = 84;
             this.score_val.Text = "20";
             // 
+            // special_ability_label
+            // 
+            this.special_ability_label.AutoSize = true;
+            this.special_ability_label.BackColor = System.Drawing.Color.Transparent;
+            this.special_ability_label.ForeColor = System.Drawing.Color.White;
+            this.special_ability_label.Location = new System.Drawing.Point(10, 60);
+            this.special_ability_label.Name = "special_ability_label";
+            this.special_ability_label.Size = new System.Drawing.Size(155, 26);
+            this.special_ability_label.TabIndex = 85;
+            this.special_ability_label.Text = "Special Ability:";
+            this.special_ability_label.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // special_ability_btn
+            // 
+            this.special_ability_btn.BackColor = System.Drawing.Color.Coral;
+            this.special_ability_btn.ForeColor = System.Drawing.Color.White;
+            this.special_ability_btn.Location = new System.Drawing.Point(15, 89);
+            this.special_ability_btn.Name = "special_ability_btn";
+            this.special_ability_btn.Size = new System.Drawing.Size(98, 40);
+            this.special_ability_btn.TabIndex = 86;
+            this.special_ability_btn.Text = "USE";
+            this.special_ability_btn.UseVisualStyleBackColor = false;
+            this.special_ability_btn.Click += new System.EventHandler(this.special_ability_btn_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.special_ability_btn);
+            this.Controls.Add(this.special_ability_label);
             this.Controls.Add(this.score_val);
             this.Controls.Add(this.score_value);
             this.Controls.Add(this.score_label);
@@ -861,5 +889,7 @@ namespace Battleships
         private System.Windows.Forms.Label score_label;
         private System.Windows.Forms.Label score_value;
         private System.Windows.Forms.Label score_val;
+        private System.Windows.Forms.Label special_ability_label;
+        private System.Windows.Forms.Button special_ability_btn;
     }
 }
