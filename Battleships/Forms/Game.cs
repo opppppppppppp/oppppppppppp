@@ -73,12 +73,7 @@ namespace Battleships
         private void LevelChecker()
         {
             switch (currentLevel)
-            {
-                /// builder:
-                ///     level builder
-                ///         -level name
-                ///         -number of ships
-                ///         
+            {        
                 case 1:
                     this.InitLevel(new LevelOneBuilder());
                     break;
@@ -89,7 +84,6 @@ namespace Battleships
                     this.InitLevel(new LevelThreeBuilder());
                     break;
             }
-
 
         }
 
