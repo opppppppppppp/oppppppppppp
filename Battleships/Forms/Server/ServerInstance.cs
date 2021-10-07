@@ -8,12 +8,11 @@ using System.Diagnostics;
 
 namespace Battleships.Forms
 {
-    class ServerInstance
+    public sealed class ServerInstance
     {
         private static ServerInstance serverInstance = null;
 
         private WebSocketServer webSocketServer = null;
-
         private ServerInstance()
         {
             webSocketServer = new WebSocketServer($"ws://{Constants.ip_address}");

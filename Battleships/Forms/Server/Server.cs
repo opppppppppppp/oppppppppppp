@@ -15,7 +15,7 @@ using WebSocketSharp.Server;
 
 namespace Battleships.Forms
 {
-    class Server
+    public class Server
     {
         public static int connectedUsers = 0;
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models
 {
-    abstract class Ship
+    public abstract class Ship
     {
         public abstract string ShipType { get;}
         public abstract int ShipSize { get; set; }

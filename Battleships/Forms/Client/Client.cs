@@ -11,12 +11,11 @@ using WebSocketSharp;
 
 namespace Battleships.Forms
 {
-    class Client
+    public class Client
     {
         public static Game game;
         public static WebSocket ws;
         static string ip_addr;
-        private static Random random = new Random();
         static string user_id;
 
         /// <summary>
@@ -140,16 +139,13 @@ namespace Battleships.Forms
             game.Completed(uid);
         }
 
-
         /// <summary>
         /// Metodas skirtas sugeneruoti UID
         /// </summary>
         /// <returns>Grąžinamas sugeneruotas string</returns>
         public static string GenerateUserID()
         {
-            const string chars = "qwertyuiopasdfghjklzxcvbnm,./']ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            return new string(Enumerable.Repeat(chars, 12)
-              .Select(s => s[random.Next(s.Length)]).ToArray());
+            return Guid.NewGuid().ToString();
         }
     }
 }

@@ -86,8 +86,15 @@
     <Compile Include="Forms\WaitRoom.Designer.cs">
       <DependentUpon>WaitRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="LevelBuilder\ILevelBuilder.cs" />
+    <Compile Include="LevelBuilder\Level.cs" />
+    <Compile Include="LevelBuilder\LevelCreator.cs" />
+    <Compile Include="LevelBuilder\LevelOneBuilder.cs" />
+    <Compile Include="LevelBuilder\LevelThreeBuilder.cs" />
+    <Compile Include="LevelBuilder\LevelTwoBuilder.cs" />
     <Compile Include="Models\ConcreteCreator\ShipBigFactory.cs" />
     <Compile Include="Models\ConcreteCreator\ShipMediumFactory.cs" />
+    <Compile Include="Models\GameLogic.cs" />
     <Compile Include="Models\Sailor.cs" />
     <Compile Include="Models\Ship.cs" />
     <Compile Include="Models\ConcreteProduct\ShipBig.cs" />
@@ -95,6 +102,10 @@
     <Compile Include="Models\ConcreteProduct\ShipMedium.cs" />
     <Compile Include="Models\ConcreteProduct\ShipSmall.cs" />
     <Compile Include="Models\ConcreteCreator\ShipSmallFactory.cs" />
+    <Compile Include="Models\Strategy\DynamiteAttackStrategy.cs" />
+    <Compile Include="Models\Strategy\MissileAttackStrategy.cs" />
+    <Compile Include="Models\Strategy\IAttackStrategy.cs" />
+    <Compile Include="Models\Strategy\BombAttackStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\Server\Server.cs" />
@@ -136,6 +147,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Observer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
