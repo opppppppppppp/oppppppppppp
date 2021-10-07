@@ -99,31 +99,6 @@ namespace Battleships
             if (playerScore >= totalShips)
                 complete_socket.Send(user_id);
         }
-
-        /*private void RestartGame()
-        {
-            LevelChecker();
-            GameObject.AttackPos = GameObject.EnemyPos;
-
-            for (int i = 0; i < GameObject.PlayerPos.Count; i++)
-            {
-                GameObject.PlayerPos[i].BackColor = Color.White;
-                GameObject.EnemyPos[i].BackColor = Color.White;
-
-                GameObject.PlayerPos[i].Tag = null;
-                GameObject.EnemyPos[i].Tag = null;
-            }
-            playerScore = 0;
-            level_value.Text = currentLevel.ToString();
-
-            GameObject.SelectedPlayerPos = generateRandomPos();
-
-            GameObject.MarkShipColor(playerPos, selectedPlayerPos);
-            GameObject.MarkShipTag(playerPos, selectedPlayerPos);
-            GameObject.AddAttackOptions(attackPos);
-            UpdateScore();
-        }*/
-
         private void Attack_btn_Click(object sender, EventArgs e)
         {
             int index = attack_options.SelectedIndex;

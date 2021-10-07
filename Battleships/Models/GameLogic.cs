@@ -102,20 +102,20 @@ namespace Battleships.Models
         {   
             AttackPos = EnemyPos;
 
-            for (int i = 0; i < PlayerPos.Count; i++)
-            {
-                PlayerPos[i].BackColor = Color.White;
-                EnemyPos[i].BackColor = Color.White;
-
-                PlayerPos[i].Tag = null;
-                EnemyPos[i].Tag = null;
-            }
+            PlayerPos.ForEach(p => ResetShips(p));
+            EnemyPos.ForEach(p => ResetShips(p));
             playerScore = 0;
 
             SelectedPlayerPos = generateRandomPos();
 
             MarkShipColor(PlayerPos, SelectedPlayerPos);
             MarkShipTag(PlayerPos, SelectedPlayerPos);
+        }
+
+        private void ResetShips(Button ShipPos)
+        {
+            ShipPos.BackColor = Color.White;
+            ShipPos.Tag = null;
         }
 
         public void IncreaseScore()
