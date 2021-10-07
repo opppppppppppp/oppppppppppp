@@ -7,6 +7,7 @@ using Battleships.Forms;
 using Battleships.Models;
 using Battleships.Models.ConcreteCreator;
 using Battleships.Models.Strategy;
+using Battleships.LevelBuilder;
 
 namespace Battleships
 {
@@ -14,9 +15,10 @@ namespace Battleships
     {
         private GameLogic GameObject;
 
-        ShipFactory ships;
-        IAttackStrategy attackstrategy;
-
+        //ShipFactory ships;
+        //IAttackStrategy attackstrategy;
+     
+        Level Level;
         WebSocket position_socket;
         WebSocket response_socket;
         WebSocket complete_socket;
@@ -48,7 +50,7 @@ namespace Battleships
             var PlayerPos = new List<Button> { w1, w2, w3, w4, w5, x1, x2, x3, x4, x5, y1, y2, y3, y4, y5, z1, z2, z3, z4, z5, f1, f2, f3, f4, f5 };
             var EnemyPos = new List<Button> { a1, a2, a3, a4, a5, b1, b2, b3, b4, b5, c1, c2, c3, c4, c5, d1, d2, d3, d4, d5, e1, e2, e3, e4, e5 };
             LevelChecker();
-            GameObject = new GameLogic(PlayerPos, EnemyPos, ships);
+            GameObject = new GameLogic(PlayerPos, EnemyPos, Level.ShipFactory);
             AddAttackOptions(GameObject.AttackPos);
             UpdateScore();
             LevelChecker();
@@ -70,25 +72,38 @@ namespace Battleships
         }
         private void LevelChecker()
         {
-            switch(currentLevel)
+            switch (currentLevel)
             {
+                /// builder:
+                ///     level builder
+                ///         -level name
+                ///         -number of ships
+                ///         
                 case 1:
-                    ships = new ShipSmallFactory(4);
-                    attackstrategy = new BombAttackStrategy();
-                    special_ability_label.Text = attackstrategy.Name;
+                    this.InitLevel(new LevelOneBuilder());
                     break;
                 case 2:
-                    ships = new ShipMediumFactory(5);
-                    attackstrategy = new DynamiteAttackStrategy();
-                    special_ability_label.Text = attackstrategy.Name;
+                    this.InitLevel(new LevelTwoBuilder());
                     break;
                 case 3:
-                    ships = new ShipBigFactory(6);
-                    attackstrategy = new MissileAttackStrategy();
-                    special_ability_label.Text = attackstrategy.Name;
+                    this.InitLevel(new LevelThreeBuilder());
                     break;
             }
+
+
         }
+
+        private void InitLevel(ILevelBuilder levelBuilder)
+        {
+            LevelCreator  LevelCreator = new LevelCreator(levelBuilder);
+            LevelCreator.CreateLevel();
+            Level = LevelCreator.GetLevel();
+            special_ability_label.Text = Level.Strategy.Name;
+        }
+
+
+
+
         private void UpdateScore()
         {
             score_val.Text = GameObject.Score.ToString();
@@ -135,7 +150,7 @@ namespace Battleships
 
         public void SpecialAttack()
         {
-            List<Button> attackships = attackstrategy.GetAttackingShips(GameObject.AttackPos);
+            List<Button> attackships = Level.Strategy.GetAttackingShips(GameObject.AttackPos);
             for(int i = 0;i<attackships.Count;i++)
             {
                 int index = GameObject.EnemyPos.IndexOf(attackships[i]);

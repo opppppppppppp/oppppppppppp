@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Battleships.Models.Strategy
 {
-    interface IAttackStrategy
+    public interface IAttackStrategy
     {
         string Name { get; }
         int shipCount { get;}

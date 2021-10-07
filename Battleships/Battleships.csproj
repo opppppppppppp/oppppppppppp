@@ -86,6 +86,12 @@
     <Compile Include="Forms\WaitRoom.Designer.cs">
       <DependentUpon>WaitRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="LevelBuilder\ILevelBuilder.cs" />
+    <Compile Include="LevelBuilder\Level.cs" />
+    <Compile Include="LevelBuilder\LevelCreator.cs" />
+    <Compile Include="LevelBuilder\LevelOneBuilder.cs" />
+    <Compile Include="LevelBuilder\LevelThreeBuilder.cs" />
+    <Compile Include="LevelBuilder\LevelTwoBuilder.cs" />
     <Compile Include="Models\ConcreteCreator\ShipBigFactory.cs" />
     <Compile Include="Models\ConcreteCreator\ShipMediumFactory.cs" />
     <Compile Include="Models\GameLogic.cs" />
