@@ -299,7 +299,7 @@ namespace Battleships
             this.attack_btn.TabIndex = 39;
             this.attack_btn.Text = "Attack";
             this.attack_btn.UseVisualStyleBackColor = false;
-            this.attack_btn.Click += new System.EventHandler(this.attack_btn_Click);
+            this.attack_btn.Click += new System.EventHandler(this.Attack_btn_Click);
             // 
             // surrender_btn
             // 

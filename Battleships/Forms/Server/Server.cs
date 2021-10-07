@@ -15,7 +15,7 @@ using WebSocketSharp.Server;
 
 namespace Battleships.Forms
 {
-    class Server
+    public class Server
     {
         public static int connectedUsers = 0;
 
@@ -62,7 +62,6 @@ namespace Battleships.Forms
                 Debug.WriteLine($"Response: {e.Data}");
             }
         }
-
 
         /// <summary>
         /// Complete Klasė, paveldinti WebSocketBehavior

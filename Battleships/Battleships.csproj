@@ -88,6 +88,7 @@
     </Compile>
     <Compile Include="Models\ConcreteCreator\ShipBigFactory.cs" />
     <Compile Include="Models\ConcreteCreator\ShipMediumFactory.cs" />
+    <Compile Include="Models\GameLogic.cs" />
     <Compile Include="Models\Sailor.cs" />
     <Compile Include="Models\Ship.cs" />
     <Compile Include="Models\ConcreteProduct\ShipBig.cs" />
@@ -141,6 +142,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\Observer\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

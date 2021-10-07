@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace Battleships.Forms
 {
-    class ServerInstance
+    public sealed class ServerInstance
     {
         private static ServerInstance serverInstance = null;
 
