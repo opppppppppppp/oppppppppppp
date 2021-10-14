@@ -8,24 +8,22 @@ using System.Threading.Tasks;
 
 namespace Battleships.LevelBuilder
 {
-    class LevelThreeBuilder : ILevelBuilder
+    class LevelTwoBuilder : ILevelBuilder
     {
         Level level = new Level();
-
         public void SetTitle()
         {
-            level.Title = "Level 3 - TERRORISTS WIN";
+            level.Title = "Level 2 - Cariebien of the Pirates";
         }
-
         public void SetNumberOfShips()
         {
-            level.NumberOfShips = 6;
-            level.ShipFactory = new ShipBigFactory(6);
+            level.NumberOfShips = 5;
+            level.ShipFactory = new ShipMediumFactory(5);
         }
 
         public void SetStrategy()
         {
-            level.Strategy = new MissileAttackStrategy();
+            level.Strategy = new DynamiteAttackStrategy();
         }
 
 

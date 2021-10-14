@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Battleships.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,9 @@ namespace Battleships.Forms
         public Main()
         {
             InitializeComponent();
+            ShipField field = new ShipField(3, table);
+            field.MarkShip(5);
+            
         }
 
         private static void ShowExceptionDetails(Exception exception)
@@ -42,6 +46,16 @@ namespace Battleships.Forms
             this.Hide();
             var joinroom = new JoinRoom();
             joinroom.Show();
+        }
+
+        private void table_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

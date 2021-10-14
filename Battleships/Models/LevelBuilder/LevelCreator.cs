@@ -15,18 +15,15 @@ namespace Battleships.LevelBuilder
         {
             _levelBuilder = levelBuilder;
         }
-
         public void CreateLevel()
         {
                     _levelBuilder.SetTitle();
                     _levelBuilder.SetNumberOfShips();
                     _levelBuilder.SetStrategy();
         }
-
         public Level GetLevel()
         {
             return _levelBuilder.GetLevel();
         }
-
     }
 }

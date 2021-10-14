@@ -14,9 +14,6 @@ namespace Battleships
     public partial class Game : Form
     {
         private GameLogic GameObject;
-
-        //ShipFactory ships;
-        //IAttackStrategy attackstrategy;
      
         Level Level;
         WebSocket position_socket;

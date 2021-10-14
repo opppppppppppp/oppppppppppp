@@ -11,7 +11,6 @@ namespace Battleships.LevelBuilder
     public class Level
     {
         public int NumberOfShips { get; set; }
-
         public ShipFactory ShipFactory { get; set; }
         public string Title { get; set; }
         public IAttackStrategy Strategy { get; set; }

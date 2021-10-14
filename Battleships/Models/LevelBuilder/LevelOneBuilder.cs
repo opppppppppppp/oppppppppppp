@@ -11,23 +11,19 @@ namespace Battleships.LevelBuilder
     public class LevelOneBuilder : ILevelBuilder 
     {
         Level level = new Level();
-
         public void SetTitle()
         {
             level.Title = "Level 1 - Paradise of hell";
         }
-
         public void SetNumberOfShips()
         {
             level.NumberOfShips = 4;
             level.ShipFactory = new ShipSmallFactory(4);
         }
-
         public void SetStrategy()
         {
             level.Strategy = new BombAttackStrategy();
         }
-
 
         public Level GetLevel()
         {
