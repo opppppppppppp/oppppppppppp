@@ -15,13 +15,16 @@ namespace Battleships.Forms
 {
     public partial class Main : Form
     {
+        private ShipField field;
         public Main()
         {
             InitializeComponent();
-            ShipField field = new ShipField(3, table);
-            field.MarkShip(5);
-            
+            this.field = new ShipField(3, table);
+           
+            //table = field.MarkShip(5);
         }
+
+       
 
         private static void ShowExceptionDetails(Exception exception)
         {
@@ -55,7 +58,9 @@ namespace Battleships.Forms
 
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int row = field.GetRowAndColumn(5)[0];
+            int column = field.GetRowAndColumn(5)[1];
+            table.Rows[row].Cells[column].Style.BackColor = Color.Red;
         }
     }
 }

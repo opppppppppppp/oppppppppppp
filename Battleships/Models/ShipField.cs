@@ -82,11 +82,29 @@ namespace Battleships.Models
                 index++;
             }
         }
-        public void MarkShip(int index)
+        public int GetRow(int index)
         {
-            int row = index / FieldSize;
-            int column = index - (row * FieldSize) - 1;
-            table.Rows[row].Cells[column].Style.BackColor = Color.Red;
+            return index / FieldSize;
         }
+
+        public int GetColumn(int index, int row)
+        {
+            return index - (row * FieldSize) - 1;
+        }
+
+        public int[] GetRowAndColumn(int index)
+        {
+            int row = GetRow(index);
+            int[] RowAndColumn = { row, GetColumn(index, row) };
+            return RowAndColumn;
+        }
+
+        //public DataGridView MarkShip(int index)
+        //{
+        //    int row = index / FieldSize;
+        //    int column = index - (row * FieldSize) - 1;
+        //    table.Rows[row].Cells[column].Style.BackColor = Color.Red;
+        //    return table;
+        //}
     }
 }
