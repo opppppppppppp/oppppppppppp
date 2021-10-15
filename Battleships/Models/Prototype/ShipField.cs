@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Battleships.Models.Prototype;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -9,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Battleships.Models
 {
-    public class ShipField
+    public class ShipField : ShipFieldPrototype
     {
         private DataTable tabledata { get; set; }
         private DataGridView table { get; set; }
@@ -27,9 +28,15 @@ namespace Battleships.Models
             table.DataSource = tabledata;
         }
 
-        public DataGridView GetTable()
+        public override ShipFieldPrototype Clone()
         {
-            return table;
+            Console.WriteLine(
+                "Cloned ShipField");
+            return this.MemberwiseClone() as ShipFieldPrototype;
+        }
+        public DataTable GetTableData()
+        {
+            return tabledata;
         }
         public DataTable GenerateTable()
         {
@@ -39,7 +46,10 @@ namespace Battleships.Models
             AddValues();
             return tabledata;
         }
-
+        public void SetTable(DataGridView table)
+        {
+            this.table = table;
+        }
         public List<string> GetPositions()
         {
             return positions;

@@ -151,6 +151,5 @@ namespace Battleships.Models
             Score++;
         }
 
-
     }
 }

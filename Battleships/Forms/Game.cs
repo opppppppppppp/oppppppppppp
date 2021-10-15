@@ -46,6 +46,9 @@ namespace Battleships
         private void InitializeGameLogic()
         {
             this.player_field = new ShipField(5, player_table);
+            this.enemy_field = player_field.Clone() as ShipField;
+            enemy_table.DataSource = this.enemy_field.GetTableData();
+            //this.enemy_field.SetTable(enemy_table);
             this.enemy_field = new ShipField(5, enemy_table);
             //var PlayerPos = new List<Button> { w1, w2, w3, w4, w5, x1, x2, x3, x4, x5, y1, y2, y3, y4, y5, z1, z2, z3, z4, z5, f1, f2, f3, f4, f5 };
             //var EnemyPos = new List<Button> { a1, a2, a3, a4, a5, b1, b2, b3, b4, b5, c1, c2, c3, c4, c5, d1, d2, d3, d4, d5, e1, e2, e3, e4, e5 };

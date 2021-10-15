@@ -11,6 +11,6 @@ namespace Battleships.Models.Strategy
     {
         string Name { get; }
         int shipCount { get;}
-        List<Button> GetAttackingShips(List<Button> attackships);
+        List<string> GetAttackingShips(List<string> attackships);
     }
 }

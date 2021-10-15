@@ -748,6 +748,8 @@ namespace Battleships
             // 
             // player_table
             // 
+            this.player_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.player_table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.player_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.player_table.Location = new System.Drawing.Point(164, 216);
             this.player_table.Name = "player_table";
@@ -756,6 +758,8 @@ namespace Battleships
             // 
             // enemy_table
             // 
+            this.enemy_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.enemy_table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.enemy_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.enemy_table.Location = new System.Drawing.Point(747, 216);
             this.enemy_table.Name = "enemy_table";
