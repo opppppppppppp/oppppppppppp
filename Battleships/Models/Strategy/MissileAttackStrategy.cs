@@ -10,9 +10,7 @@ namespace Battleships.Models.Strategy
     class MissileAttackStrategy : IAttackStrategy
     {
         public string Name => nameof(MissileAttackStrategy);
-
         public int shipCount => 1;
-
         public List<string> GetAttackingShips(List<string> attackships)
         {
             Random rnd = new Random(Guid.NewGuid().GetHashCode());

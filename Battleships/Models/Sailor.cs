@@ -9,7 +9,6 @@ namespace Battleships.Models
     public class Sailor
     {
         public string UID { get; set; }
-
         public Sailor(string uid)
         {
             UID = uid;

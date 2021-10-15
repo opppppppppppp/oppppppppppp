@@ -20,6 +20,7 @@ namespace Battleships.LevelBuilder
                     _levelBuilder.SetTitle();
                     _levelBuilder.SetNumberOfShips();
                     _levelBuilder.SetStrategy();
+                    _levelBuilder.IncreasedStrategy();
         }
         public Level GetLevel()
         {

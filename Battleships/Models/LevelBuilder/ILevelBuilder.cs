@@ -11,9 +11,8 @@ namespace Battleships.LevelBuilder
     {
         void SetTitle();
         void SetNumberOfShips();
-
         void SetStrategy();
-
+        void IncreasedStrategy();
         Level GetLevel();
     }
 }

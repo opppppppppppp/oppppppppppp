@@ -1,4 +1,5 @@
 ﻿using Battleships.Models.ConcreteCreator;
+using Battleships.Models.Decorator;
 using Battleships.Models.Strategy;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,10 @@ namespace Battleships.LevelBuilder
             level.Strategy = new DynamiteAttackStrategy();
         }
 
+        public void IncreasedStrategy()
+        {
+            level.IncreasedStrategy = new UltraAttackIncrease(level.Strategy);
+        }
 
         public Level GetLevel()
         {

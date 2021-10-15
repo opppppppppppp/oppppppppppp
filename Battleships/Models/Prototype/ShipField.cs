@@ -16,10 +16,12 @@ namespace Battleships.Models
         private DataGridView table { get; set; }
         public List<string> positions { get; set; }
         public int FieldSize { get; set; }
+        public int DestroyedShips { get; set; }
 
         char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
         public ShipField(int size, DataGridView table)
         {
+            DestroyedShips = 0;
             FieldSize = size;
             positions = new List<string>();
             tabledata = new DataTable();
@@ -65,7 +67,6 @@ namespace Battleships.Models
                 tabledata.Columns.Add((i+1).ToString());
             }
         }
-
         private void AddRows()
         {
             for (int i = 0; i < FieldSize; i++)
@@ -131,6 +132,7 @@ namespace Battleships.Models
             int row = GetRow(index);
             int column = GetColumn(index);
             table.Rows[row].Cells[column].Value = "X";
+            DestroyedShips++;
         }
 
         public void MarkShip(int index)

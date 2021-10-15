@@ -10,7 +10,6 @@ namespace Battleships.Models.Strategy
     class BombAttackStrategy : IAttackStrategy
     {
         public string Name => nameof(BombAttackStrategy);
-
         public int shipCount => 3;
         public List<string> GetAttackingShips(List<string> attackships)
         {

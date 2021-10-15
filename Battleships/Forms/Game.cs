@@ -22,8 +22,6 @@ namespace Battleships
         WebSocket response_socket;
         WebSocket complete_socket;
 
-        int totalShips = 4;
-        int playerScore = 0;
         int currentLevel = 2;
         static string user_id;
         Sailor sailor;
@@ -48,12 +46,8 @@ namespace Battleships
             this.player_field = new ShipField(5, player_table);
             this.enemy_field = player_field.Clone() as ShipField;
             enemy_table.DataSource = this.enemy_field.GetTableData();
-            //this.enemy_field.SetTable(enemy_table);
-            this.enemy_field = new ShipField(5, enemy_table);
-            //var PlayerPos = new List<Button> { w1, w2, w3, w4, w5, x1, x2, x3, x4, x5, y1, y2, y3, y4, y5, z1, z2, z3, z4, z5, f1, f2, f3, f4, f5 };
-            //var EnemyPos = new List<Button> { a1, a2, a3, a4, a5, b1, b2, b3, b4, b5, c1, c2, c3, c4, c5, d1, d2, d3, d4, d5, e1, e2, e3, e4, e5 };
+ 
             LevelChecker();
-            //GameObject = new GameLogic(PlayerPos, EnemyPos, Level.ShipFactory);
             GameObject = new GameLogic(player_field, enemy_field, Level.ShipFactory);
             AddAttackOptions(player_field.GetPositions());
             UpdateScore();
@@ -103,11 +97,11 @@ namespace Battleships
             score_val.Text = GameObject.Score.ToString();
         }
 
-        private void ScoreChecker()
+        /*private void ScoreChecker()
         {
             if (playerScore >= totalShips)
                 complete_socket.Send(user_id);
-        }
+        }*/
         private void Attack_btn_Click(object sender, EventArgs e)
         {
             int index = attack_options.SelectedIndex;
@@ -127,10 +121,8 @@ namespace Battleships
             {
                 GameObject.MarkLocalShip(ship_index, false);
                 response_socket.Send($"{uid}:{ship_index}:{false}");
-            }
-                
+            }       
         }
-
         public void UpdateHitShips(int ship_index, string uid, bool hit_status)
         {
             if (sailor.UID != uid)//Nuo cia*
@@ -153,12 +145,26 @@ namespace Battleships
 
         public void SpecialAttack()
         {
-            /*List<Button> attackships = Level.Strategy.GetAttackingShips(GameObject.AttackPos);
+            List<string> attackships = GetCorrectStrategy();        
             for(int i = 0;i<attackships.Count;i++)
             {
-                int index = GameObject.EnemyPos.IndexOf(attackships[i]);
+                int index = GameObject.EnemyPos.GetShipIndex(attackships[i]);
                 position_socket.Send($"{index}:{user_id}");
-            }*/
+            }
+        }
+
+        public List<string> GetCorrectStrategy()
+        {
+            List<string> attackships = Level.Strategy.GetAttackingShips(GameObject.AttackPos.positions);
+            if (GameObject.PlayerPos.DestroyedShips > 2)
+            {
+                attackships = Level.Strategy.GetAttackingShips(GameObject.AttackPos.positions);
+            }
+            else
+            {
+                attackships = Level.IncreasedStrategy.GetAttackingShips(GameObject.AttackPos.positions);
+            }
+            return attackships;
         }
         public void Completed(string uid)
         {

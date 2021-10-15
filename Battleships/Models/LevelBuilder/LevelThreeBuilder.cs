@@ -1,4 +1,5 @@
 ﻿using Battleships.Models.ConcreteCreator;
+using Battleships.Models.Decorator;
 using Battleships.Models.Strategy;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace Battleships.LevelBuilder
         Level level = new Level();
         public void SetTitle()
         {
-            level.Title = "Level 3 - TERRORISTS WIN";
+            level.Title = "Level 3 - Island of the Terror";
         }
         public void SetNumberOfShips()
         {
@@ -23,6 +24,11 @@ namespace Battleships.LevelBuilder
         public void SetStrategy()
         {
             level.Strategy = new MissileAttackStrategy();
+        }
+
+        public void IncreasedStrategy()
+        {
+            level.IncreasedStrategy = new BasicAttackIncrease(level.Strategy);
         }
         public Level GetLevel()
         {

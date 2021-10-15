@@ -14,6 +14,7 @@ namespace Battleships.LevelBuilder
         public ShipFactory ShipFactory { get; set; }
         public string Title { get; set; }
         public IAttackStrategy Strategy { get; set; }
+        public IAttackStrategy IncreasedStrategy { get; set; }
 
     }
 }

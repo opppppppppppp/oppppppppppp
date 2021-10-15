@@ -86,23 +86,26 @@
     <Compile Include="Forms\WaitRoom.Designer.cs">
       <DependentUpon>WaitRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Decorator\AttackIncreaseDecorator.cs" />
+    <Compile Include="Models\Decorator\BasicAttackIncrease.cs" />
+    <Compile Include="Models\Decorator\UltraAttackIncrease.cs" />
     <Compile Include="Models\LevelBuilder\ILevelBuilder.cs" />
     <Compile Include="Models\LevelBuilder\Level.cs" />
     <Compile Include="Models\LevelBuilder\LevelCreator.cs" />
     <Compile Include="Models\LevelBuilder\LevelOneBuilder.cs" />
     <Compile Include="Models\LevelBuilder\LevelThreeBuilder.cs" />
     <Compile Include="Models\LevelBuilder\LevelTwoBuilder.cs" />
-    <Compile Include="Models\ConcreteCreator\ShipBigFactory.cs" />
-    <Compile Include="Models\ConcreteCreator\ShipMediumFactory.cs" />
+    <Compile Include="Models\Factory Method\ConcreteCreator\ShipBigFactory.cs" />
+    <Compile Include="Models\Factory Method\ConcreteCreator\ShipMediumFactory.cs" />
     <Compile Include="Models\GameLogic.cs" />
     <Compile Include="Models\Prototype\ShipFieldPrototype.cs" />
     <Compile Include="Models\Sailor.cs" />
     <Compile Include="Models\Ship.cs" />
-    <Compile Include="Models\ConcreteProduct\ShipBig.cs" />
-    <Compile Include="Models\Creator\ShipFactory.cs" />
-    <Compile Include="Models\ConcreteProduct\ShipMedium.cs" />
-    <Compile Include="Models\ConcreteProduct\ShipSmall.cs" />
-    <Compile Include="Models\ConcreteCreator\ShipSmallFactory.cs" />
+    <Compile Include="Models\Factory Method\ConcreteProduct\ShipBig.cs" />
+    <Compile Include="Models\Factory Method\Creator\ShipFactory.cs" />
+    <Compile Include="Models\Factory Method\ConcreteProduct\ShipMedium.cs" />
+    <Compile Include="Models\Factory Method\ConcreteProduct\ShipSmall.cs" />
+    <Compile Include="Models\Factory Method\ConcreteCreator\ShipSmallFactory.cs" />
     <Compile Include="Models\Strategy\DynamiteAttackStrategy.cs" />
     <Compile Include="Models\Strategy\MissileAttackStrategy.cs" />
     <Compile Include="Models\Strategy\IAttackStrategy.cs" />
