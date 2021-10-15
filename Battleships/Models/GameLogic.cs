@@ -10,9 +10,12 @@ namespace Battleships.Models
 {
     public class GameLogic
     {
-        public List<Button> PlayerPos { get; set; }
-        public List<Button> EnemyPos { get; set; }
-        public List<Button> AttackPos { get; set; }
+        //public List<Button> PlayerPos { get; set; }
+        //public List<Button> EnemyPos { get; set; }
+        //public List<Button> AttackPos { get; set; }
+        public ShipField PlayerPos { get; set; }
+        public ShipField EnemyPos { get; set; }
+        public ShipField AttackPos { get; set; }
         public List<int> SelectedPlayerPos { get; set; }
         public ShipFactory Ships { get; set; }
 
@@ -21,7 +24,7 @@ namespace Battleships.Models
         public int Score = 0;
 
         public GameLogic() { }
-        public GameLogic(List<Button> playerPositions, List<Button> enemyPositions, ShipFactory ships)
+        public GameLogic(ShipField playerPositions, ShipField enemyPositions, ShipFactory ships)
         {
             PlayerPos = playerPositions;
             EnemyPos = enemyPositions;
@@ -36,7 +39,7 @@ namespace Battleships.Models
             List<int> positions = new List<int>();
             while (positions.Count != Ships.GetShip().ShipSize)
             {
-                int number = rnd.Next(1, 24);
+                int number = rnd.Next(1, PlayerPos.GetTableSize() - 1);
                 if (!positions.Contains(number))
                 {
                     positions.Add(number);
@@ -45,37 +48,44 @@ namespace Battleships.Models
             return positions;
         }
 
-        public int GetEnemyShipIndex(Button ship)
+
+        /*public int GetEnemyShipIndex(string ship)
         {
-            return EnemyPos.IndexOf(ship);
+            return EnemyPos.GetShipIndex(ship);
         }
 
-        public void MarkShipColor(List<Button> Pos, List<int> selectedPos)
+        public void GetEnemyShip(int index)
+        {
+            return Ene
+        }*/
+
+        public void MarkSelectedShips(ShipField Pos, List<int> selectedPos)
         {
             for (int i = 0; i < selectedPos.Count; i++)
             {
                 int index = selectedPos[i];
-                Pos[index].BackColor = Color.Green;
+                Pos.MarkShip(index);
             }
         }
 
-        public void MarkShipTag(List<Button> Pos, List<int> selectedPos)
+        /*public void MarkShipTag(List<string> Pos, List<int> selectedPos)
         {
             for (int i = 0; i < selectedPos.Count; i++)
             {
                 int index = selectedPos[i];
                 Pos[index].Tag = "Ship";
             }
-        }
+        }*/
 
-        public void MarkShip(Button Ship, bool hit_status)
+        public void MarkLocalShip(int ship_index, bool hit_status)
         {
-            Ship.Invoke((MethodInvoker)(() =>
-            {
+            //Ship.Invoke((MethodInvoker)(() =>
+            //{
                 if (hit_status)
                 {
-                    Ship.BackColor = Color.Red;
-                    Ship.Text = "X";
+                    PlayerPos.MarkDestroyedShip(ship_index);
+                    //Ship.BackColor = Color.Red;
+                    //Ship.Text = "X";
                     MessageBox.Show("You've hit enemy ship!");
                     playerScore++;
                     IncreaseScore();
@@ -83,41 +93,59 @@ namespace Battleships.Models
                 }
                 else
                 {
-                    Ship.BackColor = Color.Red;
+                    PlayerPos.MarkHitShip(ship_index);
                 }
-            }));
+            //}));
+        }
+
+        public void MarkEnemyShip(int ship_index, bool hit_status)
+        {
+            //Ship.Invoke((MethodInvoker)(() =>
+            //{
+            if (hit_status)
+            {
+                EnemyPos.MarkDestroyedShip(ship_index);
+                //Ship.BackColor = Color.Red;
+                //Ship.Text = "X";
+                MessageBox.Show("You've hit enemy ship!");
+                playerScore++;
+                IncreaseScore();
+                //ScoreChecker();
+            }
+            else
+            {
+                EnemyPos.MarkHitShip(ship_index);
+                //Ship.BackColor = Color.Red;
+            }
+            //}));
         }
 
         public void RemoveShipFromAttackTable(Button Ship)
         {
-            AttackPos.Remove(Ship);
+            //AttackPos.Remove(Ship);
         }
-
         public Button FindShipByIndex(List<Button> positions, int index)
         {
             return positions[index];
         }
-
         public void RestartGame()
         {   
             AttackPos = EnemyPos;
 
-            PlayerPos.ForEach(p => ResetShips(p));
-            EnemyPos.ForEach(p => ResetShips(p));
+            //PlayerPos.ForEach(p => ResetShips(p));
+            //EnemyPos.ForEach(p => ResetShips(p));
             playerScore = 0;
 
             SelectedPlayerPos = generateRandomPos();
 
-            MarkShipColor(PlayerPos, SelectedPlayerPos);
-            MarkShipTag(PlayerPos, SelectedPlayerPos);
+            MarkSelectedShips(PlayerPos, SelectedPlayerPos);
+            //MarkShipTag(PlayerPos, SelectedPlayerPos);
         }
-
         private void ResetShips(Button ShipPos)
         {
-            ShipPos.BackColor = Color.White;
-            ShipPos.Tag = null;
+            //ShipPos.BackColor = Color.White;
+            //ShipPos.Tag = null;
         }
-
         public void IncreaseScore()
         {
             Score++;

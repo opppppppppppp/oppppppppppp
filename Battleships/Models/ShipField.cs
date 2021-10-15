@@ -11,18 +11,18 @@ namespace Battleships.Models
 {
     public class ShipField
     {
-        private static DataTable tabledata { get; set; }
-        private static DataGridView table { get; set; }
-        public static List<string> positions { get; set; }
-        public static int FieldSize { get; set; }
+        private DataTable tabledata { get; set; }
+        private DataGridView table { get; set; }
+        public List<string> positions { get; set; }
+        public int FieldSize { get; set; }
 
         char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-        public ShipField(int size, DataGridView tab)
+        public ShipField(int size, DataGridView table)
         {
             FieldSize = size;
             positions = new List<string>();
             tabledata = new DataTable();
-            table = tab;
+            this.table = table;
             tabledata = GenerateTable();
             table.DataSource = tabledata;
         }
@@ -40,6 +40,14 @@ namespace Battleships.Models
             return tabledata;
         }
 
+        public List<string> GetPositions()
+        {
+            return positions;
+        }
+        public int GetTableSize()
+        {
+            return FieldSize * FieldSize;
+        }
         private void AddColumns()
         {
             for (int i = 0; i < FieldSize; i++)
@@ -86,25 +94,41 @@ namespace Battleships.Models
         {
             return index / FieldSize;
         }
-
-        public int GetColumn(int index, int row)
+        public int GetColumn(int index)
         {
-            return index - (row * FieldSize) - 1;
+            return index - (GetRow(index) * FieldSize);
+        }
+        public int GetShipIndex(string ship)
+        {
+            return positions.IndexOf(ship);
         }
 
-        public int[] GetRowAndColumn(int index)
+        public string GetShipValue(int index)
         {
             int row = GetRow(index);
-            int[] RowAndColumn = { row, GetColumn(index, row) };
-            return RowAndColumn;
+            int column = GetColumn(index);
+            return table.Rows[row].Cells[column].Value.ToString();
+        }
+        public void MarkHitShip(int index)
+        {
+            int row = GetRow(index);
+            int column = GetColumn(index);
+            table.Rows[row].Cells[column].Value = "O";
         }
 
-        //public DataGridView MarkShip(int index)
-        //{
-        //    int row = index / FieldSize;
-        //    int column = index - (row * FieldSize) - 1;
-        //    table.Rows[row].Cells[column].Style.BackColor = Color.Red;
-        //    return table;
-        //}
+        public void MarkDestroyedShip(int index)
+        {
+            int row = GetRow(index);
+            int column = GetColumn(index);
+            table.Rows[row].Cells[column].Value = "X";
+        }
+
+        public void MarkShip(int index)
+        {
+            int row = GetRow(index);
+            int column = GetColumn(index);
+            table.Rows[row].Cells[column].Value = "S";
+        }
+
     }
 }

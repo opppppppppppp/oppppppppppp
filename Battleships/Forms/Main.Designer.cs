@@ -80,7 +80,6 @@ namespace Battleships.Forms
             this.table.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.table.Size = new System.Drawing.Size(356, 208);
             this.table.TabIndex = 5;
-            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             // 
             // Main
             // 

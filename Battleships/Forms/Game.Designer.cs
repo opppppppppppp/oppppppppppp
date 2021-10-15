@@ -96,6 +96,10 @@ namespace Battleships
             this.score_val = new System.Windows.Forms.Label();
             this.special_ability_label = new System.Windows.Forms.Label();
             this.special_ability_btn = new System.Windows.Forms.Button();
+            this.player_table = new System.Windows.Forms.DataGridView();
+            this.enemy_table = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.player_table)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy_table)).BeginInit();
             this.SuspendLayout();
             // 
             // w1
@@ -742,12 +746,30 @@ namespace Battleships
             this.special_ability_btn.UseVisualStyleBackColor = false;
             this.special_ability_btn.Click += new System.EventHandler(this.special_ability_btn_Click);
             // 
+            // player_table
+            // 
+            this.player_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.player_table.Location = new System.Drawing.Point(164, 216);
+            this.player_table.Name = "player_table";
+            this.player_table.Size = new System.Drawing.Size(407, 351);
+            this.player_table.TabIndex = 87;
+            // 
+            // enemy_table
+            // 
+            this.enemy_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.enemy_table.Location = new System.Drawing.Point(747, 216);
+            this.enemy_table.Name = "enemy_table";
+            this.enemy_table.Size = new System.Drawing.Size(407, 351);
+            this.enemy_table.TabIndex = 88;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.enemy_table);
+            this.Controls.Add(this.player_table);
             this.Controls.Add(this.special_ability_btn);
             this.Controls.Add(this.special_ability_label);
             this.Controls.Add(this.score_val);
@@ -818,6 +840,8 @@ namespace Battleships
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Game";
             this.Text = "Game";
+            ((System.ComponentModel.ISupportInitialize)(this.player_table)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy_table)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -891,5 +915,7 @@ namespace Battleships
         private System.Windows.Forms.Label score_val;
         private System.Windows.Forms.Label special_ability_label;
         private System.Windows.Forms.Button special_ability_btn;
+        private System.Windows.Forms.DataGridView player_table;
+        private System.Windows.Forms.DataGridView enemy_table;
     }
 }

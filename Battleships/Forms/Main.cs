@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,14 @@ namespace Battleships.Forms
         public Main()
         {
             InitializeComponent();
-            this.field = new ShipField(3, table);
-           
-            //table = field.MarkShip(5);
+           /* this.field = new ShipField(3, table);
+            Debug.WriteLine(table.Rows[2].Cells[2].Value);
+
+            //table.Rows[2].Cells[2].Value = "X";
+            field.MarkShip(5);
+
+
+            //table = field.MarkShip(5);*/
         }
 
        
@@ -56,11 +62,5 @@ namespace Battleships.Forms
 
         }
 
-        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int row = field.GetRowAndColumn(5)[0];
-            int column = field.GetRowAndColumn(5)[1];
-            table.Rows[row].Cells[column].Style.BackColor = Color.Red;
-        }
     }
 }
