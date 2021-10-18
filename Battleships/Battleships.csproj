@@ -86,6 +86,10 @@
     <Compile Include="Forms\WaitRoom.Designer.cs">
       <DependentUpon>WaitRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Command\SubtractScoreCommand.cs" />
+    <Compile Include="Models\Command\AddScoreCommand.cs" />
+    <Compile Include="Models\Command\IScoreCommand.cs" />
+    <Compile Include="Models\Command\ScoreCalculator.cs" />
     <Compile Include="Models\Decorator\AttackIncreaseDecorator.cs" />
     <Compile Include="Models\Decorator\BasicAttackIncrease.cs" />
     <Compile Include="Models\Decorator\UltraAttackIncrease.cs" />

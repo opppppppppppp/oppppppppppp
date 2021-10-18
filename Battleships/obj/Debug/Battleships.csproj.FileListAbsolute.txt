@@ -88,3 +88,21 @@ C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\bsbsbs\opp
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\bsbsbs\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CopyComplete
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\bsbsbs\oppppppppppp\Battleships\obj\Debug\Battleships.exe
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\bsbsbs\oppppppppppp\Battleships\obj\Debug\Battleships.pdb
+C:\Users\mikal\Desktop\New folder (3)\Battleships\bin\Debug\Battleships.exe.config
+C:\Users\mikal\Desktop\New folder (3)\Battleships\bin\Debug\Battleships.exe
+C:\Users\mikal\Desktop\New folder (3)\Battleships\bin\Debug\Battleships.pdb
+C:\Users\mikal\Desktop\New folder (3)\Battleships\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mikal\Desktop\New folder (3)\Battleships\bin\Debug\websocket-sharp.dll
+C:\Users\mikal\Desktop\New folder (3)\Battleships\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.csprojAssemblyReference.cache
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.Game.resources
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.Forms.JoinRoom.resources
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.Forms.Main.resources
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.Forms.Room.resources
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.Forms.WaitRoom.resources
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.Properties.Resources.resources
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.csproj.GenerateResource.cache
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.csproj.CopyComplete
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.exe
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.pdb

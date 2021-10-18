@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Battleships.Models.Command;
 
 namespace Battleships.Models
 {
@@ -18,9 +19,11 @@ namespace Battleships.Models
 
         public int playerScore = 0;
         public int currentLevel = 1;
-        public int Score = 0;
+        public ScoreCalculator scoreCalculator = new ScoreCalculator();
 
-        public GameLogic() { }
+        public GameLogic()
+        {
+        }
         public GameLogic(ShipField playerPositions, ShipField enemyPositions, ShipFactory ships)
         {
             PlayerPos = playerPositions;
@@ -91,7 +94,7 @@ namespace Battleships.Models
         }
         public void IncreaseScore()
         {
-            Score++;
+            scoreCalculator.ExecuteCommand(new AddScoreCommand(1));
         }
     }
 }
