@@ -26,10 +26,8 @@ namespace Battleships.Forms
         {
             user_id = GenerateUserID();
             ip_addr = ip_address;
-            ws = new WebSocket($"ws://{ip_address}/Connection");
-            ws.OnMessage += OnRoomCreate;
-            ws.Connect();
-            ws.Send("Connected");
+            var wsf = new WebSocketFacade(ip_address, "Connection");
+            ws = wsf.Connect(OnRoomCreate, "Connected");
         }
 
         /// <summary>
@@ -40,9 +38,8 @@ namespace Battleships.Forms
         public static WebSocket Positions(string ip_address)
         {
             ip_addr = ip_address;
-            ws = new WebSocket($"ws://{ip_address}/Positions");
-            ws.OnMessage += OnPosMessage;
-            ws.Connect();
+            var wsf = new WebSocketFacade(ip_address, "Positions");
+            ws = wsf.Connect(OnPosMessage);
             return ws;
         }
         /// <summary>
@@ -53,9 +50,8 @@ namespace Battleships.Forms
         public static WebSocket Response(string ip_address)
         {
             ip_addr = ip_address;
-            ws = new WebSocket($"ws://{ip_address}/Response");
-            ws.OnMessage += OnResponseMessage;
-            ws.Connect();
+            var wsf = new WebSocketFacade(ip_address, "Response");
+            ws = wsf.Connect(OnResponseMessage);
             return ws;
         }
 
@@ -67,9 +63,8 @@ namespace Battleships.Forms
         public static WebSocket Complete(string ip_address)
         {
             ip_addr = ip_address;
-            ws = new WebSocket($"ws://{ip_address}/Complete");
-            ws.OnMessage += OnCompleteMessage;
-            ws.Connect();
+            var wsf = new WebSocketFacade(ip_address, "Complete");
+            ws = wsf.Connect(OnCompleteMessage);
             return ws;
         }
 

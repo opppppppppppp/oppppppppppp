@@ -94,7 +94,7 @@ namespace Battleships
 
         private void UpdateScore()
         {
-            score_val.Text = GameObject.Score.ToString();
+            score_val.Text = GameObject.scoreCalculator.score.ToString();
         }
 
         /*private void ScoreChecker()
