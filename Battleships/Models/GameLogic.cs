@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Battleships.Models.Command;
+using Battleships.Models.Adapter;
 
 namespace Battleships.Models
 {
@@ -30,22 +31,7 @@ namespace Battleships.Models
             EnemyPos = enemyPositions;
             AttackPos = enemyPositions;
             Ships = ships;
-            SelectedPlayerPos = generateRandomPos();
-        }
-
-        private List<int> generateRandomPos()
-        {
-            Random rnd = new Random(Guid.NewGuid().GetHashCode());
-            List<int> positions = new List<int>();
-            while (positions.Count != Ships.GetShip().ShipSize)
-            {
-                int number = rnd.Next(1, PlayerPos.GetTableSize() - 1);
-                if (!positions.Contains(number))
-                {
-                    positions.Add(number);
-                }
-            }
-            return positions;
+            SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
         }
         public void MarkSelectedShips(ShipField Pos, List<int> selectedPos)
         {
@@ -89,7 +75,7 @@ namespace Battleships.Models
         {   
             AttackPos = EnemyPos;
             playerScore = 0;
-            SelectedPlayerPos = generateRandomPos();
+            SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
             MarkSelectedShips(PlayerPos, SelectedPlayerPos);
         }
         public void IncreaseScore()

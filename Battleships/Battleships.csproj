@@ -87,6 +87,11 @@
     <Compile Include="Forms\WaitRoom.Designer.cs">
       <DependentUpon>WaitRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Adapter\IPos.cs" />
+    <Compile Include="Models\Adapter\IPosGenerator.cs" />
+    <Compile Include="Models\Adapter\Pos.cs" />
+    <Compile Include="Models\Adapter\PosAdapter.cs" />
+    <Compile Include="Models\Adapter\RandomPosGenerator.cs" />
     <Compile Include="Models\Bridge\ShipFieldUpgradeEvil.cs" />
     <Compile Include="Models\Bridge\ShipFieldUpgradeGood.cs" />
     <Compile Include="Models\Bridge\ShipFieldUpgradeInterface.cs" />
