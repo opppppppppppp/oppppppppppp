@@ -106,3 +106,21 @@ C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.csproj.C
 C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.csproj.CopyComplete
 C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.exe
 C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.pdb
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\bin\Debug\Battleships.exe.config
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\bin\Debug\Battleships.exe
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\bin\Debug\Battleships.pdb
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\bin\Debug\websocket-sharp.dll
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.csprojAssemblyReference.cache
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.Game.resources
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.JoinRoom.resources
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Main.resources
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Room.resources
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.WaitRoom.resources
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.Properties.Resources.resources
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.GenerateResource.cache
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CopyComplete
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.exe
+C:\Users\Gin\Desktop\s7\t120b516_objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.pdb

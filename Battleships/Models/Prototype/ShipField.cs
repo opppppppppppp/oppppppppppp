@@ -1,4 +1,5 @@
-﻿using Battleships.Models.Prototype;
+﻿using Battleships.Models.Bridge;
+using Battleships.Models.Prototype;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,8 +19,10 @@ namespace Battleships.Models
         public int FieldSize { get; set; }
         public int DestroyedShips { get; set; }
 
+        private ShipFieldUpgradeInterface shipFieldUpgradeInterface;
+
         char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-        public ShipField(int size, DataGridView table)
+        public ShipField(int size, DataGridView table, ShipFieldUpgradeInterface shipFieldUpgradeInterface)
         {
             DestroyedShips = 0;
             FieldSize = size;
@@ -28,6 +31,7 @@ namespace Battleships.Models
             this.table = table;
             tabledata = GenerateTable();
             table.DataSource = tabledata;
+            this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
         }
 
         public override ShipFieldPrototype Clone()
@@ -125,6 +129,7 @@ namespace Battleships.Models
             int row = GetRow(index);
             int column = GetColumn(index);
             table.Rows[row].Cells[column].Value = "O";
+            shipFieldUpgradeInterface.upgrade(table, row, column, CellState.NotHit);
         }
 
         public void MarkDestroyedShip(int index)
@@ -133,6 +138,7 @@ namespace Battleships.Models
             int column = GetColumn(index);
             table.Rows[row].Cells[column].Value = "X";
             DestroyedShips++;
+            shipFieldUpgradeInterface.upgrade(table, row, column, CellState.Hit);
         }
 
         public void MarkShip(int index)
@@ -140,6 +146,12 @@ namespace Battleships.Models
             int row = GetRow(index);
             int column = GetColumn(index);
             table.Rows[row].Cells[column].Value = "S";
+            shipFieldUpgradeInterface.upgrade(table, row, column, CellState.Ship);
+        }
+
+        public void updateShipFieldUpgradeInterface(ShipFieldUpgradeInterface shipFieldUpgradeInterface)
+        {
+            this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
         }
 
     }

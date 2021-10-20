@@ -8,6 +8,7 @@ using Battleships.Models;
 using Battleships.Models.ConcreteCreator;
 using Battleships.Models.Strategy;
 using Battleships.LevelBuilder;
+using Battleships.Models.Bridge;
 
 namespace Battleships
 {
@@ -43,10 +44,12 @@ namespace Battleships
 
         private void InitializeGameLogic()
         {
-            this.player_field = new ShipField(5, player_table);
-            this.enemy_field = player_field.Clone() as ShipField;
+            this.player_field = new ShipField(5, player_table, new ShipFieldUpgradeGood());
+            this.enemy_field = new ShipField(5, enemy_table, new ShipFieldUpgradeEvil());
+            //this.enemy_field = player_field.Clone() as ShipField;
+            //this.enemy_field.updateShipFieldUpgradeInterface(new ShipFieldUpgradeEvil());
             enemy_table.DataSource = this.enemy_field.GetTableData();
- 
+
             LevelChecker();
             GameObject = new GameLogic(player_field, enemy_field, Level.ShipFactory);
             AddAttackOptions(player_field.GetPositions());

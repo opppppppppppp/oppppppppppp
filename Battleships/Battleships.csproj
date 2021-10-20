@@ -87,6 +87,9 @@
     <Compile Include="Forms\WaitRoom.Designer.cs">
       <DependentUpon>WaitRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Bridge\ShipFieldUpgradeEvil.cs" />
+    <Compile Include="Models\Bridge\ShipFieldUpgradeGood.cs" />
+    <Compile Include="Models\Bridge\ShipFieldUpgradeInterface.cs" />
     <Compile Include="Models\Command\SubtractScoreCommand.cs" />
     <Compile Include="Models\Command\AddScoreCommand.cs" />
     <Compile Include="Models\Command\IScoreCommand.cs" />
