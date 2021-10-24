@@ -10,7 +10,6 @@ namespace Battleships.Models.Strategy
     class DynamiteAttackStrategy : IAttackStrategy
     {
         public string Name => nameof(DynamiteAttackStrategy);
-
         public int shipCount => 2;
         public List<string> GetAttackingShips(List<string> attackships)
         {

@@ -159,13 +159,13 @@ namespace Battleships
         public List<string> GetCorrectStrategy()
         {
             List<string> attackships = Level.Strategy.GetAttackingShips(GameObject.AttackPos.positions);
-            if (GameObject.PlayerPos.DestroyedShips > 2)
+            if (GameObject.PlayerPos.DestroyedShips >= 2)
             {
-                attackships = Level.Strategy.GetAttackingShips(GameObject.AttackPos.positions);
+                attackships = Level.IncreasedStrategy.GetAttackingShips(GameObject.AttackPos.positions);
             }
             else
             {
-                attackships = Level.IncreasedStrategy.GetAttackingShips(GameObject.AttackPos.positions);
+                attackships = Level.Strategy.GetAttackingShips(GameObject.AttackPos.positions);
             }
             return attackships;
         }

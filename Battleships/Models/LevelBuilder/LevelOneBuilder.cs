@@ -28,7 +28,7 @@ namespace Battleships.LevelBuilder
 
         public void IncreasedStrategy()
         {
-            level.IncreasedStrategy = new UltraAttackIncrease(level.Strategy);
+            level.IncreasedStrategy = new UltraAttackIncrease(new BombAttackStrategy());
         }
 
         public Level GetLevel()

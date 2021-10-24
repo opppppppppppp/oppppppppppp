@@ -28,7 +28,7 @@ namespace Battleships.LevelBuilder
 
         public void IncreasedStrategy()
         {
-            level.IncreasedStrategy = new BasicAttackIncrease(level.Strategy);
+            level.IncreasedStrategy = new BasicAttackIncrease(new MissileAttackStrategy());
         }
         public Level GetLevel()
         {
