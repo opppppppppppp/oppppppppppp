@@ -29,10 +29,6 @@ namespace Battleships
 
         //********************************************************
 
-        //private GameLogic GameObject;
-        private ShipField player_field;
-        private ShipField enemy_field;
-
         Level Level;
         WebSocket position_socket;
         WebSocket response_socket;
@@ -66,8 +62,7 @@ namespace Battleships
             AttackPos = new ShipField(5, enemy_table, new ShipFieldUpgradeEvil());
             Ships = Level.ShipFactory;
             SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
-            //this.enemy_field = player_field.Clone() as ShipField;
-            //this.enemy_field.updateShipFieldUpgradeInterface(new ShipFieldUpgradeEvil());
+
             enemy_table.DataSource = EnemyPos.GetTableData();
             AddAttackOptions(PlayerPos.GetPositions());
             UpdateScore();
@@ -116,14 +111,35 @@ namespace Battleships
 
         private void UpdateScore()
         {
-            score_val.Text = scoreCalculator.score.ToString();
+            SetText(scoreCalculator.score.ToString());
+            //score_val.Text = scoreCalculator.score.ToString();
+            ScoreChecker();
         }
 
-        /*private void ScoreChecker()
+
+        delegate void SetTextCallback(string text);
+
+        private void SetText(string text)
         {
-            if (playerScore >= totalShips)
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
+            if (this.score_val.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(SetText);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.score_val.Text = text;
+            }
+        }
+
+        private void ScoreChecker()
+        {
+            if (scoreCalculator.score >= Level.NumberOfShips)
                 complete_socket.Send(user_id);
-        }*/
+        }
         private void Attack_btn_Click(object sender, EventArgs e)
         {
             int index = attack_options.SelectedIndex;
@@ -234,9 +250,11 @@ namespace Battleships
             if (hit_status)
             {
                 PlayerPos.MarkDestroyedShip(ship_index);
-                MessageBox.Show("You've hit enemy ship!");
-                playerScore++;
-                IncreaseScore();
+                //MessageBox.Show("You've hit enemy ship!");
+
+                //playerScore++;
+                //IncreaseScore();
+                UpdateScore();
                 //ScoreChecker();
             }
             else
@@ -249,9 +267,10 @@ namespace Battleships
             if (hit_status)
             {
                 EnemyPos.MarkDestroyedShip(ship_index);
-                MessageBox.Show("You've hit enemy ship!");
-                playerScore++;
+                //MessageBox.Show("You've hit enemy ship!");
+                //playerScore++;
                 IncreaseScore();
+                UpdateScore();
                 //ScoreChecker();
             }
             else

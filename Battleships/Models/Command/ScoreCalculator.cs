@@ -20,6 +20,7 @@ namespace Battleships.Models.Command
             history.Push(command);
         }
 
+
         public void Undo()
         {
             var command = history.Pop();
