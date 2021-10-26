@@ -9,12 +9,27 @@ using Battleships.Models.ConcreteCreator;
 using Battleships.Models.Strategy;
 using Battleships.LevelBuilder;
 using Battleships.Models.Bridge;
+using Battleships.Models.Adapter;
+using Battleships.Models.Command;
 
 namespace Battleships
 {
     public partial class Game : Form
     {
-        private GameLogic GameObject;
+
+        public ShipField PlayerPos { get; set; }
+        public ShipField EnemyPos { get; set; }
+        public ShipField AttackPos { get; set; }
+        public List<int> SelectedPlayerPos { get; set; }
+        public ShipFactory Ships { get; set; }
+
+        public int playerScore = 0;
+        public int currentLevel = 1;
+        public ScoreCalculator scoreCalculator = new ScoreCalculator();
+
+        //********************************************************
+
+        //private GameLogic GameObject;
         private ShipField player_field;
         private ShipField enemy_field;
 
@@ -23,7 +38,7 @@ namespace Battleships
         WebSocket response_socket;
         WebSocket complete_socket;
 
-        int currentLevel = 2;
+
         static string user_id;
         Sailor sailor;
         
@@ -34,7 +49,7 @@ namespace Battleships
             position_socket = Client.Positions(Constants.ip_address);
             response_socket = Client.Response(Constants.ip_address);
             complete_socket = Client.Complete(Constants.ip_address);
-            GameObject.RestartGame();
+            RestartGame();
         }
         public void setUID(string uid)
         {
@@ -44,18 +59,22 @@ namespace Battleships
 
         private void InitializeGameLogic()
         {
-            this.player_field = new ShipField(5, player_table, new ShipFieldUpgradeGood());
-            this.enemy_field = new ShipField(5, enemy_table, new ShipFieldUpgradeEvil());
+            LevelChecker();
+            
+            PlayerPos = new ShipField(5, player_table, new ShipFieldUpgradeGood());
+            EnemyPos = new ShipField(5, enemy_table, new ShipFieldUpgradeEvil());
+            AttackPos = new ShipField(5, enemy_table, new ShipFieldUpgradeEvil());
+            Ships = Level.ShipFactory;
+            SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
             //this.enemy_field = player_field.Clone() as ShipField;
             //this.enemy_field.updateShipFieldUpgradeInterface(new ShipFieldUpgradeEvil());
-            enemy_table.DataSource = this.enemy_field.GetTableData();
-
-            LevelChecker();
-            GameObject = new GameLogic(player_field, enemy_field, Level.ShipFactory);
-            AddAttackOptions(player_field.GetPositions());
+            enemy_table.DataSource = EnemyPos.GetTableData();
+            AddAttackOptions(PlayerPos.GetPositions());
             UpdateScore();
-            LevelChecker();
+
         }
+
+
 
         private void AddAttackOptions(List<string> options)
         {
@@ -97,7 +116,7 @@ namespace Battleships
 
         private void UpdateScore()
         {
-            score_val.Text = GameObject.scoreCalculator.score.ToString();
+            score_val.Text = scoreCalculator.score.ToString();
         }
 
         /*private void ScoreChecker()
@@ -113,16 +132,16 @@ namespace Battleships
         }
         public void ShipHitCheck(int ship_index, string uid)
         {
-            //string attackOption = GameObject.FindShipByIndex(GameObject.PlayerPos, ship_index);
-            string attackOption = GameObject.PlayerPos.GetShipValue(ship_index);
+            //string attackOption = FindShipByIndex(PlayerPos, ship_index);
+            string attackOption = PlayerPos.GetShipValue(ship_index);
             if (attackOption == "S")
             {
-                GameObject.MarkLocalShip(ship_index, true);
+                MarkLocalShip(ship_index, true);
                 response_socket.Send($"{uid}:{ship_index}:{true}");
             }
             else
             {
-                GameObject.MarkLocalShip(ship_index, false);
+                MarkLocalShip(ship_index, false);
                 response_socket.Send($"{uid}:{ship_index}:{false}");
             }       
         }
@@ -130,19 +149,19 @@ namespace Battleships
         {
             if (sailor.UID != uid)//Nuo cia*
             {
-                //Button attackedShip = GameObject.FindShipByIndex(GameObject.PlayerPos, ship_index);
-                string attackOption = GameObject.PlayerPos.GetShipValue(ship_index);
-                //GameObject.MarkShip(attackedShip, hit_status);
-                GameObject.MarkLocalShip(ship_index, hit_status);
+                //Button attackedShip = FindShipByIndex(PlayerPos, ship_index);
+                string attackOption = PlayerPos.GetShipValue(ship_index);
+                //MarkShip(attackedShip, hit_status);
+                MarkLocalShip(ship_index, hit_status);
             }
             else //Iki cia
             if (sailor.UID == uid)
             {
-                //Button attackedShip = GameObject.FindShipByIndex(GameObject.EnemyPos, ship_index);
-                string attackOption = GameObject.EnemyPos.GetShipValue(ship_index);
-                //GameObject.MarkShip(attackedShip, hit_status);
-                GameObject.MarkEnemyShip(ship_index, hit_status);
-                //GameObject.RemoveShipFromAttackTable(attackedShip);
+                //Button attackedShip = FindShipByIndex(EnemyPos, ship_index);
+                string attackOption = EnemyPos.GetShipValue(ship_index);
+                //MarkShip(attackedShip, hit_status);
+                MarkEnemyShip(ship_index, hit_status);
+                //RemoveShipFromAttackTable(attackedShip);
             }
         }
 
@@ -151,21 +170,21 @@ namespace Battleships
             List<string> attackships = GetCorrectStrategy();        
             for(int i = 0;i<attackships.Count;i++)
             {
-                int index = GameObject.EnemyPos.GetShipIndex(attackships[i]);
+                int index = EnemyPos.GetShipIndex(attackships[i]);
                 position_socket.Send($"{index}:{user_id}");
             }
         }
 
         public List<string> GetCorrectStrategy()
         {
-            List<string> attackships = Level.Strategy.GetAttackingShips(GameObject.AttackPos.positions);
-            if (GameObject.PlayerPos.DestroyedShips >= 2)
+            List<string> attackships = Level.Strategy.GetAttackingShips(AttackPos.positions);
+            if (PlayerPos.DestroyedShips >= 2)
             {
-                attackships = Level.IncreasedStrategy.GetAttackingShips(GameObject.AttackPos.positions);
+                attackships = Level.IncreasedStrategy.GetAttackingShips(AttackPos.positions);
             }
             else
             {
-                attackships = Level.Strategy.GetAttackingShips(GameObject.AttackPos.positions);
+                attackships = Level.Strategy.GetAttackingShips(AttackPos.positions);
             }
             return attackships;
         }
@@ -198,6 +217,58 @@ namespace Battleships
             SpecialAttack();
             special_ability_btn.Hide();
             special_ability_label.Hide(); 
+        }
+
+
+
+        public void MarkSelectedShips(ShipField Pos, List<int> selectedPos)
+        {
+            for (int i = 0; i < selectedPos.Count; i++)
+            {
+                int index = selectedPos[i];
+                Pos.MarkShip(index);
+            }
+        }
+        public void MarkLocalShip(int ship_index, bool hit_status)
+        {
+            if (hit_status)
+            {
+                PlayerPos.MarkDestroyedShip(ship_index);
+                MessageBox.Show("You've hit enemy ship!");
+                playerScore++;
+                IncreaseScore();
+                //ScoreChecker();
+            }
+            else
+            {
+                PlayerPos.MarkHitShip(ship_index);
+            }
+        }
+        public void MarkEnemyShip(int ship_index, bool hit_status)
+        {
+            if (hit_status)
+            {
+                EnemyPos.MarkDestroyedShip(ship_index);
+                MessageBox.Show("You've hit enemy ship!");
+                playerScore++;
+                IncreaseScore();
+                //ScoreChecker();
+            }
+            else
+            {
+                EnemyPos.MarkHitShip(ship_index);
+            }
+        }
+        public void RestartGame()
+        {
+            AttackPos = EnemyPos;
+            playerScore = 0;
+            SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
+            MarkSelectedShips(PlayerPos, SelectedPlayerPos);
+        }
+        public void IncreaseScore()
+        {
+            scoreCalculator.ExecuteCommand(new AddScoreCommand(1));
         }
     }
 }
