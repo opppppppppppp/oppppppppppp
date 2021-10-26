@@ -14,12 +14,11 @@ namespace Battleships.Forms
 {
     public class Client
     {
-        public static Game game = new Game();
+        public static Game game { get; set; }
         public static WebSocket ws;
         static string ip_addr;
         //static UserObserver user;
         static string user_id;
-
 
         /// <summary>
         /// Metodas, skirtas prisijungti prie ws://{ip_address}/Connection route.
@@ -83,10 +82,7 @@ namespace Battleships.Forms
         static void OnTurnMessage(object sender, MessageEventArgs e)
         {
             string id = JsonConvert.DeserializeObject<String>(e.Data);
-            if (user_id == id)
-                game.EnableButton(true);
-            else
-                game.EnableButton(false);
+            game.ButtonStatusChange();
 
         }
 
@@ -99,15 +95,25 @@ namespace Battleships.Forms
         /// <param name="e">Gauti Duomenys</param>
         static void OnRoomCreate(object sender, MessageEventArgs e)
         {
+            string[] data = e.Data.Split(':');
+         
+            var user_count = Convert.ToInt32(data[1]);
+            var uid = data[0];
+            Debug.WriteLine($"Client : {uid}");
 
-            if (Convert.ToInt32(e.Data) == 2)
+            if(user_count == 2)
+                CreateGame();
+            if (user_count == 2 && user_id == uid)
             {
-                // game = new Game(ip_addr);
-                //game;
+                //CreateGame();
                 game.setUID(user_id);
-                //game.setPlayerPositionAsEnemy();
+                game.ButtonStatusChange();
                 game.ShowDialog();
-                
+            }
+            else if(user_count == 2)
+            {
+                game.setUID(user_id);
+                game.ShowDialog();
             }
         }
 
@@ -165,6 +171,11 @@ namespace Battleships.Forms
         public static string GenerateUserID()
         {
             return Guid.NewGuid().ToString();
+        }
+
+        public static void CreateGame()
+        {
+            game = new Game();
         }
     }
 }

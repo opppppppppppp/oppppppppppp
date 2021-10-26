@@ -296,7 +296,6 @@ namespace Battleships
             // attack_btn
             // 
             this.attack_btn.BackColor = System.Drawing.Color.Maroon;
-            this.attack_btn.Enabled = false;
             this.attack_btn.ForeColor = System.Drawing.Color.White;
             this.attack_btn.Location = new System.Drawing.Point(150, 170);
             this.attack_btn.Name = "attack_btn";

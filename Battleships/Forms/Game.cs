@@ -293,9 +293,29 @@ namespace Battleships
         {
             scoreCalculator.ExecuteCommand(new AddScoreCommand(1));
         }
-        public void EnableButton(bool enable)
+
+        delegate void SetBtnStatus(bool status);
+        private void SetButtonStatus(bool status)
         {
-           this.attack_btn.Enabled = enable;
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
+            if (this.attack_btn.InvokeRequired)
+            {
+                SetBtnStatus d = new SetBtnStatus(SetButtonStatus);
+                this.Invoke(d, new object[] { status });
+            }
+            else
+            {
+                this.attack_btn.Enabled = status;
+            }
+        }
+        public void ButtonStatusChange()
+        {
+            if (attack_btn.Enabled)
+                SetButtonStatus(false);
+            else
+                SetButtonStatus(true);
         }
     }
 }

@@ -35,11 +35,11 @@ namespace Battleships.Forms
                 string user_id = e.Data;
                 playerTurn.Register(new UserObserver(user_id));
                 connectedUsers++;
-                if (connectedUsers == 2)
-                    playerTurn.Notify(user_id);
-                Sessions.Broadcast(JsonConvert.SerializeObject(connectedUsers));
+                //if (connectedUsers == 2)
+                    //playerTurn.Notify(user_id);
+                Sessions.Broadcast($"{user_id}:{connectedUsers}");
             
-                Debug.WriteLine($"User Connected (Total Users: {connectedUsers})");
+                Debug.WriteLine($"User ({user_id}) Connected (Total Users: {connectedUsers})");
             }
         }
 
@@ -55,6 +55,7 @@ namespace Battleships.Forms
                 string[] data = e.Data.Split(':');
                 Sessions.Broadcast(JsonConvert.SerializeObject(data));
                 Debug.WriteLine($"Position hit {data[0]} (User ID = {data[1]})");
+                playerTurn.Notify(data[1]);
             }
         }
         /// <summary>

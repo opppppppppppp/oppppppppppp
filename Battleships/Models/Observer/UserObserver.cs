@@ -11,8 +11,8 @@ namespace Battleships.Models.Observer
     class UserObserver : IObserver
     {
         private string ID { get; set; }
-         WebSocket turn_socket;
-         Game _game;
+        WebSocket turn_socket;
+        //Game _game;
 
         public UserObserver(string user_id)
         {
@@ -26,7 +26,8 @@ namespace Battleships.Models.Observer
         }
         public void PlayerTurn(string userUID)
         {
-            turn_socket.Send(userUID);
+            if(userUID == ID)
+              turn_socket.Send(userUID);
         }
     }
 }
