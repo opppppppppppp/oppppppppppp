@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Battleships.Models.Observer;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace Battleships.Forms
     public class Server
     {
         public static int connectedUsers = 0;
-
+        static TurnSubject playerTurn = new TurnSubject();
         private static ServerInstance serverInstance = ServerInstance.Instance;
         static WebSocketServer webSocketServer = serverInstance.GetWebSocketServer();
         // = new WebSocketServer();
@@ -31,11 +32,18 @@ namespace Battleships.Forms
         {
             protected override void OnMessage(MessageEventArgs e)
             {
+                string user_id = e.Data;
+                playerTurn.Register(new UserObserver(user_id));
                 connectedUsers++;
+                if (connectedUsers == 2)
+                    playerTurn.Notify(user_id);
                 Sessions.Broadcast(JsonConvert.SerializeObject(connectedUsers));
+            
                 Debug.WriteLine($"User Connected (Total Users: {connectedUsers})");
             }
         }
+
+
         /// <summary>
         /// Positions Klasė, paveldinti WebSocketBehavior
         /// Šioje klasėje vykdomi metodai, priklausantis ws://{ip_address}/Positions
@@ -67,6 +75,16 @@ namespace Battleships.Forms
         /// Complete Klasė, paveldinti WebSocketBehavior
         /// Šioje klasėje vykdomi metodai, priklausantis ws://{ip_address}/Complete
         /// </summary>
+        public class Turn : WebSocketBehavior
+        {
+            protected override void OnMessage(MessageEventArgs e)
+            {
+                string uid = JsonConvert.SerializeObject(e.Data);
+                Sessions.Broadcast(uid);
+                Debug.WriteLine($"User turn id: {uid}");
+            }
+        }
+
         public class Complete : WebSocketBehavior
         {
             protected override void OnMessage(MessageEventArgs e)
@@ -76,6 +94,7 @@ namespace Battleships.Forms
                 Debug.WriteLine($"Winner of the game: {uid}");
             }
         }
+
         /// <summary>
         /// Metodas skirtas sukurti serverį su tam tikrais Route.
         /// Šiame metode apibrežiami serveryje esantys route, su jiem priklausančia logika.
@@ -92,6 +111,7 @@ namespace Battleships.Forms
                 webSocketServer.AddWebSocketService<Positions>("/Positions");
                 webSocketServer.AddWebSocketService<Response>("/Response");
                 webSocketServer.AddWebSocketService<Complete>("/Complete");
+                webSocketServer.AddWebSocketService<Turn>("/Turn");
             }
             catch (Exception exception)
             {

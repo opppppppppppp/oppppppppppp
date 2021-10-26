@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Battleships.Models.Observer;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,10 +14,12 @@ namespace Battleships.Forms
 {
     public class Client
     {
-        public static Game game;
+        public static Game game = new Game();
         public static WebSocket ws;
         static string ip_addr;
+        //static UserObserver user;
         static string user_id;
+
 
         /// <summary>
         /// Metodas, skirtas prisijungti prie ws://{ip_address}/Connection route.
@@ -24,10 +27,11 @@ namespace Battleships.Forms
         /// <param name="ip_address">IP Address prie kurio jungiames</param>
         public static void Connect(string ip_address)
         {
+            //user = new UserObserver(GenerateUserID());
             user_id = GenerateUserID();
             ip_addr = ip_address;
             var wsf = new WebSocketFacade(ip_address, "Connection");
-            ws = wsf.Connect(OnRoomCreate, "Connected");
+            ws = wsf.Connect(OnRoomCreate, user_id);
         }
 
         /// <summary>
@@ -68,6 +72,24 @@ namespace Battleships.Forms
             return ws;
         }
 
+        public static WebSocket Turn(string ip_address)
+        {
+            ip_addr = ip_address;
+            var wsf = new WebSocketFacade(ip_address, "Turn");
+            ws = wsf.Connect(OnTurnMessage);
+            return ws;
+        }
+
+        static void OnTurnMessage(object sender, MessageEventArgs e)
+        {
+            string id = JsonConvert.DeserializeObject<String>(e.Data);
+            if (user_id == id)
+                game.EnableButton(true);
+            else
+                game.EnableButton(false);
+
+        }
+
         /// <summary>
         /// Metodas, naudojamas kai gaunamas message į ws://{ip_address}/Connection route.
         /// Metode išanalizuojami gauti duomenys ir jei prisijungusių vartotojų sk. = 2, sukuriamas
@@ -77,13 +99,15 @@ namespace Battleships.Forms
         /// <param name="e">Gauti Duomenys</param>
         static void OnRoomCreate(object sender, MessageEventArgs e)
         {
+
             if (Convert.ToInt32(e.Data) == 2)
             {
                 // game = new Game(ip_addr);
-                game = new Game();
+                //game;
                 game.setUID(user_id);
                 //game.setPlayerPositionAsEnemy();
                 game.ShowDialog();
+                
             }
         }
 

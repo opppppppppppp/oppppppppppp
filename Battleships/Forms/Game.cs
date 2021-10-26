@@ -11,6 +11,7 @@ using Battleships.LevelBuilder;
 using Battleships.Models.Bridge;
 using Battleships.Models.Adapter;
 using Battleships.Models.Command;
+using Battleships.Models.Observer;
 
 namespace Battleships
 {
@@ -37,6 +38,9 @@ namespace Battleships
 
         static string user_id;
         Sailor sailor;
+
+        //*********************************************************
+
         
         public Game()
         {
@@ -56,7 +60,7 @@ namespace Battleships
         private void InitializeGameLogic()
         {
             LevelChecker();
-            
+
             PlayerPos = new ShipField(5, player_table, new ShipFieldUpgradeGood());
             EnemyPos = new ShipField(5, enemy_table, new ShipFieldUpgradeEvil());
             AttackPos = new ShipField(5, enemy_table, new ShipFieldUpgradeEvil());
@@ -288,6 +292,10 @@ namespace Battleships
         public void IncreaseScore()
         {
             scoreCalculator.ExecuteCommand(new AddScoreCommand(1));
+        }
+        public void EnableButton(bool enable)
+        {
+           this.attack_btn.Enabled = enable;
         }
     }
 }

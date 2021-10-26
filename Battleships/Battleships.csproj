@@ -111,6 +111,10 @@
     <Compile Include="Models\Factory Method\ConcreteCreator\ShipBigFactory.cs" />
     <Compile Include="Models\Factory Method\ConcreteCreator\ShipMediumFactory.cs" />
     <Compile Include="Models\GameLogic.cs" />
+    <Compile Include="Models\Observer\IObserver.cs" />
+    <Compile Include="Models\Observer\ISubject.cs" />
+    <Compile Include="Models\Observer\TurnSubject.cs" />
+    <Compile Include="Models\Observer\UserObserver.cs" />
     <Compile Include="Models\Prototype\ShipFieldPrototype.cs" />
     <Compile Include="Models\Sailor.cs" />
     <Compile Include="Models\Ship.cs" />
@@ -166,8 +170,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Observer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
