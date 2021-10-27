@@ -1,330 +1,61 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using WebSocketSharp;
-using Battleships.Forms;
-using Battleships.Models;
-using Battleships.Models.ConcreteCreator;
-using Battleships.Models.Strategy;
-using Battleships.LevelBuilder;
-using Battleships.Models.Bridge;
-using Battleships.Models.Adapter;
-using Battleships.Models.Command;
-using Battleships.Models.Observer;
+using Battleships.Models.Facade;
 
 namespace Battleships
 {
     public partial class Game : Form
     {
-        public ShipField PlayerPos { get; set; }
-        public ShipField EnemyPos { get; set; }
-        public ShipField AttackPos { get; set; }
-        public List<int> SelectedPlayerPos { get; set; }
-        public ShipFactory Ships { get; set; }
-
-        public int playerScore = 0;
-        public int currentLevel = 1;
-        public ScoreCalculator scoreCalculator = new ScoreCalculator();
-
-        //********************************************************
-
-        Level Level;
-        WebSocket position_socket;
-        WebSocket response_socket;
-        WebSocket complete_socket;
-        WebSocket player_turn;
-
-
-        static string user_id;
-        Sailor sailor;
-
-        //*********************************************************
-
-        
+        public Facade Facade;
         public Game()
         {
             InitializeComponent();
-            InitializeGameLogic();
-            position_socket = Client.Positions(Constants.ip_address);
-            response_socket = Client.Response(Constants.ip_address);
-            complete_socket = Client.Complete(Constants.ip_address);
-            player_turn = Client.Turn(Constants.ip_address);
-            RestartGame();
-        }
-        public void setUID(string uid)
-        {
-            user_id = uid;
-            sailor = new Sailor(uid);
+            GameObjects GameObjects = new GameObjects(player_table, enemy_table, attack_options, special_ability_label, attack_btn, special_ability_btn, score_val);
+            Facade = new Facade(this, GameObjects);
+            Facade.InitializeGameLogic();
+            Facade.RestartGame();
         }
 
-        private void InitializeGameLogic()
-        {
-            LevelChecker();
-
-            PlayerPos = new ShipField(5, player_table, new ShipFieldUpgradeGood());
-            EnemyPos = new ShipField(5, enemy_table, new ShipFieldUpgradeEvil());
-            AttackPos = EnemyPos.Clone() as ShipField;
-            Ships = Level.ShipFactory;
-            SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
-
-            enemy_table.DataSource = EnemyPos.GetTableData();
-            AddAttackOptions(AttackPos.GetPositions());
-            UpdateScore();
-
-        }
-
-
-
-        private void AddAttackOptions(List<string> options)
-        {
-            attack_options.Items.Clear();
-            for (int i = 0; i < options.Count; i++)
-            {
-                attack_options.Items.Add(options[i]);
-            }
-        }
-
-        private void RemoveAttackOption(string option)
-        {
-            attack_options.Items.Remove(option);
-            //options.Remove(option);
-        }
-        private void LevelChecker()
-        {
-            switch (currentLevel)
-            {        
-                case 1:
-                    this.InitLevel(new LevelOneBuilder());
-                    break;
-                case 2:
-                    this.InitLevel(new LevelTwoBuilder());
-                    break;
-                case 3:
-                    this.InitLevel(new LevelThreeBuilder());
-                    break;
-            }
-        }
-
-        private void InitLevel(ILevelBuilder levelBuilder)
-        {
-            LevelCreator  LevelCreator = new LevelCreator(levelBuilder);
-            LevelCreator.CreateLevel();
-            Level = LevelCreator.GetLevel();
-            special_ability_label.Text = Level.Strategy.Name;
-        }
-
-        private void UpdateScore()
-        {
-            SetText(scoreCalculator.score.ToString());
-            //score_val.Text = scoreCalculator.score.ToString();
-            ScoreChecker();
-        }
-
-
-        delegate void SetTextCallback(string text);
-
-        private void SetText(string text)
-        {
-            // InvokeRequired required compares the thread ID of the
-            // calling thread to the thread ID of the creating thread.
-            // If these threads are different, it returns true.
-            if (this.score_val.InvokeRequired)
-            {
-                SetTextCallback d = new SetTextCallback(SetText);
-                this.Invoke(d, new object[] { text });
-            }
-            else
-            {
-                this.score_val.Text = text;
-            }
-        }
-
-        private void ScoreChecker()
-        {
-            if (scoreCalculator.score >= Level.NumberOfShips)
-                complete_socket.Send(user_id);
-        }
-        private void Attack_btn_Click(object sender, EventArgs e)
-        {
-            int index = attack_options.SelectedIndex;
-            //RemoveAttackOption(FindShipByIndex(enemyPos, index).Text);//*Cia*
-            position_socket.Send($"{index}:{user_id}");
-            player_turn.Send($"{user_id}");
-        }
-        public void ShipHitCheck(int ship_index, string uid)
-        {
-            //string attackOption = FindShipByIndex(PlayerPos, ship_index);
-            string attackOption = PlayerPos.GetShipValue(ship_index);
-            if (attackOption == "S")
-            {
-                MarkLocalShip(ship_index, true);
-                response_socket.Send($"{uid}:{ship_index}:{true}");
-            }
-            else
-            {
-                MarkLocalShip(ship_index, false);
-                response_socket.Send($"{uid}:{ship_index}:{false}");
-            }       
-        }
-        public void UpdateHitShips(int ship_index, string uid, bool hit_status)
-        {
-            if (sailor.UID != uid)//Nuo cia*
-            {
-                //Button attackedShip = FindShipByIndex(PlayerPos, ship_index);
-                string attackOption = PlayerPos.GetShipValue(ship_index);
-                //MarkShip(attackedShip, hit_status);
-                MarkLocalShip(ship_index, hit_status);
-            }
-            else //Iki cia
-            if (sailor.UID == uid)
-            {
-                //Button attackedShip = FindShipByIndex(EnemyPos, ship_index);
-                string attackOption = EnemyPos.GetShipValue(ship_index);
-                //MarkShip(attackedShip, hit_status);
-                MarkEnemyShip(ship_index, hit_status);
-                //RemoveShipFromAttackTable(attackedShip);
-            }
-        }
-
-        public void SpecialAttack()
-        {
-            List<string> attackships = GetCorrectStrategy();        
-            for(int i = 0;i<attackships.Count;i++)
-            {
-                int index = EnemyPos.GetShipIndex(attackships[i]);
-                position_socket.Send($"{index}:{user_id}");
-            }
-            player_turn.Send($"{user_id}");
-        }
-
-        public List<string> GetCorrectStrategy()
-        {
-            List<string> attackships = Level.Strategy.GetAttackingShips(AttackPos.positions);
-            if (PlayerPos.DestroyedShips >= 2)
-            {
-                attackships = Level.IncreasedStrategy.GetAttackingShips(AttackPos.positions);
-            }
-            else
-            {
-                attackships = Level.Strategy.GetAttackingShips(AttackPos.positions);
-            }
-            return attackships;
-        }
-        public void Completed(string uid)
-        {
-            if (sailor.UID == uid)
-            {
-                position_socket.Close();
-                response_socket.Close();
-                complete_socket.Close();
-                MessageBox.Show("You are the winner");
-                Application.Exit();
-            }
-            else
-            {
-                position_socket.Close();
-                response_socket.Close();
-                complete_socket.Close();
-                MessageBox.Show("You've lost the game!");
-                Application.Exit();
-            }
-        }
+        
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
         private void special_ability_btn_Click(object sender, EventArgs e)
         {
-            SpecialAttack();
+            Facade.SpecialAttack();
             special_ability_btn.Hide();
-            special_ability_label.Hide(); 
+            special_ability_label.Hide();
         }
-        public void MarkSelectedShips(ShipField Pos, List<int> selectedPos)
+        public void Attack_btn_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < selectedPos.Count; i++)
-            {
-                int index = selectedPos[i];
-                Pos.MarkShip(index);
-            }
+            int index = attack_options.SelectedIndex;
+            //RemoveAttackOption(FindShipByIndex(enemyPos, index).Text);//*Cia*
+            Facade.position_socket.Send($"{index}:{Facade.user_id}");
+            Facade.player_turn.Send($"{Facade.user_id}");
         }
-        public void MarkLocalShip(int ship_index, bool hit_status)
-        {
-            if (hit_status)
-            {
-                PlayerPos.MarkDestroyedShip(ship_index);
-                //MessageBox.Show("You've hit enemy ship!");
+    }
 
-                //playerScore++;
-                //IncreaseScore();
-                UpdateScore();
-                //ScoreChecker();
-            }
-            else
-            {
-                PlayerPos.MarkHitShip(ship_index);
-            }
-        }
-        public void MarkEnemyShip(int ship_index, bool hit_status)
-        {
-            if (hit_status)
-            {
-                EnemyPos.MarkDestroyedShip(ship_index);
-                //MessageBox.Show("You've hit enemy ship!");
-                //playerScore++;
-                IncreaseScore();
-                UpdateScore();
-                //ScoreChecker();
-            }
-            else
-            {
-                EnemyPos.MarkHitShip(ship_index);
-            }
-        }
-        public void RestartGame()
-        {
-            AttackPos = EnemyPos.Clone() as ShipField;
-            playerScore = 0;
-            SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
-            MarkSelectedShips(PlayerPos, SelectedPlayerPos);
-        }
-        public void IncreaseScore()
-        {
-            scoreCalculator.ExecuteCommand(new AddScoreCommand(1));
-        }
+    public class GameObjects
+    {
+        public DataGridView player_table;
+        public DataGridView enemy_table;
+        public ComboBox attack_options;
+        public Label special_ability_label;
+        public Button attack_btn;
+        public Button special_ability_btn;
+        public Label score_val;
 
-        delegate void SetAttackBtnStatus(bool status);
-        public void SetAttackButtonStatus(bool status)
+        public GameObjects(DataGridView player_table, DataGridView enemy_table, ComboBox attack_options,
+            Label special_ability_label, Button attack_btn, Button special_ability_btn, Label score_val)
         {
-            // InvokeRequired required compares the thread ID of the
-            // calling thread to the thread ID of the creating thread.
-            // If these threads are different, it returns true.
-            if (this.attack_btn.InvokeRequired)
-            {
-                SetAttackBtnStatus d = new SetAttackBtnStatus(SetAttackButtonStatus);
-                this.Invoke(d, new object[] { status });
-            }
-            else
-            {
-                this.attack_btn.Enabled = status;
-            }
-        }
-
-        delegate void SetSpecialBtnStatus(bool status);
-        public void SetSpecialButtonStatus(bool status)
-        {
-            // InvokeRequired required compares the thread ID of the
-            // calling thread to the thread ID of the creating thread.
-            // If these threads are different, it returns true.
-            if (this.attack_btn.InvokeRequired)
-            {
-                SetSpecialBtnStatus d = new SetSpecialBtnStatus(SetSpecialButtonStatus);
-                this.Invoke(d, new object[] { status });
-            }
-            else
-            {
-                this.special_ability_btn.Enabled = status;
-            }
+            this.player_table = player_table;
+            this.enemy_table = enemy_table;
+            this.attack_options = attack_options;
+            this.special_ability_label = special_ability_label;
+            this.attack_btn = attack_btn;
+            this.special_ability_btn = special_ability_btn;
+            this.score_val = score_val;
         }
     }
 }

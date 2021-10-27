@@ -55,7 +55,8 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Forms\Client\Client.cs" />
-    <Compile Include="Forms\Client\WebSocketFacade.cs" />
+    <Compile Include="Models\Facade\Facade.cs" />
+    <Compile Include="Models\Facade\WebSocketFacade.cs" />
     <Compile Include="Forms\Game.cs">
       <SubType>Form</SubType>
     </Compile>

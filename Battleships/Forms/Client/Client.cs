@@ -84,13 +84,13 @@ namespace Battleships.Forms
             string uid = JsonConvert.DeserializeObject<String>(e.Data);
             if (uid == user_id)
             {
-                game.SetAttackButtonStatus(false);
-                game.SetSpecialButtonStatus(false);
+                game.Facade.SetAttackButtonStatus(false);
+                game.Facade.SetSpecialButtonStatus(false);
             }
             else
             {
-                game.SetAttackButtonStatus(true);
-                game.SetSpecialButtonStatus(true);
+                game.Facade.SetAttackButtonStatus(true);
+                game.Facade.SetSpecialButtonStatus(true);
             }
             Debug.WriteLine($"*CLIENT* Client with ID:{uid} just attacked, his TURN is over! ");
 
@@ -119,16 +119,16 @@ namespace Battleships.Forms
                 CreateGame();
             if (user_count == 2 && user_id == uid)
             {
-                game.setUID(user_id);
-                game.SetAttackButtonStatus(true);
-                game.SetSpecialButtonStatus(true);
+                game.Facade.setUID(user_id);
+                game.Facade.SetAttackButtonStatus(true);
+                game.Facade.SetSpecialButtonStatus(true);
                 game.ShowDialog();
             }
             else if (user_count == 2)
             {
-                game.setUID(user_id);
-                game.SetAttackButtonStatus(false);
-                game.SetSpecialButtonStatus(false);
+                game.Facade.setUID(user_id);
+                game.Facade.SetAttackButtonStatus(false);
+                game.Facade.SetSpecialButtonStatus(false);
                 game.ShowDialog();
             }
         }
@@ -148,7 +148,7 @@ namespace Battleships.Forms
             if (uid != user_id)
             {
                 //Debug.WriteLine("*CLIENT* Message from the Client!");
-                game.ShipHitCheck(ship_index, uid);
+                game.Facade.ShipHitCheck(ship_index, uid);
             }
         }
 
@@ -165,7 +165,7 @@ namespace Battleships.Forms
             int ship_index = Convert.ToInt32(items[1]);
             bool hit_status = Convert.ToBoolean(items[2]);
 
-            game.UpdateHitShips(ship_index, uid, hit_status);
+            game.Facade.UpdateHitShips(ship_index, uid, hit_status);
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace Battleships.Forms
         private static void OnCompleteMessage(object sender, MessageEventArgs e)
         {
             string uid = JsonConvert.DeserializeObject<String>(e.Data);
-            game.Completed(uid);
+            game.Facade.Completed(uid);
         }
 
         /// <summary>
