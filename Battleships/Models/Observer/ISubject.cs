@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebSocketSharp.Server;
 
 namespace Battleships.Models.Observer
 {
@@ -10,8 +11,7 @@ namespace Battleships.Models.Observer
     {
         void Register(IObserver observer);
         void Unregister(IObserver observer);
-
-        void Notify(string playerUID);
+        void Notify(string playerUID, WebSocketSessionManager ServerSession);
 
     }
 }

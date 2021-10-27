@@ -81,8 +81,18 @@ namespace Battleships.Forms
 
         static void OnTurnMessage(object sender, MessageEventArgs e)
         {
-            string id = JsonConvert.DeserializeObject<String>(e.Data);
-            game.ButtonStatusChange();
+            string uid = JsonConvert.DeserializeObject<String>(e.Data);
+            if (uid == user_id)
+            {
+                game.SetAttackButtonStatus(false);
+                game.SetSpecialButtonStatus(false);
+            }
+            else
+            {
+                game.SetAttackButtonStatus(true);
+                game.SetSpecialButtonStatus(true);
+            }
+            Debug.WriteLine($"*CLIENT* Client with ID:{uid} just attacked, his TURN is over! ");
 
         }
 
@@ -99,20 +109,26 @@ namespace Battleships.Forms
          
             var user_count = Convert.ToInt32(data[1]);
             var uid = data[0];
-            Debug.WriteLine($"Client : {uid}");
+            //Debug.WriteLine($"*CLIENT* Client : {uid}");
+            SetFirstTurnSettings(user_count, uid);
+        }
 
-            if(user_count == 2)
+        private static void SetFirstTurnSettings(int user_count, string uid)
+        {
+            if (user_count == 2)
                 CreateGame();
             if (user_count == 2 && user_id == uid)
             {
-                //CreateGame();
                 game.setUID(user_id);
-                game.ButtonStatusChange();
+                game.SetAttackButtonStatus(true);
+                game.SetSpecialButtonStatus(true);
                 game.ShowDialog();
             }
-            else if(user_count == 2)
+            else if (user_count == 2)
             {
                 game.setUID(user_id);
+                game.SetAttackButtonStatus(false);
+                game.SetSpecialButtonStatus(false);
                 game.ShowDialog();
             }
         }
@@ -131,7 +147,7 @@ namespace Battleships.Forms
 
             if (uid != user_id)
             {
-                Debug.WriteLine("Message from the Client!");
+                //Debug.WriteLine("*CLIENT* Message from the Client!");
                 game.ShipHitCheck(ship_index, uid);
             }
         }

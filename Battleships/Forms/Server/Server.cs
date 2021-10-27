@@ -35,11 +35,9 @@ namespace Battleships.Forms
                 string user_id = e.Data;
                 playerTurn.Register(new UserObserver(user_id));
                 connectedUsers++;
-                //if (connectedUsers == 2)
-                    //playerTurn.Notify(user_id);
                 Sessions.Broadcast($"{user_id}:{connectedUsers}");
             
-                Debug.WriteLine($"User ({user_id}) Connected (Total Users: {connectedUsers})");
+                Debug.WriteLine($"*SERVER* User ({user_id}) Connected (Total Users: {connectedUsers})");
             }
         }
 
@@ -54,8 +52,7 @@ namespace Battleships.Forms
             {
                 string[] data = e.Data.Split(':');
                 Sessions.Broadcast(JsonConvert.SerializeObject(data));
-                Debug.WriteLine($"Position hit {data[0]} (User ID = {data[1]})");
-                playerTurn.Notify(data[1]);
+                Debug.WriteLine($"*SERVER* Position hit {data[0]} (User ID = {data[1]})");
             }
         }
         /// <summary>
@@ -81,8 +78,8 @@ namespace Battleships.Forms
             protected override void OnMessage(MessageEventArgs e)
             {
                 string uid = JsonConvert.SerializeObject(e.Data);
-                Sessions.Broadcast(uid);
-                Debug.WriteLine($"User turn id: {uid}");
+                playerTurn.Notify(uid, Sessions);
+                Debug.WriteLine($"*SERVER* User turn id: {uid}");
             }
         }
 
@@ -92,7 +89,7 @@ namespace Battleships.Forms
             {
                 string uid = JsonConvert.SerializeObject(e.Data);
                 Sessions.Broadcast(uid);
-                Debug.WriteLine($"Winner of the game: {uid}");
+                Debug.WriteLine($"*SERVER* Winner of the game: {uid}");
             }
         }
 

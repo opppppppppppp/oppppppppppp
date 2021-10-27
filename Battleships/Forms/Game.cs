@@ -17,7 +17,6 @@ namespace Battleships
 {
     public partial class Game : Form
     {
-
         public ShipField PlayerPos { get; set; }
         public ShipField EnemyPos { get; set; }
         public ShipField AttackPos { get; set; }
@@ -34,6 +33,7 @@ namespace Battleships
         WebSocket position_socket;
         WebSocket response_socket;
         WebSocket complete_socket;
+        WebSocket player_turn;
 
 
         static string user_id;
@@ -49,6 +49,7 @@ namespace Battleships
             position_socket = Client.Positions(Constants.ip_address);
             response_socket = Client.Response(Constants.ip_address);
             complete_socket = Client.Complete(Constants.ip_address);
+            player_turn = Client.Turn(Constants.ip_address);
             RestartGame();
         }
         public void setUID(string uid)
@@ -63,12 +64,12 @@ namespace Battleships
 
             PlayerPos = new ShipField(5, player_table, new ShipFieldUpgradeGood());
             EnemyPos = new ShipField(5, enemy_table, new ShipFieldUpgradeEvil());
-            AttackPos = new ShipField(5, enemy_table, new ShipFieldUpgradeEvil());
+            AttackPos = EnemyPos.Clone() as ShipField;
             Ships = Level.ShipFactory;
             SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
 
             enemy_table.DataSource = EnemyPos.GetTableData();
-            AddAttackOptions(PlayerPos.GetPositions());
+            AddAttackOptions(AttackPos.GetPositions());
             UpdateScore();
 
         }
@@ -149,6 +150,7 @@ namespace Battleships
             int index = attack_options.SelectedIndex;
             //RemoveAttackOption(FindShipByIndex(enemyPos, index).Text);//*Cia*
             position_socket.Send($"{index}:{user_id}");
+            player_turn.Send($"{user_id}");
         }
         public void ShipHitCheck(int ship_index, string uid)
         {
@@ -193,6 +195,7 @@ namespace Battleships
                 int index = EnemyPos.GetShipIndex(attackships[i]);
                 position_socket.Send($"{index}:{user_id}");
             }
+            player_turn.Send($"{user_id}");
         }
 
         public List<string> GetCorrectStrategy()
@@ -231,16 +234,12 @@ namespace Battleships
         {
 
         }
-
         private void special_ability_btn_Click(object sender, EventArgs e)
         {
             SpecialAttack();
             special_ability_btn.Hide();
             special_ability_label.Hide(); 
         }
-
-
-
         public void MarkSelectedShips(ShipField Pos, List<int> selectedPos)
         {
             for (int i = 0; i < selectedPos.Count; i++)
@@ -284,7 +283,7 @@ namespace Battleships
         }
         public void RestartGame()
         {
-            AttackPos = EnemyPos;
+            AttackPos = EnemyPos.Clone() as ShipField;
             playerScore = 0;
             SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
             MarkSelectedShips(PlayerPos, SelectedPlayerPos);
@@ -294,15 +293,15 @@ namespace Battleships
             scoreCalculator.ExecuteCommand(new AddScoreCommand(1));
         }
 
-        delegate void SetBtnStatus(bool status);
-        private void SetButtonStatus(bool status)
+        delegate void SetAttackBtnStatus(bool status);
+        public void SetAttackButtonStatus(bool status)
         {
             // InvokeRequired required compares the thread ID of the
             // calling thread to the thread ID of the creating thread.
             // If these threads are different, it returns true.
             if (this.attack_btn.InvokeRequired)
             {
-                SetBtnStatus d = new SetBtnStatus(SetButtonStatus);
+                SetAttackBtnStatus d = new SetAttackBtnStatus(SetAttackButtonStatus);
                 this.Invoke(d, new object[] { status });
             }
             else
@@ -310,12 +309,22 @@ namespace Battleships
                 this.attack_btn.Enabled = status;
             }
         }
-        public void ButtonStatusChange()
+
+        delegate void SetSpecialBtnStatus(bool status);
+        public void SetSpecialButtonStatus(bool status)
         {
-            if (attack_btn.Enabled)
-                SetButtonStatus(false);
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
+            if (this.attack_btn.InvokeRequired)
+            {
+                SetSpecialBtnStatus d = new SetSpecialBtnStatus(SetSpecialButtonStatus);
+                this.Invoke(d, new object[] { status });
+            }
             else
-                SetButtonStatus(true);
+            {
+                this.special_ability_btn.Enabled = status;
+            }
         }
     }
 }

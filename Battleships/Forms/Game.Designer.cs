@@ -86,9 +86,6 @@ namespace Battleships
             this.a3 = new System.Windows.Forms.Button();
             this.a2 = new System.Windows.Forms.Button();
             this.a1 = new System.Windows.Forms.Button();
-            this.turn_label = new System.Windows.Forms.Label();
-            this.turn_left_label = new System.Windows.Forms.Label();
-            this.turn_right = new System.Windows.Forms.Label();
             this.level_label = new System.Windows.Forms.Label();
             this.level_value = new System.Windows.Forms.Label();
             this.score_label = new System.Windows.Forms.Label();
@@ -630,41 +627,6 @@ namespace Battleships
             this.a1.Text = "A1";
             this.a1.UseVisualStyleBackColor = true;
             // 
-            // turn_label
-            // 
-            this.turn_label.AutoSize = true;
-            this.turn_label.BackColor = System.Drawing.Color.Transparent;
-            this.turn_label.ForeColor = System.Drawing.Color.White;
-            this.turn_label.Location = new System.Drawing.Point(629, 182);
-            this.turn_label.Name = "turn_label";
-            this.turn_label.Size = new System.Drawing.Size(55, 26);
-            this.turn_label.TabIndex = 75;
-            this.turn_label.Text = "Turn";
-            // 
-            // turn_left_label
-            // 
-            this.turn_left_label.AutoSize = true;
-            this.turn_left_label.BackColor = System.Drawing.Color.Transparent;
-            this.turn_left_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.turn_left_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.turn_left_label.Location = new System.Drawing.Point(600, 175);
-            this.turn_left_label.Name = "turn_left_label";
-            this.turn_left_label.Size = new System.Drawing.Size(32, 36);
-            this.turn_left_label.TabIndex = 76;
-            this.turn_left_label.Text = "<";
-            // 
-            // turn_right
-            // 
-            this.turn_right.AutoSize = true;
-            this.turn_right.BackColor = System.Drawing.Color.Transparent;
-            this.turn_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.turn_right.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.turn_right.Location = new System.Drawing.Point(681, 175);
-            this.turn_right.Name = "turn_right";
-            this.turn_right.Size = new System.Drawing.Size(32, 36);
-            this.turn_right.TabIndex = 77;
-            this.turn_right.Text = ">";
-            // 
             // level_label
             // 
             this.level_label.AutoSize = true;
@@ -782,9 +744,6 @@ namespace Battleships
             this.Controls.Add(this.score_label);
             this.Controls.Add(this.level_value);
             this.Controls.Add(this.level_label);
-            this.Controls.Add(this.turn_right);
-            this.Controls.Add(this.turn_left_label);
-            this.Controls.Add(this.turn_label);
             this.Controls.Add(this.e5);
             this.Controls.Add(this.e4);
             this.Controls.Add(this.e3);
@@ -910,9 +869,6 @@ namespace Battleships
         private System.Windows.Forms.Button a3;
         private System.Windows.Forms.Button a2;
         private System.Windows.Forms.Button a1;
-        private System.Windows.Forms.Label turn_label;
-        private System.Windows.Forms.Label turn_left_label;
-        private System.Windows.Forms.Label turn_right;
         private System.Windows.Forms.Label level_label;
         private System.Windows.Forms.Label level_value;
         private System.Windows.Forms.Label score_label;

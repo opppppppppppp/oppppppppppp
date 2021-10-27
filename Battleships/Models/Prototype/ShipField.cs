@@ -36,8 +36,7 @@ namespace Battleships.Models
 
         public override ShipFieldPrototype Clone()
         {
-            Console.WriteLine(
-                "Cloned ShipField");
+            Console.WriteLine("Cloned ShipField");
             return this.MemberwiseClone() as ShipFieldPrototype;
         }
         public DataTable GetTableData()

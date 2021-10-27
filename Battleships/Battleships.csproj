@@ -110,7 +110,6 @@
     <Compile Include="Models\LevelBuilder\LevelTwoBuilder.cs" />
     <Compile Include="Models\Factory Method\ConcreteCreator\ShipBigFactory.cs" />
     <Compile Include="Models\Factory Method\ConcreteCreator\ShipMediumFactory.cs" />
-    <Compile Include="Models\GameLogic.cs" />
     <Compile Include="Models\Observer\IObserver.cs" />
     <Compile Include="Models\Observer\ISubject.cs" />
     <Compile Include="Models\Observer\TurnSubject.cs" />
