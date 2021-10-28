@@ -15,7 +15,6 @@ namespace Battleships
             Facade.InitializeGameLogic();
             Facade.RestartGame();
         }
-
         
         private void label1_Click(object sender, EventArgs e)
         {
@@ -26,6 +25,7 @@ namespace Battleships
             Facade.SpecialAttack();
             special_ability_btn.Hide();
             special_ability_label.Hide();
+           
         }
         public void Attack_btn_Click(object sender, EventArgs e)
         {

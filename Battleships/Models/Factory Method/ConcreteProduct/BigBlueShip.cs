@@ -16,6 +16,7 @@ namespace Battleships.Models
         public BigBlueShip()
         {
             _ShipType = "Big";
+            ShipSize = 1;
         }
 
         public override string ShipType

@@ -123,6 +123,7 @@ namespace Battleships.Forms
                 game.Facade.SetAttackButtonStatus(true);
                 game.Facade.SetSpecialButtonStatus(true);
                 game.ShowDialog();
+
             }
             else if (user_count == 2)
             {
@@ -141,6 +142,7 @@ namespace Battleships.Forms
         /// <param name="e">Gauti Duomenys</param>
         private static void OnPosMessage(object sender, MessageEventArgs e)
         {
+
             var items = JsonConvert.DeserializeObject<List<string>>(e.Data);
             var uid = items[1];
             var ship_index = Convert.ToInt32(items[0]);

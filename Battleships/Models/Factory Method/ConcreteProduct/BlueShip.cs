@@ -10,6 +10,7 @@ namespace Battleships.Models.Factory_Method.ConcreteProduct
     public abstract class BlueShip
     {
         public abstract string ShipType { get; }
+        public int ShipSize { get; set; }
         public abstract Color _Color { get; set; }
 
         public BlueShip()

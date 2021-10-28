@@ -15,6 +15,7 @@ namespace Battleships.Models
         public MediumBlueShip()
         {
             _ShipType = "Medium";
+            ShipSize = 2;
         }
 
         public override string ShipType

@@ -66,11 +66,12 @@ namespace Battleships.Models.Facade
         {
             LevelChecker();
 
-            PlayerPos = new ShipField(5, GameObjects.player_table, new ShipFieldUpgradeGood());
-            EnemyPos = new ShipField(5, GameObjects.enemy_table, new ShipFieldUpgradeEvil());
-            AttackPos = EnemyPos.Clone() as ShipField;
+            
             Ships = Level.ShipFactory;
+            PlayerPos = new ShipField(5, GameObjects.player_table, new ShipFieldUpgradeGood(),Ships);
+            EnemyPos = new ShipField(5, GameObjects.enemy_table, new ShipFieldUpgradeEvil(), Ships);
             //SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
+            AttackPos = EnemyPos.Clone() as ShipField;
             SelectedPlayerPos = new Pos().generatePos(0, Level, PlayerPos);
 
             GameObjects.enemy_table.DataSource = EnemyPos.GetTableData();

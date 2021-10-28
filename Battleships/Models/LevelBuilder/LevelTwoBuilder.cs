@@ -1,4 +1,5 @@
-﻿using Battleships.Models.ConcreteCreator;
+﻿using Battleships.Models;
+using Battleships.Models.ConcreteCreator;
 using Battleships.Models.Decorator;
 using Battleships.Models.Strategy;
 using System;
@@ -19,7 +20,7 @@ namespace Battleships.LevelBuilder
         public void SetNumberOfShips()
         {
             level.NumberOfShips = 5;
-            level.ShipFactory = new ShipMediumFactory();
+            level.ShipFactory = new ShipSmallFactory();
         }
 
         public void SetStrategy()

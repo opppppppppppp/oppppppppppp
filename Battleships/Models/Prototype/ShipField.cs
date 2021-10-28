@@ -13,17 +13,20 @@ namespace Battleships.Models
 {
     public class ShipField : ShipFieldPrototype
     {
+        private ShipFactory _ships { get; set; }
         private DataTable tabledata { get; set; }
         private DataGridView table { get; set; }
         public List<string> positions { get; set; }
         public int FieldSize { get; set; }
         public int DestroyedShips { get; set; }
 
+
         private ShipFieldUpgradeInterface shipFieldUpgradeInterface;
 
         char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-        public ShipField(int size, DataGridView table, ShipFieldUpgradeInterface shipFieldUpgradeInterface)
+        public ShipField(int size, DataGridView table, ShipFieldUpgradeInterface shipFieldUpgradeInterface, ShipFactory ships)
         {
+            _ships = ships;
             DestroyedShips = 0;
             FieldSize = size;
             positions = new List<string>();
@@ -146,6 +149,12 @@ namespace Battleships.Models
             int column = GetColumn(index);
             table.Rows[row].Cells[column].Value = "S";
             shipFieldUpgradeInterface.upgrade(table, row, column, CellState.Ship);
+
+        }
+
+        private Type BlueShip()
+        {
+            throw new NotImplementedException();
         }
 
         public void updateShipFieldUpgradeInterface(ShipFieldUpgradeInterface shipFieldUpgradeInterface)

@@ -14,6 +14,7 @@ namespace Battleships.Models.Factory_Method.ConcreteOrangeProduct
         public MediumOrangeShip()
         {
             _ShipType = "Medium";
+            ShipSize = 2;
         }
 
         public override string ShipType

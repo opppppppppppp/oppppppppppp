@@ -13,6 +13,7 @@ namespace Battleships.Models.Factory_Method.ConcreteOrangeProduct
         public BigOrangeShip()
         {
             _ShipType = "Big";
+            ShipSize = 3;
         }
 
         public override string ShipType

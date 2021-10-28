@@ -22,7 +22,7 @@ namespace Battleships.Models.Bridge
             }
             else if (state == CellState.Ship)
             {
-                table.Rows[row].Cells[column].Style.BackColor = Color.Green;
+                table.Rows[row].Cells[column].Style.BackColor = Color.Pink;
             } 
             else if (state == CellState.NotHitBlue)
             {
