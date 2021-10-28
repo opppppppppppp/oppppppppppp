@@ -103,6 +103,11 @@
     <Compile Include="Models\Decorator\AttackIncreaseDecorator.cs" />
     <Compile Include="Models\Decorator\BasicAttackIncrease.cs" />
     <Compile Include="Models\Decorator\UltraAttackIncrease.cs" />
+    <Compile Include="Models\Factory Method\ConcreteOrangeProduct\BigOrangeShip.cs" />
+    <Compile Include="Models\Factory Method\ConcreteOrangeProduct\MediumOrangeShip.cs" />
+    <Compile Include="Models\Factory Method\ConcreteOrangeProduct\OrangeShip.cs" />
+    <Compile Include="Models\Factory Method\ConcreteOrangeProduct\SmallOrangeShip.cs" />
+    <Compile Include="Models\Factory Method\ConcreteProduct\BlueShip.cs" />
     <Compile Include="Models\LevelBuilder\ILevelBuilder.cs" />
     <Compile Include="Models\LevelBuilder\Level.cs" />
     <Compile Include="Models\LevelBuilder\LevelCreator.cs" />
@@ -118,10 +123,10 @@
     <Compile Include="Models\Prototype\ShipFieldPrototype.cs" />
     <Compile Include="Models\Sailor.cs" />
     <Compile Include="Models\Ship.cs" />
-    <Compile Include="Models\Factory Method\ConcreteProduct\ShipBig.cs" />
+    <Compile Include="Models\Factory Method\ConcreteProduct\BigBlueShip.cs" />
     <Compile Include="Models\Factory Method\Creator\ShipFactory.cs" />
-    <Compile Include="Models\Factory Method\ConcreteProduct\ShipMedium.cs" />
-    <Compile Include="Models\Factory Method\ConcreteProduct\ShipSmall.cs" />
+    <Compile Include="Models\Factory Method\ConcreteProduct\MediumBlueShip.cs" />
+    <Compile Include="Models\Factory Method\ConcreteProduct\SmallBlueShip.cs" />
     <Compile Include="Models\Factory Method\ConcreteCreator\ShipSmallFactory.cs" />
     <Compile Include="Models\Strategy\DynamiteAttackStrategy.cs" />
     <Compile Include="Models\Strategy\MissileAttackStrategy.cs" />

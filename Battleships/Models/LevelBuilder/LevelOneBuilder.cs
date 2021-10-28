@@ -19,7 +19,7 @@ namespace Battleships.LevelBuilder
         public void SetNumberOfShips()
         {
             level.NumberOfShips = 4;
-            level.ShipFactory = new ShipSmallFactory(4);
+            level.ShipFactory = new ShipSmallFactory();
         }
         public void SetStrategy()
         {

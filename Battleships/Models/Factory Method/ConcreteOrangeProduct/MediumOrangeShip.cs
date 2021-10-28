@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Battleships.Models
+namespace Battleships.Models.Factory_Method.ConcreteOrangeProduct
 {
-    class ShipSmall : Ship
+    class MediumOrangeShip : OrangeShip
     {
         private readonly string _ShipType;
-        private int _ShipSize;
 
-        public ShipSmall(int ShipSize)
+        public MediumOrangeShip()
         {
-            _ShipType = "Small";
-            _ShipSize = ShipSize;
+            _ShipType = "Medium";
         }
 
         public override string ShipType
@@ -22,11 +21,10 @@ namespace Battleships.Models
             get { return _ShipType; }
         }
 
-        public override int ShipSize
+        public override Color _Color
         {
-            get { return _ShipSize; }
-            set { _ShipSize = value; }
+            get { return _Color; }
+            set { _Color = value; }
         }
-
     }
 }

@@ -1,20 +1,21 @@
-﻿using System;
+﻿using Battleships.Models.Factory_Method.ConcreteProduct;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Battleships.Models
 {
-    class ShipBig : Ship
+    public class BigBlueShip : BlueShip
     {
         private readonly string _ShipType;
-        private int _ShipSize;
+  
 
-        public ShipBig(int ShipSize)
+        public BigBlueShip()
         {
             _ShipType = "Big";
-            _ShipSize = ShipSize;
         }
 
         public override string ShipType
@@ -22,10 +23,10 @@ namespace Battleships.Models
             get { return _ShipType; }
         }
 
-        public override int ShipSize
+        public override Color _Color
         {
-            get { return _ShipSize; }
-            set { _ShipSize = value; }
+            get { return _Color; }
+            set { _Color = value; }
         }
     }
 }

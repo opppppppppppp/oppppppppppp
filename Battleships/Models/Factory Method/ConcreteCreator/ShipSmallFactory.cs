@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Battleships.Models.Factory_Method.ConcreteOrangeProduct;
+using Battleships.Models.Factory_Method.ConcreteProduct;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,16 +11,21 @@ namespace Battleships.Models
 {
     class ShipSmallFactory : ShipFactory
     {
-        private int _ShipSize;
+        private Color _Color;
 
-        public ShipSmallFactory(int shipSize)
+        public ShipSmallFactory()
         {
-            _ShipSize = shipSize;
+
         }
 
-        public override Ship GetShip()
+        public override OrangeShip GetOrangeShip()
         {
-            return new ShipMedium(_ShipSize);
+            return new SmallOrangeShip();
+        }
+
+        public override BlueShip GetBlueShip()
+        {
+            return new SmallBlueShip();
         }
     }
 }
