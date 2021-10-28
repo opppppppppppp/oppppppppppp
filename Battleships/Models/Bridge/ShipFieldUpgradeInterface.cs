@@ -11,6 +11,8 @@ namespace Battleships.Models.Bridge
     {
         Ship,
         Hit,
+        NotHitBlue,
+        NotHitOrange,
         NotHit
     }
 

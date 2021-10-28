@@ -12,9 +12,10 @@ namespace Battleships.Models.Bridge
     {
         public void upgrade(DataGridView table, int row, int column, CellState state)
         {
-            if(state == CellState.NotHit)
+
+            if (state == CellState.NotHitOrange)
             {
-                table.Rows[row].Cells[column].Style.BackColor = Color.Yellow;
+                table.Rows[row].Cells[column].Style.BackColor = Color.Orange;
             }
             else if (state == CellState.Hit)
             {
@@ -23,6 +24,14 @@ namespace Battleships.Models.Bridge
             else if (state == CellState.Ship)
             {
                 table.Rows[row].Cells[column].Style.BackColor = Color.Green;
+            } 
+            else if (state == CellState.NotHitBlue)
+            {
+                table.Rows[row].Cells[column].Style.BackColor = Color.LightBlue;
+            }
+            else if (state == CellState.NotHit)
+            {
+                table.Rows[row].Cells[column].Style.BackColor = Color.Yellow;
             }
         }
     }

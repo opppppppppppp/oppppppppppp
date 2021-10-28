@@ -70,7 +70,8 @@ namespace Battleships.Models.Facade
             EnemyPos = new ShipField(5, GameObjects.enemy_table, new ShipFieldUpgradeEvil());
             AttackPos = EnemyPos.Clone() as ShipField;
             Ships = Level.ShipFactory;
-            SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
+            //SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
+            SelectedPlayerPos = new Pos().generatePos(0, Level, PlayerPos);
 
             GameObjects.enemy_table.DataSource = EnemyPos.GetTableData();
             AddAttackOptions(AttackPos.GetPositions());
@@ -245,7 +246,7 @@ namespace Battleships.Models.Facade
         {
             AttackPos = EnemyPos.Clone() as ShipField;
             playerScore = 0;
-            SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
+            SelectedPlayerPos = new Pos().generatePos(0, Level, PlayerPos);
             MarkSelectedShips(PlayerPos, SelectedPlayerPos);
         }
         public void IncreaseScore()

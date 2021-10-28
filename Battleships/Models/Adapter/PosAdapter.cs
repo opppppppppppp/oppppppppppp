@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Battleships.LevelBuilder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,11 @@ namespace Battleships.Models.Adapter
             }
         }
 
-        public List<int> generatePos(int type, ShipFactory Ships, ShipField PlayerPos)
+        public List<int> generatePos(int type, Level level, ShipField PlayerPos)
         {
             if (type == 0)
             {
-                return posGenerator.generatePos(Ships.GetShip().ShipSize, PlayerPos.GetTableSize());
+                return posGenerator.generatePos(level.NumberOfShips, PlayerPos.GetTableSize());
             }
             else return null;
         }
