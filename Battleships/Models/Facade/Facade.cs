@@ -71,7 +71,7 @@ namespace Battleships.Models.Facade
             Ships = Level.ShipFactory;
             PlayerPos = new ShipField(6, GameObjects.player_table, new ShipFieldUpgradeGood(), Ships);
             EnemyPos = new ShipField(6, GameObjects.enemy_table, new ShipFieldUpgradeEvil(), Ships);
-            AttackPos = EnemyPos.DeepClone();
+            AttackPos = (ShipField)EnemyPos.DeepClone();
             SelectedPlayerPos = new Pos().generatePos(0, Level, PlayerPos);
             GameObjects.enemy_table.DataSource = EnemyPos.GetTableData();
             AddAttackOptions(AttackPos.GetPositions());
@@ -83,14 +83,6 @@ namespace Battleships.Models.Facade
             Debug.WriteLine("Memory Address of Cloned EnemyPos.positions : " + AddressHelper.GetAddress(AttackPos.positions));*/
         }
 
-
-        /*public void PrintMemoryAddress(ShipField obj, ShipField objCloned)
-        {
-            Debug.WriteLine("Memory Address of EnemyPos : " + GetMemoryAddress(obj));
-            Debug.WriteLine("Memory Address of EnemyPos.ships : " + GetMemoryAddress(obj.positions));
-            Debug.WriteLine("Memory Address of Cloned EnemyPos : " + GetMemoryAddress(objCloned));
-            Debug.WriteLine("Memory Address of Cloned EnemyPos.ships : " + GetMemoryAddress(objCloned.positions));
-        }*/
 
         public void setUID(string uid)
         {

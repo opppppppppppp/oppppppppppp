@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Battleships.Models
 {
-    public class ShipField
+    public class ShipField : ShipFieldPrototype
     {
         public ShipFactory ships { get; set; }
         private DataTable tabledata { get; set; }
@@ -37,13 +37,13 @@ namespace Battleships.Models
             this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
         }
 
-        public ShipField Clone()
+        public override ShipFieldPrototype Clone()
         {
             Console.WriteLine("Shallow Cloned ShipField");
             return (ShipField)this.MemberwiseClone();
         }
 
-        public ShipField DeepClone()
+        public override ShipFieldPrototype DeepClone()
         {
             Console.WriteLine("Deep Cloned ShipField");
             ShipField shipfield = (ShipField)this.MemberwiseClone();
