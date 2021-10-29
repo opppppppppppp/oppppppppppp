@@ -30,7 +30,7 @@ namespace Battleships.LevelBuilder
 
         public void IncreasedStrategy()
         {
-            level.IncreasedStrategy = new UltraAttackIncrease(new DynamiteAttackStrategy());
+            level.IncreasedStrategy = new MediumAttackIncrease(new DynamiteAttackStrategy());
         }
 
         public Level GetLevel()

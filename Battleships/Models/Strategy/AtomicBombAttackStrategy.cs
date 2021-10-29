@@ -1,20 +1,16 @@
-﻿using Battleships.Models.Strategy;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Battleships.Models.Decorator
+namespace Battleships.Models.Strategy
 {
-    class UltraAttackIncrease : AttackIncreaseDecorator
+    class AtomicBombAttackStrategy : IAttackStrategy
     {
-        public UltraAttackIncrease(IAttackStrategy aAttack) : base(aAttack)
-        {
-        }
-        public override string Name => base.aAttack.Name;
-        public override int shipCount => base.aAttack.shipCount * 4;
-        public override List<string> GetAttackingShips(List<string> attackships)
+        public string Name => nameof(BombAttackStrategy);
+        public int shipCount => 4;
+        public List<string> GetAttackingShips(List<string> attackships)
         {
             Random rnd = new Random(Guid.NewGuid().GetHashCode());
             List<string> generated_ships = new List<string>();

@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models.Decorator
 {
-    class UltraAttackIncrease : AttackIncreaseDecorator
+    class MediumAttackIncrease : AttackIncreaseDecorator
     {
-        public UltraAttackIncrease(IAttackStrategy aAttack) : base(aAttack)
+        public MediumAttackIncrease(IAttackStrategy aAttack) : base(aAttack)
         {
         }
         public override string Name => base.aAttack.Name;
-        public override int shipCount => base.aAttack.shipCount * 4;
+        public override int shipCount => base.aAttack.shipCount * 3;
         public override List<string> GetAttackingShips(List<string> attackships)
         {
             Random rnd = new Random(Guid.NewGuid().GetHashCode());

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using Battleships.Models.Facade;
 
@@ -29,9 +30,17 @@ namespace Battleships
         }
         public void Attack_btn_Click(object sender, EventArgs e)
         {
-            int index = attack_options.SelectedIndex;
+            int index = Facade.EnemyPos.GetShipIndex(attack_options.SelectedItem.ToString());
+            //Debug.WriteLine(Facade.EnemyPos.GetShipIndex(attack_options.SelectedItem.ToString()));
             Facade.position_socket.Send($"{index}:{Facade.user_id}");
             Facade.player_turn.Send($"{Facade.user_id}");
+            RemoveAttackOption(attack_options.SelectedIndex);
+   
+        }
+
+        private void RemoveAttackOption(int index)
+        {
+            attack_options.Items.RemoveAt(index);
         }
     }
 

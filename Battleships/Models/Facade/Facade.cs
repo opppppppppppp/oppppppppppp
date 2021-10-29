@@ -69,18 +69,18 @@ namespace Battleships.Models.Facade
         {
             LevelChecker();
             Ships = Level.ShipFactory;
-            PlayerPos = new ShipField(5, GameObjects.player_table, new ShipFieldUpgradeGood(), Ships);
-            EnemyPos = new ShipField(5, GameObjects.enemy_table, new ShipFieldUpgradeEvil(), Ships);
-            AttackPos = EnemyPos.Clone();
+            PlayerPos = new ShipField(6, GameObjects.player_table, new ShipFieldUpgradeGood(), Ships);
+            EnemyPos = new ShipField(6, GameObjects.enemy_table, new ShipFieldUpgradeEvil(), Ships);
+            AttackPos = EnemyPos.DeepClone();
             SelectedPlayerPos = new Pos().generatePos(0, Level, PlayerPos);
             GameObjects.enemy_table.DataSource = EnemyPos.GetTableData();
             AddAttackOptions(AttackPos.GetPositions());
             UpdateScore();
 
-            Debug.WriteLine("Memory Address of EnemyPos : " + AddressHelper.GetAddress(EnemyPos));
+            /*Debug.WriteLine("Memory Address of EnemyPos : " + AddressHelper.GetAddress(EnemyPos));
             Debug.WriteLine("Memory Address of EnemyPos.positions : " + AddressHelper.GetAddress(EnemyPos.positions));
             Debug.WriteLine("Memory Address of Cloned EnemyPos : " + AddressHelper.GetAddress(AttackPos));
-            Debug.WriteLine("Memory Address of Cloned EnemyPos.positions : " + AddressHelper.GetAddress(AttackPos.positions));
+            Debug.WriteLine("Memory Address of Cloned EnemyPos.positions : " + AddressHelper.GetAddress(AttackPos.positions));*/
         }
 
 
@@ -105,12 +105,6 @@ namespace Battleships.Models.Facade
             {
                 GameObjects.attack_options.Items.Add(options[i]);
             }
-        }
-
-        private void RemoveAttackOption(string option)
-        {
-            GameObjects.attack_options.Items.Remove(option);
-            //options.Remove(option);
         }
         private void LevelChecker()
         {

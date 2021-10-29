@@ -57,6 +57,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Forms\Client\Client.cs" />
     <Compile Include="Models\AddressHelper.cs" />
+    <Compile Include="Models\Decorator\MediumAttackIncrease.cs" />
     <Compile Include="Models\Facade\Facade.cs" />
     <Compile Include="Models\Facade\WebSocketFacade.cs" />
     <Compile Include="Forms\Game.cs">
@@ -130,6 +131,7 @@
     <Compile Include="Models\Factory Method\ConcreteProduct\MediumBlueShip.cs" />
     <Compile Include="Models\Factory Method\ConcreteProduct\SmallBlueShip.cs" />
     <Compile Include="Models\Factory Method\ConcreteCreator\ShipSmallFactory.cs" />
+    <Compile Include="Models\Strategy\AtomicBombAttackStrategy.cs" />
     <Compile Include="Models\Strategy\DynamiteAttackStrategy.cs" />
     <Compile Include="Models\Strategy\MissileAttackStrategy.cs" />
     <Compile Include="Models\Strategy\IAttackStrategy.cs" />

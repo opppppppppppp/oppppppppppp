@@ -49,7 +49,6 @@ namespace Battleships.Models
             ShipField shipfield = (ShipField)this.MemberwiseClone();
             shipfield.positions = positions.GetRange(0, positions.Count);
             return shipfield;
-            
         }
         public DataTable GetTableData()
         {
