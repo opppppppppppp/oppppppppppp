@@ -9,5 +9,6 @@ namespace Battleships.Models.Prototype
     public abstract class ShipFieldPrototype
     {
         public abstract ShipFieldPrototype Clone();
+        public abstract ShipFieldPrototype DeepClone();
     }
 }

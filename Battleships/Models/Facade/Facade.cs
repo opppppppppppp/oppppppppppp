@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Battleships.Forms;
 using Battleships.LevelBuilder;
@@ -65,21 +68,30 @@ namespace Battleships.Models.Facade
         public void InitializeGameLogic()
         {
             LevelChecker();
-
-            
             Ships = Level.ShipFactory;
-            PlayerPos = new ShipField(5, GameObjects.player_table, new ShipFieldUpgradeGood(),Ships);
+            PlayerPos = new ShipField(5, GameObjects.player_table, new ShipFieldUpgradeGood(), Ships);
             EnemyPos = new ShipField(5, GameObjects.enemy_table, new ShipFieldUpgradeEvil(), Ships);
-            //SelectedPlayerPos = new Pos().generatePos(0, Ships, PlayerPos);
-            AttackPos = EnemyPos.Clone() as ShipField;
+            AttackPos = EnemyPos.Clone();
             SelectedPlayerPos = new Pos().generatePos(0, Level, PlayerPos);
-
             GameObjects.enemy_table.DataSource = EnemyPos.GetTableData();
             AddAttackOptions(AttackPos.GetPositions());
             UpdateScore();
 
+            Debug.WriteLine("Memory Address of EnemyPos : " + AddressHelper.GetAddress(EnemyPos));
+            Debug.WriteLine("Memory Address of EnemyPos.positions : " + AddressHelper.GetAddress(EnemyPos.positions));
+            Debug.WriteLine("Memory Address of Cloned EnemyPos : " + AddressHelper.GetAddress(AttackPos));
+            Debug.WriteLine("Memory Address of Cloned EnemyPos.positions : " + AddressHelper.GetAddress(AttackPos.positions));
         }
-        
+
+
+        /*public void PrintMemoryAddress(ShipField obj, ShipField objCloned)
+        {
+            Debug.WriteLine("Memory Address of EnemyPos : " + GetMemoryAddress(obj));
+            Debug.WriteLine("Memory Address of EnemyPos.ships : " + GetMemoryAddress(obj.positions));
+            Debug.WriteLine("Memory Address of Cloned EnemyPos : " + GetMemoryAddress(objCloned));
+            Debug.WriteLine("Memory Address of Cloned EnemyPos.ships : " + GetMemoryAddress(objCloned.positions));
+        }*/
+
         public void setUID(string uid)
         {
             user_id = uid;

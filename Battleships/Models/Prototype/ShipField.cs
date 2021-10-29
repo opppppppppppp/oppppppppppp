@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Battleships.Models
 {
-    public class ShipField : ShipFieldPrototype
+    public class ShipField
     {
-        private ShipFactory _ships { get; set; }
+        public ShipFactory ships { get; set; }
         private DataTable tabledata { get; set; }
         private DataGridView table { get; set; }
         public List<string> positions { get; set; }
@@ -24,9 +24,9 @@ namespace Battleships.Models
         private ShipFieldUpgradeInterface shipFieldUpgradeInterface;
 
         char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-        public ShipField(int size, DataGridView table, ShipFieldUpgradeInterface shipFieldUpgradeInterface, ShipFactory ships)
+        public ShipField(int size, DataGridView table, ShipFieldUpgradeInterface shipFieldUpgradeInterface, ShipFactory shipsfactory)
         {
-            _ships = ships;
+            ships = shipsfactory;
             DestroyedShips = 0;
             FieldSize = size;
             positions = new List<string>();
@@ -37,10 +37,19 @@ namespace Battleships.Models
             this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
         }
 
-        public override ShipFieldPrototype Clone()
+        public ShipField Clone()
         {
-            Console.WriteLine("Cloned ShipField");
-            return this.MemberwiseClone() as ShipFieldPrototype;
+            Console.WriteLine("Shallow Cloned ShipField");
+            return (ShipField)this.MemberwiseClone();
+        }
+
+        public ShipField DeepClone()
+        {
+            Console.WriteLine("Deep Cloned ShipField");
+            ShipField shipfield = (ShipField)this.MemberwiseClone();
+            shipfield.positions = positions.GetRange(0, positions.Count);
+            return shipfield;
+            
         }
         public DataTable GetTableData()
         {

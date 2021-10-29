@@ -33,8 +33,6 @@ namespace Battleships.Forms
             this.create_room_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
             this.join_room_btn = new System.Windows.Forms.Button();
-            this.table = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
             // create_room_btn
@@ -70,17 +68,6 @@ namespace Battleships.Forms
             this.join_room_btn.UseVisualStyleBackColor = true;
             this.join_room_btn.Click += new System.EventHandler(this.join_room_btn_Click);
             // 
-            // table
-            // 
-            this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table.Location = new System.Drawing.Point(127, 176);
-            this.table.Name = "table";
-            this.table.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.table.Size = new System.Drawing.Size(356, 208);
-            this.table.TabIndex = 5;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -88,13 +75,11 @@ namespace Battleships.Forms
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.table);
             this.Controls.Add(this.join_room_btn);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.create_room_btn);
             this.Name = "Main";
             this.Text = "Main";
-            ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -104,6 +89,5 @@ namespace Battleships.Forms
         private System.Windows.Forms.Button create_room_btn;
         private System.Windows.Forms.Button exit_btn;
         private System.Windows.Forms.Button join_room_btn;
-        private System.Windows.Forms.DataGridView table;
     }
 }

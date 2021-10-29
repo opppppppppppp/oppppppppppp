@@ -30,7 +30,6 @@ namespace Battleships
         public void Attack_btn_Click(object sender, EventArgs e)
         {
             int index = attack_options.SelectedIndex;
-            //RemoveAttackOption(FindShipByIndex(enemyPos, index).Text);//*Cia*
             Facade.position_socket.Send($"{index}:{Facade.user_id}");
             Facade.player_turn.Send($"{Facade.user_id}");
         }
