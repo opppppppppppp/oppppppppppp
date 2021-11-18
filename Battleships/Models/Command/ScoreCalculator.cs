@@ -19,8 +19,6 @@ namespace Battleships.Models.Command
             score = command.Execute(score);
             history.Push(command);
         }
-
-
         public void Undo()
         {
             var command = history.Pop();

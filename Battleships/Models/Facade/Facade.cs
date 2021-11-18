@@ -29,11 +29,12 @@ namespace Battleships.Models.Facade
 
         //********************************************************
 
-        Level Level;
-        public WebSocket position_socket;
-        WebSocket response_socket;
-        WebSocket complete_socket;
-        public WebSocket player_turn;
+        public Level Level;
+        public Connections connections;
+        /*public WebSocket position_socket;
+        public WebSocket response_socket;
+        public WebSocket complete_socket;
+        public WebSocket player_turn;*/
 
 
         public static string user_id;
@@ -43,10 +44,12 @@ namespace Battleships.Models.Facade
 
         public Facade(Game Game, GameObjects GameObjects)
         {
-            position_socket = Client.Positions(Constants.ip_address);
+            connections = new Connections();
+            connections.Connect(Constants.ip_address);
+            /*position_socket = Client.Positions(Constants.ip_address);
             response_socket = Client.Response(Constants.ip_address);
             complete_socket = Client.Complete(Constants.ip_address);
-            player_turn = Client.Turn(Constants.ip_address);
+            player_turn = Client.Turn(Constants.ip_address);*/
             this.Game = Game;
             this.GameObjects = GameObjects;
         }
@@ -132,7 +135,7 @@ namespace Battleships.Models.Facade
         private void ScoreChecker()
         {
             if (scoreCalculator.score >= Level.NumberOfShips)
-                complete_socket.Send(user_id);
+                connections.complete_socket.Send(user_id);
         }
         public void ShipHitCheck(int ship_index, string uid)
         {
@@ -141,12 +144,12 @@ namespace Battleships.Models.Facade
             if (attackOption == "S")
             {
                 MarkLocalShip(ship_index, true);
-                response_socket.Send($"{uid}:{ship_index}:{true}");
+                connections.response_socket.Send($"{uid}:{ship_index}:{true}");
             }
             else
             {
                 MarkLocalShip(ship_index, false);
-                response_socket.Send($"{uid}:{ship_index}:{false}");
+                connections.response_socket.Send($"{uid}:{ship_index}:{false}");
             }
         }
         public void UpdateHitShips(int ship_index, string uid, bool hit_status)
@@ -175,26 +178,26 @@ namespace Battleships.Models.Facade
             for (int i = 0; i < attackships.Count; i++)
             {
                 int index = EnemyPos.GetShipIndex(attackships[i]);
-                position_socket.Send($"{index}:{user_id}");
+                connections.position_socket.Send($"{index}:{user_id}");
             }
-            player_turn.Send($"{user_id}");
+            connections.player_turn.Send($"{user_id}");
         }
 
         public void Completed(string uid)
         {
             if (sailor.UID == uid)
             {
-                position_socket.Close();
-                response_socket.Close();
-                complete_socket.Close();
+                connections.position_socket.Close();
+                connections.response_socket.Close();
+                connections.complete_socket.Close();
                 MessageBox.Show("You are the winner");
                 Application.Exit();
             }
             else
             {
-                position_socket.Close();
-                response_socket.Close();
-                complete_socket.Close();
+                connections.position_socket.Close();
+                connections.response_socket.Close();
+                connections.complete_socket.Close();
                 MessageBox.Show("You've lost the game!");
                 Application.Exit();
             }

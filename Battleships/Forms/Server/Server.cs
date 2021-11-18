@@ -97,24 +97,24 @@ namespace Battleships.Forms
         /// Metodas skirtas sukurti serverį su tam tikrais Route.
         /// Šiame metode apibrežiami serveryje esantys route, su jiem priklausančia logika.
         /// </summary>
-        public static void InitializeServer(string ip_address)
+        public static bool InitializeServer()
         {
             connectedUsers = 0;
             try
             {
-                //webSocketServer = ServerInstance.GetInstance();
-
                 webSocketServer.Start();
                 webSocketServer.AddWebSocketService<Connection>("/Connection");
                 webSocketServer.AddWebSocketService<Positions>("/Positions");
                 webSocketServer.AddWebSocketService<Response>("/Response");
                 webSocketServer.AddWebSocketService<Complete>("/Complete");
                 webSocketServer.AddWebSocketService<Turn>("/Turn");
+                return true;
             }
             catch (Exception exception)
             {
                 ShowExceptionDetails(exception);
             }
+            return false;
         }
         /// <summary>
         /// Exception metodas, grąžinantis klaidas.
@@ -124,6 +124,11 @@ namespace Battleships.Forms
         {
             MessageBox.Show(exception.Message, exception.TargetSite.ToString(),
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public static bool InitializeServer(object ip_address)
+        {
+            throw new NotImplementedException();
         }
     }
 }

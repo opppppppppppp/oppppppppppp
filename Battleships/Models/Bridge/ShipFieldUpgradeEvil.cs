@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Battleships.Models.Bridge
 {
-    class ShipFieldUpgradeEvil : ShipFieldUpgradeInterface
+    public class ShipFieldUpgradeEvil : ShipFieldUpgradeInterface
     {
         public void upgrade(DataGridView table, int row, int column, CellState state)
         {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models
 {
-    class ShipSmallFactory : ShipFactory
+    public class ShipSmallFactory : ShipFactory
     {
         private Color _Color;
 

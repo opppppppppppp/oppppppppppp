@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models.ConcreteCreator
 {
-    class ShipBigFactory : ShipFactory
+    public class ShipBigFactory : ShipFactory
     {
         private Color _Color;
 

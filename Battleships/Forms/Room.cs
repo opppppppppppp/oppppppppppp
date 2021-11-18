@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,8 @@ namespace Battleships.Forms
 
         private void create_server_btn_Click(object sender, EventArgs e)
         {
-            Server.InitializeServer(Constants.ip_address);
+            
+            Server.InitializeServer();
             this.Hide();
             var waitroom = new WaitRoom();
             waitroom.Show();

@@ -15,7 +15,7 @@ namespace Battleships.Forms
     public class Client
     {
         public static Game game { get; set; }
-        public static WebSocket ws;
+        public static WebSocket ws = null;
         static string ip_addr;
         //static UserObserver user;
         static string user_id;
@@ -24,13 +24,16 @@ namespace Battleships.Forms
         /// Metodas, skirtas prisijungti prie ws://{ip_address}/Connection route.
         /// </summary>
         /// <param name="ip_address">IP Address prie kurio jungiames</param>
-        public static void Connect(string ip_address)
+        public static WebSocket Connect(string ip_address)
         {
             //user = new UserObserver(GenerateUserID());
+            bool value = false;
             user_id = GenerateUserID();
             ip_addr = ip_address;
             var wsf = new WebSocketFacade(ip_address, "Connection");
             ws = wsf.Connect(OnRoomCreate, user_id);
+            return ws;
+  
         }
 
         /// <summary>

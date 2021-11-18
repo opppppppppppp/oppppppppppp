@@ -20,7 +20,6 @@ namespace Battleships.Models
         public int FieldSize { get; set; }
         public int DestroyedShips { get; set; }
 
-
         private ShipFieldUpgradeInterface shipFieldUpgradeInterface;
 
         char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
