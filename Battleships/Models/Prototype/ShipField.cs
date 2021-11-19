@@ -1,4 +1,5 @@
 ﻿using Battleships.Models.Bridge;
+using Battleships.Models.Composite;
 using Battleships.Models.Prototype;
 using System;
 using System.Collections.Generic;
@@ -11,12 +12,14 @@ using System.Windows.Forms;
 
 namespace Battleships.Models
 {
-    public class ShipField : ShipFieldPrototype
+    public class ShipField : Component
     {
         public ShipFactory ships { get; set; }
         private DataTable tabledata { get; set; }
         private DataGridView table { get; set; }
-        public List<string> positions { get; set; }
+
+        public ShipPositions _posObject = new ShipPositions();
+        //public List<string> positions { get; set; }
         public int FieldSize { get; set; }
         public int DestroyedShips { get; set; }
 
@@ -28,7 +31,6 @@ namespace Battleships.Models
             ships = shipsfactory;
             DestroyedShips = 0;
             FieldSize = size;
-            positions = new List<string>();
             tabledata = new DataTable();
             this.table = table;
             tabledata = GenerateTable();
@@ -36,17 +38,17 @@ namespace Battleships.Models
             this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
         }
 
-        public override ShipFieldPrototype Clone()
+        public ShipField Clone()
         {
             Console.WriteLine("Shallow Cloned ShipField");
             return (ShipField)this.MemberwiseClone();
         }
 
-        public override ShipFieldPrototype DeepClone()
+        public ShipField DeepClone()
         {
             Console.WriteLine("Deep Cloned ShipField");
             ShipField shipfield = (ShipField)this.MemberwiseClone();
-            shipfield.positions = positions.GetRange(0, positions.Count);
+            shipfield._posObject.positions = _posObject.positions.GetRange(0, _posObject.positions.Count);
             return shipfield;
         }
         public DataTable GetTableData()
@@ -67,7 +69,7 @@ namespace Battleships.Models
         }
         public List<string> GetPositions()
         {
-            return positions;
+            return _posObject.positions;
         }
         public int GetTableSize()
         {
@@ -95,7 +97,7 @@ namespace Battleships.Models
                 DataRow table_row = tabledata.Rows[i];
                 for (int j = 0;j<FieldSize;j++)
                 {
-                    table_row[j] = positions[i*FieldSize + j];
+                    table_row[j] = _posObject.positions[i*FieldSize + j];
                 }
             }
         }
@@ -110,7 +112,7 @@ namespace Battleships.Models
                     letter_index++;
                     index = 1;
                 }
-                positions.Add(letters[letter_index] + (index).ToString());
+                _posObject.positions.Add(letters[letter_index] + (index).ToString());
                 index++;
             }
         }
@@ -124,7 +126,7 @@ namespace Battleships.Models
         }
         public int GetShipIndex(string ship)
         {
-            return positions.IndexOf(ship);
+            return _posObject.positions.IndexOf(ship);
         }
 
         public string GetShipValue(int index)
@@ -167,6 +169,11 @@ namespace Battleships.Models
         public void updateShipFieldUpgradeInterface(ShipFieldUpgradeInterface shipFieldUpgradeInterface)
         {
             this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
+        }
+
+        public override void AddChild(string ip_address)
+        {
+
         }
 
     }

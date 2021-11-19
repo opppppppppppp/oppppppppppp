@@ -16,7 +16,6 @@ namespace Battleships.Models.Facade
     {
         private Game Game;
         private GameObjects GameObjects;
-
         public ShipField PlayerPos { get; set; }
         public ShipField EnemyPos { get; set; }
         public ShipField AttackPos { get; set; }
@@ -31,12 +30,6 @@ namespace Battleships.Models.Facade
 
         public Level Level;
         public Connections connections;
-        /*public WebSocket position_socket;
-        public WebSocket response_socket;
-        public WebSocket complete_socket;
-        public WebSocket player_turn;*/
-
-
         public static string user_id;
         Sailor sailor;
 
@@ -46,24 +39,20 @@ namespace Battleships.Models.Facade
         {
             connections = new Connections();
             connections.Connect(Constants.ip_address);
-            /*position_socket = Client.Positions(Constants.ip_address);
-            response_socket = Client.Response(Constants.ip_address);
-            complete_socket = Client.Complete(Constants.ip_address);
-            player_turn = Client.Turn(Constants.ip_address);*/
             this.Game = Game;
             this.GameObjects = GameObjects;
         }
 
         public List<string> GetCorrectStrategy(Level Level, ShipField AttackPos, ShipField PlayerPos)
         {
-            List<string> attackships = Level.Strategy.GetAttackingShips(AttackPos.positions);
+            List<string> attackships = Level.Strategy.GetAttackingShips(AttackPos._posObject.positions);
             if (PlayerPos.DestroyedShips >= 2)
             {
-                attackships = Level.IncreasedStrategy.GetAttackingShips(AttackPos.positions);
+                attackships = Level.IncreasedStrategy.GetAttackingShips(AttackPos._posObject.positions);
             }
             else
             {
-                attackships = Level.Strategy.GetAttackingShips(AttackPos.positions);
+                attackships = Level.Strategy.GetAttackingShips(AttackPos._posObject.positions);
             }
             return attackships;
         }
@@ -216,12 +205,7 @@ namespace Battleships.Models.Facade
             if (hit_status)
             {
                 PlayerPos.MarkDestroyedShip(ship_index);
-                //MessageBox.Show("You've hit enemy ship!");
-
-                //playerScore++;
-                //IncreaseScore();
                 UpdateScore();
-                //ScoreChecker();
             }
             else
             {
@@ -233,11 +217,8 @@ namespace Battleships.Models.Facade
             if (hit_status)
             {
                 EnemyPos.MarkDestroyedShip(ship_index);
-                //MessageBox.Show("You've hit enemy ship!");
-                //playerScore++;
                 IncreaseScore();
                 UpdateScore();
-                //ScoreChecker();
             }
             else
             {
