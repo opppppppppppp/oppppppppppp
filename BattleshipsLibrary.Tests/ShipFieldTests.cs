@@ -9,21 +9,35 @@ using System.Text;
 using System.Threading.Tasks;
 using Battleships.Models.Bridge;
 using Xunit;
+using Xunit.Abstractions;
+using System.Windows.Forms;
 
 namespace BattleshipsLibrary.Tests
 {
+  
+
     public class ShipFieldTests
     {
-        private static GameObjects gObjects;
-        private static ShipFactory Ships = new ShipSmallFactory();
-        private static ShipField ttt = new ShipField(6, gObjects.player_table, new ShipFieldUpgradeGood(), Ships);
 
-        [Fact]
-        public void GetPositions_Valid()
+
+        private readonly ITestOutputHelper _testOutputHelper;
+        public ShipFieldTests(ITestOutputHelper testOutputHelper)
         {
-            List<string> pos = ttt.GetPositions();
+            _testOutputHelper = testOutputHelper;
+        }
 
-            Console.WriteLine(pos.Count());
+       
+     
+        [Theory]
+        [InlineData(5,25)]
+        public void GetPositionsCount_Valid(int numberOfFields, int expected)
+        { 
+            private static ShipFactory Ships = new ShipSmallFactory();
+            private static ShipField ttt = new ShipField(numberOfFields, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
+            List<string> pos = ttt.GetPositions();
+            
+            
+            Assert.Equal(expected, pos.Count());
 
         }
 

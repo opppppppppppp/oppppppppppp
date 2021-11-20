@@ -21,3 +21,26 @@ C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battle
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.csproj.CopyComplete
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.dll
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.pdb
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.abstractions.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.runner.reporters.net452.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.runner.utility.net452.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\BattleshipsLibrary.Tests.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\BattleshipsLibrary.Tests.pdb
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Battleships.exe
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.assert.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.core.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.execution.desktop.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\websocket-sharp.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Newtonsoft.Json.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Battleships.pdb
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Battleships.exe.config
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.assert.xml
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.core.xml
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.execution.desktop.xml
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Newtonsoft.Json.xml
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.csprojAssemblyReference.cache
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.csproj.CoreCompileInputs.cache
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.csproj.CopyComplete
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.pdb
