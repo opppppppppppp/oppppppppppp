@@ -31,7 +31,6 @@ E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Battleships.exe
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.assert.dll
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.core.dll
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.execution.desktop.dll
-E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\websocket-sharp.dll
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Newtonsoft.Json.dll
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Battleships.pdb
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Battleships.exe.config
@@ -44,3 +43,4 @@ E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.csproj.CopyComplete
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.dll
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.pdb
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.runner.json

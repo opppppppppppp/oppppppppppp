@@ -8,16 +8,29 @@ using Xunit;
 
 namespace BattleshipsLibrary.Tests
 {
-    public class ServerInitializeTests
+    public class ServerTests
     {
         [Fact]
-        public void ServerInitialize_Valid()
+        public void ServerInitializeTest()
         {
             bool value = Server.InitializeServer();
 
             Assert.True(value);
         }
 
+        [Fact]
+        public void ServerConnectTestFail()
+        {
+            Assert.Throws<InvalidOperationException>(() => Client.Connect("127.0.0.157890"));
+        }
+
+        [Fact]
+        public void ServerConnectTest()
+        {
+            Server.InitializeServer();
+            object ws = Client.Connect("127.0.0.1:7890");
+            Assert.NotNull(ws);
+        }
         /*[Fact]
         public void ServerInitialize_Invalid()
         {

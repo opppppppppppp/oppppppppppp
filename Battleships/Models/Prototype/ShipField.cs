@@ -34,7 +34,7 @@ namespace Battleships.Models
             tabledata = new DataTable();
             this.table = table;
             tabledata = GenerateTable();
-            table.DataSource = tabledata;
+            this.table.DataSource = tabledata;
             this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
         }
 
@@ -90,6 +90,13 @@ namespace Battleships.Models
                 tabledata.Rows.Add(table_row);
             }
         }
+
+           public void assignDataTableToDataGrindView()
+        {
+            table.Columns.Clear();
+            table.DataSource = tabledata;
+        }
+
         private void AddValues()
         {
             for(int i = 0;i<FieldSize;i++)
@@ -174,6 +181,11 @@ namespace Battleships.Models
         public override void AddChild(string ip_address)
         {
 
+        }
+
+        public override string ToString()
+        {
+            return "rows: "+GetTableData().Rows+"   columns: "+ GetTableData().Columns;
         }
 
     }

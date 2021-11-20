@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models.Strategy
 {
-    class AtomicBombAttackStrategy : IAttackStrategy
+   public  class AtomicBombAttackStrategy : IAttackStrategy
     {
         public string Name => nameof(BombAttackStrategy);
         public int shipCount => 4;

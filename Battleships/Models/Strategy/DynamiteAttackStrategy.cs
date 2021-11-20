@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Battleships.Models.Strategy
 {
-    class DynamiteAttackStrategy : IAttackStrategy
+    public class DynamiteAttackStrategy : IAttackStrategy
     {
         public string Name => nameof(DynamiteAttackStrategy);
         public int shipCount => 2;
