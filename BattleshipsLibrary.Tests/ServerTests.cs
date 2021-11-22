@@ -31,11 +31,6 @@ namespace BattleshipsLibrary.Tests
             object ws = Client.Connect("127.0.0.1:7890");
             Assert.NotNull(ws);
         }
-        /*[Fact]
-        public void ServerInitialize_Invalid()
-        {
-            Assert.Throws<TypeInitializationException>(() => Server.InitializeServer());
-        }*/
 
     }
 }

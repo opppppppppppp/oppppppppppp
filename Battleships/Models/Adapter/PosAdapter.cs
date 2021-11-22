@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models.Adapter
 {
-    class PosAdapter : IPos
+    public class PosAdapter : IPos
     {
         private IPosGenerator posGenerator;
 

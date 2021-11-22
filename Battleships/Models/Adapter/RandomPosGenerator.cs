@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models.Adapter
 {
-    class RandomPosGenerator : IPosGenerator
+    public class RandomPosGenerator : IPosGenerator
     {
         public List<int> generatePos(int shipSize, int tableSize)
         {

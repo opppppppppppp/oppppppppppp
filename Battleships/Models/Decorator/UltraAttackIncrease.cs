@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models.Decorator
 {
-    class UltraAttackIncrease : AttackIncreaseDecorator
+    public class UltraAttackIncrease : AttackIncreaseDecorator
     {
         public UltraAttackIncrease(IAttackStrategy aAttack) : base(aAttack)
         {

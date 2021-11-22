@@ -60,10 +60,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameTests.cs" />
+    <Compile Include="AdapterTests.cs" />
+    <Compile Include="BuilderTests.cs" />
+    <Compile Include="CommandTests.cs" />
+    <Compile Include="CompositeTests.cs" />
+    <Compile Include="DecoratorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PrototypeTests.cs" />
     <Compile Include="ServerTests.cs" />
     <Compile Include="ShipFieldTests.cs" />
+    <Compile Include="StrategyTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Battleships\Battleships.csproj">

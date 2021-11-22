@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Battleships.LevelBuilder
 {
-    class LevelTwoBuilder : ILevelBuilder
+    public class LevelTwoBuilder : ILevelBuilder
     {
         Level level = new Level();
         public void SetTitle()

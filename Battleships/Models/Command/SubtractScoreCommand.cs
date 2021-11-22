@@ -1,6 +1,6 @@
 ﻿namespace Battleships.Models.Command
 {
-    public class SubtractScoreCommand : IScoreCommand
+    class SubtractScoreCommand : IScoreCommand
     {
         private int score;
 

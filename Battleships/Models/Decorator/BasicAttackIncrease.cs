@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models.Decorator
 {
-    class BasicAttackIncrease : AttackIncreaseDecorator
+    public class BasicAttackIncrease : AttackIncreaseDecorator
     {
         public BasicAttackIncrease(IAttackStrategy aAttack) :base(aAttack)
         {

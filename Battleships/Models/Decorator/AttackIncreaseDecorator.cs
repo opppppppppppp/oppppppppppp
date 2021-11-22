@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models.Decorator
 {
-    class AttackIncreaseDecorator : IAttackStrategy
+    public class AttackIncreaseDecorator : IAttackStrategy
     {
         public IAttackStrategy aAttack;
         public AttackIncreaseDecorator(IAttackStrategy aAttack)

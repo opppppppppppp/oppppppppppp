@@ -8,7 +8,6 @@ C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battle
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.assert.dll
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.core.dll
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.execution.desktop.dll
-C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\websocket-sharp.dll
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Battleships.pdb
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Battleships.exe.config
@@ -44,3 +43,4 @@ E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.dll
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.pdb
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.runner.json
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.runner.json

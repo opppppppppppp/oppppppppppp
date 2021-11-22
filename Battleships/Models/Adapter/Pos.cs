@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models.Adapter
 {
-    class Pos : IPos
+    public class Pos : IPos
     {
         public List<int> generatePos(int type, Level level, ShipField PlayerPos)
         {

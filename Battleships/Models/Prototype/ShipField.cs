@@ -24,15 +24,15 @@ namespace Battleships.Models
         public int DestroyedShips { get; set; }
 
         private ShipFieldUpgradeInterface shipFieldUpgradeInterface;
-
+         
         char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-        public ShipField(int size, DataGridView table, ShipFieldUpgradeInterface shipFieldUpgradeInterface, ShipFactory shipsfactory)
+        public ShipField(int size, DataGridView tbl, ShipFieldUpgradeInterface shipFieldUpgradeInterface, ShipFactory shipsfactory)
         {
             ships = shipsfactory;
             DestroyedShips = 0;
             FieldSize = size;
             tabledata = new DataTable();
-            this.table = table;
+            this.table = tbl;
             tabledata = GenerateTable();
             this.table.DataSource = tabledata;
             this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
@@ -89,12 +89,6 @@ namespace Battleships.Models
                 DataRow table_row = tabledata.NewRow();
                 tabledata.Rows.Add(table_row);
             }
-        }
-
-           public void assignDataTableToDataGrindView()
-        {
-            table.Columns.Clear();
-            table.DataSource = tabledata;
         }
 
         private void AddValues()
@@ -164,6 +158,8 @@ namespace Battleships.Models
             int row = GetRow(index);
             int column = GetColumn(index);
             table.Rows[row].Cells[column].Value = "S";
+            //table[row,column].Value = "S";
+            //table.UpdateCellValue(row, column);
             shipFieldUpgradeInterface.upgrade(table, row, column, CellState.Ship);
 
         }
