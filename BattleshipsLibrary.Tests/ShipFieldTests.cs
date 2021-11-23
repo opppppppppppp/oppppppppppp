@@ -88,15 +88,15 @@ namespace BattleshipsLibrary.Tests
         }
 
 
-        [Theory]
-        [InlineData(5, 13, "S")]
-        //[InlineData(5, 24, "S")]
-        public void markShipTest(int numberOfFields, int index, string expected)
-        {
+        //[Theory]
+        //[InlineData(5, 13, "S")]
+        ////[InlineData(5, 24, "S")]
+        //public void markShipTest(int numberOfFields, int index, string expected)
+        //{
 
-            shipField = new ShipField(numberOfFields, dataGridView, new ShipFieldUpgradeGood(), Ships);
-            shipField.MarkShip(index);
-        }
+        //    shipField = new ShipField(numberOfFields, dataGridView, new ShipFieldUpgradeGood(), Ships);
+        //    shipField.MarkShip(index);
+        //}
 
 
     }
