@@ -9,9 +9,9 @@ namespace Battleships.Models.Strategy
 {
     public class BombAttackStrategy : IAttackStrategy
     {
-        public string Name => nameof(BombAttackStrategy);
-        public int shipCount => 3;
-        public List<string> GetAttackingShips(List<string> attackships)
+        public virtual string Name => nameof(BombAttackStrategy);
+        public virtual int shipCount => 3;
+        public virtual List<string> GetAttackingShips(List<string> attackships)
         {
             Random rnd = new Random(Guid.NewGuid().GetHashCode());
             List<string> generated_ships = new List<string>();

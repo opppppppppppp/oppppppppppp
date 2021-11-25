@@ -141,3 +141,4 @@ C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battle
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CopyComplete
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\obj\Debug\Battleships.exe
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\obj\Debug\Battleships.pdb
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.AssemblyReference.cache

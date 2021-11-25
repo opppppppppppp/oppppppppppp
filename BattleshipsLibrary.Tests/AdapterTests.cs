@@ -13,17 +13,19 @@ namespace BattleshipsLibrary.Tests
 {
     public class AdapterTests
     {
-        [Fact]
-        public void PositionGenerationTest()
+        [Theory]
+        [InlineData(5)]
+        [InlineData(6)]
+        public void positionGenerationTest(int FieldSize)
         {
+            //Arrange
             LevelCreator levelcreator = new LevelCreator(new LevelOneBuilder());
             levelcreator.CreateLevel();
             Level lvl = levelcreator.GetLevel();
             ShipFactory Ships = new ShipSmallFactory();
-            ShipField shipField = new ShipField(5, new System.Windows.Forms.DataGridView(), new ShipFieldUpgradeGood(), Ships);
+            ShipField shipField = new ShipField(FieldSize, new System.Windows.Forms.DataGridView(), new ShipFieldUpgradeGood(), Ships);
             List<int> positions = new Pos().generatePos(0, lvl, shipField);
             Assert.Equal(lvl.NumberOfShips, positions.Count);
-
         }
     }
 }

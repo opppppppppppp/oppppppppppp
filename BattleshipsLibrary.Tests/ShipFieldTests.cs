@@ -11,7 +11,7 @@ using Battleships.Models.Bridge;
 using Xunit;
 using Xunit.Abstractions;
 using System.Windows.Forms;
-
+using Moq;
 
 namespace BattleshipsLibrary.Tests
 {
@@ -36,7 +36,6 @@ namespace BattleshipsLibrary.Tests
         [InlineData(8, 64)]
         public void PosCountTest(int numberOfFields, int expected)
         {
-
             shipField = new ShipField(numberOfFields, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
             List<string> pos = shipField.GetPositions();
 

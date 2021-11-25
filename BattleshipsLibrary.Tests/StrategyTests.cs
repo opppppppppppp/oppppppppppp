@@ -11,6 +11,7 @@ using Battleships.Models.Bridge;
 using Xunit;
 using Xunit.Abstractions;
 using System.Windows.Forms;
+using Moq;
 
 namespace BattleshipsLibrary.Tests
 {
@@ -20,30 +21,96 @@ namespace BattleshipsLibrary.Tests
         private static ShipFactory Ships = new ShipSmallFactory();
         private static ShipField shipField;
 
-        [Fact]
-        public void basicAttackTest()
+        [Theory]
+        [InlineData(5)]
+        [InlineData(6)]
+        public void missileAttackStrategyInitiliazeTest(int FieldSize)
         {
-            shipField = new ShipField(5, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
+            //Arrange
+            shipField = new ShipField(FieldSize, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
+            List<string> attackships = shipField.GetPositions();
             MissileAttackStrategy missileAttackStrategy = new MissileAttackStrategy();
-            var shipsCount = missileAttackStrategy.GetAttackingShips(shipField.GetPositions()).Count;
-            Assert.Equal(1, shipsCount);
+            List<string> expected = returnSamplePositions(missileAttackStrategy.shipCount);
+
+            //Act
+            var strategyMock = new Mock<MissileAttackStrategy>();
+            strategyMock.Setup(x => x.GetAttackingShips(attackships)).Returns(returnSamplePositions(missileAttackStrategy.shipCount));
+            List<string> actual = strategyMock.Object.GetAttackingShips(attackships);
+
+            //Assert
+            Assert.True(actual.SequenceEqual(expected));
+           
         }
 
-        [Fact]
-        public void bombAttackTest()
+        [Theory]
+        [InlineData(5)]
+        [InlineData(6)]
+        public void DynamiteAttackStrategyInitiliazeTest(int FieldSize)
         {
-            shipField = new ShipField(5, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
-            BombAttackStrategy missileAttackStrategy = new BombAttackStrategy();
-            var shipsCount = missileAttackStrategy.GetAttackingShips(shipField.GetPositions()).Count;
-            Assert.Equal(3, shipsCount);
+            //Arrange
+            shipField = new ShipField(FieldSize, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
+            List<string> attackships = shipField.GetPositions();
+            DynamiteAttackStrategy dynamiteAttackStrategy = new DynamiteAttackStrategy();
+            List<string> expected = returnSamplePositions(dynamiteAttackStrategy.shipCount);
+
+            //Act
+            var strategyMock = new Mock<DynamiteAttackStrategy>();
+            strategyMock.Setup(x => x.GetAttackingShips(attackships)).Returns(returnSamplePositions(dynamiteAttackStrategy.shipCount));
+            List<string> actual = strategyMock.Object.GetAttackingShips(attackships);
+
+            //Assert
+            Assert.True(actual.SequenceEqual(expected));
         }
-        [Fact]
-        public void dynamiteAttackTest()
+
+        [Theory]
+        [InlineData(5)]
+        [InlineData(6)]
+        public void BombAttackStrategyInitiliazeTest(int FieldSize)
         {
-            shipField = new ShipField(5, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
-            DynamiteAttackStrategy missileAttackStrategy = new DynamiteAttackStrategy();
-            var shipsCount = missileAttackStrategy.GetAttackingShips(shipField.GetPositions()).Count;
-            Assert.Equal(2, shipsCount);
+            //Arrange
+            shipField = new ShipField(FieldSize, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
+            List<string> attackships = shipField.GetPositions();
+            BombAttackStrategy bombAttackStrategy = new BombAttackStrategy();
+            List<string> expected = returnSamplePositions(bombAttackStrategy.shipCount);
+
+            //Act
+            var strategyMock = new Mock<BombAttackStrategy>();
+            strategyMock.Setup(x => x.GetAttackingShips(attackships)).Returns(returnSamplePositions(bombAttackStrategy.shipCount));
+            List<string> actual = strategyMock.Object.GetAttackingShips(attackships);
+
+            //Assert
+            Assert.True(actual.SequenceEqual(expected));
+        }
+
+        [Theory]
+        [InlineData(5)]
+        [InlineData(6)]
+        public void atomicBombAttackStrategyInitializeTest(int FieldSize)
+        {
+            //Arrange
+            shipField = new ShipField(FieldSize, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
+            List<string> attackships = shipField.GetPositions();
+            AtomicBombAttackStrategy atomicBombStrategy = new AtomicBombAttackStrategy();
+            List<string> expected = returnSamplePositions(atomicBombStrategy.shipCount);
+
+            //Act
+            var strategyMock = new Mock<AtomicBombAttackStrategy>();
+            strategyMock.Setup(x => x.GetAttackingShips(attackships)).Returns(returnSamplePositions(atomicBombStrategy.shipCount));
+            List<string> actual = strategyMock.Object.GetAttackingShips(attackships);
+
+            //Assert
+            Assert.True(actual.SequenceEqual(expected));
+        }
+
+        private List<string> returnSamplePositions(int size)
+        {
+            List<string> pos = new List<string>();
+            char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+            for (int i = 1; i <= size; i++)
+            {
+                pos.Add((letters[i].ToString() + i.ToString()));
+            }
+            return pos;
         }
     }
 }

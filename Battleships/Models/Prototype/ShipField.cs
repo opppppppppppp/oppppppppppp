@@ -19,8 +19,7 @@ namespace Battleships.Models
         private DataGridView table { get; set; }
 
         public ShipPositions _posObject = new ShipPositions();
-        //public List<string> positions { get; set; }
-        public int FieldSize { get; set; }
+        public virtual int FieldSize { get; set; }
         public int DestroyedShips { get; set; }
 
         private ShipFieldUpgradeInterface shipFieldUpgradeInterface;
@@ -102,8 +101,9 @@ namespace Battleships.Models
                 }
             }
         }
-        private void GeneratePositions()
+        public void GeneratePositions()
         {
+            _posObject.positions.Clear();
             int letter_index = 0;
             int index = 1;
             for (int i = 0;i<FieldSize * FieldSize;i++)

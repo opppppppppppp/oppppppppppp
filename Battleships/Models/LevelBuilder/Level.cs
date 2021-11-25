@@ -10,11 +10,23 @@ namespace Battleships.LevelBuilder
 {
     public class Level
     {
-        public int NumberOfShips { get; set; }
+        public virtual int NumberOfShips { get; set; }
         public ShipFactory ShipFactory { get; set; }
         public string Title { get; set; }
         public IAttackStrategy Strategy { get; set; }
         public IAttackStrategy IncreasedStrategy { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            Level level = obj as Level;
+            return (NumberOfShips == level.NumberOfShips && Title == level.Title && ShipFactory.GetType() == level.ShipFactory.GetType() &&
+                Strategy.GetType() == level.Strategy.GetType() && IncreasedStrategy.GetType() == level.IncreasedStrategy.GetType());
+        }
 
     }
 }
