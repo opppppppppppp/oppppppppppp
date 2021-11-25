@@ -1,8 +1,6 @@
 ﻿
 using Xunit;
 using Battleships.LevelBuilder;
-using Battleships.Models.Strategy;
-using Battleships.Models.Decorator;
 using Battleships.Models;
 
 namespace BattleshipsLibrary.Tests
@@ -16,10 +14,10 @@ namespace BattleshipsLibrary.Tests
             //Arrange
             Level expected = new Level();
             expected.Title = "Level 1 - Paradise of hell";
-            expected.Strategy = new BombAttackStrategy();
+          
             expected.ShipFactory = new ShipSmallFactory(2);
             expected.NumberOfShips = 4;
-            expected.IncreasedStrategy = new UltraAttackIncrease(new BombAttackStrategy());
+      
 
             //Act
             LevelCreator levelcreator = new LevelCreator(new LevelOneBuilder());
@@ -36,10 +34,8 @@ namespace BattleshipsLibrary.Tests
             //Arrange
             Level expected = new Level();
             expected.Title = "Level 2 - Cariebien of the Pirates";
-            expected.Strategy = new DynamiteAttackStrategy();
             expected.ShipFactory = new ShipSmallFactory(2);
             expected.NumberOfShips = 5;
-            expected.IncreasedStrategy = new MediumAttackIncrease(new DynamiteAttackStrategy());
 
             //Act
             LevelCreator levelcreator = new LevelCreator(new LevelTwoBuilder());
@@ -57,10 +53,8 @@ namespace BattleshipsLibrary.Tests
             //Arrange
             Level expected = new Level();
             expected.Title = "Level 3 - Island of the Terror";
-            expected.Strategy = new MissileAttackStrategy();
             expected.ShipFactory = new ShipSmallFactory(2);
             expected.NumberOfShips = 6;
-            expected.IncreasedStrategy = new BasicAttackIncrease(new MissileAttackStrategy());
 
             //Act
             LevelCreator levelcreator = new LevelCreator(new LevelThreeBuilder());

@@ -1,5 +1,5 @@
 ﻿using Battleships.Models;
-using Battleships.Models.Bridge;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,7 @@ namespace BattleshipsLibrary.Tests
            ShipFactory Ships = new ShipSmallFactory(2);
            ShipField shipField;
            DataGridView dataGridView = new DataGridView();
-           shipField = new ShipField(1, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
+           shipField = new ShipField(1, new DataGridView(), Ships);
            var Ship = shipField.Clone();
 
            Assert.IsType(shipField.GetType(), Ship);

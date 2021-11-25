@@ -1,6 +1,4 @@
 ﻿using Battleships.Models;
-using Battleships.Models.Decorator;
-using Battleships.Models.Strategy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,12 +21,12 @@ namespace Battleships.LevelBuilder
         }
         public void SetStrategy()
         {
-            level.Strategy = new BombAttackStrategy();
+           
         }
 
         public void IncreasedStrategy()
         {
-            level.IncreasedStrategy = new UltraAttackIncrease(new BombAttackStrategy());
+            
         }
 
         public Level GetLevel()

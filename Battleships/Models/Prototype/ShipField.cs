@@ -1,4 +1,4 @@
-﻿using Battleships.Models.Bridge;
+﻿
 using Battleships.Models.Composite;
 using Battleships.Models.Prototype;
 using System;
@@ -22,10 +22,10 @@ namespace Battleships.Models
         public virtual int FieldSize { get; set; }
         public int DestroyedShips { get; set; }
 
-        private ShipFieldUpgradeInterface shipFieldUpgradeInterface;
+        
          
         char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-        public ShipField(int size, DataGridView tbl, ShipFieldUpgradeInterface shipFieldUpgradeInterface, ShipFactory shipsfactory)
+        public ShipField(int size, DataGridView tbl, ShipFactory shipsfactory)
         {
             ships = shipsfactory;
             DestroyedShips = 0;
@@ -34,7 +34,6 @@ namespace Battleships.Models
             this.table = tbl;
             tabledata = GenerateTable();
             this.table.DataSource = tabledata;
-            this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
         }
 
         public ShipField Clone()
@@ -141,7 +140,7 @@ namespace Battleships.Models
             int row = GetRow(index);
             int column = GetColumn(index);
             table.Rows[row].Cells[column].Value = "O";
-            shipFieldUpgradeInterface.upgrade(table, row, column, CellState.NotHit);
+            //shipFieldUpgradeInterface.upgrade(table, row, column, CellState.NotHit);
         }
 
         public void MarkDestroyedShip(int index)
@@ -150,7 +149,7 @@ namespace Battleships.Models
             int column = GetColumn(index);
             table.Rows[row].Cells[column].Value = "X";
             DestroyedShips++;
-            shipFieldUpgradeInterface.upgrade(table, row, column, CellState.Hit);
+            //shipFieldUpgradeInterface.upgrade(table, row, column, CellState.Hit);
         }
 
         public void MarkShip(int index)
@@ -160,7 +159,7 @@ namespace Battleships.Models
             table.Rows[row].Cells[column].Value = "S";
             //table[row,column].Value = "S";
             //table.UpdateCellValue(row, column);
-            shipFieldUpgradeInterface.upgrade(table, row, column, CellState.Ship);
+            //shipFieldUpgradeInterface.upgrade(table, row, column, CellState.Ship);
 
         }
 
@@ -169,10 +168,10 @@ namespace Battleships.Models
             throw new NotImplementedException();
         }
 
-        public void updateShipFieldUpgradeInterface(ShipFieldUpgradeInterface shipFieldUpgradeInterface)
-        {
-            this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
-        }
+        //public void updateShipFieldUpgradeInterface(ShipFieldUpgradeInterface shipFieldUpgradeInterface)
+        //{
+        //    this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
+        //}
 
         public override void AddChild(string ip_address)
         {

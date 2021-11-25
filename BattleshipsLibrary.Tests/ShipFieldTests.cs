@@ -1,13 +1,12 @@
 ﻿using Battleships;
 using Battleships.Models;
-using Battleships.Models.Decorator;
-using Battleships.Models.Strategy;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Battleships.Models.Bridge;
+
 using Xunit;
 using Xunit.Abstractions;
 using System.Windows.Forms;
@@ -36,7 +35,7 @@ namespace BattleshipsLibrary.Tests
         [InlineData(8, 64)]
         public void PosCountTest(int numberOfFields, int expected)
         {
-            shipField = new ShipField(numberOfFields, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
+            shipField = new ShipField(numberOfFields, new DataGridView(), Ships);
             List<string> pos = shipField.GetPositions();
 
 
@@ -48,7 +47,7 @@ namespace BattleshipsLibrary.Tests
         [InlineData(6, 6)]
         public void addRowsTest(int numberOfFields, int expectedRows)
         {
-            shipField = new ShipField(numberOfFields, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
+            shipField = new ShipField(numberOfFields, new DataGridView(), Ships);
             var table = shipField.GetTableData();
 
             Assert.Equal(expectedRows, table.Rows.Count);
@@ -60,7 +59,7 @@ namespace BattleshipsLibrary.Tests
         [InlineData(6, 6)]
         public void addColunmsTest(int numberOfFields, int expectedRows)
         {
-            shipField = new ShipField(numberOfFields, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
+            shipField = new ShipField(numberOfFields, new DataGridView(), Ships);
             var table = shipField.GetTableData();
 
             Assert.Equal(expectedRows, table.Columns.Count);
@@ -71,7 +70,7 @@ namespace BattleshipsLibrary.Tests
         [InlineData(5, 25, 5)]
         public void getRowTest(int numberOfFields, int index, int expected)
         {
-            shipField = new ShipField(numberOfFields, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
+            shipField = new ShipField(numberOfFields, new DataGridView(), Ships);
             var actual = shipField.GetRow(index);
             Assert.Equal(expected, actual);
         }
@@ -81,7 +80,7 @@ namespace BattleshipsLibrary.Tests
         [InlineData(5, 24, 4)]
         public void getColumnTest(int numberOfFields, int index, int expected)
         {
-            shipField = new ShipField(numberOfFields, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
+            shipField = new ShipField(numberOfFields, new DataGridView(), Ships);
             var actual = shipField.GetColumn(index);
             Assert.Equal(expected, actual);
         }

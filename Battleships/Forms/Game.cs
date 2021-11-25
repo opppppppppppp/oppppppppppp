@@ -23,7 +23,7 @@ namespace Battleships
         }
         private void special_ability_btn_Click(object sender, EventArgs e)
         {
-            Facade.SpecialAttack();
+            
             special_ability_btn.Hide();
             special_ability_label.Hide();
            

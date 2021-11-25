@@ -6,7 +6,6 @@ using System.Windows.Forms;
 using Battleships.Forms;
 using Battleships.LevelBuilder;
 using Battleships.Models.Adapter;
-using Battleships.Models.Bridge;
 using Battleships.Models.Command;
 using WebSocketSharp;
 
@@ -43,26 +42,14 @@ namespace Battleships.Models.Facade
             this.GameObjects = GameObjects;
         }
 
-        public List<string> GetCorrectStrategy(Level Level, ShipField AttackPos, ShipField PlayerPos)
-        {
-            List<string> attackships = Level.Strategy.GetAttackingShips(AttackPos._posObject.positions);
-            if (PlayerPos.DestroyedShips >= 2)
-            {
-                attackships = Level.IncreasedStrategy.GetAttackingShips(AttackPos._posObject.positions);
-            }
-            else
-            {
-                attackships = Level.Strategy.GetAttackingShips(AttackPos._posObject.positions);
-            }
-            return attackships;
-        }
+    
 
         public void InitializeGameLogic()
         {
             LevelChecker();
             Ships = Level.ShipFactory;
-            PlayerPos = new ShipField(6, GameObjects.player_table, new ShipFieldUpgradeGood(), Ships);
-            EnemyPos = new ShipField(6, GameObjects.enemy_table, new ShipFieldUpgradeEvil(), Ships);
+            PlayerPos = new ShipField(6, GameObjects.player_table, Ships);
+            EnemyPos = new ShipField(6, GameObjects.enemy_table, Ships);
             AttackPos = (ShipField)EnemyPos.DeepClone();
             SelectedPlayerPos = new Pos().generatePos(0, Level, PlayerPos);
             GameObjects.enemy_table.DataSource = EnemyPos.GetTableData();
@@ -79,7 +66,8 @@ namespace Battleships.Models.Facade
         public void setUID(string uid)
         {
             user_id = uid;
-            sailor = new Sailor(uid);
+            sailor = new Sailor();
+            sailor.assignUID(user_id);
         }
 
         private void AddAttackOptions(List<string> options)
@@ -111,7 +99,7 @@ namespace Battleships.Models.Facade
             LevelCreator LevelCreator = new LevelCreator(levelBuilder);
             LevelCreator.CreateLevel();
             Level = LevelCreator.GetLevel();
-            GameObjects.special_ability_label.Text = Level.Strategy.Name;
+            //GameObjects.special_ability_label.Text = Level.Strategy.Name;
         }
 
         private void UpdateScore()
@@ -143,7 +131,7 @@ namespace Battleships.Models.Facade
         }
         public void UpdateHitShips(int ship_index, string uid, bool hit_status)
         {
-            if (sailor.UID != uid)//Nuo cia*
+            if (sailor.getUID() != uid)//Nuo cia*
             {
                 //Button attackedShip = FindShipByIndex(PlayerPos, ship_index);
                 string attackOption = PlayerPos.GetShipValue(ship_index);
@@ -151,7 +139,7 @@ namespace Battleships.Models.Facade
                 MarkLocalShip(ship_index, hit_status);
             }
             else //Iki cia
-            if (sailor.UID == uid)
+            if (sailor.getUID() == uid)
             {
                 //Button attackedShip = FindShipByIndex(EnemyPos, ship_index);
                 string attackOption = EnemyPos.GetShipValue(ship_index);
@@ -161,20 +149,11 @@ namespace Battleships.Models.Facade
             }
         }
 
-        public void SpecialAttack()
-        {
-            List<string> attackships = GetCorrectStrategy(Level, AttackPos, PlayerPos);
-            for (int i = 0; i < attackships.Count; i++)
-            {
-                int index = EnemyPos.GetShipIndex(attackships[i]);
-                connections.position_socket.Send($"{index}:{user_id}");
-            }
-            connections.player_turn.Send($"{user_id}");
-        }
+    
 
         public void Completed(string uid)
         {
-            if (sailor.UID == uid)
+            if (sailor.getUID() == uid)
             {
                 connections.position_socket.Close();
                 connections.response_socket.Close();

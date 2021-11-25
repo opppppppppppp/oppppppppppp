@@ -8,10 +8,20 @@ namespace Battleships.Models
 {
     public class Sailor
     {
-        public string UID { get; set; }
-        public Sailor(string uid)
+        private  string UID { get; set; }
+        public Sailor()
+        {
+
+        }
+
+        public virtual void assignUID(string uid)
         {
             UID = uid;
+        }
+
+        public virtual string getUID()
+        {
+            return UID ?? "-1";
         }
     }
 }

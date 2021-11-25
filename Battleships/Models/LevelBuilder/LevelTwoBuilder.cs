@@ -1,7 +1,5 @@
 ﻿using Battleships.Models;
 using Battleships.Models.ConcreteCreator;
-using Battleships.Models.Decorator;
-using Battleships.Models.Strategy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,12 +23,12 @@ namespace Battleships.LevelBuilder
 
         public void SetStrategy()
         {
-            level.Strategy = new DynamiteAttackStrategy();
+          
         }
 
         public void IncreasedStrategy()
         {
-            level.IncreasedStrategy = new MediumAttackIncrease(new DynamiteAttackStrategy());
+            
         }
 
         public Level GetLevel()

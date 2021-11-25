@@ -34,7 +34,7 @@ namespace Battleships.Models.Factory_Method.ConcreteProduct
                 return false;
             var obj_new = obj as ShipMedium;
 
-            return obj_new._ShipSize == _ShipSize && obj_new._ShipType == _ShipType;
+            return obj_new.ShipSize == ShipSize && obj_new.ShipType == ShipType;
         }
     }
 }
