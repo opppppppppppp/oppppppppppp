@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.22808764940239043" branch-rate="0.1306760847628658" lines-covered="4351" lines-valid="19076" branches-covered="1036" branches-valid="7928" complexity="7452" version="0" timestamp="1637872609">
+<coverage line-rate="0.22814007129377228" branch-rate="0.13054994954591323" lines-covered="4352" lines-valid="19076" branches-covered="1035" branches-valid="7928" complexity="7452" version="0" timestamp="1637875003">
   <sources />
   <packages>
     <package name="Battleships" line-rate="0.20501868659903896" branch-rate="0.2222222222222222" complexity="275">
       <classes>
-        <class name="Battleships.Forms.Client" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Client\Client.cs" line-rate="0.22916666666666666" branch-rate="0.3333333333333333" complexity="2">
+        <class name="Battleships.Forms.Client" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\Client\Client.cs" line-rate="0.22916666666666666" branch-rate="0.3333333333333333" complexity="2">
           <methods>
             <method name="game" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -264,7 +264,7 @@
             <line number="199" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Forms.JoinRoom" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\JoinRoom.cs" line-rate="0" branch-rate="1" complexity="NaN">
+        <class name="Battleships.Forms.JoinRoom" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\JoinRoom.cs" line-rate="0" branch-rate="1" complexity="NaN">
           <methods>
             <method name="login_server_btn_Click" signature="(System.Object,System.EventArgs)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -301,7 +301,7 @@
             <line number="33" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Forms.JoinRoom" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\JoinRoom.Designer.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Battleships.Forms.JoinRoom" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\JoinRoom.Designer.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="0" complexity="1">
               <lines>
@@ -444,7 +444,7 @@
             <line number="98" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Forms.Main" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Main.cs" line-rate="0" branch-rate="1" complexity="NaN">
+        <class name="Battleships.Forms.Main" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\Main.cs" line-rate="0" branch-rate="1" complexity="NaN">
           <methods>
             <method name="ShowExceptionDetails" signature="(System.Exception)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -512,7 +512,7 @@
             <line number="63" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Forms.Main" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Main.Designer.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Battleships.Forms.Main" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\Main.Designer.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="0" complexity="1">
               <lines>
@@ -638,7 +638,7 @@
             <line number="85" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Forms.Room" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Room.cs" line-rate="0" branch-rate="1" complexity="NaN">
+        <class name="Battleships.Forms.Room" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\Room.cs" line-rate="0" branch-rate="1" complexity="NaN">
           <methods>
             <method name="create_server_btn_Click" signature="(System.Object,System.EventArgs)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -674,7 +674,7 @@
             <line number="37" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Forms.Room" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Room.Designer.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Battleships.Forms.Room" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\Room.Designer.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="0" complexity="1">
               <lines>
@@ -815,7 +815,7 @@
             <line number="96" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Forms.Server" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Server\Server.cs" line-rate="0.39215686274509803" branch-rate="1" complexity="2">
+        <class name="Battleships.Forms.Server" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\Server\Server.cs" line-rate="0.39215686274509803" branch-rate="1" complexity="2">
           <methods>
             <method name="InitializeServer" signature="()" line-rate="0.6875" branch-rate="1" complexity="1">
               <lines>
@@ -959,7 +959,7 @@
             <line number="128" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Forms.ServerInstance" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Server\ServerInstance.cs" line-rate="1" branch-rate="0.5" complexity="2">
+        <class name="Battleships.Forms.ServerInstance" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\Server\ServerInstance.cs" line-rate="1" branch-rate="0.5" complexity="2">
           <methods>
             <method name="Instance" signature="()" line-rate="1" branch-rate="0.5" complexity="NaN">
               <lines>
@@ -1009,7 +1009,7 @@
             <line number="37" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Forms.WaitRoom" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\WaitRoom.cs" line-rate="0" branch-rate="1" complexity="NaN">
+        <class name="Battleships.Forms.WaitRoom" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\WaitRoom.cs" line-rate="0" branch-rate="1" complexity="NaN">
           <methods>
             <method name="WaitRoom_Load" signature="(System.Object,System.EventArgs)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -1037,7 +1037,7 @@
             <line number="33" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Forms.WaitRoom" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\WaitRoom.Designer.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Battleships.Forms.WaitRoom" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\WaitRoom.Designer.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="0" complexity="1">
               <lines>
@@ -1156,7 +1156,7 @@
             <line number="82" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Forms.WebSocketFacade" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Facade\WebSocketFacade.cs" line-rate="1" branch-rate="1" complexity="NaN">
+        <class name="Battleships.Forms.WebSocketFacade" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Facade\WebSocketFacade.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
             <method name="webSocket" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -1213,7 +1213,7 @@
             <line number="27" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Game" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Game.cs" line-rate="0" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Game" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\Game.cs" line-rate="0" branch-rate="0" complexity="NaN">
           <methods>
             <method name="label1_Click" signature="(System.Object,System.EventArgs)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -1275,7 +1275,7 @@
             <line number="43" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Game" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Game.Designer.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="Battleships.Game" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\Game.Designer.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="0" complexity="1">
               <lines>
@@ -2478,7 +2478,7 @@
             <line number="812" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.GameObjects" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Game.cs" line-rate="0" branch-rate="1" complexity="NaN">
+        <class name="Battleships.GameObjects" filename="E:\Work stuff\oppppppppppp\Battleships\Forms\Game.cs" line-rate="0" branch-rate="1" complexity="NaN">
           <methods>
             <method name=".ctor" signature="(System.Windows.Forms.DataGridView,System.Windows.Forms.DataGridView,System.Windows.Forms.ComboBox,System.Windows.Forms.Label,System.Windows.Forms.Button,System.Windows.Forms.Button,System.Windows.Forms.Label)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -2510,7 +2510,7 @@
             <line number="66" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.LevelBuilder.Level" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\LevelBuilder\Level.cs" line-rate="0.8461538461538461" branch-rate="0.5" complexity="NaN">
+        <class name="Battleships.LevelBuilder.Level" filename="E:\Work stuff\oppppppppppp\Battleships\Models\LevelBuilder\Level.cs" line-rate="0.8461538461538461" branch-rate="0.5" complexity="NaN">
           <methods>
             <method name="NumberOfShips" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -2591,7 +2591,7 @@
             <line number="29" hits="3" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.LevelBuilder.LevelCreator" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\LevelBuilder\LevelCreator.cs" line-rate="1" branch-rate="1" complexity="2">
+        <class name="Battleships.LevelBuilder.LevelCreator" filename="E:\Work stuff\oppppppppppp\Battleships\Models\LevelBuilder\LevelCreator.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
             <method name=".ctor" signature="(Battleships.LevelBuilder.ILevelBuilder)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -2635,7 +2635,7 @@
             <line number="28" hits="5" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.LevelBuilder.LevelOneBuilder" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\LevelBuilder\LevelOneBuilder.cs" line-rate="1" branch-rate="1" complexity="6">
+        <class name="Battleships.LevelBuilder.LevelOneBuilder" filename="E:\Work stuff\oppppppppppp\Battleships\Models\LevelBuilder\LevelOneBuilder.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
             <method name="SetTitle" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -2699,7 +2699,7 @@
             <line number="37" hits="3" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.LevelBuilder.LevelThreeBuilder" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\LevelBuilder\LevelThreeBuilder.cs" line-rate="1" branch-rate="1" complexity="6">
+        <class name="Battleships.LevelBuilder.LevelThreeBuilder" filename="E:\Work stuff\oppppppppppp\Battleships\Models\LevelBuilder\LevelThreeBuilder.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
             <method name="SetTitle" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -2763,7 +2763,7 @@
             <line number="37" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.LevelBuilder.LevelTwoBuilder" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\LevelBuilder\LevelTwoBuilder.cs" line-rate="1" branch-rate="1" complexity="6">
+        <class name="Battleships.LevelBuilder.LevelTwoBuilder" filename="E:\Work stuff\oppppppppppp\Battleships\Models\LevelBuilder\LevelTwoBuilder.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
             <method name="SetTitle" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -2827,7 +2827,7 @@
             <line number="39" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Adapter.Pos" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Adapter\Pos.cs" line-rate="0.3333333333333333" branch-rate="0.25" complexity="NaN">
+        <class name="Battleships.Models.Adapter.Pos" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Adapter\Pos.cs" line-rate="0.3333333333333333" branch-rate="0.25" complexity="NaN">
           <methods>
             <method name="generatePos" signature="(System.Int32,Battleships.LevelBuilder.Level,Battleships.Models.ShipField)" line-rate="0.3333333333333333" branch-rate="0.25" complexity="NaN">
               <lines>
@@ -2867,7 +2867,7 @@
             <line number="30" hits="2" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Adapter.PosAdapter" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Adapter\PosAdapter.cs" line-rate="0.9230769230769231" branch-rate="0.5" complexity="NaN">
+        <class name="Battleships.Models.Adapter.PosAdapter" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Adapter\PosAdapter.cs" line-rate="0.9230769230769231" branch-rate="0.5" complexity="NaN">
           <methods>
             <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="0.5" complexity="NaN">
               <lines>
@@ -2907,7 +2907,7 @@
             <line number="29" hits="2" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Adapter.RandomPosGenerator" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Adapter\RandomPosGenerator.cs" line-rate="1" branch-rate="1" complexity="NaN">
+        <class name="Battleships.Models.Adapter.RandomPosGenerator" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Adapter\RandomPosGenerator.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
             <method name="generatePos" signature="(System.Int32,System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -2943,7 +2943,7 @@
             <line number="24" hits="2" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.AddressHelper" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\AddressHelper.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Battleships.Models.AddressHelper" filename="E:\Work stuff\oppppppppppp\Battleships\Models\AddressHelper.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name=".cctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2999,7 +2999,7 @@
             <line number="40" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Bridge.ShipFieldUpgradeEvil" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Bridge\ShipFieldUpgradeEvil.cs" line-rate="0" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Bridge.ShipFieldUpgradeEvil" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Bridge\ShipFieldUpgradeEvil.cs" line-rate="0" branch-rate="0" complexity="NaN">
           <methods>
             <method name="upgrade" signature="(System.Windows.Forms.DataGridView,System.Int32,System.Int32,Battleships.Models.Bridge.CellState)" line-rate="0" branch-rate="0" complexity="NaN">
               <lines>
@@ -3053,7 +3053,7 @@
             <line number="35" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Bridge.ShipFieldUpgradeGood" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Bridge\ShipFieldUpgradeGood.cs" line-rate="0" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Bridge.ShipFieldUpgradeGood" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Bridge\ShipFieldUpgradeGood.cs" line-rate="0" branch-rate="0" complexity="NaN">
           <methods>
             <method name="upgrade" signature="(System.Windows.Forms.DataGridView,System.Int32,System.Int32,Battleships.Models.Bridge.CellState)" line-rate="0" branch-rate="0" complexity="NaN">
               <lines>
@@ -3107,7 +3107,7 @@
             <line number="36" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Command.AddScoreCommand" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Command\AddScoreCommand.cs" line-rate="1" branch-rate="1" complexity="NaN">
+        <class name="Battleships.Models.Command.AddScoreCommand" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Command\AddScoreCommand.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
             <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -3145,7 +3145,7 @@
             <line number="20" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Command.ScoreCalculator" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Command\ScoreCalculator.cs" line-rate="1" branch-rate="1" complexity="2">
+        <class name="Battleships.Models.Command.ScoreCalculator" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Command\ScoreCalculator.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
             <method name="score" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -3200,7 +3200,7 @@
             <line number="26" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Command.SubtractScoreCommand" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Command\SubtractScoreCommand.cs" line-rate="0" branch-rate="1" complexity="NaN">
+        <class name="Battleships.Models.Command.SubtractScoreCommand" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Command\SubtractScoreCommand.cs" line-rate="0" branch-rate="1" complexity="NaN">
           <methods>
             <method name=".ctor" signature="(System.Int32)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -3238,7 +3238,7 @@
             <line number="20" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Composite.ShipPositions" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Composite\ShipPositions.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="Battleships.Models.Composite.ShipPositions" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Composite\ShipPositions.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -3286,7 +3286,7 @@
             <line number="27" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.ConcreteCreator.ShipBigFactory" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteCreator\ShipBigFactory.cs" line-rate="0.9230769230769231" branch-rate="0.5" complexity="1">
+        <class name="Battleships.Models.ConcreteCreator.ShipBigFactory" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Factory Method\ConcreteCreator\ShipBigFactory.cs" line-rate="0.9230769230769231" branch-rate="0.5" complexity="1">
           <methods>
             <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -3330,7 +3330,7 @@
             <line number="32" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.ConcreteCreator.ShipMediumFactory" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteCreator\ShipMediumFactory.cs" line-rate="0.9230769230769231" branch-rate="0.5" complexity="1">
+        <class name="Battleships.Models.ConcreteCreator.ShipMediumFactory" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Factory Method\ConcreteCreator\ShipMediumFactory.cs" line-rate="0.9230769230769231" branch-rate="0.5" complexity="1">
           <methods>
             <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -3374,7 +3374,7 @@
             <line number="32" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.ConnectionAccessor" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Template Method\ConnectionAccessor.cs" line-rate="0" branch-rate="1" complexity="NaN">
+        <class name="Battleships.Models.ConnectionAccessor" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Template Method\ConnectionAccessor.cs" line-rate="0" branch-rate="1" complexity="NaN">
           <methods>
             <method name="Connect" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -3396,7 +3396,7 @@
             <line number="22" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Connections" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Template Method\Connections.cs" line-rate="0" branch-rate="1" complexity="NaN">
+        <class name="Battleships.Models.Connections" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Template Method\Connections.cs" line-rate="0" branch-rate="1" complexity="NaN">
           <methods>
             <method name="position_socket" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -3486,7 +3486,7 @@
             <line number="32" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Decorator.AttackIncreaseDecorator" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Decorator\AttackIncreaseDecorator.cs" line-rate="0.4444444444444444" branch-rate="1" complexity="NaN">
+        <class name="Battleships.Models.Decorator.AttackIncreaseDecorator" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Decorator\AttackIncreaseDecorator.cs" line-rate="0.4444444444444444" branch-rate="1" complexity="NaN">
           <methods>
             <method name="Name" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -3526,7 +3526,7 @@
             <line number="22" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Decorator.BasicAttackIncrease" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Decorator\BasicAttackIncrease.cs" line-rate="0.16" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Decorator.BasicAttackIncrease" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Decorator\BasicAttackIncrease.cs" line-rate="0.16" branch-rate="0" complexity="NaN">
           <methods>
             <method name="Name" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -3602,7 +3602,7 @@
             <line number="39" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Decorator.MediumAttackIncrease" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Decorator\MediumAttackIncrease.cs" line-rate="0.21052631578947367" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Decorator.MediumAttackIncrease" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Decorator\MediumAttackIncrease.cs" line-rate="0.21052631578947367" branch-rate="0" complexity="NaN">
           <methods>
             <method name="Name" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -3662,7 +3662,7 @@
             <line number="31" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Decorator.UltraAttackIncrease" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Decorator\UltraAttackIncrease.cs" line-rate="0.2631578947368421" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Decorator.UltraAttackIncrease" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Decorator\UltraAttackIncrease.cs" line-rate="0.2631578947368421" branch-rate="0" complexity="NaN">
           <methods>
             <method name="Name" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -3722,7 +3722,7 @@
             <line number="31" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Facade.Facade" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Facade\Facade.cs" line-rate="0" branch-rate="0" complexity="13">
+        <class name="Battleships.Models.Facade.Facade" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Facade\Facade.cs" line-rate="0" branch-rate="0" complexity="13">
           <methods>
             <method name="PlayerPos" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -4233,7 +4233,7 @@
             <line number="290" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Factory_Method.ConcreteProduct.ShipBig" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\ShipBig.cs" line-rate="0.7142857142857143" branch-rate="0.5" complexity="NaN">
+        <class name="Battleships.Models.Factory_Method.ConcreteProduct.ShipBig" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\ShipBig.cs" line-rate="0.7142857142857143" branch-rate="0.5" complexity="NaN">
           <methods>
             <method name="ShipType" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -4287,7 +4287,7 @@
             <line number="38" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Factory_Method.ConcreteProduct.ShipMedium" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\ShipMedium.cs" line-rate="0.7142857142857143" branch-rate="0.5" complexity="NaN">
+        <class name="Battleships.Models.Factory_Method.ConcreteProduct.ShipMedium" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\ShipMedium.cs" line-rate="0.7142857142857143" branch-rate="0.5" complexity="NaN">
           <methods>
             <method name="ShipType" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -4341,7 +4341,7 @@
             <line number="38" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Factory_Method.ConcreteProduct.ShipSmall" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\ShipSmall.cs" line-rate="0.7142857142857143" branch-rate="0.5" complexity="NaN">
+        <class name="Battleships.Models.Factory_Method.ConcreteProduct.ShipSmall" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\ShipSmall.cs" line-rate="0.7142857142857143" branch-rate="0.5" complexity="NaN">
           <methods>
             <method name="ShipType" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -4395,7 +4395,7 @@
             <line number="38" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Sailor" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Sailor.cs" line-rate="0" branch-rate="1" complexity="NaN">
+        <class name="Battleships.Models.Sailor" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Sailor.cs" line-rate="0" branch-rate="1" complexity="NaN">
           <methods>
             <method name="UID" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -4424,7 +4424,7 @@
             <line number="15" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.ShipField" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Prototype\ShipField.cs" line-rate="0.640625" branch-rate="0.7777777777777778" complexity="23">
+        <class name="Battleships.Models.ShipField" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Prototype\ShipField.cs" line-rate="0.640625" branch-rate="0.7777777777777778" complexity="23">
           <methods>
             <method name="ships" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -4825,7 +4825,7 @@
             <line number="185" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.ShipSmallFactory" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteCreator\ShipSmallFactory.cs" line-rate="0.9230769230769231" branch-rate="0.5" complexity="1">
+        <class name="Battleships.Models.ShipSmallFactory" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Factory Method\ConcreteCreator\ShipSmallFactory.cs" line-rate="0.9230769230769231" branch-rate="0.5" complexity="1">
           <methods>
             <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -4869,7 +4869,7 @@
             <line number="32" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Strategy.AtomicBombAttackStrategy" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Strategy\AtomicBombAttackStrategy.cs" line-rate="0.0625" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Strategy.AtomicBombAttackStrategy" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Strategy\AtomicBombAttackStrategy.cs" line-rate="0.0625" branch-rate="0" complexity="NaN">
           <methods>
             <method name="Name" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -4919,7 +4919,7 @@
             <line number="27" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Strategy.BombAttackStrategy" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Strategy\BombAttackStrategy.cs" line-rate="0.125" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Strategy.BombAttackStrategy" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Strategy\BombAttackStrategy.cs" line-rate="0.125" branch-rate="0" complexity="NaN">
           <methods>
             <method name="Name" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -4969,7 +4969,7 @@
             <line number="28" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Strategy.DynamiteAttackStrategy" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Strategy\DynamiteAttackStrategy.cs" line-rate="0.0625" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Strategy.DynamiteAttackStrategy" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Strategy\DynamiteAttackStrategy.cs" line-rate="0.0625" branch-rate="0" complexity="NaN">
           <methods>
             <method name="Name" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -5019,7 +5019,7 @@
             <line number="28" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Strategy.MissileAttackStrategy" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Strategy\MissileAttackStrategy.cs" line-rate="0" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Strategy.MissileAttackStrategy" filename="E:\Work stuff\oppppppppppp\Battleships\Models\Strategy\MissileAttackStrategy.cs" line-rate="0" branch-rate="0" complexity="NaN">
           <methods>
             <method name="Name" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -5046,7 +5046,7 @@
                 <line number="25" hits="0" branch="false" />
                 <line number="26" hits="0" branch="false" />
                 <line number="27" hits="0" branch="false" />
-                <line number="28" hits="0" branch="false" />
+                <line number="29" hits="0" branch="false" />
               </lines>
             </method>
           </methods>
@@ -5066,10 +5066,10 @@
             <line number="25" hits="0" branch="false" />
             <line number="26" hits="0" branch="false" />
             <line number="27" hits="0" branch="false" />
-            <line number="28" hits="0" branch="false" />
+            <line number="29" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Program" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Program.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Battleships.Program" filename="E:\Work stuff\oppppppppppp\Battleships\Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="Main" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -5093,7 +5093,7 @@
     </package>
     <package name="BattleshipsLibrary.Tests" line-rate="1" branch-rate="0.8333333333333334" complexity="37">
       <classes>
-        <class name="BattleshipsLibrary.Tests.AdapterTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\AdapterTests.cs" line-rate="1" branch-rate="1" complexity="NaN">
+        <class name="BattleshipsLibrary.Tests.AdapterTests" filename="E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\AdapterTests.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
             <method name="positionGenerationTest" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -5121,7 +5121,7 @@
             <line number="29" hits="2" branch="false" />
           </lines>
         </class>
-        <class name="BattleshipsLibrary.Tests.BuilderTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\BuilderTests.cs" line-rate="1" branch-rate="1" complexity="3">
+        <class name="BattleshipsLibrary.Tests.BuilderTests" filename="E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\BuilderTests.cs" line-rate="1" branch-rate="1" complexity="3">
           <methods>
             <method name="LevelOneBuilderTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -5211,7 +5211,7 @@
             <line number="72" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="BattleshipsLibrary.Tests.CommandTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\CommandTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="BattleshipsLibrary.Tests.CommandTests" filename="E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\CommandTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="TestAddScore" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -5249,7 +5249,7 @@
             <line number="32" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="BattleshipsLibrary.Tests.CompositeTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\CompositeTests.cs" line-rate="1" branch-rate="1" complexity="3">
+        <class name="BattleshipsLibrary.Tests.CompositeTests" filename="E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\CompositeTests.cs" line-rate="1" branch-rate="1" complexity="3">
           <methods>
             <method name="TestCompositeAddChild" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -5303,7 +5303,7 @@
             <line number="39" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="BattleshipsLibrary.Tests.DecoratorTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\DecoratorTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="BattleshipsLibrary.Tests.DecoratorTests" filename="E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\DecoratorTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="BasicAttackIncreaseTest" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -5413,7 +5413,7 @@
             <line number="101" hits="12" branch="false" />
           </lines>
         </class>
-        <class name="BattleshipsLibrary.Tests.FactoryTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\FactoryTests.cs" line-rate="1" branch-rate="1" complexity="3">
+        <class name="BattleshipsLibrary.Tests.FactoryTests" filename="E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\FactoryTests.cs" line-rate="1" branch-rate="1" complexity="3">
           <methods>
             <method name="SmallShipFactoryInitializeTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -5461,7 +5461,7 @@
             <line number="51" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="BattleshipsLibrary.Tests.PrototypeTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\PrototypeTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="BattleshipsLibrary.Tests.PrototypeTests" filename="E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\PrototypeTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="CloneTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -5485,7 +5485,7 @@
             <line number="25" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="BattleshipsLibrary.Tests.ServerTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\ServerTests.cs" line-rate="1" branch-rate="0.5" complexity="4">
+        <class name="BattleshipsLibrary.Tests.ServerTests" filename="E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\ServerTests.cs" line-rate="1" branch-rate="0.5" complexity="4">
           <methods>
             <method name="ServerInitializeTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -5527,7 +5527,7 @@
             <line number="33" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="BattleshipsLibrary.Tests.ShipFieldTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\ShipFieldTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="BattleshipsLibrary.Tests.ShipFieldTests" filename="E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\ShipFieldTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="(Xunit.Abstractions.ITestOutputHelper)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -5623,7 +5623,7 @@
             <line number="87" hits="2" branch="false" />
           </lines>
         </class>
-        <class name="BattleshipsLibrary.Tests.StrategyTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\StrategyTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="BattleshipsLibrary.Tests.StrategyTests" filename="E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\StrategyTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="missileAttackStrategyInitiliazeTest" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -5778,80 +5778,6 @@
               <lines />
             </method>
             <method name="Intercept" signature="(Moq.Invocation)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-          </methods>
-          <lines />
-        </class>
-        <class name="Moq.AsInterface`1" filename="C:\projects\moq4\src\Moq\AsInterface.cs" line-rate="1" branch-rate="1" complexity="3">
-          <methods>
-            <method name="AdditionalInterfaces" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="ConfiguredDefaultValues" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="ConstructorArguments" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="MutableInvocations" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="IsObjectInitialized" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="MockedType" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="Behavior" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="CallBase" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="CallBase" signature="(System.Boolean)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="DefaultValueProvider" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="DefaultValueProvider" signature="(Moq.DefaultValueProvider)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="AutoSetupPropertiesDefaultValueProvider" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="AutoSetupPropertiesDefaultValueProvider" signature="(Moq.DefaultValueProvider)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="EventHandlers" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="InheritedInterfaces" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="Object" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="MutableSetups" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="Switches" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="Switches" signature="(Moq.Switches)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name=".ctor" signature="(Moq.Mock)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="As" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines />
-            </method>
-            <method name="OnGetObject" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines />
-            </method>
-            <method name="ToString" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines />
             </method>
           </methods>
@@ -6023,6 +5949,80 @@
               <lines />
             </method>
             <method name="TryGetResult" signature="(System.Threading.Tasks.ValueTask`1&lt;TResult&gt;,TResult&amp;)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+          </methods>
+          <lines />
+        </class>
+        <class name="Moq.AsInterface`1" filename="C:\projects\moq4\src\Moq\AsInterface.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="AdditionalInterfaces" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="ConfiguredDefaultValues" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="ConstructorArguments" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="MutableInvocations" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="IsObjectInitialized" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="MockedType" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="Behavior" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="CallBase" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="CallBase" signature="(System.Boolean)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="DefaultValueProvider" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="DefaultValueProvider" signature="(Moq.DefaultValueProvider)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="AutoSetupPropertiesDefaultValueProvider" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="AutoSetupPropertiesDefaultValueProvider" signature="(Moq.DefaultValueProvider)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="EventHandlers" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="InheritedInterfaces" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="Object" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="MutableSetups" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="Switches" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="Switches" signature="(Moq.Switches)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name=".ctor" signature="(Moq.Mock)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="As" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines />
+            </method>
+            <method name="OnGetObject" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines />
+            </method>
+            <method name="ToString" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines />
             </method>
           </methods>
@@ -11190,7 +11190,7 @@
         </class>
       </classes>
     </package>
-    <package name="xunit.execution.desktop" line-rate="0.4628475551294343" branch-rate="0.27997858672376874" complexity="1722">
+    <package name="xunit.execution.desktop" line-rate="0.463326941514861" branch-rate="0.27997858672376874" complexity="1722">
       <classes>
         <class name="AssemblyExtensions" filename="C:\Dev\xunit\xunit\src\common\AssemblyExtensions.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
@@ -11502,6 +11502,49 @@
           </methods>
           <lines />
         </class>
+        <class name="Xunit.Sdk.AsyncManualResetEvent" filename="C:\Dev\xunit\xunit\src\xunit.execution\Sdk\Utility\AsyncManualResetEvent.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="IsSet" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name=".ctor" signature="(System.Boolean)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="WaitAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines />
+            </method>
+            <method name="Set" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines />
+            </method>
+            <method name="Reset" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines />
+            </method>
+          </methods>
+          <lines />
+        </class>
+        <class name="Xunit.Sdk.AsyncTestSyncContext" filename="C:\Dev\xunit\xunit\src\xunit.execution\Sdk\AsyncTestSyncContext.cs" line-rate="1" branch-rate="1" complexity="6">
+          <methods>
+            <method name=".ctor" signature="(System.Threading.SynchronizationContext)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="OperationCompleted" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines />
+            </method>
+            <method name="OperationStarted" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines />
+            </method>
+            <method name="Post" signature="(System.Threading.SendOrPostCallback,System.Object)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="Send" signature="(System.Threading.SendOrPostCallback,System.Object)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="WaitForCompletionAsync" signature="()" line-rate="1" branch-rate="1" complexity="3">
+              <lines />
+            </method>
+          </methods>
+          <lines />
+        </class>
         <class name="Xunit.Sdk.AssertEqualityComparer`1" filename="C:\Dev\xunit\xunit\src\xunit.assert\Asserts\Sdk\AssertEqualityComparer.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="(System.Collections.IEqualityComparer)" line-rate="1" branch-rate="1" complexity="NaN">
@@ -11555,49 +11598,6 @@
               <lines />
             </method>
             <method name="GetHashCode" signature="(System.Object)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-          </methods>
-          <lines />
-        </class>
-        <class name="Xunit.Sdk.AsyncManualResetEvent" filename="C:\Dev\xunit\xunit\src\xunit.execution\Sdk\Utility\AsyncManualResetEvent.cs" line-rate="1" branch-rate="1" complexity="4">
-          <methods>
-            <method name="IsSet" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name=".ctor" signature="(System.Boolean)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="WaitAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines />
-            </method>
-            <method name="Set" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines />
-            </method>
-            <method name="Reset" signature="()" line-rate="1" branch-rate="1" complexity="2">
-              <lines />
-            </method>
-          </methods>
-          <lines />
-        </class>
-        <class name="Xunit.Sdk.AsyncTestSyncContext" filename="C:\Dev\xunit\xunit\src\xunit.execution\Sdk\AsyncTestSyncContext.cs" line-rate="1" branch-rate="1" complexity="6">
-          <methods>
-            <method name=".ctor" signature="(System.Threading.SynchronizationContext)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="OperationCompleted" signature="()" line-rate="1" branch-rate="1" complexity="2">
-              <lines />
-            </method>
-            <method name="OperationStarted" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines />
-            </method>
-            <method name="Post" signature="(System.Threading.SendOrPostCallback,System.Object)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="Send" signature="(System.Threading.SendOrPostCallback,System.Object)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="WaitForCompletionAsync" signature="()" line-rate="1" branch-rate="1" complexity="3">
               <lines />
             </method>
           </methods>
@@ -12698,6 +12698,20 @@
           </methods>
           <lines />
         </class>
+        <class name="Xunit.Sdk.SynchronousMessageBus" filename="C:\Dev\xunit\xunit\src\xunit.execution\Sdk\SynchronousMessageBus.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(Xunit.Abstractions.IMessageSink)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="Dispose" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines />
+            </method>
+            <method name="QueueMessage" signature="(Xunit.Abstractions.IMessageSinkMessage)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+          </methods>
+          <lines />
+        </class>
         <class name="Xunit.Sdk.SourceInformation" filename="C:\Dev\xunit\xunit\src\common\SourceInformation.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
             <method name="FileName" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
@@ -12716,20 +12730,6 @@
               <lines />
             </method>
             <method name="Deserialize" signature="(Xunit.Abstractions.IXunitSerializationInfo)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-          </methods>
-          <lines />
-        </class>
-        <class name="Xunit.Sdk.SynchronousMessageBus" filename="C:\Dev\xunit\xunit\src\xunit.execution\Sdk\SynchronousMessageBus.cs" line-rate="1" branch-rate="1" complexity="1">
-          <methods>
-            <method name=".ctor" signature="(Xunit.Abstractions.IMessageSink)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="Dispose" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines />
-            </method>
-            <method name="QueueMessage" signature="(Xunit.Abstractions.IMessageSinkMessage)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines />
             </method>
           </methods>
@@ -14557,17 +14557,6 @@
           </methods>
           <lines />
         </class>
-        <class name="Xunit.Sdk.TraitHelper" filename="C:\Dev\xunit\xunit\src\xunit.execution\Sdk\TraitHelper.cs" line-rate="1" branch-rate="1" complexity="NaN">
-          <methods>
-            <method name="GetTraits" signature="(System.Reflection.MemberInfo)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-            <method name="FindDiscovererAttributeType" signature="(System.Reflection.TypeInfo)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines />
-            </method>
-          </methods>
-          <lines />
-        </class>
         <class name="Xunit.Sdk.TypeUtility" filename="C:\Dev\xunit\xunit\src\xunit.execution\Sdk\TypeUtility.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="ConvertToSimpleTypeName" signature="(Xunit.Abstractions.ITypeInfo)" line-rate="1" branch-rate="1" complexity="NaN">
@@ -14619,6 +14608,17 @@
               <lines />
             </method>
             <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines />
+            </method>
+          </methods>
+          <lines />
+        </class>
+        <class name="Xunit.Sdk.TraitHelper" filename="C:\Dev\xunit\xunit\src\xunit.execution\Sdk\TraitHelper.cs" line-rate="1" branch-rate="1" complexity="NaN">
+          <methods>
+            <method name="GetTraits" signature="(System.Reflection.MemberInfo)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines />
+            </method>
+            <method name="FindDiscovererAttributeType" signature="(System.Reflection.TypeInfo)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines />
             </method>
           </methods>
@@ -20242,7 +20242,7 @@
         </class>
       </classes>
     </package>
-    <package name="xunit.runner.visualstudio.testadapter" line-rate="0.2352625937834941" branch-rate="0.14359637774902975" complexity="731">
+    <package name="xunit.runner.visualstudio.testadapter" line-rate="0.2347266881028939" branch-rate="0.1423027166882277" complexity="731">
       <classes>
         <class name="AssemblyExtensions" filename="/_/src/xunit.runner.visualstudio/Utility/AssemblyExtensions.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>

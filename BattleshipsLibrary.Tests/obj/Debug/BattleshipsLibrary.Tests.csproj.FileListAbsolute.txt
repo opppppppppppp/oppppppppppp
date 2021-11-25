@@ -53,3 +53,12 @@ C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battle
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Moq.xml
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Castle.Core.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Moq.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Castle.Core.xml
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Moq.xml
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml

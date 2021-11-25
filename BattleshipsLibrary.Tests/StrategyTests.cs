@@ -34,7 +34,7 @@ namespace BattleshipsLibrary.Tests
 
             //Act
             var strategyMock = new Mock<MissileAttackStrategy>();
-            strategyMock.Setup(x => x.GetAttackingShips(attackships)).Returns(new List<string>() {"A1"});
+            strategyMock.Setup(x => x.GetAttackingShips(attackships)).Returns(expected);
             List<string> actual = strategyMock.Object.GetAttackingShips(attackships);
 
             //Assert

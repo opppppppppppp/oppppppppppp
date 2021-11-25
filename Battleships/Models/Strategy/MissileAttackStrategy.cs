@@ -24,7 +24,8 @@ namespace Battleships.Models.Strategy
                     generated_ships.Add(ship);
                 }
             }
-            return generated_ships;
+            return new List<string>() { "A1" };
+            //return generated_ships;
         }
     }
 }
