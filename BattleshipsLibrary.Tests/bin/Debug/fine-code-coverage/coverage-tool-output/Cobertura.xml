@@ -1,267 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.22349359647281125" branch-rate="0.1291751012145749" lines-covered="4258" lines-valid="19052" branches-covered="1021" branches-valid="7904" complexity="7443" version="0" timestamp="1637821944">
+<coverage line-rate="0.22808764940239043" branch-rate="0.1306760847628658" lines-covered="4351" lines-valid="19076" branches-covered="1036" branches-valid="7928" complexity="7452" version="0" timestamp="1637872609">
   <sources />
   <packages>
-    <package name="Battleships" line-rate="0.1747624076029567" branch-rate="0.189873417721519" complexity="272">
+    <package name="Battleships" line-rate="0.20501868659903896" branch-rate="0.2222222222222222" complexity="275">
       <classes>
         <class name="Battleships.Forms.Client" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Client\Client.cs" line-rate="0.22916666666666666" branch-rate="0.3333333333333333" complexity="2">
           <methods>
             <method name="game" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="17" hits="0" branch="false" />
+                <line number="16" hits="0" branch="false" />
               </lines>
             </method>
             <method name="game" signature="(Battleships.Game)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="17" hits="0" branch="false" />
+                <line number="16" hits="0" branch="false" />
               </lines>
             </method>
             <method name="Connect" signature="(System.String)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="28" hits="2" branch="false" />
+                <line number="27" hits="2" branch="false" />
+                <line number="29" hits="2" branch="false" />
                 <line number="30" hits="2" branch="false" />
                 <line number="31" hits="2" branch="false" />
                 <line number="32" hits="2" branch="false" />
                 <line number="33" hits="2" branch="false" />
-                <line number="34" hits="2" branch="false" />
-                <line number="35" hits="1" branch="false" />
-                <line number="37" hits="1" branch="false" />
+                <line number="34" hits="1" branch="false" />
+                <line number="36" hits="1" branch="false" />
               </lines>
             </method>
             <method name="Positions" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="44" hits="0" branch="false" />
                 <line number="45" hits="0" branch="false" />
                 <line number="46" hits="0" branch="false" />
                 <line number="47" hits="0" branch="false" />
                 <line number="48" hits="0" branch="false" />
                 <line number="49" hits="0" branch="false" />
-                <line number="50" hits="0" branch="false" />
               </lines>
             </method>
             <method name="Response" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="56" hits="0" branch="false" />
                 <line number="57" hits="0" branch="false" />
                 <line number="58" hits="0" branch="false" />
                 <line number="59" hits="0" branch="false" />
                 <line number="60" hits="0" branch="false" />
                 <line number="61" hits="0" branch="false" />
-                <line number="62" hits="0" branch="false" />
               </lines>
             </method>
             <method name="Complete" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="69" hits="0" branch="false" />
                 <line number="70" hits="0" branch="false" />
                 <line number="71" hits="0" branch="false" />
                 <line number="72" hits="0" branch="false" />
                 <line number="73" hits="0" branch="false" />
                 <line number="74" hits="0" branch="false" />
-                <line number="75" hits="0" branch="false" />
               </lines>
             </method>
             <method name="Turn" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="77" hits="0" branch="false" />
                 <line number="78" hits="0" branch="false" />
                 <line number="79" hits="0" branch="false" />
                 <line number="80" hits="0" branch="false" />
                 <line number="81" hits="0" branch="false" />
                 <line number="82" hits="0" branch="false" />
-                <line number="83" hits="0" branch="false" />
               </lines>
             </method>
             <method name="OnTurnMessage" signature="(System.Object,WebSocketSharp.MessageEventArgs)" line-rate="0" branch-rate="0" complexity="NaN">
               <lines>
+                <line number="85" hits="0" branch="false" />
                 <line number="86" hits="0" branch="false" />
-                <line number="87" hits="0" branch="false" />
-                <line number="88" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="87" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="88" hits="0" branch="false" />
                 <line number="89" hits="0" branch="false" />
                 <line number="90" hits="0" branch="false" />
                 <line number="91" hits="0" branch="false" />
-                <line number="92" hits="0" branch="false" />
+                <line number="93" hits="0" branch="false" />
                 <line number="94" hits="0" branch="false" />
                 <line number="95" hits="0" branch="false" />
                 <line number="96" hits="0" branch="false" />
                 <line number="97" hits="0" branch="false" />
-                <line number="98" hits="0" branch="false" />
-                <line number="100" hits="0" branch="false" />
+                <line number="99" hits="0" branch="false" />
               </lines>
             </method>
             <method name="OnRoomCreate" signature="(System.Object,WebSocketSharp.MessageEventArgs)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="109" hits="1" branch="false" />
                 <line number="110" hits="1" branch="false" />
-                <line number="111" hits="1" branch="false" />
+                <line number="112" hits="1" branch="false" />
                 <line number="113" hits="1" branch="false" />
-                <line number="114" hits="1" branch="false" />
+                <line number="115" hits="1" branch="false" />
                 <line number="116" hits="1" branch="false" />
-                <line number="117" hits="1" branch="false" />
               </lines>
             </method>
             <method name="SetFirstTurnSettings" signature="(System.Int32,System.String)" line-rate="0.2777777777777778" branch-rate="0.5" complexity="NaN">
               <lines>
-                <line number="120" hits="1" branch="false" />
-                <line number="121" hits="1" branch="true" condition-coverage="50% (1/2)" />
-                <line number="122" hits="0" branch="false" />
-                <line number="123" hits="1" branch="true" condition-coverage="50% (2/4)" />
+                <line number="119" hits="1" branch="false" />
+                <line number="120" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="121" hits="0" branch="false" />
+                <line number="122" hits="1" branch="true" condition-coverage="50% (2/4)" />
+                <line number="123" hits="0" branch="false" />
                 <line number="124" hits="0" branch="false" />
                 <line number="125" hits="0" branch="false" />
                 <line number="126" hits="0" branch="false" />
                 <line number="127" hits="0" branch="false" />
-                <line number="128" hits="0" branch="false" />
-                <line number="130" hits="0" branch="false" />
-                <line number="131" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="129" hits="0" branch="false" />
+                <line number="130" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="131" hits="0" branch="false" />
                 <line number="132" hits="0" branch="false" />
                 <line number="133" hits="0" branch="false" />
                 <line number="134" hits="0" branch="false" />
                 <line number="135" hits="0" branch="false" />
                 <line number="136" hits="0" branch="false" />
-                <line number="137" hits="0" branch="false" />
-                <line number="138" hits="1" branch="false" />
+                <line number="137" hits="1" branch="false" />
               </lines>
             </method>
             <method name="OnPosMessage" signature="(System.Object,WebSocketSharp.MessageEventArgs)" line-rate="0" branch-rate="0" complexity="NaN">
               <lines>
-                <line number="147" hits="0" branch="false" />
+                <line number="146" hits="0" branch="false" />
+                <line number="148" hits="0" branch="false" />
                 <line number="149" hits="0" branch="false" />
                 <line number="150" hits="0" branch="false" />
-                <line number="151" hits="0" branch="false" />
-                <line number="153" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="154" hits="0" branch="false" />
+                <line number="152" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="153" hits="0" branch="false" />
+                <line number="155" hits="0" branch="false" />
                 <line number="156" hits="0" branch="false" />
                 <line number="157" hits="0" branch="false" />
-                <line number="158" hits="0" branch="false" />
               </lines>
             </method>
             <method name="OnResponseMessage" signature="(System.Object,WebSocketSharp.MessageEventArgs)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="166" hits="0" branch="false" />
                 <line number="167" hits="0" branch="false" />
                 <line number="168" hits="0" branch="false" />
                 <line number="169" hits="0" branch="false" />
                 <line number="170" hits="0" branch="false" />
-                <line number="171" hits="0" branch="false" />
+                <line number="172" hits="0" branch="false" />
                 <line number="173" hits="0" branch="false" />
-                <line number="174" hits="0" branch="false" />
               </lines>
             </method>
             <method name="OnCompleteMessage" signature="(System.Object,WebSocketSharp.MessageEventArgs)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="182" hits="0" branch="false" />
                 <line number="183" hits="0" branch="false" />
                 <line number="184" hits="0" branch="false" />
                 <line number="185" hits="0" branch="false" />
-                <line number="186" hits="0" branch="false" />
               </lines>
             </method>
             <method name="GenerateUserID" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
+                <line number="192" hits="2" branch="false" />
                 <line number="193" hits="2" branch="false" />
                 <line number="194" hits="2" branch="false" />
-                <line number="195" hits="2" branch="false" />
               </lines>
             </method>
             <method name="CreateGame" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
+                <line number="197" hits="0" branch="false" />
                 <line number="198" hits="0" branch="false" />
                 <line number="199" hits="0" branch="false" />
-                <line number="200" hits="0" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="17" hits="0" branch="false" />
-            <line number="28" hits="2" branch="false" />
+            <line number="16" hits="0" branch="false" />
+            <line number="27" hits="2" branch="false" />
+            <line number="29" hits="2" branch="false" />
             <line number="30" hits="2" branch="false" />
             <line number="31" hits="2" branch="false" />
             <line number="32" hits="2" branch="false" />
             <line number="33" hits="2" branch="false" />
-            <line number="34" hits="2" branch="false" />
-            <line number="35" hits="1" branch="false" />
-            <line number="37" hits="1" branch="false" />
+            <line number="34" hits="1" branch="false" />
+            <line number="36" hits="1" branch="false" />
+            <line number="44" hits="0" branch="false" />
             <line number="45" hits="0" branch="false" />
             <line number="46" hits="0" branch="false" />
             <line number="47" hits="0" branch="false" />
             <line number="48" hits="0" branch="false" />
             <line number="49" hits="0" branch="false" />
-            <line number="50" hits="0" branch="false" />
+            <line number="56" hits="0" branch="false" />
             <line number="57" hits="0" branch="false" />
             <line number="58" hits="0" branch="false" />
             <line number="59" hits="0" branch="false" />
             <line number="60" hits="0" branch="false" />
             <line number="61" hits="0" branch="false" />
-            <line number="62" hits="0" branch="false" />
+            <line number="69" hits="0" branch="false" />
             <line number="70" hits="0" branch="false" />
             <line number="71" hits="0" branch="false" />
             <line number="72" hits="0" branch="false" />
             <line number="73" hits="0" branch="false" />
             <line number="74" hits="0" branch="false" />
-            <line number="75" hits="0" branch="false" />
+            <line number="77" hits="0" branch="false" />
             <line number="78" hits="0" branch="false" />
             <line number="79" hits="0" branch="false" />
             <line number="80" hits="0" branch="false" />
             <line number="81" hits="0" branch="false" />
             <line number="82" hits="0" branch="false" />
-            <line number="83" hits="0" branch="false" />
+            <line number="85" hits="0" branch="false" />
             <line number="86" hits="0" branch="false" />
-            <line number="87" hits="0" branch="false" />
-            <line number="88" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="87" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="88" hits="0" branch="false" />
             <line number="89" hits="0" branch="false" />
             <line number="90" hits="0" branch="false" />
             <line number="91" hits="0" branch="false" />
-            <line number="92" hits="0" branch="false" />
+            <line number="93" hits="0" branch="false" />
             <line number="94" hits="0" branch="false" />
             <line number="95" hits="0" branch="false" />
             <line number="96" hits="0" branch="false" />
             <line number="97" hits="0" branch="false" />
-            <line number="98" hits="0" branch="false" />
-            <line number="100" hits="0" branch="false" />
+            <line number="99" hits="0" branch="false" />
+            <line number="109" hits="1" branch="false" />
             <line number="110" hits="1" branch="false" />
-            <line number="111" hits="1" branch="false" />
+            <line number="112" hits="1" branch="false" />
             <line number="113" hits="1" branch="false" />
-            <line number="114" hits="1" branch="false" />
+            <line number="115" hits="1" branch="false" />
             <line number="116" hits="1" branch="false" />
-            <line number="117" hits="1" branch="false" />
-            <line number="120" hits="1" branch="false" />
-            <line number="121" hits="1" branch="true" condition-coverage="50% (1/2)" />
-            <line number="122" hits="0" branch="false" />
-            <line number="123" hits="1" branch="true" condition-coverage="50% (2/4)" />
+            <line number="119" hits="1" branch="false" />
+            <line number="120" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="121" hits="0" branch="false" />
+            <line number="122" hits="1" branch="true" condition-coverage="50% (2/4)" />
+            <line number="123" hits="0" branch="false" />
             <line number="124" hits="0" branch="false" />
             <line number="125" hits="0" branch="false" />
             <line number="126" hits="0" branch="false" />
             <line number="127" hits="0" branch="false" />
-            <line number="128" hits="0" branch="false" />
-            <line number="130" hits="0" branch="false" />
-            <line number="131" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="129" hits="0" branch="false" />
+            <line number="130" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="131" hits="0" branch="false" />
             <line number="132" hits="0" branch="false" />
             <line number="133" hits="0" branch="false" />
             <line number="134" hits="0" branch="false" />
             <line number="135" hits="0" branch="false" />
             <line number="136" hits="0" branch="false" />
-            <line number="137" hits="0" branch="false" />
-            <line number="138" hits="1" branch="false" />
-            <line number="147" hits="0" branch="false" />
+            <line number="137" hits="1" branch="false" />
+            <line number="146" hits="0" branch="false" />
+            <line number="148" hits="0" branch="false" />
             <line number="149" hits="0" branch="false" />
             <line number="150" hits="0" branch="false" />
-            <line number="151" hits="0" branch="false" />
-            <line number="153" hits="0" branch="true" condition-coverage="0% (0/2)" />
-            <line number="154" hits="0" branch="false" />
+            <line number="152" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="153" hits="0" branch="false" />
+            <line number="155" hits="0" branch="false" />
             <line number="156" hits="0" branch="false" />
             <line number="157" hits="0" branch="false" />
-            <line number="158" hits="0" branch="false" />
+            <line number="166" hits="0" branch="false" />
             <line number="167" hits="0" branch="false" />
             <line number="168" hits="0" branch="false" />
             <line number="169" hits="0" branch="false" />
             <line number="170" hits="0" branch="false" />
-            <line number="171" hits="0" branch="false" />
+            <line number="172" hits="0" branch="false" />
             <line number="173" hits="0" branch="false" />
-            <line number="174" hits="0" branch="false" />
+            <line number="182" hits="0" branch="false" />
             <line number="183" hits="0" branch="false" />
             <line number="184" hits="0" branch="false" />
             <line number="185" hits="0" branch="false" />
-            <line number="186" hits="0" branch="false" />
+            <line number="192" hits="2" branch="false" />
             <line number="193" hits="2" branch="false" />
             <line number="194" hits="2" branch="false" />
-            <line number="195" hits="2" branch="false" />
+            <line number="197" hits="0" branch="false" />
             <line number="198" hits="0" branch="false" />
             <line number="199" hits="0" branch="false" />
-            <line number="200" hits="0" branch="false" />
           </lines>
         </class>
         <class name="Battleships.Forms.JoinRoom" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\JoinRoom.cs" line-rate="0" branch-rate="1" complexity="NaN">
@@ -815,152 +815,148 @@
             <line number="96" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Forms.Server" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Server\Server.cs" line-rate="0.41509433962264153" branch-rate="1" complexity="2">
+        <class name="Battleships.Forms.Server" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Server\Server.cs" line-rate="0.39215686274509803" branch-rate="1" complexity="2">
           <methods>
             <method name="InitializeServer" signature="()" line-rate="0.6875" branch-rate="1" complexity="1">
               <lines>
+                <line number="98" hits="2" branch="false" />
+                <line number="99" hits="2" branch="false" />
                 <line number="101" hits="2" branch="false" />
                 <line number="102" hits="2" branch="false" />
+                <line number="103" hits="2" branch="false" />
                 <line number="104" hits="2" branch="false" />
                 <line number="105" hits="2" branch="false" />
                 <line number="106" hits="2" branch="false" />
                 <line number="107" hits="2" branch="false" />
                 <line number="108" hits="2" branch="false" />
-                <line number="109" hits="2" branch="false" />
-                <line number="110" hits="2" branch="false" />
-                <line number="111" hits="2" branch="false" />
+                <line number="110" hits="0" branch="false" />
+                <line number="111" hits="0" branch="false" />
+                <line number="112" hits="0" branch="false" />
                 <line number="113" hits="0" branch="false" />
                 <line number="114" hits="0" branch="false" />
-                <line number="115" hits="0" branch="false" />
-                <line number="116" hits="0" branch="false" />
-                <line number="117" hits="0" branch="false" />
-                <line number="118" hits="2" branch="false" />
+                <line number="115" hits="2" branch="false" />
               </lines>
             </method>
             <method name="ShowExceptionDetails" signature="(System.Exception)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="121" hits="0" branch="false" />
+                <line number="122" hits="0" branch="false" />
+                <line number="123" hits="0" branch="false" />
                 <line number="124" hits="0" branch="false" />
-                <line number="125" hits="0" branch="false" />
-                <line number="126" hits="0" branch="false" />
-                <line number="127" hits="0" branch="false" />
               </lines>
             </method>
             <method name="InitializeServer" signature="(System.Object)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="130" hits="0" branch="false" />
-                <line number="131" hits="0" branch="false" />
+                <line number="127" hits="0" branch="false" />
+                <line number="128" hits="0" branch="false" />
               </lines>
             </method>
             <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
+                <line number="20" hits="1" branch="false" />
                 <line number="21" hits="1" branch="false" />
                 <line number="22" hits="1" branch="false" />
-                <line number="23" hits="1" branch="false" />
-                <line number="24" hits="1" branch="false" />
               </lines>
             </method>
             <method name="OnMessage" signature="(WebSocketSharp.MessageEventArgs)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="32" hits="1" branch="false" />
+                <line number="33" hits="1" branch="false" />
                 <line number="34" hits="1" branch="false" />
                 <line number="35" hits="1" branch="false" />
-                <line number="36" hits="1" branch="false" />
                 <line number="37" hits="1" branch="false" />
                 <line number="38" hits="1" branch="false" />
-                <line number="40" hits="1" branch="false" />
-                <line number="41" hits="1" branch="false" />
               </lines>
             </method>
             <method name="OnMessage" signature="(WebSocketSharp.MessageEventArgs)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="49" hits="0" branch="false" />
+                <line number="50" hits="0" branch="false" />
+                <line number="51" hits="0" branch="false" />
                 <line number="52" hits="0" branch="false" />
                 <line number="53" hits="0" branch="false" />
-                <line number="54" hits="0" branch="false" />
-                <line number="55" hits="0" branch="false" />
-                <line number="56" hits="0" branch="false" />
               </lines>
             </method>
             <method name="OnMessage" signature="(WebSocketSharp.MessageEventArgs)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="62" hits="0" branch="false" />
+                <line number="63" hits="0" branch="false" />
+                <line number="64" hits="0" branch="false" />
                 <line number="65" hits="0" branch="false" />
                 <line number="66" hits="0" branch="false" />
-                <line number="67" hits="0" branch="false" />
-                <line number="68" hits="0" branch="false" />
-                <line number="69" hits="0" branch="false" />
               </lines>
             </method>
             <method name="OnMessage" signature="(WebSocketSharp.MessageEventArgs)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="76" hits="0" branch="false" />
+                <line number="77" hits="0" branch="false" />
+                <line number="78" hits="0" branch="false" />
                 <line number="79" hits="0" branch="false" />
                 <line number="80" hits="0" branch="false" />
-                <line number="81" hits="0" branch="false" />
-                <line number="82" hits="0" branch="false" />
-                <line number="83" hits="0" branch="false" />
               </lines>
             </method>
             <method name="OnMessage" signature="(WebSocketSharp.MessageEventArgs)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
+                <line number="86" hits="0" branch="false" />
+                <line number="87" hits="0" branch="false" />
+                <line number="88" hits="0" branch="false" />
                 <line number="89" hits="0" branch="false" />
                 <line number="90" hits="0" branch="false" />
-                <line number="91" hits="0" branch="false" />
-                <line number="92" hits="0" branch="false" />
-                <line number="93" hits="0" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="20" hits="1" branch="false" />
             <line number="21" hits="1" branch="false" />
             <line number="22" hits="1" branch="false" />
-            <line number="23" hits="1" branch="false" />
-            <line number="24" hits="1" branch="false" />
+            <line number="32" hits="1" branch="false" />
+            <line number="33" hits="1" branch="false" />
             <line number="34" hits="1" branch="false" />
             <line number="35" hits="1" branch="false" />
-            <line number="36" hits="1" branch="false" />
             <line number="37" hits="1" branch="false" />
             <line number="38" hits="1" branch="false" />
-            <line number="40" hits="1" branch="false" />
-            <line number="41" hits="1" branch="false" />
+            <line number="49" hits="0" branch="false" />
+            <line number="50" hits="0" branch="false" />
+            <line number="51" hits="0" branch="false" />
             <line number="52" hits="0" branch="false" />
             <line number="53" hits="0" branch="false" />
-            <line number="54" hits="0" branch="false" />
-            <line number="55" hits="0" branch="false" />
-            <line number="56" hits="0" branch="false" />
+            <line number="62" hits="0" branch="false" />
+            <line number="63" hits="0" branch="false" />
+            <line number="64" hits="0" branch="false" />
             <line number="65" hits="0" branch="false" />
             <line number="66" hits="0" branch="false" />
-            <line number="67" hits="0" branch="false" />
-            <line number="68" hits="0" branch="false" />
-            <line number="69" hits="0" branch="false" />
+            <line number="76" hits="0" branch="false" />
+            <line number="77" hits="0" branch="false" />
+            <line number="78" hits="0" branch="false" />
             <line number="79" hits="0" branch="false" />
             <line number="80" hits="0" branch="false" />
-            <line number="81" hits="0" branch="false" />
-            <line number="82" hits="0" branch="false" />
-            <line number="83" hits="0" branch="false" />
+            <line number="86" hits="0" branch="false" />
+            <line number="87" hits="0" branch="false" />
+            <line number="88" hits="0" branch="false" />
             <line number="89" hits="0" branch="false" />
             <line number="90" hits="0" branch="false" />
-            <line number="91" hits="0" branch="false" />
-            <line number="92" hits="0" branch="false" />
-            <line number="93" hits="0" branch="false" />
+            <line number="98" hits="2" branch="false" />
+            <line number="99" hits="2" branch="false" />
             <line number="101" hits="2" branch="false" />
             <line number="102" hits="2" branch="false" />
+            <line number="103" hits="2" branch="false" />
             <line number="104" hits="2" branch="false" />
             <line number="105" hits="2" branch="false" />
             <line number="106" hits="2" branch="false" />
             <line number="107" hits="2" branch="false" />
             <line number="108" hits="2" branch="false" />
-            <line number="109" hits="2" branch="false" />
-            <line number="110" hits="2" branch="false" />
-            <line number="111" hits="2" branch="false" />
+            <line number="110" hits="0" branch="false" />
+            <line number="111" hits="0" branch="false" />
+            <line number="112" hits="0" branch="false" />
             <line number="113" hits="0" branch="false" />
             <line number="114" hits="0" branch="false" />
-            <line number="115" hits="0" branch="false" />
-            <line number="116" hits="0" branch="false" />
-            <line number="117" hits="0" branch="false" />
-            <line number="118" hits="2" branch="false" />
+            <line number="115" hits="2" branch="false" />
+            <line number="121" hits="0" branch="false" />
+            <line number="122" hits="0" branch="false" />
+            <line number="123" hits="0" branch="false" />
             <line number="124" hits="0" branch="false" />
-            <line number="125" hits="0" branch="false" />
-            <line number="126" hits="0" branch="false" />
             <line number="127" hits="0" branch="false" />
-            <line number="130" hits="0" branch="false" />
-            <line number="131" hits="0" branch="false" />
+            <line number="128" hits="0" branch="false" />
           </lines>
         </class>
         <class name="Battleships.Forms.ServerInstance" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Forms\Server\ServerInstance.cs" line-rate="1" branch-rate="0.5" complexity="2">
@@ -2911,21 +2907,21 @@
             <line number="29" hits="2" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Adapter.RandomPosGenerator" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Adapter\RandomPosGenerator.cs" line-rate="1" branch-rate="0.75" complexity="NaN">
+        <class name="Battleships.Models.Adapter.RandomPosGenerator" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Adapter\RandomPosGenerator.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
-            <method name="generatePos" signature="(System.Int32,System.Int32)" line-rate="1" branch-rate="0.75" complexity="NaN">
+            <method name="generatePos" signature="(System.Int32,System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
                 <line number="12" hits="2" branch="false" />
                 <line number="13" hits="2" branch="false" />
                 <line number="14" hits="2" branch="false" />
-                <line number="15" hits="10" branch="true" condition-coverage="100% (2/2)" />
-                <line number="16" hits="8" branch="false" />
-                <line number="17" hits="8" branch="false" />
-                <line number="18" hits="8" branch="true" condition-coverage="50% (1/2)" />
+                <line number="15" hits="11" branch="true" condition-coverage="100% (2/2)" />
+                <line number="16" hits="9" branch="false" />
+                <line number="17" hits="9" branch="false" />
+                <line number="18" hits="9" branch="true" condition-coverage="100% (2/2)" />
                 <line number="19" hits="8" branch="false" />
                 <line number="20" hits="8" branch="false" />
                 <line number="21" hits="8" branch="false" />
-                <line number="22" hits="8" branch="false" />
+                <line number="22" hits="9" branch="false" />
                 <line number="23" hits="2" branch="false" />
                 <line number="24" hits="2" branch="false" />
               </lines>
@@ -2935,14 +2931,14 @@
             <line number="12" hits="2" branch="false" />
             <line number="13" hits="2" branch="false" />
             <line number="14" hits="2" branch="false" />
-            <line number="15" hits="10" branch="true" condition-coverage="100% (2/2)" />
-            <line number="16" hits="8" branch="false" />
-            <line number="17" hits="8" branch="false" />
-            <line number="18" hits="8" branch="true" condition-coverage="50% (1/2)" />
+            <line number="15" hits="11" branch="true" condition-coverage="100% (2/2)" />
+            <line number="16" hits="9" branch="false" />
+            <line number="17" hits="9" branch="false" />
+            <line number="18" hits="9" branch="true" condition-coverage="100% (2/2)" />
             <line number="19" hits="8" branch="false" />
             <line number="20" hits="8" branch="false" />
             <line number="21" hits="8" branch="false" />
-            <line number="22" hits="8" branch="false" />
+            <line number="22" hits="9" branch="false" />
             <line number="23" hits="2" branch="false" />
             <line number="24" hits="2" branch="false" />
           </lines>
@@ -3001,44 +2997,6 @@
             <line number="37" hits="0" branch="false" />
             <line number="38" hits="0" branch="false" />
             <line number="40" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="Battleships.Models.BigBlueShip" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\BigBlueShip.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="ShipType" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="24" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="_Color" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="29" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="_Color" signature="(System.Drawing.Color)" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="30" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="16" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-                <line number="18" hits="0" branch="false" />
-                <line number="19" hits="0" branch="false" />
-                <line number="20" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="16" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="18" hits="0" branch="false" />
-            <line number="19" hits="0" branch="false" />
-            <line number="20" hits="0" branch="false" />
-            <line number="24" hits="0" branch="false" />
-            <line number="29" hits="0" branch="false" />
-            <line number="30" hits="0" branch="false" />
           </lines>
         </class>
         <class name="Battleships.Models.Bridge.ShipFieldUpgradeEvil" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Bridge\ShipFieldUpgradeEvil.cs" line-rate="0" branch-rate="0" complexity="NaN">
@@ -3284,10 +3242,10 @@
           <methods>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="25" branch="false" />
-                <line number="13" hits="25" branch="false" />
-                <line number="14" hits="25" branch="false" />
-                <line number="15" hits="25" branch="false" />
+                <line number="12" hits="31" branch="false" />
+                <line number="13" hits="31" branch="false" />
+                <line number="14" hits="31" branch="false" />
+                <line number="15" hits="31" branch="false" />
               </lines>
             </method>
             <method name="AddChild" signature="(System.String)" line-rate="1" branch-rate="1" complexity="NaN">
@@ -3313,10 +3271,10 @@
             </method>
           </methods>
           <lines>
-            <line number="12" hits="25" branch="false" />
-            <line number="13" hits="25" branch="false" />
-            <line number="14" hits="25" branch="false" />
-            <line number="15" hits="25" branch="false" />
+            <line number="12" hits="31" branch="false" />
+            <line number="13" hits="31" branch="false" />
+            <line number="14" hits="31" branch="false" />
+            <line number="15" hits="31" branch="false" />
             <line number="17" hits="5" branch="false" />
             <line number="18" hits="5" branch="false" />
             <line number="19" hits="5" branch="false" />
@@ -3328,76 +3286,92 @@
             <line number="27" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.ConcreteCreator.ShipBigFactory" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteCreator\ShipBigFactory.cs" line-rate="0" branch-rate="1" complexity="3">
+        <class name="Battleships.Models.ConcreteCreator.ShipBigFactory" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteCreator\ShipBigFactory.cs" line-rate="0.9230769230769231" branch-rate="0.5" complexity="1">
           <methods>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="16" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-                <line number="19" hits="0" branch="false" />
+                <line number="15" hits="2" branch="false" />
+                <line number="16" hits="2" branch="false" />
+                <line number="17" hits="2" branch="false" />
+                <line number="18" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="GetOrangeShip" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="GetShip" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="0" branch="false" />
-                <line number="23" hits="0" branch="false" />
-                <line number="24" hits="0" branch="false" />
+                <line number="21" hits="2" branch="false" />
+                <line number="22" hits="2" branch="false" />
+                <line number="23" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="GetBlueShip" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Equals" signature="(System.Object)" line-rate="0.8333333333333334" branch-rate="0.5" complexity="NaN">
               <lines>
-                <line number="27" hits="0" branch="false" />
+                <line number="26" hits="1" branch="false" />
+                <line number="27" hits="1" branch="true" condition-coverage="50% (1/2)" />
                 <line number="28" hits="0" branch="false" />
-                <line number="29" hits="0" branch="false" />
+                <line number="29" hits="1" branch="false" />
+                <line number="31" hits="1" branch="false" />
+                <line number="32" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="16" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="19" hits="0" branch="false" />
-            <line number="22" hits="0" branch="false" />
-            <line number="23" hits="0" branch="false" />
-            <line number="24" hits="0" branch="false" />
-            <line number="27" hits="0" branch="false" />
+            <line number="15" hits="2" branch="false" />
+            <line number="16" hits="2" branch="false" />
+            <line number="17" hits="2" branch="false" />
+            <line number="18" hits="2" branch="false" />
+            <line number="21" hits="2" branch="false" />
+            <line number="22" hits="2" branch="false" />
+            <line number="23" hits="2" branch="false" />
+            <line number="26" hits="1" branch="false" />
+            <line number="27" hits="1" branch="true" condition-coverage="50% (1/2)" />
             <line number="28" hits="0" branch="false" />
-            <line number="29" hits="0" branch="false" />
+            <line number="29" hits="1" branch="false" />
+            <line number="31" hits="1" branch="false" />
+            <line number="32" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.ConcreteCreator.ShipMediumFactory" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteCreator\ShipMediumFactory.cs" line-rate="0" branch-rate="1" complexity="3">
+        <class name="Battleships.Models.ConcreteCreator.ShipMediumFactory" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteCreator\ShipMediumFactory.cs" line-rate="0.9230769230769231" branch-rate="0.5" complexity="1">
           <methods>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="16" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-                <line number="18" hits="0" branch="false" />
+                <line number="15" hits="2" branch="false" />
+                <line number="16" hits="2" branch="false" />
+                <line number="17" hits="2" branch="false" />
+                <line number="18" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="GetOrangeShip" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="GetShip" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="21" hits="0" branch="false" />
-                <line number="22" hits="0" branch="false" />
-                <line number="23" hits="0" branch="false" />
+                <line number="21" hits="2" branch="false" />
+                <line number="22" hits="2" branch="false" />
+                <line number="23" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="GetBlueShip" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Equals" signature="(System.Object)" line-rate="0.8333333333333334" branch-rate="0.5" complexity="NaN">
               <lines>
-                <line number="26" hits="0" branch="false" />
-                <line number="27" hits="0" branch="false" />
+                <line number="26" hits="1" branch="false" />
+                <line number="27" hits="1" branch="true" condition-coverage="50% (1/2)" />
                 <line number="28" hits="0" branch="false" />
+                <line number="29" hits="1" branch="false" />
+                <line number="31" hits="1" branch="false" />
+                <line number="32" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="16" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="18" hits="0" branch="false" />
-            <line number="21" hits="0" branch="false" />
-            <line number="22" hits="0" branch="false" />
-            <line number="23" hits="0" branch="false" />
-            <line number="26" hits="0" branch="false" />
-            <line number="27" hits="0" branch="false" />
+            <line number="15" hits="2" branch="false" />
+            <line number="16" hits="2" branch="false" />
+            <line number="17" hits="2" branch="false" />
+            <line number="18" hits="2" branch="false" />
+            <line number="21" hits="2" branch="false" />
+            <line number="22" hits="2" branch="false" />
+            <line number="23" hits="2" branch="false" />
+            <line number="26" hits="1" branch="false" />
+            <line number="27" hits="1" branch="true" condition-coverage="50% (1/2)" />
             <line number="28" hits="0" branch="false" />
+            <line number="29" hits="1" branch="false" />
+            <line number="31" hits="1" branch="false" />
+            <line number="32" hits="1" branch="false" />
           </lines>
         </class>
         <class name="Battleships.Models.ConnectionAccessor" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Template Method\ConnectionAccessor.cs" line-rate="0" branch-rate="1" complexity="NaN">
@@ -3526,10 +3500,10 @@
             </method>
             <method name=".ctor" signature="(Battleships.Models.Strategy.IAttackStrategy)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="13" hits="11" branch="false" />
-                <line number="14" hits="11" branch="false" />
-                <line number="15" hits="11" branch="false" />
-                <line number="16" hits="11" branch="false" />
+                <line number="13" hits="20" branch="false" />
+                <line number="14" hits="20" branch="false" />
+                <line number="15" hits="20" branch="false" />
+                <line number="16" hits="20" branch="false" />
               </lines>
             </method>
             <method name="GetAttackingShips" signature="(System.Collections.Generic.List`1&lt;System.String&gt;)" line-rate="0" branch-rate="1" complexity="NaN">
@@ -3541,10 +3515,10 @@
             </method>
           </methods>
           <lines>
-            <line number="13" hits="11" branch="false" />
-            <line number="14" hits="11" branch="false" />
-            <line number="15" hits="11" branch="false" />
-            <line number="16" hits="11" branch="false" />
+            <line number="13" hits="20" branch="false" />
+            <line number="14" hits="20" branch="false" />
+            <line number="15" hits="20" branch="false" />
+            <line number="16" hits="20" branch="false" />
             <line number="17" hits="0" branch="false" />
             <line number="18" hits="0" branch="false" />
             <line number="20" hits="0" branch="false" />
@@ -3552,7 +3526,7 @@
             <line number="22" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Decorator.BasicAttackIncrease" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Decorator\BasicAttackIncrease.cs" line-rate="0.21052631578947367" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Decorator.BasicAttackIncrease" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Decorator\BasicAttackIncrease.cs" line-rate="0.16" branch-rate="0" complexity="NaN">
           <methods>
             <method name="Name" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -3561,14 +3535,14 @@
             </method>
             <method name="shipCount" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="16" hits="1" branch="false" />
+                <line number="16" hits="4" branch="false" />
               </lines>
             </method>
             <method name=".ctor" signature="(Battleships.Models.Strategy.IAttackStrategy)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="12" hits="3" branch="false" />
-                <line number="13" hits="3" branch="false" />
-                <line number="14" hits="3" branch="false" />
+                <line number="12" hits="4" branch="false" />
+                <line number="13" hits="4" branch="false" />
+                <line number="14" hits="4" branch="false" />
               </lines>
             </method>
             <method name="GetAttackingShips" signature="(System.Collections.Generic.List`1&lt;System.String&gt;)" line-rate="0" branch-rate="0" complexity="NaN">
@@ -3589,13 +3563,23 @@
                 <line number="31" hits="0" branch="false" />
               </lines>
             </method>
+            <method name="Equals" signature="(System.Object)" line-rate="0" branch-rate="0" complexity="NaN">
+              <lines>
+                <line number="34" hits="0" branch="false" />
+                <line number="35" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="36" hits="0" branch="false" />
+                <line number="37" hits="0" branch="false" />
+                <line number="38" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="39" hits="0" branch="false" />
+              </lines>
+            </method>
           </methods>
           <lines>
-            <line number="12" hits="3" branch="false" />
-            <line number="13" hits="3" branch="false" />
-            <line number="14" hits="3" branch="false" />
+            <line number="12" hits="4" branch="false" />
+            <line number="13" hits="4" branch="false" />
+            <line number="14" hits="4" branch="false" />
             <line number="15" hits="0" branch="false" />
-            <line number="16" hits="1" branch="false" />
+            <line number="16" hits="4" branch="false" />
             <line number="18" hits="0" branch="false" />
             <line number="19" hits="0" branch="false" />
             <line number="20" hits="0" branch="false" />
@@ -3610,6 +3594,12 @@
             <line number="29" hits="0" branch="false" />
             <line number="30" hits="0" branch="false" />
             <line number="31" hits="0" branch="false" />
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="36" hits="0" branch="false" />
+            <line number="37" hits="0" branch="false" />
+            <line number="38" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="39" hits="0" branch="false" />
           </lines>
         </class>
         <class name="Battleships.Models.Decorator.MediumAttackIncrease" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Decorator\MediumAttackIncrease.cs" line-rate="0.21052631578947367" branch-rate="0" complexity="NaN">
@@ -3621,14 +3611,14 @@
             </method>
             <method name="shipCount" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="16" hits="1" branch="false" />
+                <line number="16" hits="4" branch="false" />
               </lines>
             </method>
             <method name=".ctor" signature="(Battleships.Models.Strategy.IAttackStrategy)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="12" hits="3" branch="false" />
-                <line number="13" hits="3" branch="false" />
-                <line number="14" hits="3" branch="false" />
+                <line number="12" hits="4" branch="false" />
+                <line number="13" hits="4" branch="false" />
+                <line number="14" hits="4" branch="false" />
               </lines>
             </method>
             <method name="GetAttackingShips" signature="(System.Collections.Generic.List`1&lt;System.String&gt;)" line-rate="0" branch-rate="0" complexity="NaN">
@@ -3651,11 +3641,11 @@
             </method>
           </methods>
           <lines>
-            <line number="12" hits="3" branch="false" />
-            <line number="13" hits="3" branch="false" />
-            <line number="14" hits="3" branch="false" />
+            <line number="12" hits="4" branch="false" />
+            <line number="13" hits="4" branch="false" />
+            <line number="14" hits="4" branch="false" />
             <line number="15" hits="0" branch="false" />
-            <line number="16" hits="1" branch="false" />
+            <line number="16" hits="4" branch="false" />
             <line number="18" hits="0" branch="false" />
             <line number="19" hits="0" branch="false" />
             <line number="20" hits="0" branch="false" />
@@ -3672,23 +3662,23 @@
             <line number="31" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Decorator.UltraAttackIncrease" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Decorator\UltraAttackIncrease.cs" line-rate="0.21052631578947367" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Decorator.UltraAttackIncrease" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Decorator\UltraAttackIncrease.cs" line-rate="0.2631578947368421" branch-rate="0" complexity="NaN">
           <methods>
-            <method name="Name" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+            <method name="Name" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="15" hits="0" branch="false" />
+                <line number="15" hits="2" branch="false" />
               </lines>
             </method>
             <method name="shipCount" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="16" hits="1" branch="false" />
+                <line number="16" hits="6" branch="false" />
               </lines>
             </method>
             <method name=".ctor" signature="(Battleships.Models.Strategy.IAttackStrategy)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="12" hits="5" branch="false" />
-                <line number="13" hits="5" branch="false" />
-                <line number="14" hits="5" branch="false" />
+                <line number="12" hits="6" branch="false" />
+                <line number="13" hits="6" branch="false" />
+                <line number="14" hits="6" branch="false" />
               </lines>
             </method>
             <method name="GetAttackingShips" signature="(System.Collections.Generic.List`1&lt;System.String&gt;)" line-rate="0" branch-rate="0" complexity="NaN">
@@ -3711,11 +3701,11 @@
             </method>
           </methods>
           <lines>
-            <line number="12" hits="5" branch="false" />
-            <line number="13" hits="5" branch="false" />
-            <line number="14" hits="5" branch="false" />
-            <line number="15" hits="0" branch="false" />
-            <line number="16" hits="1" branch="false" />
+            <line number="12" hits="6" branch="false" />
+            <line number="13" hits="6" branch="false" />
+            <line number="14" hits="6" branch="false" />
+            <line number="15" hits="2" branch="false" />
+            <line number="16" hits="6" branch="false" />
             <line number="18" hits="0" branch="false" />
             <line number="19" hits="0" branch="false" />
             <line number="20" hits="0" branch="false" />
@@ -4243,305 +4233,166 @@
             <line number="290" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Factory_Method.ConcreteOrangeProduct.BigOrangeShip" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteOrangeProduct\BigOrangeShip.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="ShipType" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="21" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="_Color" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="26" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="_Color" signature="(System.Drawing.Color)" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="27" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="13" hits="0" branch="false" />
-                <line number="14" hits="0" branch="false" />
-                <line number="15" hits="0" branch="false" />
-                <line number="16" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="13" hits="0" branch="false" />
-            <line number="14" hits="0" branch="false" />
-            <line number="15" hits="0" branch="false" />
-            <line number="16" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="21" hits="0" branch="false" />
-            <line number="26" hits="0" branch="false" />
-            <line number="27" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="Battleships.Models.Factory_Method.ConcreteOrangeProduct.MediumOrangeShip" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteOrangeProduct\MediumOrangeShip.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Battleships.Models.Factory_Method.ConcreteProduct.ShipBig" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\ShipBig.cs" line-rate="0.7142857142857143" branch-rate="0.5" complexity="NaN">
           <methods>
             <method name="ShipType" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
                 <line number="22" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="_Color" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="27" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="_Color" signature="(System.Drawing.Color)" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="28" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="14" hits="0" branch="false" />
-                <line number="15" hits="0" branch="false" />
-                <line number="16" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-                <line number="18" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="14" hits="0" branch="false" />
-            <line number="15" hits="0" branch="false" />
-            <line number="16" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="18" hits="0" branch="false" />
-            <line number="22" hits="0" branch="false" />
-            <line number="27" hits="0" branch="false" />
-            <line number="28" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="Battleships.Models.Factory_Method.ConcreteOrangeProduct.OrangeShip" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteOrangeProduct\OrangeShip.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
             <method name="ShipSize" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="13" hits="0" branch="false" />
+                <line number="27" hits="0" branch="false" />
               </lines>
             </method>
             <method name="ShipSize" signature="(System.Int32)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="13" hits="0" branch="false" />
+                <line number="28" hits="0" branch="false" />
               </lines>
             </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="16" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-                <line number="18" hits="0" branch="false" />
-                <line number="19" hits="0" branch="false" />
+                <line number="14" hits="2" branch="false" />
+                <line number="15" hits="2" branch="false" />
+                <line number="16" hits="2" branch="false" />
+                <line number="17" hits="2" branch="false" />
+                <line number="18" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="Equals" signature="(System.Object)" line-rate="0.8333333333333334" branch-rate="0.5" complexity="NaN">
+              <lines>
+                <line number="32" hits="1" branch="false" />
+                <line number="33" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="34" hits="0" branch="false" />
+                <line number="35" hits="1" branch="false" />
+                <line number="37" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="38" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="13" hits="0" branch="false" />
-            <line number="16" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="18" hits="0" branch="false" />
-            <line number="19" hits="0" branch="false" />
+            <line number="14" hits="2" branch="false" />
+            <line number="15" hits="2" branch="false" />
+            <line number="16" hits="2" branch="false" />
+            <line number="17" hits="2" branch="false" />
+            <line number="18" hits="2" branch="false" />
+            <line number="22" hits="0" branch="false" />
+            <line number="27" hits="0" branch="false" />
+            <line number="28" hits="0" branch="false" />
+            <line number="32" hits="1" branch="false" />
+            <line number="33" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="1" branch="false" />
+            <line number="37" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="38" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Factory_Method.ConcreteOrangeProduct.SmallOrangeShip" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteOrangeProduct\SmallOrangeShip.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Battleships.Models.Factory_Method.ConcreteProduct.ShipMedium" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\ShipMedium.cs" line-rate="0.7142857142857143" branch-rate="0.5" complexity="NaN">
           <methods>
             <method name="ShipType" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
                 <line number="22" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="_Color" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="27" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="_Color" signature="(System.Drawing.Color)" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="28" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="14" hits="0" branch="false" />
-                <line number="15" hits="0" branch="false" />
-                <line number="16" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-                <line number="18" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="14" hits="0" branch="false" />
-            <line number="15" hits="0" branch="false" />
-            <line number="16" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="18" hits="0" branch="false" />
-            <line number="22" hits="0" branch="false" />
-            <line number="27" hits="0" branch="false" />
-            <line number="28" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="Battleships.Models.Factory_Method.ConcreteProduct.BlueShip" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\BlueShip.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
             <method name="ShipSize" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="13" hits="0" branch="false" />
+                <line number="27" hits="0" branch="false" />
               </lines>
             </method>
             <method name="ShipSize" signature="(System.Int32)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="13" hits="0" branch="false" />
+                <line number="28" hits="0" branch="false" />
               </lines>
             </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="16" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-                <line number="18" hits="0" branch="false" />
-                <line number="19" hits="0" branch="false" />
+                <line number="14" hits="2" branch="false" />
+                <line number="15" hits="2" branch="false" />
+                <line number="16" hits="2" branch="false" />
+                <line number="17" hits="2" branch="false" />
+                <line number="18" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="Equals" signature="(System.Object)" line-rate="0.8333333333333334" branch-rate="0.5" complexity="NaN">
+              <lines>
+                <line number="32" hits="1" branch="false" />
+                <line number="33" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="34" hits="0" branch="false" />
+                <line number="35" hits="1" branch="false" />
+                <line number="37" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="38" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="13" hits="0" branch="false" />
-            <line number="16" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="18" hits="0" branch="false" />
-            <line number="19" hits="0" branch="false" />
+            <line number="14" hits="2" branch="false" />
+            <line number="15" hits="2" branch="false" />
+            <line number="16" hits="2" branch="false" />
+            <line number="17" hits="2" branch="false" />
+            <line number="18" hits="2" branch="false" />
+            <line number="22" hits="0" branch="false" />
+            <line number="27" hits="0" branch="false" />
+            <line number="28" hits="0" branch="false" />
+            <line number="32" hits="1" branch="false" />
+            <line number="33" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="1" branch="false" />
+            <line number="37" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="38" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.MediumBlueShip" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\MediumBlueShip.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="Battleships.Models.Factory_Method.ConcreteProduct.ShipSmall" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\ShipSmall.cs" line-rate="0.7142857142857143" branch-rate="0.5" complexity="NaN">
           <methods>
             <method name="ShipType" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="23" hits="0" branch="false" />
+                <line number="22" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="_Color" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+            <method name="ShipSize" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="27" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="ShipSize" signature="(System.Int32)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
                 <line number="28" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="_Color" signature="(System.Drawing.Color)" line-rate="0" branch-rate="1" complexity="NaN">
+            <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="29" hits="0" branch="false" />
+                <line number="14" hits="2" branch="false" />
+                <line number="15" hits="2" branch="false" />
+                <line number="16" hits="2" branch="false" />
+                <line number="17" hits="2" branch="false" />
+                <line number="18" hits="2" branch="false" />
               </lines>
             </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Equals" signature="(System.Object)" line-rate="0.8333333333333334" branch-rate="0.5" complexity="NaN">
               <lines>
-                <line number="15" hits="0" branch="false" />
-                <line number="16" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-                <line number="18" hits="0" branch="false" />
-                <line number="19" hits="0" branch="false" />
+                <line number="32" hits="1" branch="false" />
+                <line number="33" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="34" hits="0" branch="false" />
+                <line number="35" hits="1" branch="false" />
+                <line number="37" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="38" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="15" hits="0" branch="false" />
-            <line number="16" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="18" hits="0" branch="false" />
-            <line number="19" hits="0" branch="false" />
-            <line number="23" hits="0" branch="false" />
+            <line number="14" hits="2" branch="false" />
+            <line number="15" hits="2" branch="false" />
+            <line number="16" hits="2" branch="false" />
+            <line number="17" hits="2" branch="false" />
+            <line number="18" hits="2" branch="false" />
+            <line number="22" hits="0" branch="false" />
+            <line number="27" hits="0" branch="false" />
             <line number="28" hits="0" branch="false" />
-            <line number="29" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="Battleships.Models.Observer.TurnSubject" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Observer\TurnSubject.cs" line-rate="0.4" branch-rate="1" complexity="1">
-          <methods>
-            <method name="Register" signature="(Battleships.Models.Observer.IObserver)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="15" hits="1" branch="false" />
-                <line number="16" hits="1" branch="false" />
-                <line number="17" hits="1" branch="false" />
-              </lines>
-            </method>
-            <method name="Unregister" signature="(Battleships.Models.Observer.IObserver)" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="20" hits="0" branch="false" />
-                <line number="21" hits="0" branch="false" />
-                <line number="22" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="Notify" signature="(System.String,WebSocketSharp.Server.WebSocketSessionManager)" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="25" hits="0" branch="false" />
-                <line number="26" hits="0" branch="false" />
-                <line number="27" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="12" hits="1" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="12" hits="1" branch="false" />
-            <line number="15" hits="1" branch="false" />
-            <line number="16" hits="1" branch="false" />
-            <line number="17" hits="1" branch="false" />
-            <line number="20" hits="0" branch="false" />
-            <line number="21" hits="0" branch="false" />
-            <line number="22" hits="0" branch="false" />
-            <line number="25" hits="0" branch="false" />
-            <line number="26" hits="0" branch="false" />
-            <line number="27" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="Battleships.Models.Observer.UserObserver" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Observer\UserObserver.cs" line-rate="0.45454545454545453" branch-rate="1" complexity="1">
-          <methods>
-            <method name="ID" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="15" hits="1" branch="false" />
-              </lines>
-            </method>
-            <method name="ID" signature="(System.String)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="15" hits="1" branch="false" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="16" hits="1" branch="false" />
-                <line number="17" hits="1" branch="false" />
-                <line number="18" hits="1" branch="false" />
-                <line number="19" hits="1" branch="false" />
-              </lines>
-            </method>
-            <method name="GetId" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="21" hits="0" branch="false" />
-                <line number="22" hits="0" branch="false" />
-                <line number="23" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="PlayerTurn" signature="(System.String,WebSocketSharp.Server.WebSocketSessionManager)" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="25" hits="0" branch="false" />
-                <line number="26" hits="0" branch="false" />
-                <line number="27" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="15" hits="1" branch="false" />
-            <line number="16" hits="1" branch="false" />
-            <line number="17" hits="1" branch="false" />
-            <line number="18" hits="1" branch="false" />
-            <line number="19" hits="1" branch="false" />
-            <line number="21" hits="0" branch="false" />
-            <line number="22" hits="0" branch="false" />
-            <line number="23" hits="0" branch="false" />
-            <line number="25" hits="0" branch="false" />
-            <line number="26" hits="0" branch="false" />
-            <line number="27" hits="0" branch="false" />
+            <line number="32" hits="1" branch="false" />
+            <line number="33" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="1" branch="false" />
+            <line number="37" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="38" hits="1" branch="false" />
           </lines>
         </class>
         <class name="Battleships.Models.Sailor" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Sailor.cs" line-rate="0" branch-rate="1" complexity="NaN">
@@ -4577,71 +4428,71 @@
           <methods>
             <method name="ships" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="17" hits="22" branch="false" />
+                <line number="17" hits="28" branch="false" />
               </lines>
             </method>
             <method name="ships" signature="(Battleships.Models.ShipFactory)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="17" hits="22" branch="false" />
+                <line number="17" hits="28" branch="false" />
               </lines>
             </method>
             <method name="tabledata" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="18" hits="560" branch="false" />
+                <line number="18" hits="716" branch="false" />
               </lines>
             </method>
             <method name="tabledata" signature="(System.Data.DataTable)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="18" hits="560" branch="false" />
+                <line number="18" hits="716" branch="false" />
               </lines>
             </method>
             <method name="table" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="19" hits="44" branch="false" />
+                <line number="19" hits="56" branch="false" />
               </lines>
             </method>
             <method name="table" signature="(System.Windows.Forms.DataGridView)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="19" hits="44" branch="false" />
+                <line number="19" hits="56" branch="false" />
               </lines>
             </method>
             <method name="FieldSize" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="22" hits="3875" branch="false" />
+                <line number="22" hits="4958" branch="false" />
               </lines>
             </method>
             <method name="FieldSize" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="22" hits="3875" branch="false" />
+                <line number="22" hits="4958" branch="false" />
               </lines>
             </method>
             <method name="DestroyedShips" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="23" hits="22" branch="false" />
+                <line number="23" hits="28" branch="false" />
               </lines>
             </method>
             <method name="DestroyedShips" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="23" hits="22" branch="false" />
+                <line number="23" hits="28" branch="false" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.Int32,System.Windows.Forms.DataGridView,Battleships.Models.Bridge.ShipFieldUpgradeInterface,Battleships.Models.ShipFactory)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="21" hits="22" branch="false" />
-                <line number="22" hits="3875" branch="false" />
-                <line number="23" hits="22" branch="false" />
-                <line number="27" hits="22" branch="false" />
-                <line number="28" hits="22" branch="false" />
-                <line number="29" hits="22" branch="false" />
-                <line number="30" hits="22" branch="false" />
-                <line number="31" hits="22" branch="false" />
-                <line number="32" hits="22" branch="false" />
-                <line number="33" hits="22" branch="false" />
-                <line number="34" hits="22" branch="false" />
-                <line number="35" hits="22" branch="false" />
-                <line number="36" hits="22" branch="false" />
-                <line number="37" hits="22" branch="false" />
-                <line number="38" hits="22" branch="false" />
+                <line number="21" hits="28" branch="false" />
+                <line number="22" hits="4958" branch="false" />
+                <line number="23" hits="28" branch="false" />
+                <line number="27" hits="28" branch="false" />
+                <line number="28" hits="28" branch="false" />
+                <line number="29" hits="28" branch="false" />
+                <line number="30" hits="28" branch="false" />
+                <line number="31" hits="28" branch="false" />
+                <line number="32" hits="28" branch="false" />
+                <line number="33" hits="28" branch="false" />
+                <line number="34" hits="28" branch="false" />
+                <line number="35" hits="28" branch="false" />
+                <line number="36" hits="28" branch="false" />
+                <line number="37" hits="28" branch="false" />
+                <line number="38" hits="28" branch="false" />
               </lines>
             </method>
             <method name="Clone" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -4671,13 +4522,13 @@
             </method>
             <method name="GenerateTable" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="58" hits="22" branch="false" />
-                <line number="59" hits="22" branch="false" />
-                <line number="60" hits="22" branch="false" />
-                <line number="61" hits="22" branch="false" />
-                <line number="62" hits="22" branch="false" />
-                <line number="63" hits="22" branch="false" />
-                <line number="64" hits="22" branch="false" />
+                <line number="58" hits="28" branch="false" />
+                <line number="59" hits="28" branch="false" />
+                <line number="60" hits="28" branch="false" />
+                <line number="61" hits="28" branch="false" />
+                <line number="62" hits="28" branch="false" />
+                <line number="63" hits="28" branch="false" />
+                <line number="64" hits="28" branch="false" />
               </lines>
             </method>
             <method name="SetTable" signature="(System.Windows.Forms.DataGridView)" line-rate="0" branch-rate="1" complexity="NaN">
@@ -4689,9 +4540,9 @@
             </method>
             <method name="GetPositions" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="70" hits="11" branch="false" />
-                <line number="71" hits="11" branch="false" />
-                <line number="72" hits="11" branch="false" />
+                <line number="70" hits="17" branch="false" />
+                <line number="71" hits="17" branch="false" />
+                <line number="72" hits="17" branch="false" />
               </lines>
             </method>
             <method name="GetTableSize" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -4703,56 +4554,56 @@
             </method>
             <method name="AddColumns" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="78" hits="22" branch="false" />
-                <line number="79" hits="278" branch="true" condition-coverage="100% (2/2)" />
-                <line number="80" hits="117" branch="false" />
-                <line number="81" hits="117" branch="false" />
-                <line number="82" hits="117" branch="false" />
-                <line number="83" hits="22" branch="false" />
+                <line number="78" hits="28" branch="false" />
+                <line number="79" hits="356" branch="true" condition-coverage="100% (2/2)" />
+                <line number="80" hits="150" branch="false" />
+                <line number="81" hits="150" branch="false" />
+                <line number="82" hits="150" branch="false" />
+                <line number="83" hits="28" branch="false" />
               </lines>
             </method>
             <method name="AddRows" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="85" hits="22" branch="false" />
-                <line number="86" hits="278" branch="true" condition-coverage="100% (2/2)" />
-                <line number="87" hits="117" branch="false" />
-                <line number="88" hits="117" branch="false" />
-                <line number="89" hits="117" branch="false" />
-                <line number="90" hits="117" branch="false" />
-                <line number="91" hits="22" branch="false" />
+                <line number="85" hits="28" branch="false" />
+                <line number="86" hits="356" branch="true" condition-coverage="100% (2/2)" />
+                <line number="87" hits="150" branch="false" />
+                <line number="88" hits="150" branch="false" />
+                <line number="89" hits="150" branch="false" />
+                <line number="90" hits="150" branch="false" />
+                <line number="91" hits="28" branch="false" />
               </lines>
             </method>
             <method name="AddValues" signature="()" line-rate="1" branch-rate="1" complexity="3">
               <lines>
-                <line number="94" hits="22" branch="false" />
-                <line number="95" hits="278" branch="true" condition-coverage="100% (2/2)" />
-                <line number="96" hits="117" branch="false" />
-                <line number="97" hits="117" branch="false" />
-                <line number="98" hits="1540" branch="true" condition-coverage="100% (2/2)" />
-                <line number="99" hits="653" branch="false" />
-                <line number="100" hits="653" branch="false" />
-                <line number="101" hits="653" branch="false" />
-                <line number="102" hits="117" branch="false" />
-                <line number="103" hits="22" branch="false" />
+                <line number="94" hits="28" branch="false" />
+                <line number="95" hits="356" branch="true" condition-coverage="100% (2/2)" />
+                <line number="96" hits="150" branch="false" />
+                <line number="97" hits="150" branch="false" />
+                <line number="98" hits="1972" branch="true" condition-coverage="100% (2/2)" />
+                <line number="99" hits="836" branch="false" />
+                <line number="100" hits="836" branch="false" />
+                <line number="101" hits="836" branch="false" />
+                <line number="102" hits="150" branch="false" />
+                <line number="103" hits="28" branch="false" />
               </lines>
             </method>
             <method name="GeneratePositions" signature="()" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="105" hits="22" branch="false" />
-                <line number="106" hits="22" branch="false" />
-                <line number="107" hits="22" branch="false" />
-                <line number="108" hits="22" branch="false" />
-                <line number="109" hits="1350" branch="true" condition-coverage="100% (2/2)" />
-                <line number="110" hits="653" branch="false" />
-                <line number="111" hits="653" branch="true" condition-coverage="100% (4/4)" />
-                <line number="112" hits="95" branch="false" />
-                <line number="113" hits="95" branch="false" />
-                <line number="114" hits="95" branch="false" />
-                <line number="115" hits="95" branch="false" />
-                <line number="116" hits="653" branch="false" />
-                <line number="117" hits="653" branch="false" />
-                <line number="118" hits="653" branch="false" />
-                <line number="119" hits="22" branch="false" />
+                <line number="105" hits="28" branch="false" />
+                <line number="106" hits="28" branch="false" />
+                <line number="107" hits="28" branch="false" />
+                <line number="108" hits="28" branch="false" />
+                <line number="109" hits="1728" branch="true" condition-coverage="100% (2/2)" />
+                <line number="110" hits="836" branch="false" />
+                <line number="111" hits="836" branch="true" condition-coverage="100% (4/4)" />
+                <line number="112" hits="122" branch="false" />
+                <line number="113" hits="122" branch="false" />
+                <line number="114" hits="122" branch="false" />
+                <line number="115" hits="122" branch="false" />
+                <line number="116" hits="836" branch="false" />
+                <line number="117" hits="836" branch="false" />
+                <line number="118" hits="836" branch="false" />
+                <line number="119" hits="28" branch="false" />
               </lines>
             </method>
             <method name="GetRow" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
@@ -4844,24 +4695,24 @@
             </method>
           </methods>
           <lines>
-            <line number="17" hits="22" branch="false" />
-            <line number="18" hits="560" branch="false" />
-            <line number="19" hits="44" branch="false" />
-            <line number="21" hits="22" branch="false" />
-            <line number="22" hits="3875" branch="false" />
-            <line number="23" hits="22" branch="false" />
-            <line number="27" hits="22" branch="false" />
-            <line number="28" hits="22" branch="false" />
-            <line number="29" hits="22" branch="false" />
-            <line number="30" hits="22" branch="false" />
-            <line number="31" hits="22" branch="false" />
-            <line number="32" hits="22" branch="false" />
-            <line number="33" hits="22" branch="false" />
-            <line number="34" hits="22" branch="false" />
-            <line number="35" hits="22" branch="false" />
-            <line number="36" hits="22" branch="false" />
-            <line number="37" hits="22" branch="false" />
-            <line number="38" hits="22" branch="false" />
+            <line number="17" hits="28" branch="false" />
+            <line number="18" hits="716" branch="false" />
+            <line number="19" hits="56" branch="false" />
+            <line number="21" hits="28" branch="false" />
+            <line number="22" hits="4958" branch="false" />
+            <line number="23" hits="28" branch="false" />
+            <line number="27" hits="28" branch="false" />
+            <line number="28" hits="28" branch="false" />
+            <line number="29" hits="28" branch="false" />
+            <line number="30" hits="28" branch="false" />
+            <line number="31" hits="28" branch="false" />
+            <line number="32" hits="28" branch="false" />
+            <line number="33" hits="28" branch="false" />
+            <line number="34" hits="28" branch="false" />
+            <line number="35" hits="28" branch="false" />
+            <line number="36" hits="28" branch="false" />
+            <line number="37" hits="28" branch="false" />
+            <line number="38" hits="28" branch="false" />
             <line number="41" hits="1" branch="false" />
             <line number="42" hits="1" branch="false" />
             <line number="43" hits="1" branch="false" />
@@ -4875,60 +4726,60 @@
             <line number="54" hits="4" branch="false" />
             <line number="55" hits="4" branch="false" />
             <line number="56" hits="4" branch="false" />
-            <line number="58" hits="22" branch="false" />
-            <line number="59" hits="22" branch="false" />
-            <line number="60" hits="22" branch="false" />
-            <line number="61" hits="22" branch="false" />
-            <line number="62" hits="22" branch="false" />
-            <line number="63" hits="22" branch="false" />
-            <line number="64" hits="22" branch="false" />
+            <line number="58" hits="28" branch="false" />
+            <line number="59" hits="28" branch="false" />
+            <line number="60" hits="28" branch="false" />
+            <line number="61" hits="28" branch="false" />
+            <line number="62" hits="28" branch="false" />
+            <line number="63" hits="28" branch="false" />
+            <line number="64" hits="28" branch="false" />
             <line number="66" hits="0" branch="false" />
             <line number="67" hits="0" branch="false" />
             <line number="68" hits="0" branch="false" />
-            <line number="70" hits="11" branch="false" />
-            <line number="71" hits="11" branch="false" />
-            <line number="72" hits="11" branch="false" />
+            <line number="70" hits="17" branch="false" />
+            <line number="71" hits="17" branch="false" />
+            <line number="72" hits="17" branch="false" />
             <line number="74" hits="2" branch="false" />
             <line number="75" hits="2" branch="false" />
             <line number="76" hits="2" branch="false" />
-            <line number="78" hits="22" branch="false" />
-            <line number="79" hits="278" branch="true" condition-coverage="100% (2/2)" />
-            <line number="80" hits="117" branch="false" />
-            <line number="81" hits="117" branch="false" />
-            <line number="82" hits="117" branch="false" />
-            <line number="83" hits="22" branch="false" />
-            <line number="85" hits="22" branch="false" />
-            <line number="86" hits="278" branch="true" condition-coverage="100% (2/2)" />
-            <line number="87" hits="117" branch="false" />
-            <line number="88" hits="117" branch="false" />
-            <line number="89" hits="117" branch="false" />
-            <line number="90" hits="117" branch="false" />
-            <line number="91" hits="22" branch="false" />
-            <line number="94" hits="22" branch="false" />
-            <line number="95" hits="278" branch="true" condition-coverage="100% (2/2)" />
-            <line number="96" hits="117" branch="false" />
-            <line number="97" hits="117" branch="false" />
-            <line number="98" hits="1540" branch="true" condition-coverage="100% (2/2)" />
-            <line number="99" hits="653" branch="false" />
-            <line number="100" hits="653" branch="false" />
-            <line number="101" hits="653" branch="false" />
-            <line number="102" hits="117" branch="false" />
-            <line number="103" hits="22" branch="false" />
-            <line number="105" hits="22" branch="false" />
-            <line number="106" hits="22" branch="false" />
-            <line number="107" hits="22" branch="false" />
-            <line number="108" hits="22" branch="false" />
-            <line number="109" hits="1350" branch="true" condition-coverage="100% (2/2)" />
-            <line number="110" hits="653" branch="false" />
-            <line number="111" hits="653" branch="true" condition-coverage="100% (4/4)" />
-            <line number="112" hits="95" branch="false" />
-            <line number="113" hits="95" branch="false" />
-            <line number="114" hits="95" branch="false" />
-            <line number="115" hits="95" branch="false" />
-            <line number="116" hits="653" branch="false" />
-            <line number="117" hits="653" branch="false" />
-            <line number="118" hits="653" branch="false" />
-            <line number="119" hits="22" branch="false" />
+            <line number="78" hits="28" branch="false" />
+            <line number="79" hits="356" branch="true" condition-coverage="100% (2/2)" />
+            <line number="80" hits="150" branch="false" />
+            <line number="81" hits="150" branch="false" />
+            <line number="82" hits="150" branch="false" />
+            <line number="83" hits="28" branch="false" />
+            <line number="85" hits="28" branch="false" />
+            <line number="86" hits="356" branch="true" condition-coverage="100% (2/2)" />
+            <line number="87" hits="150" branch="false" />
+            <line number="88" hits="150" branch="false" />
+            <line number="89" hits="150" branch="false" />
+            <line number="90" hits="150" branch="false" />
+            <line number="91" hits="28" branch="false" />
+            <line number="94" hits="28" branch="false" />
+            <line number="95" hits="356" branch="true" condition-coverage="100% (2/2)" />
+            <line number="96" hits="150" branch="false" />
+            <line number="97" hits="150" branch="false" />
+            <line number="98" hits="1972" branch="true" condition-coverage="100% (2/2)" />
+            <line number="99" hits="836" branch="false" />
+            <line number="100" hits="836" branch="false" />
+            <line number="101" hits="836" branch="false" />
+            <line number="102" hits="150" branch="false" />
+            <line number="103" hits="28" branch="false" />
+            <line number="105" hits="28" branch="false" />
+            <line number="106" hits="28" branch="false" />
+            <line number="107" hits="28" branch="false" />
+            <line number="108" hits="28" branch="false" />
+            <line number="109" hits="1728" branch="true" condition-coverage="100% (2/2)" />
+            <line number="110" hits="836" branch="false" />
+            <line number="111" hits="836" branch="true" condition-coverage="100% (4/4)" />
+            <line number="112" hits="122" branch="false" />
+            <line number="113" hits="122" branch="false" />
+            <line number="114" hits="122" branch="false" />
+            <line number="115" hits="122" branch="false" />
+            <line number="116" hits="836" branch="false" />
+            <line number="117" hits="836" branch="false" />
+            <line number="118" hits="836" branch="false" />
+            <line number="119" hits="28" branch="false" />
             <line number="121" hits="4" branch="false" />
             <line number="122" hits="4" branch="false" />
             <line number="123" hits="4" branch="false" />
@@ -4974,78 +4825,48 @@
             <line number="185" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.ShipSmallFactory" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteCreator\ShipSmallFactory.cs" line-rate="0.3333333333333333" branch-rate="1" complexity="3">
+        <class name="Battleships.Models.ShipSmallFactory" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteCreator\ShipSmallFactory.cs" line-rate="0.9230769230769231" branch-rate="0.5" complexity="1">
           <methods>
-            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="16" hits="13" branch="false" />
-                <line number="17" hits="13" branch="false" />
-                <line number="19" hits="13" branch="false" />
+                <line number="15" hits="16" branch="false" />
+                <line number="16" hits="16" branch="false" />
+                <line number="17" hits="16" branch="false" />
+                <line number="18" hits="16" branch="false" />
               </lines>
             </method>
-            <method name="GetOrangeShip" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="GetShip" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="0" branch="false" />
-                <line number="23" hits="0" branch="false" />
-                <line number="24" hits="0" branch="false" />
+                <line number="21" hits="2" branch="false" />
+                <line number="22" hits="2" branch="false" />
+                <line number="23" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="GetBlueShip" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Equals" signature="(System.Object)" line-rate="0.8333333333333334" branch-rate="0.5" complexity="NaN">
               <lines>
-                <line number="27" hits="0" branch="false" />
+                <line number="26" hits="1" branch="false" />
+                <line number="27" hits="1" branch="true" condition-coverage="50% (1/2)" />
                 <line number="28" hits="0" branch="false" />
-                <line number="29" hits="0" branch="false" />
+                <line number="29" hits="1" branch="false" />
+                <line number="31" hits="1" branch="false" />
+                <line number="32" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="16" hits="13" branch="false" />
-            <line number="17" hits="13" branch="false" />
-            <line number="19" hits="13" branch="false" />
-            <line number="22" hits="0" branch="false" />
-            <line number="23" hits="0" branch="false" />
-            <line number="24" hits="0" branch="false" />
-            <line number="27" hits="0" branch="false" />
+            <line number="15" hits="16" branch="false" />
+            <line number="16" hits="16" branch="false" />
+            <line number="17" hits="16" branch="false" />
+            <line number="18" hits="16" branch="false" />
+            <line number="21" hits="2" branch="false" />
+            <line number="22" hits="2" branch="false" />
+            <line number="23" hits="2" branch="false" />
+            <line number="26" hits="1" branch="false" />
+            <line number="27" hits="1" branch="true" condition-coverage="50% (1/2)" />
             <line number="28" hits="0" branch="false" />
-            <line number="29" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="Battleships.Models.SmallBlueShip" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Factory Method\ConcreteProduct\SmallBlueShip.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="ShipType" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="23" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="_Color" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="28" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="_Color" signature="(System.Drawing.Color)" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="29" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="15" hits="0" branch="false" />
-                <line number="16" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-                <line number="18" hits="0" branch="false" />
-                <line number="19" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="15" hits="0" branch="false" />
-            <line number="16" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="18" hits="0" branch="false" />
-            <line number="19" hits="0" branch="false" />
-            <line number="23" hits="0" branch="false" />
-            <line number="28" hits="0" branch="false" />
-            <line number="29" hits="0" branch="false" />
+            <line number="29" hits="1" branch="false" />
+            <line number="31" hits="1" branch="false" />
+            <line number="32" hits="1" branch="false" />
           </lines>
         </class>
         <class name="Battleships.Models.Strategy.AtomicBombAttackStrategy" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Strategy\AtomicBombAttackStrategy.cs" line-rate="0.0625" branch-rate="0" complexity="NaN">
@@ -5098,16 +4919,16 @@
             <line number="27" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Strategy.BombAttackStrategy" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Strategy\BombAttackStrategy.cs" line-rate="0.0625" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Strategy.BombAttackStrategy" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Strategy\BombAttackStrategy.cs" line-rate="0.125" branch-rate="0" complexity="NaN">
           <methods>
-            <method name="Name" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+            <method name="Name" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="12" hits="0" branch="false" />
+                <line number="12" hits="2" branch="false" />
               </lines>
             </method>
             <method name="shipCount" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="13" hits="7" branch="false" />
+                <line number="13" hits="18" branch="false" />
               </lines>
             </method>
             <method name="GetAttackingShips" signature="(System.Collections.Generic.List`1&lt;System.String&gt;)" line-rate="0" branch-rate="0" complexity="NaN">
@@ -5130,8 +4951,8 @@
             </method>
           </methods>
           <lines>
-            <line number="12" hits="0" branch="false" />
-            <line number="13" hits="7" branch="false" />
+            <line number="12" hits="2" branch="false" />
+            <line number="13" hits="18" branch="false" />
             <line number="15" hits="0" branch="false" />
             <line number="16" hits="0" branch="false" />
             <line number="17" hits="0" branch="false" />
@@ -5198,16 +5019,16 @@
             <line number="28" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Battleships.Models.Strategy.MissileAttackStrategy" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Strategy\MissileAttackStrategy.cs" line-rate="0.0625" branch-rate="0" complexity="NaN">
+        <class name="Battleships.Models.Strategy.MissileAttackStrategy" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\Models\Strategy\MissileAttackStrategy.cs" line-rate="0" branch-rate="0" complexity="NaN">
           <methods>
             <method name="Name" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
                 <line number="12" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="shipCount" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+            <method name="shipCount" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="13" hits="4" branch="false" />
+                <line number="13" hits="0" branch="false" />
               </lines>
             </method>
             <method name="GetAttackingShips" signature="(System.Collections.Generic.List`1&lt;System.String&gt;)" line-rate="0" branch-rate="0" complexity="NaN">
@@ -5231,7 +5052,7 @@
           </methods>
           <lines>
             <line number="12" hits="0" branch="false" />
-            <line number="13" hits="4" branch="false" />
+            <line number="13" hits="0" branch="false" />
             <line number="15" hits="0" branch="false" />
             <line number="16" hits="0" branch="false" />
             <line number="17" hits="0" branch="false" />
@@ -5270,7 +5091,7 @@
         </class>
       </classes>
     </package>
-    <package name="BattleshipsLibrary.Tests" line-rate="1" branch-rate="0.75" complexity="31">
+    <package name="BattleshipsLibrary.Tests" line-rate="1" branch-rate="0.8333333333333334" complexity="37">
       <classes>
         <class name="BattleshipsLibrary.Tests.AdapterTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\AdapterTests.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
@@ -5482,46 +5303,162 @@
             <line number="39" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="BattleshipsLibrary.Tests.DecoratorTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\DecoratorTests.cs" line-rate="1" branch-rate="1" complexity="3">
+        <class name="BattleshipsLibrary.Tests.DecoratorTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\DecoratorTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="BasicAttackIncreaseTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="BasicAttackIncreaseTest" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="21" hits="1" branch="false" />
-                <line number="22" hits="1" branch="false" />
-                <line number="23" hits="1" branch="false" />
-                <line number="24" hits="1" branch="false" />
+                <line number="34" hits="2" branch="false" />
+                <line number="36" hits="2" branch="false" />
+                <line number="37" hits="2" branch="false" />
+                <line number="38" hits="2" branch="false" />
+                <line number="39" hits="2" branch="false" />
+                <line number="42" hits="2" branch="false" />
+                <line number="43" hits="2" branch="false" />
+                <line number="44" hits="2" branch="false" />
+                <line number="47" hits="2" branch="false" />
+                <line number="48" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="MediumAttackIncreaseTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="MediumAttackIncreaseTest" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="28" hits="1" branch="false" />
-                <line number="29" hits="1" branch="false" />
-                <line number="30" hits="1" branch="false" />
-                <line number="31" hits="1" branch="false" />
+                <line number="54" hits="2" branch="false" />
+                <line number="56" hits="2" branch="false" />
+                <line number="57" hits="2" branch="false" />
+                <line number="58" hits="2" branch="false" />
+                <line number="59" hits="2" branch="false" />
+                <line number="62" hits="2" branch="false" />
+                <line number="63" hits="2" branch="false" />
+                <line number="64" hits="2" branch="false" />
+                <line number="67" hits="2" branch="false" />
+                <line number="68" hits="2" branch="false" />
               </lines>
             </method>
-            <method name="UltraAttackIncreaseTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="UltraAttackIncreaseTest" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="35" hits="1" branch="false" />
-                <line number="36" hits="1" branch="false" />
-                <line number="37" hits="1" branch="false" />
-                <line number="38" hits="1" branch="false" />
+                <line number="74" hits="2" branch="false" />
+                <line number="76" hits="2" branch="false" />
+                <line number="77" hits="2" branch="false" />
+                <line number="78" hits="2" branch="false" />
+                <line number="79" hits="2" branch="false" />
+                <line number="80" hits="2" branch="false" />
+                <line number="81" hits="2" branch="false" />
+                <line number="84" hits="2" branch="false" />
+                <line number="85" hits="2" branch="false" />
+                <line number="86" hits="2" branch="false" />
+                <line number="89" hits="2" branch="false" />
+                <line number="90" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="returnSamplePositions" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="93" hits="12" branch="false" />
+                <line number="94" hits="12" branch="false" />
+                <line number="95" hits="12" branch="false" />
+                <line number="96" hits="240" branch="true" condition-coverage="100% (2/2)" />
+                <line number="97" hits="108" branch="false" />
+                <line number="98" hits="108" branch="false" />
+                <line number="99" hits="108" branch="false" />
+                <line number="100" hits="12" branch="false" />
+                <line number="101" hits="12" branch="false" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="20" hits="1" branch="false" />
+            <line number="34" hits="2" branch="false" />
+            <line number="36" hits="2" branch="false" />
+            <line number="37" hits="2" branch="false" />
+            <line number="38" hits="2" branch="false" />
+            <line number="39" hits="2" branch="false" />
+            <line number="42" hits="2" branch="false" />
+            <line number="43" hits="2" branch="false" />
+            <line number="44" hits="2" branch="false" />
+            <line number="47" hits="2" branch="false" />
+            <line number="48" hits="2" branch="false" />
+            <line number="54" hits="2" branch="false" />
+            <line number="56" hits="2" branch="false" />
+            <line number="57" hits="2" branch="false" />
+            <line number="58" hits="2" branch="false" />
+            <line number="59" hits="2" branch="false" />
+            <line number="62" hits="2" branch="false" />
+            <line number="63" hits="2" branch="false" />
+            <line number="64" hits="2" branch="false" />
+            <line number="67" hits="2" branch="false" />
+            <line number="68" hits="2" branch="false" />
+            <line number="74" hits="2" branch="false" />
+            <line number="76" hits="2" branch="false" />
+            <line number="77" hits="2" branch="false" />
+            <line number="78" hits="2" branch="false" />
+            <line number="79" hits="2" branch="false" />
+            <line number="80" hits="2" branch="false" />
+            <line number="81" hits="2" branch="false" />
+            <line number="84" hits="2" branch="false" />
+            <line number="85" hits="2" branch="false" />
+            <line number="86" hits="2" branch="false" />
+            <line number="89" hits="2" branch="false" />
+            <line number="90" hits="2" branch="false" />
+            <line number="93" hits="12" branch="false" />
+            <line number="94" hits="12" branch="false" />
+            <line number="95" hits="12" branch="false" />
+            <line number="96" hits="240" branch="true" condition-coverage="100% (2/2)" />
+            <line number="97" hits="108" branch="false" />
+            <line number="98" hits="108" branch="false" />
+            <line number="99" hits="108" branch="false" />
+            <line number="100" hits="12" branch="false" />
+            <line number="101" hits="12" branch="false" />
+          </lines>
+        </class>
+        <class name="BattleshipsLibrary.Tests.FactoryTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\FactoryTests.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="SmallShipFactoryInitializeTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="1" branch="false" />
+                <line number="18" hits="1" branch="false" />
+                <line number="21" hits="1" branch="false" />
+                <line number="24" hits="1" branch="false" />
+                <line number="25" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="MediumShipFactoryInitializeTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="29" hits="1" branch="false" />
+                <line number="31" hits="1" branch="false" />
+                <line number="34" hits="1" branch="false" />
+                <line number="37" hits="1" branch="false" />
+                <line number="38" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="BigShipFactoryInitializeTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="42" hits="1" branch="false" />
+                <line number="44" hits="1" branch="false" />
+                <line number="47" hits="1" branch="false" />
+                <line number="50" hits="1" branch="false" />
+                <line number="51" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="1" branch="false" />
+            <line number="18" hits="1" branch="false" />
             <line number="21" hits="1" branch="false" />
-            <line number="22" hits="1" branch="false" />
-            <line number="23" hits="1" branch="false" />
             <line number="24" hits="1" branch="false" />
-            <line number="28" hits="1" branch="false" />
+            <line number="25" hits="1" branch="false" />
             <line number="29" hits="1" branch="false" />
-            <line number="30" hits="1" branch="false" />
             <line number="31" hits="1" branch="false" />
-            <line number="35" hits="1" branch="false" />
-            <line number="36" hits="1" branch="false" />
+            <line number="34" hits="1" branch="false" />
             <line number="37" hits="1" branch="false" />
             <line number="38" hits="1" branch="false" />
+            <line number="42" hits="1" branch="false" />
+            <line number="44" hits="1" branch="false" />
+            <line number="47" hits="1" branch="false" />
+            <line number="50" hits="1" branch="false" />
+            <line number="51" hits="1" branch="false" />
           </lines>
         </class>
         <class name="BattleshipsLibrary.Tests.PrototypeTests" filename="C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\BattleshipsLibrary.Tests\PrototypeTests.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -5746,15 +5683,15 @@
             </method>
             <method name="returnSamplePositions" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="106" hits="16" branch="false" />
-                <line number="107" hits="16" branch="false" />
-                <line number="108" hits="16" branch="false" />
-                <line number="109" hits="112" branch="true" condition-coverage="100% (2/2)" />
-                <line number="110" hits="40" branch="false" />
-                <line number="111" hits="40" branch="false" />
-                <line number="112" hits="40" branch="false" />
-                <line number="113" hits="16" branch="false" />
-                <line number="114" hits="16" branch="false" />
+                <line number="106" hits="12" branch="false" />
+                <line number="107" hits="12" branch="false" />
+                <line number="108" hits="12" branch="false" />
+                <line number="109" hits="96" branch="true" condition-coverage="100% (2/2)" />
+                <line number="110" hits="36" branch="false" />
+                <line number="111" hits="36" branch="false" />
+                <line number="112" hits="36" branch="false" />
+                <line number="113" hits="12" branch="false" />
+                <line number="114" hits="12" branch="false" />
               </lines>
             </method>
             <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -5805,20 +5742,20 @@
             <line number="99" hits="2" branch="false" />
             <line number="102" hits="2" branch="false" />
             <line number="103" hits="2" branch="false" />
-            <line number="106" hits="16" branch="false" />
-            <line number="107" hits="16" branch="false" />
-            <line number="108" hits="16" branch="false" />
-            <line number="109" hits="112" branch="true" condition-coverage="100% (2/2)" />
-            <line number="110" hits="40" branch="false" />
-            <line number="111" hits="40" branch="false" />
-            <line number="112" hits="40" branch="false" />
-            <line number="113" hits="16" branch="false" />
-            <line number="114" hits="16" branch="false" />
+            <line number="106" hits="12" branch="false" />
+            <line number="107" hits="12" branch="false" />
+            <line number="108" hits="12" branch="false" />
+            <line number="109" hits="96" branch="true" condition-coverage="100% (2/2)" />
+            <line number="110" hits="36" branch="false" />
+            <line number="111" hits="36" branch="false" />
+            <line number="112" hits="36" branch="false" />
+            <line number="113" hits="12" branch="false" />
+            <line number="114" hits="12" branch="false" />
           </lines>
         </class>
       </classes>
     </package>
-    <package name="Moq" line-rate="0.10797222887239645" branch-rate="0.058325024925224324" complexity="1866">
+    <package name="Moq" line-rate="0.1089298539621738" branch-rate="0.05982053838484546" complexity="1866">
       <classes>
         <class name="Moq.ActionObserver" filename="C:\projects\moq4\src\Moq\ActionObserver.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
@@ -11253,7 +11190,7 @@
         </class>
       </classes>
     </package>
-    <package name="xunit.execution.desktop" line-rate="0.4650047938638543" branch-rate="0.27997858672376874" complexity="1722">
+    <package name="xunit.execution.desktop" line-rate="0.4628475551294343" branch-rate="0.27997858672376874" complexity="1722">
       <classes>
         <class name="AssemblyExtensions" filename="C:\Dev\xunit\xunit\src\common\AssemblyExtensions.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>

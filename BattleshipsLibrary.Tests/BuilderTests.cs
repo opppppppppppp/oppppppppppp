@@ -17,7 +17,7 @@ namespace BattleshipsLibrary.Tests
             Level expected = new Level();
             expected.Title = "Level 1 - Paradise of hell";
             expected.Strategy = new BombAttackStrategy();
-            expected.ShipFactory = new ShipSmallFactory();
+            expected.ShipFactory = new ShipSmallFactory(2);
             expected.NumberOfShips = 4;
             expected.IncreasedStrategy = new UltraAttackIncrease(new BombAttackStrategy());
 
@@ -37,7 +37,7 @@ namespace BattleshipsLibrary.Tests
             Level expected = new Level();
             expected.Title = "Level 2 - Cariebien of the Pirates";
             expected.Strategy = new DynamiteAttackStrategy();
-            expected.ShipFactory = new ShipSmallFactory();
+            expected.ShipFactory = new ShipSmallFactory(2);
             expected.NumberOfShips = 5;
             expected.IncreasedStrategy = new MediumAttackIncrease(new DynamiteAttackStrategy());
 
@@ -58,7 +58,7 @@ namespace BattleshipsLibrary.Tests
             Level expected = new Level();
             expected.Title = "Level 3 - Island of the Terror";
             expected.Strategy = new MissileAttackStrategy();
-            expected.ShipFactory = new ShipSmallFactory();
+            expected.ShipFactory = new ShipSmallFactory(2);
             expected.NumberOfShips = 6;
             expected.IncreasedStrategy = new BasicAttackIncrease(new MissileAttackStrategy());
 

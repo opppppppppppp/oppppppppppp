@@ -1,5 +1,4 @@
-﻿using Battleships.Models.Observer;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +18,6 @@ namespace Battleships.Forms
     public class Server
     {
         public static int connectedUsers = 0;
-        static TurnSubject playerTurn = new TurnSubject();
         private static ServerInstance serverInstance = ServerInstance.Instance;
         static WebSocketServer webSocketServer = serverInstance.GetWebSocketServer();
         // = new WebSocketServer();
@@ -33,7 +31,6 @@ namespace Battleships.Forms
             protected override void OnMessage(MessageEventArgs e)
             {
                 string user_id = e.Data;
-                playerTurn.Register(new UserObserver(user_id));
                 connectedUsers++;
                 Sessions.Broadcast($"{user_id}:{connectedUsers}");
             
@@ -78,7 +75,7 @@ namespace Battleships.Forms
             protected override void OnMessage(MessageEventArgs e)
             {
                 string uid = JsonConvert.SerializeObject(e.Data);
-                playerTurn.Notify(uid, Sessions);
+                Sessions.Broadcast(uid);
                 Debug.WriteLine($"*SERVER* User turn id: {uid}");
             }
         }

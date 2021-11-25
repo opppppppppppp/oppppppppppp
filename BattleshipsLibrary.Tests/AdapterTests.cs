@@ -22,7 +22,7 @@ namespace BattleshipsLibrary.Tests
             LevelCreator levelcreator = new LevelCreator(new LevelOneBuilder());
             levelcreator.CreateLevel();
             Level lvl = levelcreator.GetLevel();
-            ShipFactory Ships = new ShipSmallFactory();
+            ShipFactory Ships = new ShipSmallFactory(2);
             ShipField shipField = new ShipField(FieldSize, new System.Windows.Forms.DataGridView(), new ShipFieldUpgradeGood(), Ships);
             List<int> positions = new Pos().generatePos(0, lvl, shipField);
             Assert.Equal(lvl.NumberOfShips, positions.Count);

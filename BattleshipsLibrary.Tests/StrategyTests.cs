@@ -18,7 +18,7 @@ namespace BattleshipsLibrary.Tests
     public class StrategyTests
     {
 
-        private static ShipFactory Ships = new ShipSmallFactory();
+        private static ShipFactory Ships = new ShipSmallFactory(2);
         private static ShipField shipField;
 
         [Theory]
@@ -30,11 +30,11 @@ namespace BattleshipsLibrary.Tests
             shipField = new ShipField(FieldSize, new DataGridView(), new ShipFieldUpgradeGood(), Ships);
             List<string> attackships = shipField.GetPositions();
             MissileAttackStrategy missileAttackStrategy = new MissileAttackStrategy();
-            List<string> expected = returnSamplePositions(missileAttackStrategy.shipCount);
+            List<string> expected = new List<string>() { "A1" };
 
             //Act
             var strategyMock = new Mock<MissileAttackStrategy>();
-            strategyMock.Setup(x => x.GetAttackingShips(attackships)).Returns(returnSamplePositions(missileAttackStrategy.shipCount));
+            strategyMock.Setup(x => x.GetAttackingShips(attackships)).Returns(new List<string>() {"A1"});
             List<string> actual = strategyMock.Object.GetAttackingShips(attackships);
 
             //Assert

@@ -27,7 +27,7 @@ namespace BattleshipsLibrary.Tests
             _testOutputHelper = testOutputHelper;
         }
 
-        private static ShipFactory Ships = new ShipSmallFactory();
+        private static ShipFactory Ships = new ShipSmallFactory(2);
         private static ShipField shipField;
         private static DataGridView dataGridView = new DataGridView();
         [Theory]

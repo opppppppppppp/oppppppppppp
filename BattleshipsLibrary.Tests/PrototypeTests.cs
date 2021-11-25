@@ -15,7 +15,7 @@ namespace BattleshipsLibrary.Tests
         [Fact]
         public void CloneTest()
         {
-           ShipFactory Ships = new ShipSmallFactory();
+           ShipFactory Ships = new ShipSmallFactory(2);
            ShipField shipField;
            DataGridView dataGridView = new DataGridView();
            shipField = new ShipField(1, new DataGridView(), new ShipFieldUpgradeGood(), Ships);

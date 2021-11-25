@@ -1,5 +1,4 @@
-﻿using Battleships.Models.Factory_Method.ConcreteOrangeProduct;
-using Battleships.Models.Factory_Method.ConcreteProduct;
+﻿using Battleships.Models.Factory_Method.ConcreteProduct;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -11,23 +10,27 @@ namespace Battleships.Models.ConcreteCreator
 {
     public class ShipBigFactory : ShipFactory
     {
-        private Color _Color;
+        public int _ShipSize;
 
-        public ShipBigFactory()
+        public ShipBigFactory(int shipSize)
         {
-
+            _ShipSize = shipSize;
         }
 
-        public override OrangeShip GetOrangeShip()
+        public override Ship GetShip()
         {
-            return new BigOrangeShip();
+            return new ShipBig(_ShipSize);
         }
 
-        public override BlueShip GetBlueShip()
+        public override bool Equals(object obj)
         {
-            return new BigBlueShip();
+            if (obj == null)
+                return false;
+            var obj_new = obj as ShipBigFactory;
+
+            return obj_new.GetShip().Equals(GetShip());
         }
 
-       
+
     }
 }

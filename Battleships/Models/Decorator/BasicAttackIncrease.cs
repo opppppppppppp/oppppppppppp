@@ -29,5 +29,14 @@ namespace Battleships.Models.Decorator
             }
             return generated_ships;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return false;
+            var obj_new = obj as BasicAttackIncrease;
+            return Name == obj_new.Name && shipCount == obj_new.shipCount;
+        }
+
     }
 }
