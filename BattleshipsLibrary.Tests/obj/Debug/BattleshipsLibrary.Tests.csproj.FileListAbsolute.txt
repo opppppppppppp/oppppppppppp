@@ -62,3 +62,35 @@ E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Castle.Core.xml
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Moq.xml
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.runner.reporters.net452.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.runner.utility.net452.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.abstractions.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.runner.json
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\BattleshipsLibrary.Tests.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\BattleshipsLibrary.Tests.pdb
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Battleships.exe
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Castle.Core.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Moq.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.assert.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.core.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Battleships.pdb
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Battleships.exe.config
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Castle.Core.xml
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Moq.xml
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.assert.xml
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.core.xml
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\xunit.execution.desktop.xml
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.csproj.AssemblyReference.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.csproj.CopyComplete
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.pdb

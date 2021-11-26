@@ -15,11 +15,6 @@ namespace Battleships.LevelBuilder
 
         public override bool Equals(object obj)
         {
-            if (obj == null)
-            {
-                return false;
-            }
-
             Level level = obj as Level;
             return (NumberOfShips == level.NumberOfShips && Title == level.Title && ShipFactory.GetType() == level.ShipFactory.GetType() );
         }

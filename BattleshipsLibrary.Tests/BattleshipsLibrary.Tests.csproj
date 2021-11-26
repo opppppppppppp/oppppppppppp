@@ -87,7 +87,6 @@
     <Compile Include="SailorTest.cs" />
     <Compile Include="ServerTests.cs" />
     <Compile Include="ShipFieldTests.cs" />
-    <Compile Include="TemplateMethodTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Battleships\Battleships.csproj">

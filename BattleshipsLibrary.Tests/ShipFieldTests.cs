@@ -85,16 +85,26 @@ namespace BattleshipsLibrary.Tests
             Assert.Equal(expected, actual);
         }
 
+        [Theory]
+        [InlineData(5, 0, "A1")]
+        [InlineData(5, 1, "A2")]
+        public void getShipIndexTest(int numberOfFields, int index, string expected)
+        {
+            shipField = new ShipField(numberOfFields, new DataGridView(), Ships);
+            var actual = shipField.GetShipIndex(expected);
+            Assert.Equal(actual, index);
+        }
 
-        //[Theory]
-        //[InlineData(5, 13, "S")]
-        ////[InlineData(5, 24, "S")]
-        //public void markShipTest(int numberOfFields, int index, string expected)
-        //{
+        [Theory]
+        [InlineData(5)]
+        [InlineData(6)]
+        public void getTableSizeTest(int numberOfFields)
+        {
+            shipField = new ShipField(numberOfFields, new DataGridView(), Ships);
+            var actual = shipField.GetTableSize();
+            Assert.Equal(actual, numberOfFields* numberOfFields);
+        }
 
-        //    shipField = new ShipField(numberOfFields, dataGridView, new ShipFieldUpgradeGood(), Ships);
-        //    shipField.MarkShip(index);
-        //}
 
 
     }

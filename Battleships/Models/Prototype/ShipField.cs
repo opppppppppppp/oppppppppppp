@@ -163,11 +163,6 @@ namespace Battleships.Models
 
         }
 
-        private Type BlueShip()
-        {
-            throw new NotImplementedException();
-        }
-
         //public void updateShipFieldUpgradeInterface(ShipFieldUpgradeInterface shipFieldUpgradeInterface)
         //{
         //    this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
