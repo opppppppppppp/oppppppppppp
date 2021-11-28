@@ -30,10 +30,10 @@ namespace Battleships.Forms
             bool value = false;
             user_id = GenerateUserID();
             ip_addr = ip_address;
-            var wsf = new WebSocketFacade(ip_address, "Connection");
+            var wsf = new WebSocketFacadeProxy(ip_address, "Connection");
             ws = wsf.Connect(OnRoomCreate, user_id);
             return ws;
-  
+
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace Battleships.Forms
         public static WebSocket Positions(string ip_address)
         {
             ip_addr = ip_address;
-            var wsf = new WebSocketFacade(ip_address, "Positions");
+            var wsf = new WebSocketFacadeProxy(ip_address, "Positions");
             ws = wsf.Connect(OnPosMessage);
             return ws;
         }
@@ -56,7 +56,7 @@ namespace Battleships.Forms
         public static WebSocket Response(string ip_address)
         {
             ip_addr = ip_address;
-            var wsf = new WebSocketFacade(ip_address, "Response");
+            var wsf = new WebSocketFacadeProxy(ip_address, "Response");
             ws = wsf.Connect(OnResponseMessage);
             return ws;
         }
@@ -69,7 +69,7 @@ namespace Battleships.Forms
         public static WebSocket Complete(string ip_address)
         {
             ip_addr = ip_address;
-            var wsf = new WebSocketFacade(ip_address, "Complete");
+            var wsf = new WebSocketFacadeProxy(ip_address, "Complete");
             ws = wsf.Connect(OnCompleteMessage);
             return ws;
         }
@@ -77,7 +77,7 @@ namespace Battleships.Forms
         public static WebSocket Turn(string ip_address)
         {
             ip_addr = ip_address;
-            var wsf = new WebSocketFacade(ip_address, "Turn");
+            var wsf = new WebSocketFacadeProxy(ip_address, "Turn");
             ws = wsf.Connect(OnTurnMessage);
             return ws;
         }
@@ -109,7 +109,7 @@ namespace Battleships.Forms
         static void OnRoomCreate(object sender, MessageEventArgs e)
         {
             string[] data = e.Data.Split(':');
-         
+
             var user_count = Convert.ToInt32(data[1]);
             var uid = data[0];
             //Debug.WriteLine($"*CLIENT* Client : {uid}");
