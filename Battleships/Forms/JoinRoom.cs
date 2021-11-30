@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Battleships.Models.Template_Method;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +23,9 @@ namespace Battleships.Forms
         private void login_server_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Client.Connect(Constants.ip_address);
+            ServerConnector con = new ServerConnector();
+            con.Connect(Constants.ip_address);
+            //Client.Connect(Constants.ip_address);
         }
 
         private void go_back_btn_Click(object sender, EventArgs e)

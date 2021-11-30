@@ -58,8 +58,8 @@
     <Compile Include="Forms\Client\Client.cs" />
     <Compile Include="Models\Composite\Component.cs" />
     <Compile Include="Models\Composite\ShipPositions.cs" />
+    <Compile Include="Models\Template Method\CompleteConnector.cs" />
     <Compile Include="Models\Template Method\ConnectionAccessor.cs" />
-    <Compile Include="Models\Template Method\Connections.cs" />
     <Compile Include="Models\AddressHelper.cs" />
     <Compile Include="Models\Decorator\MediumAttackIncrease.cs" />
     <Compile Include="Models\Facade\Facade.cs" />
@@ -128,7 +128,7 @@
     <Compile Include="Models\Observer\TurnSubject.cs" />
     <Compile Include="Models\Observer\UserObserver.cs" />
     <Compile Include="Models\Prototype\ShipFieldPrototype.cs" />
-    <Compile Include="Models\Sailor.cs" />
+    <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Ship.cs" />
     <Compile Include="Models\Factory Method\ConcreteProduct\BigBlueShip.cs" />
     <Compile Include="Models\Factory Method\Creator\ShipFactory.cs" />
@@ -141,6 +141,10 @@
     <Compile Include="Models\Strategy\IAttackStrategy.cs" />
     <Compile Include="Models\Strategy\BombAttackStrategy.cs" />
     <Compile Include="Models\Prototype\ShipField.cs" />
+    <Compile Include="Models\Template Method\PositionsConnector.cs" />
+    <Compile Include="Models\Template Method\ResponseConnector.cs" />
+    <Compile Include="Models\Template Method\ServerConnector.cs" />
+    <Compile Include="Models\Template Method\TurnConnector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\Server\Server.cs" />

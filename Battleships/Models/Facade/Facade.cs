@@ -8,6 +8,7 @@ using Battleships.LevelBuilder;
 using Battleships.Models.Adapter;
 using Battleships.Models.Bridge;
 using Battleships.Models.Command;
+using Battleships.Models.Template_Method;
 using WebSocketSharp;
 
 namespace Battleships.Models.Facade
@@ -29,18 +30,26 @@ namespace Battleships.Models.Facade
         //********************************************************
 
         public Level Level;
-        public Connections connections;
-        public static string user_id;
-        Sailor sailor;
+        //public Connections connections;
+        public ConnectionAccessor positionsConnector = new PositionsConnector();
+        public ConnectionAccessor responseConnector = new ResponseConnector();
+        public ConnectionAccessor turnConnector = new TurnConnector();
+        public ConnectionAccessor completeConnector = new CompleteConnector();
+        public Player player;
 
         //*********************************************************
 
-        public Facade(Game Game, GameObjects GameObjects)
+        public Facade(Game Game, GameObjects GameObjects, Player pl)
         {
-            connections = new Connections();
-            connections.Connect(Constants.ip_address);
+            //connections = new Connections();
+            //connections.Connect(Constants.ip_address);
             this.Game = Game;
             this.GameObjects = GameObjects;
+            this.player = pl;
+            positionsConnector.Run(Constants.ip_address, Game, pl);
+            responseConnector.Run(Constants.ip_address, Game, pl);
+            turnConnector.Run(Constants.ip_address, Game, pl);
+            completeConnector.Run(Constants.ip_address, Game, pl);
         }
 
         public List<string> GetCorrectStrategy(Level Level, ShipField AttackPos, ShipField PlayerPos)
@@ -76,11 +85,11 @@ namespace Battleships.Models.Facade
         }
 
 
-        public void setUID(string uid)
+        /*public void setUID(string uid)
         {
             user_id = uid;
-            sailor = new Sailor(uid);
-        }
+            sailor = new Player(uid);
+        }*/
 
         private void AddAttackOptions(List<string> options)
         {
@@ -124,7 +133,7 @@ namespace Battleships.Models.Facade
         private void ScoreChecker()
         {
             if (scoreCalculator.score >= Level.NumberOfShips)
-                connections.complete_socket.Send(user_id);
+                completeConnector.GetSocket().Send(player.getUID());
         }
         public void ShipHitCheck(int ship_index, string uid)
         {
@@ -133,17 +142,17 @@ namespace Battleships.Models.Facade
             if (attackOption == "S")
             {
                 MarkLocalShip(ship_index, true);
-                connections.response_socket.Send($"{uid}:{ship_index}:{true}");
+                responseConnector.GetSocket().Send($"{uid}:{ship_index}:{true}");
             }
             else
             {
                 MarkLocalShip(ship_index, false);
-                connections.response_socket.Send($"{uid}:{ship_index}:{false}");
+                responseConnector.GetSocket().Send($"{uid}:{ship_index}:{false}");
             }
         }
         public void UpdateHitShips(int ship_index, string uid, bool hit_status)
         {
-            if (sailor.UID != uid)//Nuo cia*
+            if (player.getUID() != uid)//Nuo cia*
             {
                 //Button attackedShip = FindShipByIndex(PlayerPos, ship_index);
                 string attackOption = PlayerPos.GetShipValue(ship_index);
@@ -151,7 +160,7 @@ namespace Battleships.Models.Facade
                 MarkLocalShip(ship_index, hit_status);
             }
             else //Iki cia
-            if (sailor.UID == uid)
+            if (player.getUID() == uid)
             {
                 //Button attackedShip = FindShipByIndex(EnemyPos, ship_index);
                 string attackOption = EnemyPos.GetShipValue(ship_index);
@@ -167,26 +176,26 @@ namespace Battleships.Models.Facade
             for (int i = 0; i < attackships.Count; i++)
             {
                 int index = EnemyPos.GetShipIndex(attackships[i]);
-                connections.position_socket.Send($"{index}:{user_id}");
+                positionsConnector.GetSocket().Send($"{index}:{player.getUID()}");
             }
-            connections.player_turn.Send($"{user_id}");
+            turnConnector.GetSocket().Send($"{player.getUID()}");
         }
 
         public void Completed(string uid)
         {
-            if (sailor.UID == uid)
+            if (player.getUID() == uid)
             {
-                connections.position_socket.Close();
-                connections.response_socket.Close();
-                connections.complete_socket.Close();
+                positionsConnector.GetSocket().Close();
+                responseConnector.GetSocket().Close();
+                completeConnector.GetSocket().Close();
                 MessageBox.Show("You are the winner");
                 Application.Exit();
             }
             else
             {
-                connections.position_socket.Close();
-                connections.response_socket.Close();
-                connections.complete_socket.Close();
+                positionsConnector.GetSocket().Close();
+                responseConnector.GetSocket().Close();
+                completeConnector.GetSocket().Close();
                 MessageBox.Show("You've lost the game!");
                 Application.Exit();
             }

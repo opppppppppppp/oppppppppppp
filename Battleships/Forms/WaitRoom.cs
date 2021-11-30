@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Battleships.Models.Template_Method;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,9 @@ namespace Battleships.Forms
         {
             InitializeComponent();
             server_ip_address.Text = Constants.ip_address;
-            Client.Connect(Constants.ip_address);
+            ServerConnector con = new ServerConnector();
+            con.Connect(Constants.ip_address);
+            //Client.Connect(Constants.ip_address);
         }
 
 

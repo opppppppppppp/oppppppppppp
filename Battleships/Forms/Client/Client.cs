@@ -1,4 +1,5 @@
-﻿using Battleships.Models.Observer;
+﻿using Battleships.Models;
+using Battleships.Models.Observer;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -15,11 +16,11 @@ namespace Battleships.Forms
     public class Client
     {
         public static Game game { get; set; }
-        public static WebSocket ws = null;
-        static string ip_addr;
-        //static UserObserver user;
-        static string user_id;
+        public static Player player;
 
+       
+
+        /*
         /// <summary>
         /// Metodas, skirtas prisijungti prie ws://{ip_address}/Connection route.
         /// </summary>
@@ -197,6 +198,6 @@ namespace Battleships.Forms
         public static void CreateGame()
         {
             game = new Game();
-        }
+        }*/
     }
 }

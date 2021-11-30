@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using Battleships.Models;
 using Battleships.Models.Facade;
 
 namespace Battleships
@@ -8,11 +9,11 @@ namespace Battleships
     public partial class Game : Form
     {
         public Facade Facade;
-        public Game()
+        public Game(Player player)
         {
             InitializeComponent();
             GameObjects GameObjects = new GameObjects(player_table, enemy_table, attack_options, special_ability_label, attack_btn, special_ability_btn, score_val);
-            Facade = new Facade(this, GameObjects);
+            Facade = new Facade(this, GameObjects, player);
             Facade.InitializeGameLogic();
             Facade.RestartGame();
         }
@@ -31,8 +32,8 @@ namespace Battleships
         public void Attack_btn_Click(object sender, EventArgs e)
         {
             int index = Facade.EnemyPos.GetShipIndex(attack_options.SelectedItem.ToString());
-            Facade.connections.position_socket.Send($"{index}:{Facade.user_id}");
-            Facade.connections.player_turn.Send($"{Facade.user_id}");
+            Facade.positionsConnector.GetSocket().Send($"{index}:{Facade.player.getUID()}");
+            Facade.turnConnector.GetSocket().Send($"{Facade.player.getUID()}");
             RemoveAttackOption(attack_options.SelectedIndex);
    
         }
