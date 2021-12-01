@@ -1,4 +1,5 @@
 ﻿using Battleships.Forms;
+using Battleships.Models.Mediator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,12 @@ namespace Battleships.Models.Template_Method
         public WebSocket server_socket { get; set; }
         public static Player player { get; set; }
         public static Game game { get; set; }
+        public static Chatroom chatroom { get; set; }
 
         public override void Connect(string ip_address)
         {
-            player = new Player();
+            chatroom = new Chatroom();
+            player = new Player(chatroom);
             var wsf = new WebSocketFacadeProxy(ip_address, "Connection");
             server_socket = wsf.Connect(OnRoomCreate, player.getUID());
             //position_socket = Client.Positions(ip_address);

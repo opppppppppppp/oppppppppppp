@@ -35,6 +35,7 @@ namespace Battleships.Models.Facade
         public ConnectionAccessor responseConnector = new ResponseConnector();
         public ConnectionAccessor turnConnector = new TurnConnector();
         public ConnectionAccessor completeConnector = new CompleteConnector();
+        public ConnectionAccessor chatConnector = new ChatConnector();
         public Player player;
 
         //*********************************************************
@@ -50,6 +51,7 @@ namespace Battleships.Models.Facade
             responseConnector.Run(Constants.ip_address, Game, pl);
             turnConnector.Run(Constants.ip_address, Game, pl);
             completeConnector.Run(Constants.ip_address, Game, pl);
+            chatConnector.Run(Constants.ip_address, Game, pl);
         }
 
         public List<string> GetCorrectStrategy(Level Level, ShipField AttackPos, ShipField PlayerPos)
@@ -297,5 +299,23 @@ namespace Battleships.Models.Facade
                 GameObjects.score_val.Text = text;
             }
         }
+
+        delegate void WriteMessageToBox(string message, string uid);
+        public void WriteMessageToChatBox(string message, string uid)
+        {
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
+            if (GameObjects.score_val.InvokeRequired)
+            {
+                WriteMessageToBox d = new WriteMessageToBox(WriteMessageToChatBox);
+                Game.Invoke(d, new object[] { uid, message });
+            }
+            else
+            {
+                GameObjects.chatbox.Text += $"User({uid}) : {message}\n";
+            }
+        }
+
     }
 }

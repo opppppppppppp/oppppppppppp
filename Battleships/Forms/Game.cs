@@ -12,7 +12,7 @@ namespace Battleships
         public Game(Player player)
         {
             InitializeComponent();
-            GameObjects GameObjects = new GameObjects(player_table, enemy_table, attack_options, special_ability_label, attack_btn, special_ability_btn, score_val);
+            GameObjects GameObjects = new GameObjects(player_table, enemy_table, attack_options, special_ability_label, attack_btn, special_ability_btn, score_val, send_btn, chatbox, chat_message_box);
             Facade = new Facade(this, GameObjects, player);
             Facade.InitializeGameLogic();
             Facade.RestartGame();
@@ -42,6 +42,21 @@ namespace Battleships
         {
             attack_options.Items.RemoveAt(index);
         }
+
+        private void score_val_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void score_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void send_btn_Click(object sender, EventArgs e)
+        {
+            Facade.chatConnector.GetSocket().Send($"{Facade.player.getUID()}:{chat_message_box.Text}");
+        }
     }
 
     public class GameObjects
@@ -53,9 +68,12 @@ namespace Battleships
         public Button attack_btn;
         public Button special_ability_btn;
         public Label score_val;
+        public Button send_btn;
+        public RichTextBox chatbox;
+        public TextBox chat_box_message;
 
         public GameObjects(DataGridView player_table, DataGridView enemy_table, ComboBox attack_options,
-            Label special_ability_label, Button attack_btn, Button special_ability_btn, Label score_val)
+            Label special_ability_label, Button attack_btn, Button special_ability_btn, Label score_val, Button send_button, RichTextBox richchatbox, TextBox chatb_message)
         {
             this.player_table = player_table;
             this.enemy_table = enemy_table;
@@ -64,6 +82,9 @@ namespace Battleships
             this.attack_btn = attack_btn;
             this.special_ability_btn = special_ability_btn;
             this.score_val = score_val;
+            this.send_btn = send_button;
+            this.chatbox = richchatbox;
+            this.chat_box_message = chatb_message;
         }
     }
 }

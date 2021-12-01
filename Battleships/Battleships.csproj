@@ -58,6 +58,10 @@
     <Compile Include="Forms\Client\Client.cs" />
     <Compile Include="Models\Composite\Component.cs" />
     <Compile Include="Models\Composite\ShipPositions.cs" />
+    <Compile Include="Models\Mediator\AbstractChatroom.cs" />
+    <Compile Include="Models\Mediator\Chatroom.cs" />
+    <Compile Include="Models\Mediator\Participant.cs" />
+    <Compile Include="Models\Template Method\ChatConnector.cs" />
     <Compile Include="Models\Template Method\CompleteConnector.cs" />
     <Compile Include="Models\Template Method\ConnectionAccessor.cs" />
     <Compile Include="Models\AddressHelper.cs" />
@@ -128,7 +132,7 @@
     <Compile Include="Models\Observer\TurnSubject.cs" />
     <Compile Include="Models\Observer\UserObserver.cs" />
     <Compile Include="Models\Prototype\ShipFieldPrototype.cs" />
-    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Mediator\Player.cs" />
     <Compile Include="Models\Ship.cs" />
     <Compile Include="Models\Factory Method\ConcreteProduct\BigBlueShip.cs" />
     <Compile Include="Models\Factory Method\Creator\ShipFactory.cs" />
