@@ -121,9 +121,9 @@ namespace Battleships.Forms
                 //chatroom.Register(player);
                 if (player_1.getUID() == data[0])
                     player_1.Send(data, Sessions);
-                else if (player_2.getUID() == data[0])
+                else
                     player_2.Send(data, Sessions);
-                Sessions.Broadcast(JsonConvert.SerializeObject(data));
+                //Sessions.Broadcast(JsonConvert.SerializeObject(data));
                 
             }
         }

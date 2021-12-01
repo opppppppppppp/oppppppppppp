@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebSocketSharp;
 using WebSocketSharp.Server;
 
 namespace Battleships.Models.Mediator
@@ -15,6 +16,6 @@ namespace Battleships.Models.Mediator
             this.chatroom = chatrm;
         }
         public abstract void Send(string[] messagedata, WebSocketSessionManager Session);
-        public abstract void Receive(string message);
+        public abstract void Receive(object sender, MessageEventArgs e, Game game);
     }
 }

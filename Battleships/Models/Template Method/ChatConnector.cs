@@ -22,11 +22,11 @@ namespace Battleships.Models.Template_Method
 
         static void OnChatMessage(object sender, MessageEventArgs e)
         {
-            var items = JsonConvert.DeserializeObject<List<string>>(e.Data);
+            /*var items = JsonConvert.DeserializeObject<List<string>>(e.Data);
             var uid = items[1];
             var message = items[0];
-            game.Facade.WriteMessageToChatBox(message, uid);
-            //game.Facade.ShipHitCheck(ship_index, uid);
+            game.Facade.WriteMessageToChatBox(message, uid);*/
+            player.Receive(sender, e, game);
         }
 
         public override void SetPlayer(Player pl)
