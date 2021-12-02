@@ -55,9 +55,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="Forms\Client\Client.cs" />
-    <Compile Include="Models\Composite\Component.cs" />
-    <Compile Include="Models\Composite\ShipPositions.cs" />
+    <Compile Include="Models\ButtonReformer.cs" />
+    <Compile Include="Models\Composite\FilePath.cs" />
+    <Compile Include="Models\Composite\FileItem.cs" />
+    <Compile Include="Models\Composite\FileSystem.cs" />
     <Compile Include="Models\Mediator\AbstractChatroom.cs" />
     <Compile Include="Models\Mediator\Chatroom.cs" />
     <Compile Include="Models\Mediator\Participant.cs" />

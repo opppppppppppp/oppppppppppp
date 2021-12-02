@@ -2,6 +2,8 @@
 using System.Diagnostics;
 using System.Windows.Forms;
 using Battleships.Models;
+using Battleships.Models.Composite;
+using System.IO;
 using Battleships.Models.Facade;
 
 namespace Battleships

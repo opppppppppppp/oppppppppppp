@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Battleships.Models.Composite
 {
-    public abstract class Component
+    public abstract class FileSystem
     {
-        public abstract void AddChild(string position);
+        public string Name { get; }
+
+        public FileSystem(string name)
+        {
+            this.Name = name;
+        }
+        
     }
 }

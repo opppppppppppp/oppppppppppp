@@ -56,14 +56,14 @@ namespace Battleships.Models.Facade
 
         public List<string> GetCorrectStrategy(Level Level, ShipField AttackPos, ShipField PlayerPos)
         {
-            List<string> attackships = Level.Strategy.GetAttackingShips(AttackPos._posObject.positions);
+            List<string> attackships = Level.Strategy.GetAttackingShips(AttackPos.positions);
             if (PlayerPos.DestroyedShips >= 2)
             {
-                attackships = Level.IncreasedStrategy.GetAttackingShips(AttackPos._posObject.positions);
+                attackships = Level.IncreasedStrategy.GetAttackingShips(AttackPos.positions);
             }
             else
             {
-                attackships = Level.Strategy.GetAttackingShips(AttackPos._posObject.positions);
+                attackships = Level.Strategy.GetAttackingShips(AttackPos.positions);
             }
             return attackships;
         }

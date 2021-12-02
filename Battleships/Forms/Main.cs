@@ -1,10 +1,12 @@
 ﻿using Battleships.Models;
+using Battleships.Models.Composite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,17 +22,16 @@ namespace Battleships.Forms
         public Main()
         {
             InitializeComponent();
-           /* this.field = new ShipField(3, table);
-            Debug.WriteLine(table.Rows[2].Cells[2].Value);
-
-            //table.Rows[2].Cells[2].Value = "X";
-            field.MarkShip(5);
-
-
-            //table = field.MarkShip(5);*/
+            ReformButtons();
         }
 
-       
+        private void ReformButtons()
+        {
+            foreach (var button in this.Controls.OfType<Button>())
+            {
+                button.BackgroundImage = Image.FromFile(ButtonReformer.RandomFolderPath());
+            }
+        }
 
         private static void ShowExceptionDetails(Exception exception)
         {
