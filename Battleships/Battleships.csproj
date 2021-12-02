@@ -55,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Forms\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ButtonReformer.cs" />
     <Compile Include="Models\Composite\FilePath.cs" />
     <Compile Include="Models\Composite\FileItem.cs" />
@@ -62,6 +68,10 @@
     <Compile Include="Models\Mediator\AbstractChatroom.cs" />
     <Compile Include="Models\Mediator\Chatroom.cs" />
     <Compile Include="Models\Mediator\Participant.cs" />
+    <Compile Include="Models\Memento\Caretaker.cs" />
+    <Compile Include="Models\Memento\ConcreteMemento.cs" />
+    <Compile Include="Models\Memento\IMemento.cs" />
+    <Compile Include="Models\Memento\Originator.cs" />
     <Compile Include="Models\Template Method\ChatConnector.cs" />
     <Compile Include="Models\Template Method\CompleteConnector.cs" />
     <Compile Include="Models\Template Method\ConnectionAccessor.cs" />
@@ -164,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Room.resx">
       <DependentUpon>Room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\WaitRoom.resx">
       <DependentUpon>WaitRoom.cs</DependentUpon>

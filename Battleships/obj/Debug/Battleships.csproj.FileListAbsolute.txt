@@ -178,3 +178,4 @@ C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.csproj.CopyComplete
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.exe
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.pdb
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Settings.resources

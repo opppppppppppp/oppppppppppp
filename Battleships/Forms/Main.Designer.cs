@@ -33,6 +33,7 @@ namespace Battleships.Forms
             this.create_room_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
             this.join_room_btn = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // create_room_btn
@@ -49,7 +50,7 @@ namespace Battleships.Forms
             // exit_btn
             // 
             this.exit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.exit_btn.Location = new System.Drawing.Point(437, 422);
+            this.exit_btn.Location = new System.Drawing.Point(437, 525);
             this.exit_btn.Name = "exit_btn";
             this.exit_btn.Size = new System.Drawing.Size(463, 82);
             this.exit_btn.TabIndex = 3;
@@ -68,6 +69,17 @@ namespace Battleships.Forms
             this.join_room_btn.UseVisualStyleBackColor = true;
             this.join_room_btn.Click += new System.EventHandler(this.join_room_btn_Click);
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button4.Location = new System.Drawing.Point(437, 423);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(463, 82);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Nustatymai";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -75,6 +87,7 @@ namespace Battleships.Forms
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.join_room_btn);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.create_room_btn);
@@ -89,5 +102,6 @@ namespace Battleships.Forms
         private System.Windows.Forms.Button create_room_btn;
         private System.Windows.Forms.Button exit_btn;
         private System.Windows.Forms.Button join_room_btn;
+        private System.Windows.Forms.Button button4;
     }
 }

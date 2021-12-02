@@ -63,5 +63,11 @@ namespace Battleships.Forms
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var settings = new Settings();
+            settings.Show();
+        }
     }
 }

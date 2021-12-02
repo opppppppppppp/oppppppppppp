@@ -31,9 +31,9 @@ namespace Battleships.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JoinRoom));
             this.go_back_btn = new System.Windows.Forms.Button();
-            this.login_server_btn = new System.Windows.Forms.Button();
             this.ip_address_label = new System.Windows.Forms.Label();
             this.ip_address_textbox = new System.Windows.Forms.TextBox();
+            this.login_server_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // go_back_btn
@@ -46,17 +46,6 @@ namespace Battleships.Forms
             this.go_back_btn.Text = "Grįžti";
             this.go_back_btn.UseVisualStyleBackColor = true;
             this.go_back_btn.Click += new System.EventHandler(this.go_back_btn_Click);
-            // 
-            // login_server_btn
-            // 
-            this.login_server_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.login_server_btn.Location = new System.Drawing.Point(509, 340);
-            this.login_server_btn.Name = "login_server_btn";
-            this.login_server_btn.Size = new System.Drawing.Size(237, 54);
-            this.login_server_btn.TabIndex = 10;
-            this.login_server_btn.Text = "Prisijungti";
-            this.login_server_btn.UseVisualStyleBackColor = true;
-            this.login_server_btn.Click += new System.EventHandler(this.login_server_btn_Click);
             // 
             // ip_address_label
             // 
@@ -80,6 +69,17 @@ namespace Battleships.Forms
             this.ip_address_textbox.TabIndex = 8;
             this.ip_address_textbox.Visible = false;
             // 
+            // login_server_btn
+            // 
+            this.login_server_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.login_server_btn.Location = new System.Drawing.Point(509, 340);
+            this.login_server_btn.Name = "login_server_btn";
+            this.login_server_btn.Size = new System.Drawing.Size(237, 54);
+            this.login_server_btn.TabIndex = 10;
+            this.login_server_btn.Text = "Prisijungti";
+            this.login_server_btn.UseVisualStyleBackColor = true;
+            this.login_server_btn.Click += new System.EventHandler(this.login_server_btn_Click);
+            // 
             // JoinRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -100,8 +100,8 @@ namespace Battleships.Forms
         #endregion
 
         private System.Windows.Forms.Button go_back_btn;
-        private System.Windows.Forms.Button login_server_btn;
         private System.Windows.Forms.Label ip_address_label;
         private System.Windows.Forms.TextBox ip_address_textbox;
+        private System.Windows.Forms.Button login_server_btn;
     }
 }
