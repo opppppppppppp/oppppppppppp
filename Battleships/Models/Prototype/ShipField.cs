@@ -26,6 +26,7 @@ namespace Battleships.Models
         char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
         public ShipField(int size, DataGridView tbl, ShipFieldUpgradeInterface shipFieldUpgradeInterface, ShipFactory shipsfactory)
         {
+            positions = new List<string>();
             ships = shipsfactory;
             DestroyedShips = 0;
             FieldSize = size;

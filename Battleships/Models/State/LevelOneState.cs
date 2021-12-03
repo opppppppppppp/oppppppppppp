@@ -16,7 +16,7 @@ namespace Battleships.Models.State
 
         public LevelOneState()
         {
-            this.nextState = new LevelTwoState();
+            this.nextState = this;
         }
 
         public override ILevelBuilder BuildLevel()
