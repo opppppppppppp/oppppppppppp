@@ -16,16 +16,16 @@ namespace Battleships.Models.Composite
         {
             var folder1 = new FilePath("\\MainButtons");
 
-            folder1.AddItem(new FileItem("\\ImageButton.png"));
-            folder1.AddItem(new FileItem("\\ImageButton_1.png"));
-            folder1.AddItem(new FileItem("\\ImageButton_2.png"));
+            folder1.AddItem(new FileItem("\\btn_img_1.png"));
+            folder1.AddItem(new FileItem("\\btn_img_2.png"));
+            folder1.AddItem(new FileItem("\\btn_img_3.png"));
 
             root.Add(folder1);
 
             var subfolder = new FilePath("\\SecondaryButtons");
-            subfolder.AddItem(new FileItem("\\ImageButton_3.png"));
-            subfolder.AddItem(new FileItem("\\ImageButton_4.png"));
-            subfolder.AddItem(new FileItem("\\ImageButton_5.png"));
+            subfolder.AddItem(new FileItem("\\btn_img_4.png"));
+            subfolder.AddItem(new FileItem("\\btn_img_5.png"));
+            subfolder.AddItem(new FileItem("\\btn_img_6.png"));
 
             folder1.Add(subfolder);
         }
@@ -33,7 +33,7 @@ namespace Battleships.Models.Composite
         public static string RandomFolderPath()
         {
             SetupFiles();
-            Random rnd = new Random();
+            Random rnd = new Random(Guid.NewGuid().GetHashCode());
             var folder = root.folders[rnd.Next(0, root.folders.Count)] as FilePath;
             return root.Name + folder.Name + folder.items[rnd.Next(0, folder.items.Count())].Name;
         }
@@ -41,7 +41,7 @@ namespace Battleships.Models.Composite
         public static string RandomSubfolderPath()
         {
             SetupFiles();
-            Random rnd = new Random();
+            Random rnd = new Random(Guid.NewGuid().GetHashCode());
             var folder = root.folders[rnd.Next(0, root.folders.Count)] as FilePath;
             var subfolder = folder.folders[rnd.Next(0, folder.folders.Count)] as FilePath;
             return root.Name + folder.Name + subfolder.Name + subfolder.items[rnd.Next(0, subfolder.items.Count())].Name;

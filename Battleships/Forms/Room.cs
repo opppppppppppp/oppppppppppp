@@ -44,6 +44,9 @@ namespace Battleships.Forms
 
         private void go_back_btn_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Main main = new Main();
+            main.Show();
         }
 
     }

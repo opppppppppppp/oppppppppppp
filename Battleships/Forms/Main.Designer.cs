@@ -38,6 +38,7 @@ namespace Battleships.Forms
             // 
             // create_room_btn
             // 
+            this.create_room_btn.FlatAppearance.BorderSize = 0;
             this.create_room_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.create_room_btn.Location = new System.Drawing.Point(437, 231);
             this.create_room_btn.Name = "create_room_btn";
@@ -49,6 +50,7 @@ namespace Battleships.Forms
             // 
             // exit_btn
             // 
+            this.exit_btn.FlatAppearance.BorderSize = 0;
             this.exit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.exit_btn.Location = new System.Drawing.Point(437, 525);
             this.exit_btn.Name = "exit_btn";
@@ -60,6 +62,7 @@ namespace Battleships.Forms
             // 
             // join_room_btn
             // 
+            this.join_room_btn.FlatAppearance.BorderSize = 0;
             this.join_room_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.join_room_btn.Location = new System.Drawing.Point(437, 319);
             this.join_room_btn.Name = "join_room_btn";
@@ -71,6 +74,7 @@ namespace Battleships.Forms
             // 
             // button4
             // 
+            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button4.Location = new System.Drawing.Point(437, 423);
             this.button4.Name = "button4";
@@ -91,6 +95,7 @@ namespace Battleships.Forms
             this.Controls.Add(this.join_room_btn);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.create_room_btn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Main";
             this.Text = "Main";
             this.ResumeLayout(false);

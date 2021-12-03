@@ -32,13 +32,13 @@ namespace Battleships.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -70,17 +70,15 @@ namespace Battleships.Forms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // radioButton1
+            // radioButton3
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(93, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Mėlynas fonas";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(7, 66);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(82, 17);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.Text = "Žalias fonas";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -92,15 +90,17 @@ namespace Battleships.Forms
             this.radioButton2.Text = "Raudonas fonas";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioButton1
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 66);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(82, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.Text = "Žalias fonas";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 20);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(93, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Mėlynas fonas";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -123,6 +123,16 @@ namespace Battleships.Forms
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(7, 66);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(88, 17);
+            this.radioButton5.TabIndex = 1;
+            this.radioButton5.Text = "Juoda spalva";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
@@ -134,16 +144,6 @@ namespace Battleships.Forms
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Balta spalva";
             this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(7, 66);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(88, 17);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.Text = "Juoda spalva";
-            this.radioButton5.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -165,18 +165,18 @@ namespace Battleships.Forms
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(186, 374);
+            this.button1.Location = new System.Drawing.Point(60, 364);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 41);
+            this.button1.Size = new System.Drawing.Size(463, 82);
             this.button1.TabIndex = 6;
             this.button1.Text = "Išsaugoti";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(724, 374);
+            this.button2.Location = new System.Drawing.Point(615, 364);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(317, 40);
+            this.button2.Size = new System.Drawing.Size(463, 82);
             this.button2.TabIndex = 7;
             this.button2.Text = "Pasirinkti";
             this.button2.UseVisualStyleBackColor = true;

@@ -29,6 +29,7 @@ namespace Battleships.Forms
         {
             foreach (var button in this.Controls.OfType<Button>())
             {
+                button.FlatAppearance.BorderSize = 0;
                 button.BackgroundImage = Image.FromFile(ButtonReformer.RandomFolderPath());
             }
         }

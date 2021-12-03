@@ -39,9 +39,9 @@ namespace Battleships.Forms
             // go_back_btn
             // 
             this.go_back_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.go_back_btn.Location = new System.Drawing.Point(509, 400);
+            this.go_back_btn.Location = new System.Drawing.Point(419, 446);
             this.go_back_btn.Name = "go_back_btn";
-            this.go_back_btn.Size = new System.Drawing.Size(237, 54);
+            this.go_back_btn.Size = new System.Drawing.Size(463, 82);
             this.go_back_btn.TabIndex = 11;
             this.go_back_btn.Text = "Grįžti";
             this.go_back_btn.UseVisualStyleBackColor = true;
@@ -71,10 +71,12 @@ namespace Battleships.Forms
             // 
             // login_server_btn
             // 
+            this.login_server_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.login_server_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.login_server_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.login_server_btn.Location = new System.Drawing.Point(509, 340);
+            this.login_server_btn.Location = new System.Drawing.Point(419, 347);
             this.login_server_btn.Name = "login_server_btn";
-            this.login_server_btn.Size = new System.Drawing.Size(237, 54);
+            this.login_server_btn.Size = new System.Drawing.Size(463, 82);
             this.login_server_btn.TabIndex = 10;
             this.login_server_btn.Text = "Prisijungti";
             this.login_server_btn.UseVisualStyleBackColor = true;
