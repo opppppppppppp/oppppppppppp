@@ -8,6 +8,7 @@ using Battleships.LevelBuilder;
 using Battleships.Models.Adapter;
 using Battleships.Models.Bridge;
 using Battleships.Models.Command;
+using Battleships.Models.State;
 using Battleships.Models.Template_Method;
 using WebSocketSharp;
 
@@ -24,7 +25,7 @@ namespace Battleships.Models.Facade
         public ShipFactory Ships { get; set; }
 
         public int playerScore = 0;
-        public int currentLevel = 1;
+        public LevelState currentLevel = new LevelOneState();
         public ScoreCalculator scoreCalculator = new ScoreCalculator();
 
         //********************************************************
@@ -103,18 +104,7 @@ namespace Battleships.Models.Facade
         }
         private void LevelChecker()
         {
-            switch (currentLevel)
-            {
-                case 1:
-                    InitLevel(new LevelOneBuilder());
-                    break;
-                case 2:
-                    InitLevel(new LevelTwoBuilder());
-                    break;
-                case 3:
-                    InitLevel(new LevelThreeBuilder());
-                    break;
-            }
+            InitLevel(currentLevel.BuildLevel());
         }
 
         private void InitLevel(ILevelBuilder levelBuilder)

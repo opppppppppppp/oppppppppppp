@@ -78,6 +78,10 @@
     <Compile Include="Models\Memento\ConcreteMemento.cs" />
     <Compile Include="Models\Memento\IMemento.cs" />
     <Compile Include="Models\Memento\Originator.cs" />
+    <Compile Include="Models\State\LevelThreeState.cs" />
+    <Compile Include="Models\State\LevelTwoState.cs" />
+    <Compile Include="Models\State\LevelOneState.cs" />
+    <Compile Include="Models\State\LevelState.cs" />
     <Compile Include="Models\Template Method\ChatConnector.cs" />
     <Compile Include="Models\Template Method\CompleteConnector.cs" />
     <Compile Include="Models\Template Method\ConnectionAccessor.cs" />
