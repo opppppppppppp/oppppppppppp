@@ -1,4 +1,5 @@
-﻿using Battleships.Models.Memento;
+﻿using Battleships.Models.Interpreter;
+using Battleships.Models.Memento;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,14 +16,24 @@ namespace Battleships.Forms
     public partial class Settings : Form
     {
         private string path = "Settings/config.txt";
-        private 
-        Originator originator;
+        Caretaker caretaker;
         //private 
         public Settings()
         {
             InitializeComponent();
             CheckSettingsFile();
             PassContentToMemento();
+            SetListBoxValues();
+           
+        }
+
+        private void SetListBoxValues()
+        {
+            foreach (IMemento item in caretaker.ShowHistory())
+            {
+                listBox1.Items.Add(item.GetBackgroundImageName()+" background - "+item.GetChatColor()+" chat color ("+item.GetDate()+")");
+            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,9 +41,20 @@ namespace Battleships.Forms
 
         }
 
-        private void ReadContent()
+        private void PassContentToMemento()
         {
             string[] lines = File.ReadAllLines(path);
+            Context context = new Context(lines[0]);
+            Originator originator = new Originator(context.GetBackgroundColor(), context.GetBackgroundName(), context.GetChatColor(), context.GetDate());
+            caretaker = new Caretaker(originator);
+            caretaker.Backup();
+            for (int i = 1; i < lines.Length; i++)
+            {
+                
+                context = new Context(lines[i]);
+                originator.SetSettings(context.GetBackgroundColor(), context.GetBackgroundName(), context.GetChatColor(), context.GetDate());
+                caretaker.Backup();
+            }
         }
 
         private void CheckSettingsFile()

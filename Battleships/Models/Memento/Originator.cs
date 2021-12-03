@@ -9,23 +9,29 @@ namespace Battleships.Models.Memento
     class Originator
     {
         private string _backgroundImage;
+        private string _backgroundImageName;
         private string _chatColor;
+        private string _datetime;
 
-        public Originator(string backgroundImage, string chatColor)
+        public Originator(string backgroundImage, string backgroundImageName, string chatColor, string datetime)
         {
             this._backgroundImage = backgroundImage;
+            this._backgroundImageName = backgroundImageName;
             this._chatColor = chatColor;
+            this._datetime = datetime;
         }
 
-        public void SetSettings(string backgroundImage, string chatColor)
+        public void SetSettings(string backgroundImage, string backgroundImageName, string chatColor, string datetime)
         {
             this._backgroundImage = backgroundImage;
+            this._backgroundImageName = backgroundImageName;
             this._chatColor = chatColor;
+            this._datetime = datetime;
         }
 
         public IMemento Save()
         {
-            return new ConcreteMemento(_backgroundImage, _chatColor);
+            return new ConcreteMemento(_backgroundImage, _chatColor, _backgroundImageName, _datetime);
         }
 
         public void Restore(IMemento memento)
@@ -36,6 +42,8 @@ namespace Battleships.Models.Memento
             }
             this._backgroundImage = memento.GetBackgroundImage();
             this._chatColor = memento.GetChatColor();
+            this._backgroundImageName = memento.GetBackgroundImage();
+            this._datetime = memento.GetDate();
         }
 
     }

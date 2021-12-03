@@ -10,14 +10,23 @@ namespace Battleships.Models.Memento
     {
         private string _backgroundImage;
         private string _chatColor;
-        private DateTime _date;
+        private string _backgroundImageName;
+        private string _date;
 
-        public ConcreteMemento(string backgroundImage, string chatColor)
+        public ConcreteMemento(string backgroundImage, string chatColor, string backgroundImageName, string datetime)
         {
             this._backgroundImage = backgroundImage;
+            this._backgroundImageName = backgroundImageName;
             this._chatColor = chatColor;
-            this._date = DateTime.Now;
+            this._date = datetime;
         }
+
+
+        public string GetBackgroundImageName()
+        {
+            return _backgroundImageName;
+        }
+
 
         public string GetBackgroundImage()
         {
@@ -39,7 +48,7 @@ namespace Battleships.Models.Memento
             return _chatColor;
         }
 
-        public DateTime GetDate()
+        public string GetDate()
         {
             return this._date;
         }

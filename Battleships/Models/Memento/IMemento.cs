@@ -11,8 +11,9 @@ namespace Battleships.Models.Memento
         string GetName();
 
         string GetBackgroundImage();
+        string GetBackgroundImageName();
         string GetChatColor();
 
-        DateTime GetDate();
+        string GetDate();
     }
 }
