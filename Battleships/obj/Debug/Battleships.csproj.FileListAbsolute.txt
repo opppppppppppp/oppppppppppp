@@ -181,3 +181,4 @@ C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS
 E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Settings.resources
 C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.Forms.Settings.resources
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.Forms.Settings.resources
+C:\Users\mikal\Desktop\New folder (3)\Battleships\bin\Debug\Settings\config.txt
