@@ -58,6 +58,7 @@
     <Compile Include="Forms\Client\Client.cs" />
     <Compile Include="Models\Composite\Component.cs" />
     <Compile Include="Models\Composite\ShipPositions.cs" />
+    <Compile Include="Models\Iterator\Class1.cs" />
     <Compile Include="Models\Template Method\ConnectionAccessor.cs" />
     <Compile Include="Models\Template Method\Connections.cs" />
     <Compile Include="Models\AddressHelper.cs" />
