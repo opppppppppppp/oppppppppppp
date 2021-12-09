@@ -62,6 +62,12 @@
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ButtonReformer.cs" />
+    <Compile Include="Models\ChainPattern\CensoredMessageHandler.cs" />
+    <Compile Include="Models\ChainPattern\ShortMessageHandler.cs" />
+    <Compile Include="Models\ChainPattern\LongMessageHandler.cs" />
+    <Compile Include="Models\ChainPattern\Message.cs" />
+    <Compile Include="Models\ChainPattern\MessageHandler.cs" />
+    <Compile Include="Models\ChainPattern\MessageType.cs" />
     <Compile Include="Models\Composite\FilePath.cs" />
     <Compile Include="Models\Composite\FileItem.cs" />
     <Compile Include="Models\Composite\FileSystem.cs" />

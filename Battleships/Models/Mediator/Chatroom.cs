@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Battleships.Models.ChainPattern;
 using WebSocketSharp.Server;
 
 namespace Battleships.Models.Mediator
 {
     public class Chatroom : AbstractChatroom
     {
+        private MessageHandler _messageHandler = MessageHandler.DefaultMessageHandler();
         private List<Player> usersList = new List<Player>();
         public void RegisterUser(Player user)
         {
@@ -22,7 +24,14 @@ namespace Battleships.Models.Mediator
             {
                 if (u.getUID() != user.getUID())
                 {
-                    Session.Broadcast(JsonConvert.SerializeObject(messagedata));
+                    Message message = new Message(messagedata[1]);
+                    
+                    Session.Broadcast(JsonConvert.SerializeObject(
+                        new string[] {
+                            messagedata[0],
+                            _messageHandler.HandleMessage(message)
+                        }
+                    ));
                 }
             }
         }
