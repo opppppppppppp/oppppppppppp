@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Battleships.Models.Composite;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,7 @@ namespace Battleships.Forms
             InitializeComponent();
             ip_address_textbox.Text = Constants.ip_address;
             ip_address_textbox.ReadOnly = true;
+            ReformButtons();
         }
 
         private void create_server_btn_Click(object sender, EventArgs e)
@@ -32,8 +34,19 @@ namespace Battleships.Forms
             waitroom.Show();
         }
 
+        private void ReformButtons()
+        {
+            foreach (var button in this.Controls.OfType<Button>())
+            {
+                button.BackgroundImage = Image.FromFile(ButtonReformer.RandomFolderPath());
+            }
+        }
+
         private void go_back_btn_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Main main = new Main();
+            main.Show();
         }
 
     }

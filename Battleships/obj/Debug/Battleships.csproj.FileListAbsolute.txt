@@ -142,6 +142,7 @@ C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battle
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\obj\Debug\Battleships.exe
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\obj\Debug\Battleships.pdb
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\7 Semestras\OPP\Battleships\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.AssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\oppppppppppp\Battleships\bin\Debug\Battleships.exe.config
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\oppppppppppp\Battleships\bin\Debug\Battleships.exe
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\oppppppppppp\Battleships\bin\Debug\Battleships.pdb
@@ -159,3 +160,45 @@ C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\oppppppppppp\Bat
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.exe
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\oppppppppppp\Battleships\obj\Debug\Battleships.pdb
+=======
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.AssemblyReference.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\obj\Debug\Battleships.Game.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.JoinRoom.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Main.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Room.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.WaitRoom.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\obj\Debug\Battleships.Properties.Resources.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.GenerateResource.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\obj\Debug\Battleships.exe
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\obj\Debug\Battleships.pdb
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\bin\Debug\Battleships.exe.config
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\bin\Debug\Battleships.exe
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\bin\Debug\Battleships.pdb
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\bin\Debug\websocket-sharp.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CopyComplete
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\bin\Debug\Battleships.exe.config
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\bin\Debug\Battleships.exe
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\bin\Debug\Battleships.pdb
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\bin\Debug\websocket-sharp.dll
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.csproj.AssemblyReference.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.Game.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.Forms.JoinRoom.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.Forms.Main.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.Forms.Room.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.Forms.WaitRoom.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.Properties.Resources.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.csproj.GenerateResource.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.csproj.CopyComplete
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.exe
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.pdb
+E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Settings.resources
+C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.Forms.Settings.resources
+C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.Forms.Settings.resources
+C:\Users\mikal\Desktop\New folder (3)\Battleships\bin\Debug\Settings\config.txt
+>>>>>>> 46f98c299a36c8021834bbe1a14d2112092732cc

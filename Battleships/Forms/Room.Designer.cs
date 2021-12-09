@@ -58,10 +58,11 @@ namespace Battleships.Forms
             // 
             // create_server_btn
             // 
+            this.create_server_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.create_server_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.create_server_btn.Location = new System.Drawing.Point(503, 381);
+            this.create_server_btn.Location = new System.Drawing.Point(409, 384);
             this.create_server_btn.Name = "create_server_btn";
-            this.create_server_btn.Size = new System.Drawing.Size(237, 54);
+            this.create_server_btn.Size = new System.Drawing.Size(463, 82);
             this.create_server_btn.TabIndex = 6;
             this.create_server_btn.Text = "Sukurti Kambarį";
             this.create_server_btn.UseVisualStyleBackColor = true;
@@ -70,9 +71,9 @@ namespace Battleships.Forms
             // go_back_btn
             // 
             this.go_back_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.go_back_btn.Location = new System.Drawing.Point(503, 441);
+            this.go_back_btn.Location = new System.Drawing.Point(409, 472);
             this.go_back_btn.Name = "go_back_btn";
-            this.go_back_btn.Size = new System.Drawing.Size(237, 54);
+            this.go_back_btn.Size = new System.Drawing.Size(463, 82);
             this.go_back_btn.TabIndex = 7;
             this.go_back_btn.Text = "Grįžti";
             this.go_back_btn.UseVisualStyleBackColor = true;

@@ -1,4 +1,6 @@
-﻿using Battleships.Models.Observer;
+﻿using Battleships.Models;
+using Battleships.Models.Mediator;
+using Battleships.Models.Observer;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -22,6 +24,11 @@ namespace Battleships.Forms
         static TurnSubject playerTurn = new TurnSubject();
         private static ServerInstance serverInstance = ServerInstance.Instance;
         static WebSocketServer webSocketServer = serverInstance.GetWebSocketServer();
+
+        static Chatroom chatroom = new Chatroom();
+        static Player player_1;
+        static Player player_2;
+
         // = new WebSocketServer();
 
         /// <summary>
@@ -34,6 +41,18 @@ namespace Battleships.Forms
             {
                 string user_id = e.Data;
                 playerTurn.Register(new UserObserver(user_id));
+                if (connectedUsers == 0)
+                {
+                    player_1 = new Player(chatroom, user_id);
+                    chatroom.RegisterUser(player_1);
+                }
+                else
+                {
+                    player_2 = new Player(chatroom, user_id);
+                    chatroom.RegisterUser(player_2);
+                }
+                
+
                 connectedUsers++;
                 Sessions.Broadcast($"{user_id}:{connectedUsers}");
             
@@ -93,6 +112,22 @@ namespace Battleships.Forms
             }
         }
 
+        public class Chat : WebSocketBehavior
+        {
+            protected override void OnMessage(MessageEventArgs e)
+            {
+                string[] data = e.Data.Split(':');
+                //player.setID(data[0]);
+                //chatroom.Register(player);
+                if (player_1.getUID() == data[0])
+                    player_1.Send(data, Sessions);
+                else
+                    player_2.Send(data, Sessions);
+                //Sessions.Broadcast(JsonConvert.SerializeObject(data));
+                
+            }
+        }
+
         /// <summary>
         /// Metodas skirtas sukurti serverį su tam tikrais Route.
         /// Šiame metode apibrežiami serveryje esantys route, su jiem priklausančia logika.
@@ -108,6 +143,7 @@ namespace Battleships.Forms
                 webSocketServer.AddWebSocketService<Response>("/Response");
                 webSocketServer.AddWebSocketService<Complete>("/Complete");
                 webSocketServer.AddWebSocketService<Turn>("/Turn");
+                webSocketServer.AddWebSocketService<Chat>("/Chat");
                 return true;
             }
             catch (Exception exception)

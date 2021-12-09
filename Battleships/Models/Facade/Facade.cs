@@ -8,7 +8,12 @@ using Battleships.LevelBuilder;
 using Battleships.Models.Adapter;
 using Battleships.Models.Bridge;
 using Battleships.Models.Command;
+<<<<<<< HEAD
 using Battleships.Models.Iterator;
+=======
+using Battleships.Models.State;
+using Battleships.Models.Template_Method;
+>>>>>>> 46f98c299a36c8021834bbe1a14d2112092732cc
 using WebSocketSharp;
 
 namespace Battleships.Models.Facade
@@ -24,36 +29,46 @@ namespace Battleships.Models.Facade
         public ShipFactory Ships { get; set; }
 
         public int playerScore = 0;
-        public int currentLevel = 1;
+        public LevelState currentLevel = new LevelOneState();
         public ScoreCalculator scoreCalculator = new ScoreCalculator();
 
         //********************************************************
 
         public Level Level;
-        public Connections connections;
-        public static string user_id;
-        Sailor sailor;
+        //public Connections connections;
+        public ConnectionAccessor positionsConnector = new PositionsConnector();
+        public ConnectionAccessor responseConnector = new ResponseConnector();
+        public ConnectionAccessor turnConnector = new TurnConnector();
+        public ConnectionAccessor completeConnector = new CompleteConnector();
+        public ConnectionAccessor chatConnector = new ChatConnector();
+        public Player player;
 
         //*********************************************************
 
-        public Facade(Game Game, GameObjects GameObjects)
+        public Facade(Game Game, GameObjects GameObjects, Player pl)
         {
-            connections = new Connections();
-            connections.Connect(Constants.ip_address);
+            //connections = new Connections();
+            //connections.Connect(Constants.ip_address);
             this.Game = Game;
             this.GameObjects = GameObjects;
+            this.player = pl;
+            positionsConnector.Run(Constants.ip_address, Game, pl);
+            responseConnector.Run(Constants.ip_address, Game, pl);
+            turnConnector.Run(Constants.ip_address, Game, pl);
+            completeConnector.Run(Constants.ip_address, Game, pl);
+            chatConnector.Run(Constants.ip_address, Game, pl);
         }
 
         public List<string> GetCorrectStrategy(Level Level, ShipField AttackPos, ShipField PlayerPos)
         {
-            List<string> attackships = Level.Strategy.GetAttackingShips(AttackPos._posObject.positions);
+            List<string> attackships = Level.Strategy.GetAttackingShips(AttackPos.positions);
             if (PlayerPos.DestroyedShips >= 2)
             {
-                attackships = Level.IncreasedStrategy.GetAttackingShips(AttackPos._posObject.positions);
+                attackships = Level.IncreasedStrategy.GetAttackingShips(AttackPos.positions);
             }
             else
             {
-                attackships = Level.Strategy.GetAttackingShips(AttackPos._posObject.positions);
+                attackships = Level.Strategy.GetAttackingShips(AttackPos.positions);
             }
             return attackships;
         }
@@ -77,11 +92,11 @@ namespace Battleships.Models.Facade
         }
 
 
-        public void setUID(string uid)
+        /*public void setUID(string uid)
         {
             user_id = uid;
-            sailor = new Sailor(uid);
-        }
+            sailor = new Player(uid);
+        }*/
 
         private void AddAttackOptions(List<string> options)
         {
@@ -93,18 +108,7 @@ namespace Battleships.Models.Facade
         }
         private void LevelChecker()
         {
-            switch (currentLevel)
-            {
-                case 1:
-                    InitLevel(new LevelOneBuilder());
-                    break;
-                case 2:
-                    InitLevel(new LevelTwoBuilder());
-                    break;
-                case 3:
-                    InitLevel(new LevelThreeBuilder());
-                    break;
-            }
+            InitLevel(currentLevel.BuildLevel());
         }
 
         private void InitLevel(ILevelBuilder levelBuilder)
@@ -125,7 +129,7 @@ namespace Battleships.Models.Facade
         private void ScoreChecker()
         {
             if (scoreCalculator.score >= Level.NumberOfShips)
-                connections.complete_socket.Send(user_id);
+                completeConnector.GetSocket().Send(player.getUID());
         }
         public void ShipHitCheck(int ship_index, string uid)
         {
@@ -134,17 +138,17 @@ namespace Battleships.Models.Facade
             if (attackOption == "S")
             {
                 MarkLocalShip(ship_index, true);
-                connections.response_socket.Send($"{uid}:{ship_index}:{true}");
+                responseConnector.GetSocket().Send($"{uid}:{ship_index}:{true}");
             }
             else
             {
                 MarkLocalShip(ship_index, false);
-                connections.response_socket.Send($"{uid}:{ship_index}:{false}");
+                responseConnector.GetSocket().Send($"{uid}:{ship_index}:{false}");
             }
         }
         public void UpdateHitShips(int ship_index, string uid, bool hit_status)
         {
-            if (sailor.UID != uid)//Nuo cia*
+            if (player.getUID() != uid)//Nuo cia*
             {
                 //Button attackedShip = FindShipByIndex(PlayerPos, ship_index);
                 string attackOption = PlayerPos.GetShipValue(ship_index);
@@ -152,7 +156,7 @@ namespace Battleships.Models.Facade
                 MarkLocalShip(ship_index, hit_status);
             }
             else //Iki cia
-            if (sailor.UID == uid)
+            if (player.getUID() == uid)
             {
                 //Button attackedShip = FindShipByIndex(EnemyPos, ship_index);
                 string attackOption = EnemyPos.GetShipValue(ship_index);
@@ -168,27 +172,32 @@ namespace Battleships.Models.Facade
             SpecialAttackRepository specialAttackRepository = new SpecialAttackRepository(attackships);
             for (IIterator i = specialAttackRepository.GetIterator(); i.HasNext();)
             {
+<<<<<<< HEAD
                 int index = EnemyPos.GetShipIndex(i.Next());
                 connections.position_socket.Send($"{index}:{user_id}");
+=======
+                int index = EnemyPos.GetShipIndex(attackships[i]);
+                positionsConnector.GetSocket().Send($"{index}:{player.getUID()}");
+>>>>>>> 46f98c299a36c8021834bbe1a14d2112092732cc
             }
-            connections.player_turn.Send($"{user_id}");
+            turnConnector.GetSocket().Send($"{player.getUID()}");
         }
 
         public void Completed(string uid)
         {
-            if (sailor.UID == uid)
+            if (player.getUID() == uid)
             {
-                connections.position_socket.Close();
-                connections.response_socket.Close();
-                connections.complete_socket.Close();
+                positionsConnector.GetSocket().Close();
+                responseConnector.GetSocket().Close();
+                completeConnector.GetSocket().Close();
                 MessageBox.Show("You are the winner");
                 Application.Exit();
             }
             else
             {
-                connections.position_socket.Close();
-                connections.response_socket.Close();
-                connections.complete_socket.Close();
+                positionsConnector.GetSocket().Close();
+                responseConnector.GetSocket().Close();
+                completeConnector.GetSocket().Close();
                 MessageBox.Show("You've lost the game!");
                 Application.Exit();
             }
@@ -290,5 +299,23 @@ namespace Battleships.Models.Facade
                 GameObjects.score_val.Text = text;
             }
         }
+
+        delegate void WriteMessageToBox(string message, string uid);
+        public void WriteMessageToChatBox(string message, string uid)
+        {
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
+            if (GameObjects.score_val.InvokeRequired)
+            {
+                WriteMessageToBox d = new WriteMessageToBox(WriteMessageToChatBox);
+                Game.Invoke(d, new object[] { uid, message });
+            }
+            else
+            {
+                GameObjects.chatbox.Text += $"User({uid}) : {message}\n";
+            }
+        }
+
     }
 }

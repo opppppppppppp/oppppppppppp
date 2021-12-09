@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Battleships.Models
+namespace Battleships.Models.Composite
 {
-    public class Sailor
+    public class FileItem : FileSystem
     {
-        public string UID { get; set; }
-        public Sailor(string uid)
+        public FileItem(string name) : base(name)
         {
-            UID = uid;
+            
         }
     }
 }

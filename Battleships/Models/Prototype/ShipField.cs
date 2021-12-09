@@ -1,5 +1,4 @@
 ﻿using Battleships.Models.Bridge;
-using Battleships.Models.Composite;
 using Battleships.Models.Prototype;
 using System;
 using System.Collections.Generic;
@@ -12,13 +11,13 @@ using System.Windows.Forms;
 
 namespace Battleships.Models
 {
-    public class ShipField : Component
+    public class ShipField
     {
         public ShipFactory ships { get; set; }
         private DataTable tabledata { get; set; }
         private DataGridView table { get; set; }
 
-        public ShipPositions _posObject = new ShipPositions();
+        public List<string> positions { get; set; }
         public virtual int FieldSize { get; set; }
         public int DestroyedShips { get; set; }
 
@@ -27,6 +26,7 @@ namespace Battleships.Models
         char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
         public ShipField(int size, DataGridView tbl, ShipFieldUpgradeInterface shipFieldUpgradeInterface, ShipFactory shipsfactory)
         {
+            positions = new List<string>();
             ships = shipsfactory;
             DestroyedShips = 0;
             FieldSize = size;
@@ -47,7 +47,7 @@ namespace Battleships.Models
         {
             Console.WriteLine("Deep Cloned ShipField");
             ShipField shipfield = (ShipField)this.MemberwiseClone();
-            shipfield._posObject.positions = _posObject.positions.GetRange(0, _posObject.positions.Count);
+            shipfield.positions = positions.GetRange(0, positions.Count);
             return shipfield;
         }
         public DataTable GetTableData()
@@ -68,7 +68,7 @@ namespace Battleships.Models
         }
         public List<string> GetPositions()
         {
-            return _posObject.positions;
+            return positions;
         }
         public int GetTableSize()
         {
@@ -97,13 +97,13 @@ namespace Battleships.Models
                 DataRow table_row = tabledata.Rows[i];
                 for (int j = 0;j<FieldSize;j++)
                 {
-                    table_row[j] = _posObject.positions[i*FieldSize + j];
+                    table_row[j] = positions[i*FieldSize + j];
                 }
             }
         }
         public void GeneratePositions()
         {
-            _posObject.positions.Clear();
+            positions.Clear();
             int letter_index = 0;
             int index = 1;
             for (int i = 0;i<FieldSize * FieldSize;i++)
@@ -113,7 +113,7 @@ namespace Battleships.Models
                     letter_index++;
                     index = 1;
                 }
-                _posObject.positions.Add(letters[letter_index] + (index).ToString());
+                positions.Add(letters[letter_index] + (index).ToString());
                 index++;
             }
         }
@@ -127,7 +127,7 @@ namespace Battleships.Models
         }
         public int GetShipIndex(string ship)
         {
-            return _posObject.positions.IndexOf(ship);
+            return positions.IndexOf(ship);
         }
 
         public string GetShipValue(int index)
@@ -172,11 +172,6 @@ namespace Battleships.Models
         public void updateShipFieldUpgradeInterface(ShipFieldUpgradeInterface shipFieldUpgradeInterface)
         {
             this.shipFieldUpgradeInterface = shipFieldUpgradeInterface;
-        }
-
-        public override void AddChild(string ip_address)
-        {
-
         }
 
         public override string ToString()
