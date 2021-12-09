@@ -199,6 +199,5 @@ C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppp
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.Properties.Resources.resources
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.GenerateResource.cache
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
-C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CopyComplete
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.exe
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.pdb
