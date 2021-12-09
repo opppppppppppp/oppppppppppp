@@ -71,6 +71,7 @@
     <Compile Include="Models\Interpreter\ChatColorExpression.cs" />
     <Compile Include="Models\Interpreter\Context.cs" />
     <Compile Include="Models\Interpreter\DateExpression.cs" />
+    <Compile Include="Models\Iterator\Class1.cs" />
     <Compile Include="Models\Mediator\AbstractChatroom.cs" />
     <Compile Include="Models\Mediator\Chatroom.cs" />
     <Compile Include="Models\Mediator\Participant.cs" />

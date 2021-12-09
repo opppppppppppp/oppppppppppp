@@ -182,3 +182,23 @@ E:\Work stuff\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Settings.reso
 C:\Users\mikal\Desktop\New folder (3)\Battleships\obj\Debug\Battleships.Forms.Settings.resources
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\OBJEKTINIS\OPP\Battleships\obj\Debug\Battleships.Forms.Settings.resources
 C:\Users\mikal\Desktop\New folder (3)\Battleships\bin\Debug\Settings\config.txt
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\bin\Debug\Settings\config.txt
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\bin\Debug\Battleships.exe.config
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\bin\Debug\Battleships.exe
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\bin\Debug\Battleships.pdb
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\bin\Debug\websocket-sharp.dll
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.AssemblyReference.cache
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.Game.resources
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.JoinRoom.resources
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Main.resources
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Room.resources
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.Settings.resources
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.Forms.WaitRoom.resources
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.Properties.Resources.resources
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.GenerateResource.cache
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CopyComplete
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.exe
+C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.pdb

@@ -8,6 +8,7 @@ using Battleships.LevelBuilder;
 using Battleships.Models.Adapter;
 using Battleships.Models.Bridge;
 using Battleships.Models.Command;
+using Battleships.Models.Iterator;
 using Battleships.Models.State;
 using Battleships.Models.Template_Method;
 using WebSocketSharp;
@@ -165,9 +166,10 @@ namespace Battleships.Models.Facade
         public void SpecialAttack()
         {
             List<string> attackships = GetCorrectStrategy(Level, AttackPos, PlayerPos);
-            for (int i = 0; i < attackships.Count; i++)
+            SpecialAttackRepository specialAttackRepository = new SpecialAttackRepository(attackships);
+            for (IIterator i = specialAttackRepository.GetIterator(); i.HasNext();)
             {
-                int index = EnemyPos.GetShipIndex(attackships[i]);
+                int index = EnemyPos.GetShipIndex(i.Next());
                 positionsConnector.GetSocket().Send($"{index}:{player.getUID()}");
             }
             turnConnector.GetSocket().Send($"{player.getUID()}");
