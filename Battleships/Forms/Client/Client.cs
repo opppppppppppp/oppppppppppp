@@ -16,13 +16,9 @@ namespace Battleships.Forms
         public static Game game { get; set; }
         public static WebSocket ws = null;
         static string ip_addr;
-        //static UserObserver user;
         static string user_id;
 
-        /// <summary>
-        /// Metodas, skirtas prisijungti prie ws://{ip_address}/Connection route.
-        /// </summary>
-        /// <param name="ip_address">IP Address prie kurio jungiames</param>
+
         public static WebSocket Connect(string ip_address)
         {
             //user = new UserObserver(GenerateUserID());
@@ -35,11 +31,7 @@ namespace Battleships.Forms
   
         }
 
-        /// <summary>
-        /// Metodas, skirtas prisijungti prie ws://{ip_address}/Positions route.
-        /// </summary>
-        /// <param name="ip_address">Serveris, prie kurio jungiames</param>
-        /// <returns>Grąžinamas WebSocket</returns>
+       
         public static WebSocket Positions(string ip_address)
         {
             ip_addr = ip_address;
@@ -47,11 +39,7 @@ namespace Battleships.Forms
             ws = wsf.Connect(OnPosMessage);
             return ws;
         }
-        /// <summary>
-        /// Metodas, skirtas prisijungti prie ws://{ip_address}/Positions route.
-        /// </summary>
-        /// <param name="ip_address">Serveris, prie kurio jungiames</param>
-        /// <returns>Grąžinamas WebSocket</returns>
+  
         public static WebSocket Response(string ip_address)
         {
             ip_addr = ip_address;
@@ -60,11 +48,6 @@ namespace Battleships.Forms
             return ws;
         }
 
-        /// <summary>
-        /// Metodas, skirtas prisijungti prie ws://{ip_address}/Complete route.
-        /// </summary>
-        /// <param name="ip_address">Serveris, prie kurio jungiames</param>
-        /// <returns>Grąžinamas WebSocket</returns>
         public static WebSocket Complete(string ip_address)
         {
             ip_addr = ip_address;
@@ -98,13 +81,7 @@ namespace Battleships.Forms
 
         }
 
-        /// <summary>
-        /// Metodas, naudojamas kai gaunamas message į ws://{ip_address}/Connection route.
-        /// Metode išanalizuojami gauti duomenys ir jei prisijungusių vartotojų sk. = 2, sukuriamas
-        /// žaidimų kambarys ir vartotojas nukeliamas į kambarį.
-        /// </summary>
-        /// <param name="sender">Siuntėjas</param>
-        /// <param name="e">Gauti Duomenys</param>
+
         static void OnRoomCreate(object sender, MessageEventArgs e)
         {
             string[] data = e.Data.Split(':');
@@ -136,12 +113,7 @@ namespace Battleships.Forms
             }
         }
 
-        /// <summary>
-        /// Metodas, naudojamas kai gaunamas message į ws://{ip_address}/Positions route.
-        /// Metode apdorojami gauti duomenys iš serverio ir patikrinama ar buvo numuštas laivas(ShipHitCheck())
-        /// </summary>
-        /// <param name="sender">Siuntėjas</param>
-        /// <param name="e">Gauti Duomenys</param>
+
         private static void OnPosMessage(object sender, MessageEventArgs e)
         {
 
@@ -156,12 +128,7 @@ namespace Battleships.Forms
             }
         }
 
-        /// <summary>
-        /// Metodas, naudojamas kai gaunamas message į ws://{ip_address}/Response
-        /// Metode apdorojami gauti duomenys ir pažymimi numušti laivai (UpdateHitShips())
-        /// </summary>
-        /// <param name="sender">Siuntėjas</param>
-        /// <param name="e">Gauti Duomenys</param>
+
         private static void OnResponseMessage(object sender, MessageEventArgs e)
         {
             var items = JsonConvert.DeserializeObject<List<string>>(e.Data);
@@ -172,22 +139,13 @@ namespace Battleships.Forms
             game.Facade.UpdateHitShips(ship_index, uid, hit_status);
         }
 
-        /// <summary>
-        /// Metodas, naudojamas kai gaunamas message į ws://{ip_address}/Complete
-        /// Metode apdorojami gauti duomenys ir nustatomas žaidimo laimėtojas.
-        /// </summary>
-        /// <param name="sender">Siuntėjas</param>
-        /// <param name="e">Gauti Duomenys</param>
         private static void OnCompleteMessage(object sender, MessageEventArgs e)
         {
             string uid = JsonConvert.DeserializeObject<String>(e.Data);
             game.Facade.Completed(uid);
         }
 
-        /// <summary>
-        /// Metodas skirtas sugeneruoti UID
-        /// </summary>
-        /// <returns>Grąžinamas sugeneruotas string</returns>
+
         public static string GenerateUserID()
         {
             return Guid.NewGuid().ToString();

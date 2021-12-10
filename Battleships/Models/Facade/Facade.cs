@@ -14,22 +14,30 @@ namespace Battleships.Models.Facade
     public class Facade
     {
         private Game Game;
+
         private GameObjects GameObjects;
         public ShipField PlayerPos { get; set; }
+
         public ShipField EnemyPos { get; set; }
+
         public ShipField AttackPos { get; set; }
+
         public List<int> SelectedPlayerPos { get; set; }
+
         public ShipFactory Ships { get; set; }
 
         public int playerScore = 0;
+
         public int currentLevel = 1;
+
         public ScoreCalculator scoreCalculator = new ScoreCalculator();
 
-        //********************************************************
-
         public Level Level;
+
         public Connections connections;
+
         public static string user_id;
+
         Sailor sailor;
 
         //*********************************************************

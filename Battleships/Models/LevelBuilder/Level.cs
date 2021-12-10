@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Immutable;
 
 namespace Battleships.LevelBuilder
 {
@@ -15,8 +16,14 @@ namespace Battleships.LevelBuilder
 
         public override bool Equals(object obj)
         {
+       
             Level level = obj as Level;
             return (NumberOfShips == level.NumberOfShips && Title == level.Title && ShipFactory.GetType() == level.ShipFactory.GetType() );
+        }
+
+        public void returnLEvelCount()
+        {
+              var LevelCount = ImmutableArray<int>.Empty.Add(1);
         }
 
     }

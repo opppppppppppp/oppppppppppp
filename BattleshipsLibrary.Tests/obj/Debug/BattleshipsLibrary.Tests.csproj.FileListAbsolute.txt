@@ -94,3 +94,12 @@ C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.csproj.CopyComplete
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.dll
 C:\Users\Arnas\OneDrive - Kaunas University of Technology\Darbalaukis\TESTAVIMAS_2\oppppppppppp\BattleshipsLibrary.Tests\obj\Debug\BattleshipsLibrary.Tests.pdb
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\BattleshipsLibrary.Tests.dll.config
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Collections.Immutable.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Memory.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Numerics.Vectors.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Buffers.dll
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Collections.Immutable.xml
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Memory.xml
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Numerics.Vectors.xml
+E:\Work stuff\oppppppppppp\BattleshipsLibrary.Tests\bin\Debug\System.Buffers.xml
