@@ -20,11 +20,16 @@ namespace Battleships.Forms
         public Room()
         {
             InitializeComponent();
+            ApplySettings();
             ip_address_textbox.Text = Constants.ip_address;
             ip_address_textbox.ReadOnly = true;
             ReformButtons();
-        }
 
+        }
+        private void ApplySettings()
+        {
+            this.BackgroundImage = Image.FromFile(Constants.IMG_DIR);
+        }
         private void create_server_btn_Click(object sender, EventArgs e)
         {
             

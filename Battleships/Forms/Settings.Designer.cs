@@ -43,6 +43,7 @@ namespace Battleships.Forms
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -171,6 +172,7 @@ namespace Battleships.Forms
             this.button1.TabIndex = 6;
             this.button1.Text = "Išsaugoti";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -180,6 +182,17 @@ namespace Battleships.Forms
             this.button2.TabIndex = 7;
             this.button2.Text = "Pasirinkti";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(387, 462);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(369, 67);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Grįžti";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Settings
             // 
@@ -187,6 +200,7 @@ namespace Battleships.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1102, 539);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
@@ -221,5 +235,6 @@ namespace Battleships.Forms
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

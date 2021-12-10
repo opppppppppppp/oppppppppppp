@@ -1,5 +1,7 @@
 ﻿using Battleships.Models;
 using Battleships.Models.Composite;
+using Battleships.Models.Interpreter;
+using Battleships.Models.Memento;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,16 +16,63 @@ using System.Windows.Forms;
 using WebSocketSharp;
 using WebSocketSharp.Server;
 
+
 namespace Battleships.Forms
 {
     public partial class Main : Form
     {
         private ShipField field;
+        private string path = "config.txt";
+        private string defaultValue = "bg:b_;cc:0;d:2021-10-01";
         public Main()
         {
             InitializeComponent();
             ReformButtons();
+            if (!Constants.inited)
+            {
+                PassContentToMemento();
+                SetVariables();
+            }
+            ApplySettings();
+
         }
+
+       
+        private void PassContentToMemento()
+        {
+
+            using (StreamWriter w = File.AppendText(path))
+            {
+                if (new FileInfo(path).Length == 0)
+                    w.WriteLine(defaultValue);
+                w.Close();
+            }
+
+            string[] lines = File.ReadAllLines(path);
+            Context context = new Context(lines[0]);
+            Originator originator = new Originator(context.GetBackgroundColor(), context.GetBackgroundName(), context.GetChatColor(), context.GetDate());
+            Constants.caretaker = new Caretaker(originator);
+            Constants.caretaker.Backup();
+            for (int i = 1; i < lines.Length; i++)
+            {
+
+                context = new Context(lines[i]);
+                originator.SetSettings(context.GetBackgroundColor(), context.GetBackgroundName(), context.GetChatColor(), context.GetDate());
+                Constants.caretaker.Backup();
+            }
+        }
+
+        private void SetVariables()
+        {
+            Constants.IMG_DIR = Constants.caretaker.ShowHistory().Last().GetBackgroundImage();
+            Constants.CHAT_COLOR = Constants.caretaker.ShowHistory().Last().GetChatColor();
+        }
+
+        private void ApplySettings()
+        {
+            this.BackgroundImage = Image.FromFile(Constants.IMG_DIR);
+        }
+
 
         private void ReformButtons()
         {

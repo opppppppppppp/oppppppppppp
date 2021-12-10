@@ -224,6 +224,7 @@ namespace Battleships
             // 
             // chatbox
             // 
+            this.chatbox.BackColor = System.Drawing.SystemColors.Window;
             this.chatbox.Enabled = false;
             this.chatbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chatbox.Location = new System.Drawing.Point(15, 272);

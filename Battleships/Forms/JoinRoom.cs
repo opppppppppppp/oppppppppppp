@@ -18,10 +18,15 @@ namespace Battleships.Forms
         public JoinRoom()
         {
             InitializeComponent();
+            ApplySettings();
             ReformButtons();
             ip_address_textbox.Text = Constants.ip_address;
-        }
 
+        }
+        private void ApplySettings()
+        {
+            this.BackgroundImage = Image.FromFile(Constants.IMG_DIR);
+        }
         private void login_server_btn_Click(object sender, EventArgs e)
         {
             this.Hide();

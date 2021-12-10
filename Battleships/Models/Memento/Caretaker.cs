@@ -17,6 +17,11 @@ namespace Battleships.Models.Memento
             this._originator = originator;
         }
 
+        public void SetOriginator(Originator originator)
+        {
+            this._originator = originator;
+        }
+
         public void Backup()
         {
             this._mementos.Add(this._originator.Save());

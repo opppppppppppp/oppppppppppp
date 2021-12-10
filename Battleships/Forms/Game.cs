@@ -5,6 +5,7 @@ using Battleships.Models;
 using Battleships.Models.Composite;
 using System.IO;
 using Battleships.Models.Facade;
+using System.Drawing;
 
 namespace Battleships
 {
@@ -18,8 +19,11 @@ namespace Battleships
             Facade = new Facade(this, GameObjects, player);
             Facade.InitializeGameLogic();
             Facade.RestartGame();
+          
         }
+
         
+
         private void label1_Click(object sender, EventArgs e)
         {
 

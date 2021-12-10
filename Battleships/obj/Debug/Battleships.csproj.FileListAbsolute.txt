@@ -201,3 +201,4 @@ C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppp
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.exe
 C:\Users\Gintatas\Desktop\uni\objektinis_programu_projektavimas\ddddd\oppppppppppp\Battleships\obj\Debug\Battleships.pdb
+E:\Work stuff\oppppppppppp\Battleships\bin\Debug\Settings\config.txt

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Battleships.Forms;
@@ -54,6 +55,25 @@ namespace Battleships.Models.Facade
             turnConnector.Run(Constants.ip_address, Game, pl);
             completeConnector.Run(Constants.ip_address, Game, pl);
             chatConnector.Run(Constants.ip_address, Game, pl);
+            ApplySettings();
+        }
+
+        private void ApplySettings()
+        {
+
+            Game.BackgroundImage = Image.FromFile(Constants.IMG_DIR);
+            GameObjects.chatbox.TabStop = false;
+            GameObjects.chatbox.ReadOnly = true;
+            if (Constants.CHAT_COLOR == "white")
+            {
+                GameObjects.chatbox.BackColor = Color.White;
+                GameObjects.chatbox.ForeColor = Color.Black;
+            }
+            else
+            {
+                GameObjects.chatbox.BackColor = Color.Black;
+                GameObjects.chatbox.ForeColor = Color.White;
+            }
         }
 
         public List<string> GetCorrectStrategy(Level Level, ShipField AttackPos, ShipField PlayerPos)
